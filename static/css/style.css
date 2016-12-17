@@ -53,7 +53,7 @@
 
     /* Carousel base class */
     .carousel {
-      margin-bottom: 60px;
+      margin-bottom: 1px;
     }
 
     .carousel .container {
@@ -122,7 +122,7 @@
     ------------------------- */
 
     .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      margin: 10px 0; /* Space out the Bootstrap <hr> more */
     }
     .featurette {
       padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
