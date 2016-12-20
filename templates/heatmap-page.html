@@ -1,0 +1,14 @@
+{ % extends "vesion.htm"  % }
+{ % block header % }
+<link   href = "{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
+<script src  = "{{ static_url('js/plotly-latest.min.js')}}"></script>
+<script src  = "{{ static_url('js/jquery.js')}}"></script>
+<script type = "text/javascript" src="{{ static_url('heatmap.js')}}"></script>>
+{ % block end % }
+	<div id="plotly-div"></div>
+{ % block body %}
+{ % end %}
+{% block script%}
+    <script src="{{ static_url('js/heatmap.js')}}">
+    </script>
+{%end%}

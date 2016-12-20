@@ -19,11 +19,18 @@ class VisionHandler(tornado.web.RequestHandler):
         self.render('vesion.htm')
         pass
 
+class HeatMapHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('heatmap.html')
+        pass
+
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[(r'/', IndexHandler), 
-                  (r'/vesion', VisionHandler)],
+                  (r'/vesion', VisionHandler),
+                  (r'/heatmap', HeatMapHandler)],
+
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),
         debug=True
