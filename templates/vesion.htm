@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <!-- Le styles -->
     <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
@@ -15,7 +15,18 @@
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
-    <script src="{{ static_url('js/docs.min.js')}}"></script>
+    <!--<script src="{{ static_url('js/docs.min.js')}}"></script>-->
+    <script src="{{ static_url('js/cytoscape.min.js')}}"></script>
+    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
+    <style> 
+      #cy {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;
+      }
+    </style>
   </head>
 
   <body>
@@ -43,8 +54,12 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
+      <div class="row-fluid" >
+        <form class="navbar-search pull-left">
+          <input type="text" class="search-query" placeholder="Search", style="width: 150px">
+        </form>
+        <!---
+        <div class="span3" style="width: 200px">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Data analysis</li>
@@ -64,13 +79,17 @@
               <li><a href="">Link</a></li>
               <li><a href="">Link</a></li>
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9" >
-          <div class="hero-unit">
+          </div>
+        </div>
+        -->
+
+        <div class="span9" style="width: 980px;margin-left: 50px: ">
+          <div class="hero-unit" style="padding: 10px">
+            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div>  
           </div>
         </div><!--/span-->
       </div><!--/row-->
+
       <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
           <li role="presentation" class="active">
@@ -128,6 +147,42 @@
             console.log($(this).text());
       })
     </script>
+    <script>
+      $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
+        var cy = window.cy = cytoscape({
+        container: document.getElementById('cy'), 
+        boxSelectionEnabled: true,
+        autounselectify: true,
 
-    <script src="{{ static_url('js/heatmap.js')}}"></script>
+        layout: {
+            name: 'spread',
+            minDist: 40
+          },  
+          style: [
+            {
+              selector: 'node',
+              style: {
+                'content': 'data(id)',
+                'font-size': 8,
+                'background-color': '#ea8a31'
+              }
+            },  
+
+          {
+              selector: 'edge',
+              style: {
+                'curve-style': 'haystack',
+                'haystack-radius': 0,
+                'width': 3,
+                'opacity': 0.666,
+                'line-color': '#fcc694'
+              }
+            }
+          ],  
+
+        elements:data
+        });
+      })
+  </script>
+  <script src="{{ static_url('js/heatmap.js')}}"></script>
 </body>

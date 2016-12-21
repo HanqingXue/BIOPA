@@ -21,7 +21,7 @@ class VisionHandler(tornado.web.RequestHandler):
 
 class HeatMapHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('heatmap.html')
+        self.render('net.html')
         pass
 
 if __name__ == '__main__':
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     app = tornado.web.Application(
         handlers=[(r'/', IndexHandler), 
                   (r'/vesion', VisionHandler),
-                  (r'/heatmap', HeatMapHandler)],
+                  (r'/net', HeatMapHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),

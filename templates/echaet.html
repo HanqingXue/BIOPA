@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="{{ static_url('js/echarts.min.js' )}}"></script>
+    <script src="{{ static_url('js/jquery.js') }} "></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        myChart.showLoading();
+        //*$.get('http://localhost:8000/static/json/net.json', function (webkitDep) {
+            myChart.hideLoading();      
+
+            option = {
+                legend: {
+                    data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
+                },
+                series: [{
+                    type: 'graph',
+                    layout: 'force',
+                    animation: false,
+                    label: {
+                        normal: {
+                            position: 'right',
+                            formatter: '{b}'
+                        }
+                    },
+                    draggable: true,
+                    data: webkitDep.nodes.map(function (node, idx) {
+                        node.id = idx;
+                        return node;
+                    }),
+                    categories: webkitDep.categories,
+                    force: {
+                        // initLayout: 'circular'
+                        // repulsion: 20,
+                        edgeLength: 5,
+                        repulsion: 20,
+                        gravity: 0.2
+                    },
+                    edges: webkitDep.links
+                }]
+            };      
+
+            myChart.setOption(option);
+        //});
+    </script>
+</body>
+</html>
