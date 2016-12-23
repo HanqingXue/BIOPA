@@ -27,6 +27,11 @@ class SearchHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('search.html')
         pass
+class DataHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('data.html')
+    pass
+
 
 if __name__ == '__main__':
     tornado.options.parse_command_line()
@@ -34,7 +39,8 @@ if __name__ == '__main__':
         handlers=[(r'/', IndexHandler), 
                   (r'/vesion', VisionHandler),
                   (r'/net', HeatMapHandler),
-                  (r'/search', SearchHandler)],
+                  (r'/search', SearchHandler),
+                  (r'/data', DataHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),

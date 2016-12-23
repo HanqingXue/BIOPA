@@ -24,11 +24,12 @@
       .logo {
         float: none;
         text-align: center;
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
-    <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px ">
+    <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 120px ">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -49,68 +50,26 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>
-
-    <div class="container-fluid" >
-
-        <div class="container">
-          <div class="row">
-              <div class="col-md-3" id ="logo" style="text-align: center">
+    </div><!-- end gudie-->
+    <div class="container-fluid" style="margin-bottom: ">
+      <div class="container">
+            <div class="row">
+              <div class="col-md-3" id ="logo" style="text-align: center" >
                   <img  id="logoimg" src=" {{ static_url('img/search-logo.jpg') }}" >
                 </div>
               <div class="col-md-3" id="Search">
                 <form class="form-search">
-                    <input type="text" class="input-medium search-query" style="width: 600px">
-                    <button type="submit" class="btn">Search</button>
+                    <input type="text" class="input-medium search-query" style="width: 600px" placeholder="Please input gene/disease name">
+                    <button type="submit" class="btn btn-info" id="search-btn"><a href="/data"></a>Search</button>
                 </form>
               </div>
-              <hr>
-            <div class="col-md-6">
-               <table class="table table-list-search">
-                  <thead>
-                      <tr>
-                          <th>Entry</th>
-                          <th>Entry</th>
-                          <th>Entry</th>
-                          <th>Entry</th>
-                          <th>Entry</th>
-                          <th>Entry</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>Sample</td>
-                          <td>Filter</td>
-                          <td>12-11-2011 11:11</td>
-                          <td>OK</td>
-                          <td>123</td>
-                          <td>Do some other</td>
-                      </tr>
-                      <tr>
-                          <td>Try</td>
-                          <td>It</td>
-                          <td>11-20-2013 08:56</td>
-                          <td>It</td>
-                          <td>Works</td>
-                          <td>Do some FILTERME</td>
-                      </tr>
-                      <tr>
-                          <td>§</td>
-                          <td>$</td>
-                          <td>%</td>
-                          <td>&</td>
-                          <td>/</td>
-                          <td>!</td>
-                      </tr>
-                  </tbody>
-                </table>   
             </div>
-          </div>
-        </div>
-      <hr> 
-      <footer>
-        <p>© Company 2013</p>
-      </footer>
+      </div><!--end container-->
     </div><!--/.fluid-container-->
+    <script>
+      $('#search-btn').click(function(){
+        window.open('data')
+      });
+    </script>
 
 </body>
