@@ -1,80 +1,17 @@
-<!DOCTYPE>
-
 <html>
-
-	<head>
-		<title>cytoscape-spread.js demo</title>
-
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-
-		<script src="../static/js/cytoscape.min.js"></script>
-		<!-- for testing with local version of cytoscape.js -->
-		<!--<script srccytoscape.js/build/cytoscape.js"></script>-->
-
-		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
-		<script src="../static/js/jquery.js"></script>							
-						
-			<style>
-			body {
-				font-family: helvetica;
-				font-size: 14px;
-			}
-
-			#cy {
-				width: 100%;
-				height: 100;
-				left: 0;
-				top: 0;
-				z-index: 999;
-			}
-
-			h1 {
-				opacity: 0.5;
-				font-size: 1em;
-			}
-		</style>
-	<script>
-			$.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
-				console.log(data);
-				var cy = window.cy = cytoscape({
-				container: document.getElementById('cy'),	
-				boxSelectionEnabled: false,
-				autounselectify: true,
-
-				layout: {
-						name: 'spread',
-						minDist: 40
-					},	
-					style: [
-						{
-							selector: 'node',
-							style: {
-								'content': 'data(id)',
-								'font-size': 8,
-								'background-color': '#ea8a31'
-							}
-						},	
-
-					{
-							selector: 'edge',
-							style: {
-								'curve-style': 'haystack',
-								'haystack-radius': 0,
-								'width': 3,
-								'opacity': 0.666,
-								'line-color': '#fcc694'
-							}
-						}
-					],	
-
-				elements:data
-				});
-			})
-	</script>
-	</head>
-
-	<body>
-		<h1>cytoscape-spread demo</h1>
-		<div id="cy"></div>
-	</body>
+	 <header>
+	 	<title>demo</title>
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+		<script type="javascript" src="../static/js/jquery.js"></script>
+		<script type="javascript" src="../static/js/bootstrap.min.js"></script>
+	 </header>
+	 <body>
+	 	<div class="container">
+	 		<div class="row">
+	 			<div class="" ="col-xs-3"><p>hhh</p></div>
+	 			<div class="" ="col-xs-3"><p>hhh</p></div>
+	 			<div class="" ="col-xs-3"><p>hhh</p></div>
+	 		</div>
+	 	</div>
+	 </body>
 </html>

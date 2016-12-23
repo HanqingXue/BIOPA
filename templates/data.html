@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://v2.bootcss.com/examples/fluid.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- Le styles -->
+    <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
+    <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <script src="{{ static_url('js/jquery.js')}}"></script>
+    <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
+    <style>
+      .form-search {
+        float: none;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+      }
+      .logo {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px ">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">BioPA</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="" class="navbar-link">Username</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="about">About</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div><!-- end gudie-->
+    <div class="container" style="margin-bottom: ">
+            <div class="row text-left"><h2>The reuslt of query</h2></div>
+            <div class="row" id="info-table">
+              <div class="span12 text-right">
+                <a href="/vesion" style="text-align: right;">Visualzation</a>
+              </div> 
+            </div>
+            <table class="table table-bordered table-striped table-responsive"
+            id = 'table'>
+              <thead>
+                  <tr>
+                      <th>Entry</th>
+                      <th>Entry</th>
+                      <th>Entry</th>
+                      <th>Entry</th>
+                      <th>Entry</th>
+                      <th>Entry</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Sample</td>
+                      <td>Filter</td>
+                      <td>12-11-2011 11:11</td>
+                      <td>OK</td>
+                      <td>123</td>
+                      <td>Do some other</td>
+                  </tr>
+                  <tr>
+                      <td>Try</td>
+                      <td>It</td>
+                      <td>11-20-2013 08:56</td>
+                      <td>It</td>
+                      <td>Works</td>
+                      <td>Do some FILTERME</td>
+                  </tr>
+                  <tr>
+                      <td>§</td>
+                      <td>$</td>
+                      <td>%</td>
+                      <td>&</td>
+                      <td>/</td>
+                      <td>!</td>
+                  </tr>
+                  <tr>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                  </tr>
+                  <tr>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                  </tr>
+                  <tr>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                  </tr>
+                  <tr>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                    <td>w</td>
+                  </tr>
+              </tbody>
+            </table>  
+    </div><!--/.fluid-container-->
+    <script type="text/javascript">
+      //$('#info-table').hide();
+      //$('#spread-search-info').hide();
+    </script>>
+    <script>
+      $('#search-btn').click(function(){
+        var table = $('#info-table');
+        if ( table.css('display') == 'none') {
+          console.log('hide');
+          table.show()
+        } else {
+          console.log('show');
+        }
+      });
+    </script>
+
+</body>
