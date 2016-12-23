@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <!-- Le styles -->
     <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
-    <!--<link href="{{ static_url('css/bootstrap3.css')}}" rel="stylesheet">-->
     <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
     <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{static_url('css/vesion.css')}}">
@@ -56,6 +55,7 @@
     </div>
 
     <div class="container-fluid">
+      <!--
       <div class="row-fluid" >
         <div class="span3" style="width: 200px">
           <div class="well sidebar-nav">
@@ -79,23 +79,21 @@
             </ul>
           </div>
         </div>
-        <!--
+        end span3--> 
+        <!---
         <div class="span3" style="width: 200px">
-          <div class="col-md-6" style="height: 40px">
-            <form class="navbar-search pull-left">
-              <input type="text" class="search-query" placeholder="Search", style="width: 180px">
-            </form>
-          </div>
           <div id="col-md-6">
             <div id="treeview-selectable" class="treeview"><ul class="list-group"><li class="list-group-item node-treeview-selectable search-result" data-nodeid="0" style="color:#D9534F;background-color:undefined;"><span class="icon expand-icon glyphicon glyphicon-minus"></span><span class="icon node-icon"></span>Parent 1</li><li class="list-group-item node-treeview-selectable" data-nodeid="1" style="color:undefined;background-color:undefined;"><span class="indent"></span><span class="icon expand-icon glyphicon glyphicon-plus"></span><span class="icon node-icon"></span>Child 1</li><li class="list-group-item node-treeview-selectable" data-nodeid="4" style="color:undefined;background-color:undefined;"><span class="indent"></span><span class="icon glyphicon"></span><span class="icon node-icon"></span>Child 2</li><li class="list-group-item node-treeview-selectable" data-nodeid="5" style="color:undefined;background-color:undefined;"><span class="icon glyphicon"></span><span class="icon node-icon"></span>Parent 2</li><li class="list-group-item node-treeview-selectable" data-nodeid="6" style="color:undefined;background-color:undefined;"><span class="icon glyphicon"></span><span class="icon node-icon"></span>Parent 3</li><li class="list-group-item node-treeview-selectable" data-nodeid="7" style="color:undefined;background-color:undefined;"><span class="icon glyphicon"></span><span class="icon node-icon"></span>Parent 4</li><li class="list-group-item node-treeview-selectable" data-nodeid="8" style="color:undefined;background-color:undefined;"><span class="icon glyphicon"></span><span class="icon node-icon"></span>Parent 5</li></ul></div>
           </div>
-            <!--end col md6-->
-       <!-- </div>-->
-       <!--end span3-->
+       </div>
+       span3-->
 
         <div class="span9" style="width: 900px;margin-left: 50px: ">
+            <form class="navbar-search pull-left">
+              <input type="text" class="search-query" placeholder="Search", style="width: 850px">
+            </form>
           <div class="hero-unit" style="padding: 10px">
-            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div>  
+              <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div>  
           </div>
         </div><!--/span-->
       </div><!--/row-->

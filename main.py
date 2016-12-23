@@ -23,13 +23,18 @@ class HeatMapHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('net.html')
         pass
+class SearchHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('search.html')
+        pass
 
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[(r'/', IndexHandler), 
                   (r'/vesion', VisionHandler),
-                  (r'/net', HeatMapHandler)],
+                  (r'/net', HeatMapHandler),
+                  (r'/search', SearchHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),
