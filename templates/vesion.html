@@ -59,25 +59,35 @@
       <div class="row">
           <div class="hero-unit span2" ><p>hello</p></div>
           <div class="hero-unit span9" style="padding: 10px">
-          <div class="btn-toolbar" role="toolbar">
+            <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
               <button class="btn btn-default" id ="btn-zoom-in"><i class="icon-zoom-in icon-large"></i></button>
               <button class="btn btn-default" id ="btn-zoom-out"><i class="icon-zoom-out icon-large"></i></button>
               <button class="btn btn-default" id ="btn-save"><i class="icon-camera icon-large"></i></button> 
               <button class="btn btn-default" id ="btn-hide-node"><i class="icon-eye-close icon-large"></i></button>
               <button class="btn btn-default" id ="btn-screen-fit"><i class="icon-repeat icon-large"></i></button>
-              <button class="btn btn-default" id ="btn-grid"><i class="icon-large icon-th"></i></button>
-              <button class="btn" id="btn-random"><i class ="icon-random icon-large"></i></button>
-              <button class="btn" id="btn-circle"><i class="icon-vector-path-circle icon-large"></i></button>
+              <div class="btn-group">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-th icon-large"></i>
+                </button>
+                <ul class="dropdown-menu" id='Menu'>
+                  <li><a id="Random"       value="random">Random</a></li>
+                  <li><a id="Grid"         value="grid">Grid</a></li>
+                  <li><a id="Circle"       value="circle">Circle</a></li>
+                  <li><a id="Concentic"    value="concentric">Concentic</a></li>
+                  <li><a id="BreadthFirst" value="breadthfirst">Breadth First</a></li>
+                  <li><a id="Cose"         value="cose">Cose</a></li>
+                  <li><a id="Preset"       value="spread">Preset</a></li>
+                </ul>
+              </div><!--btn-group-->
             </div>                    
-          </div><!--.btn-toolbar-->
-              <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div>  
-          </div>
-      </div><!--/row-->
-      <img id="png-img">
+            </div><!--.btn-toolbar-->
+            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
+          </div><!--.span9-->
+      </div><!--row-->
 
 
-      <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+      <div class="bs-example bs-example-tabs row" data-example-id="togglable-tabs" style="margin-right: 20px;margin-left: 20px">
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
           <li role="presentation" class="active">
             <a href="http://getbootstrap.com/javascript/#home" role="tab" id="profile-tab" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Gene Detail</a></li>
@@ -209,25 +219,10 @@
     });
   </script>
   <script>
-    $('#btn-grid').click(function () {
+    $('ul li a').click(function(){
+      var layoutName = $(this).attr('value');
       var layout = cy.makeLayout({
-        name : 'grid'
-      });
-      layout.run();
-    });
-  </script>
-  <script>
-    $('#btn-random').click(function() {
-      var layout = cy.makeLayout({
-        name : 'random'
-      });
-      layout.run();
-    });
-  </script>
-    <script>
-    $('#btn-circle').click(function() {
-      var layout = cy.makeLayout({
-        name : 'circle'
+        name : layoutName
       });
       layout.run();
     });
