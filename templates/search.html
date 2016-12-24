@@ -1,75 +1,89 @@
 <!DOCTYPE html>
 <!-- saved from url=(0041)http://v2.bootcss.com/examples/fluid.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
     
-    <title>Search</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <!-- Le styles -->
-    <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
-    <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
-    <script src="{{ static_url('js/jquery.js')}}"></script>
-    <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
-    <style>
-      .form-search {
-        float: none;
-        display: table;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-      }
-      .logo {
-        float: none;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 120px ">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="/">BioPA</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              Logged in as <a href="" class="navbar-link">Username</a>
-            </p>
-            <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="about">About</a></li>
-              <li><a href="contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div><!-- end gudie-->
-    <div class="container-fluid" style="margin-bottom: ">
-      <div class="container">
-            <div class="row">
-              <div class="col-md-3" id ="logo" style="text-align: center" >
-                  <img  id="logoimg" src=" {{ static_url('img/search-logo.jpg') }}" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>
+            Search
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+        <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ static_url('css/style.css')}}" rel="stylesheet" >
+        <script src="{{ static_url('js/jquery.js')}}">
+        </script>
+        <script src="{{ static_url('js/bootstrap.min.js')}}">
+        </script>
+    </head><!--end header-->
+    
+    <body>
+        <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 120px ">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                        <span class="icon-bar">
+                        </span>
+                    </button>
+                    <a class="brand" href="/">
+                        BioPA
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            Logged in as
+                            <a href="" class="navbar-link">
+                                Username
+                            </a>
+                        </p>
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
                 </div>
-              <div class="col-md-3" id="Search">
-                <form class="form-search">
-                    <input type="text" class="input-medium search-query" style="width: 600px" placeholder="Please input gene/disease name">
-                    <button type="submit" class="btn btn-info" id="search-btn"><a href="/data"></a>Search</button>
-                </form>
-              </div>
-            </div>
-      </div><!--end container-->
-    </div><!--/.fluid-container-->
-    <script>
-      $('#search-btn').click(function(){
-        window.open('data')
-      });
-    </script>
-
-</body>
+            </div><!--end .navbar-inner-->
+        </div><!-- end gudie-->
+        <div class="container-fluid" style="margin-bottom: ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3" id="logo" style="text-align: center">
+                        <img id="logoimg" src=" {{ static_url('img/search-logo.jpg') }}">
+                    </div>
+                    <div class="col-md-3" id="Search">
+                        <form class="form-search">
+                            <input type="text" class="input-medium search-query" style="width: 600px"
+                            placeholder="Please input gene/disease name">
+                            <button type="submit" class="btn btn-info" id="search-btn">
+                                <a href="/data">
+                                </a>
+                                Search
+                            </button>
+                        </form><!--.form-search-->
+                    </div><!--#search-->
+                </div><!---.row-->
+            </div><!--end container-->
+        </div><!--/.fluid-container-->
+        <script>
+            $('#search-btn').click(function() {
+                window.open('data')
+            });
+        </script>
+    </body><!--body-->

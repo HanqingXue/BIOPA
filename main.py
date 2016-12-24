@@ -11,12 +11,12 @@ define("port", default=8000, help="run on the given port", type=int)
 
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('index2.htm')
+        self.render('index.html')
         #self.render('vesion.htm')
 
 class VisionHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('vesion.htm')
+        self.render('vesion.html')
         pass
 
 class HeatMapHandler(tornado.web.RequestHandler):
