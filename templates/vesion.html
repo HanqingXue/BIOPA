@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
     <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
+    <link rel="stylesheet" href="{{ static_url('css/flat-ui.css')}}">
     <link rel="stylesheet" href="{{static_url('css/vesion.css')}}">
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
@@ -57,8 +58,54 @@
 
     <div class="container-fluid">
       <div class="row">
-          <div class="hero-unit span2" ><p>hello</p></div>
-          <div class="hero-unit span9" style="padding: 10px">
+          <div class="hero-unit span4 bs-example bs-example-tabs" >
+            <ul class="nav nav-tabs " id="leftControlMenu" role="tabelist">
+              <li  class="active" id="li-detail"><a  href="#" id="node-detail" role="tab" data-toggle="tab" aria-controls="Detail" aria-expanded="true"><span class="fui-menu-16"></span>Detail</a></li>
+              <li id="li-setting"><a  href="#" id="node-setting" role="tab" data-toggle="tab" aria-controls="Setting" aria-expanded="false"><span class="fui-menu-16"></span>Setting</a></li>
+              <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Context" aria-expanded="false"><span>Context</span></a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade active in "  role="tabpanel" id="Detail" aria-labelledby="node-detail">
+                <div id="Detail-tips" style="display: block; margin-top: 30px ">
+                  <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
+                  <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
+                </div><!--Detail-tips-->
+                <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed" style="display: none">
+                  <h5>Gene Name</h5>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th class="span12">
+                      abdaksdfsdfsdafsdakfs
+                      Some intioduction info
+                        </th>
+                      </tr>
+                      <tr>
+                        <th class="span1">Description</th>
+                        <td class="span10">null</td>
+                      </tr>
+                      <tr>
+                        <th>Aliases</th>
+                        <td>null</td>
+                      </tr>
+                      <tr>
+                        <th>UniProtID</th>
+                        <td>null</td>
+                      </tr>
+                      <tr>
+                        <th>GnneID</th>
+                        <td>null</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!--Deatil-table-->
+              </div><!--#Detail-->
+              <div class="tab-pane fade"  role="tabpanel" id="Setting" aria-labelledby="node-setting" ><p>hello2</p></div>
+              <div class="tab-pane fade"  role="tabpanel" id="Context" aria-labelledby="node-context" ><p>hello3</p></div>
+            </div><!-- .tab-content-->
+          </div><!--.span2-->
+          <div class="hero-unit span8" style="padding: 10px">
             <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
               <button class="btn btn-default" id ="btn-zoom-in"><i class="icon-zoom-in icon-large"></i></button>
@@ -86,11 +133,11 @@
           </div><!--.span9-->
       </div><!--row-->
 
-
+      <
       <div class="bs-example bs-example-tabs row" data-example-id="togglable-tabs" style="margin-right: 20px;margin-left: 20px">
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
           <li role="presentation" class="active">
-            <a href="http://getbootstrap.com/javascript/#home" role="tab" id="profile-tab" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Gene Detail</a></li>
+            <a href="http://getbootstrap.com/javascript/#home" role="tab" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Gene Detail</a></li>
           <li role="presentation" class="">
             <a href="http://getbootstrap.com/javascript/#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Expression</a></li>
           <li role="presentation" class="dropdown">
@@ -119,7 +166,7 @@
             <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
           </div>
         </div><!--#tab-cotent-->
-      </div>
+      </div><!--.bs-example-->
       </div>
       <hr> 
       <footer>
@@ -135,9 +182,6 @@
           $('#plotly-div').show()
 
       });
-    </script>
-    <script>
-      
     </script>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
@@ -174,57 +218,98 @@
 
         elements:data
         });
+        cy.on('tap', 'node', { foo: 'bar' }, function(evt){
+          console.log( evt.data.foo ); // 'bar'
+          var node = evt.cyTarget;
+          console.log( 'tapped ' + node.id() );
+          nodeIndex = '#' + node.id();
+          cy.$(nodeIndex).select();
+          cy.zoom(2);
+          cy.center(nodeIndex);
+          $('#Deatil-table').show();
+          $('#Detail').addClass('active in');
+        });
       })
-  </script>
-  <script src="{{ static_url('js/heatmap.js')}}"></script>
-  <script>
-    $('#btn-screen-fit').click(function() {
-       console.log(cy);
-      cy.fit();
-      console.log(cy.zoom());
-    });
-  </script>
-  <script>
-    $('#btn-save').click(function() {
-      var png64 = cy.png({
-        bg : "#ffffff"
+    </script>
+    <script src="{{ static_url('js/heatmap.js')}}"></script>
+    <script>
+      $('#btn-screen-fit').click(function() {
+         console.log(cy);
+        cy.fit();
+        console.log(cy.zoom());
       });
-      download(png64, 'net.png', 'image/png');
-    });
-  </script>
-  <script>
-    $('#btn-zoom-in').click(function () {
-     var zoom =  cy.zoom()
-     console.log(cy.zoom());
-      zoom = zoom  + 0.05;
-      if ( zoom > 9 ){
-        zoom = 9;
-      }
-      cy.zoom({
-        level: zoom
+    </script>
+    <script>
+      $('#btn-save').click(function() {
+        var png64 = cy.png({
+          bg : "#ffffff"
+        });
+        download(png64, 'net.png', 'image/png');
       });
-    });
-  </script>
-  <script>
-    $('#btn-zoom-out').click(function () {
-      console.log(cy.zoom());
-      var zoom = cy.zoom();
-      zoom = zoom - 0.05;
-      if( zoom < cy.minZoom()){
-        zoom = 0.05;
-      }
-      cy.zoom({
-        level: zoom
+    </script>
+    <script>
+      $('#btn-zoom-in').click(function () {
+       var zoom =  cy.zoom()
+       console.log(cy.zoom());
+        zoom = zoom  + 0.05;
+        if ( zoom > 9 ){
+          zoom = 9;
+        }
+        cy.zoom({
+          level: zoom
+        });
       });
-    });
-  </script>
-  <script>
-    $('ul li a').click(function(){
-      var layoutName = $(this).attr('value');
-      var layout = cy.makeLayout({
-        name : layoutName
+    </script>
+    <script>
+      $('#btn-zoom-out').click(function () {
+        console.log(cy.zoom());
+        var zoom = cy.zoom();
+        zoom = zoom - 0.05;
+        if( zoom < cy.minZoom()){
+          zoom = 0.05;
+        }
+        cy.zoom({
+          level: zoom
+        });
       });
-      layout.run();
-    });
-  </script>
+    </script>
+    <script>
+      $('#Menu li a').click(function(){
+        var layoutName = $(this).attr('value');
+        var layout = cy.makeLayout({
+          name : layoutName
+        });
+        layout.run();
+      });
+    </script>
+    <script>
+      $('#node-setting').click(function(){
+        $('#Detail').removeClass('active in');
+        $('#Context').removeClass('active in');
+        $('#Setting').addClass('active in');
+      });
+    </script>
+    <script>
+      $('#node-detail').click(function(){
+        $('#Setting').removeClass('active in');
+        $('#Context').removeClass('active in');
+        $('#Detail').addClass('active in');
+  
+      });
+    </script>
+    <script>
+      $('#node-context').click(function(){
+        $('#Detail').removeClass('active in');
+        $('#Context').addClass('active in');
+        $('#Setting').removeClass('active in');
+      });
+    </script>
+    <script>
+      $('#leftControlMenu li a').click(function() {
+        $('#help-text').hide();
+        $('help-text').css('margin-top: 0px');
+        $('#arrow').hide();
+        $('#Deatil-table').show();
+      })
+    </script>
 </body>
