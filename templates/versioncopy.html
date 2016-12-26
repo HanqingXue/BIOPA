@@ -14,15 +14,13 @@
     <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
     <link rel="stylesheet" href="{{ static_url('css/flat-ui.css')}}">
-    <link rel="stylesheet" href="{{ static_url('css/vesion.css')}}">
-    <link rel="stylesheet" href="{{ static_url('css/cytoscape-context-menus.css')}}">
+    <link rel="stylesheet" href="{{static_url('css/vesion.css')}}">
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
     <script src="{{ static_url('js/cytoscape.min.js')}}"></script>
     <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
     <script src="{{ static_url('js/download.js')}}"></script>
-    <script src="{{ static_url('js/cytoscape-context-menus.js')}}"></script>
     <style> 
       #cy {
         width: 100%;
@@ -35,7 +33,7 @@
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top"  >
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -61,29 +59,28 @@
     <div class="container-fluid">
       <div class="row">
           <div class="hero-unit span4 bs-example bs-example-tabs" >
-            <ul class="nav nav-tabs " id="leftControlMenu" role="tabelist" style="margin-bottom: 0px ">
+            <ul class="nav nav-tabs " id="leftControlMenu" role="tabelist">
               <li  class="active" id="li-detail"><a  href="#" id="node-detail" role="tab" data-toggle="tab" aria-controls="Detail" aria-expanded="true"><span class="fui-menu-16"></span>Detail</a></li>
               <li id="li-setting"><a  href="#" id="node-setting" role="tab" data-toggle="tab" aria-controls="Setting" aria-expanded="false"><span class="fui-menu-16"></span>Setting</a></li>
               <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Context" aria-expanded="false"><span>Context</span></a></li>
             </ul>
 
-            <div class="tab-content" style="overflow: hidden; border-top: 0px">
+            <div class="tab-content">
               <div class="tab-pane fade active in "  role="tabpanel" id="Detail" aria-labelledby="node-detail">
-                <div id="Detail-tips"">
+                <div id="Detail-tips" style="display: block; margin-top: 30px ">
                   <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
                   <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
                 </div><!--Detail-tips-->
                 <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed" style="display: none">
+                  <h5  id="gene-title" style="margin-left: 10px">Gene Name</h5>
                   <table>
                     <tbody>
-                      <tr>
-                        <td colspan="2" ><h5 id="gene-title">Gene Name</h5></td>
-                      </tr>
                       <tr >
                           <td class="span12" id="summary" colspan="2">
                           abdaksdfsdfsdafsdakfs
                           Some intioduction info
                           </td>
+
                       </tr>
                       <tr>
                         <th class="span1" >Aliases</th>
@@ -108,13 +105,11 @@
           <div class="hero-unit span8" style="padding: 10px">
             <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
-              <button class="btn btn-default" id ="btn-zoom-in" ><a title="Zoom in" class="icon-zoom-in icon-large"></a></button>
-              <button class="btn btn-default" id ="btn-zoom-out"><a 
-              title="Zoom Out" class ="icon-zoom-out icon-large"></a></button>
-              <button class="btn btn-default" id ="btn-save" ><a title="Save" class="icon-camera icon-large"></a></button> 
-              <button class="btn btn-default" id="btn-showall"><a title="Showall" class="icon-eye-open icon-large"></a></button>
-              <button class="btn btn-default" id ="btn-hide-node" ><a class="icon-eye-close icon-large"></a></button>
-              <button class="btn btn-default" id ="btn-screen-fit"><a class="icon-repeat icon-large"></a></button>
+              <button class="btn btn-default" id ="btn-zoom-in"><i class="icon-zoom-in icon-large"></i></button>
+              <button class="btn btn-default" id ="btn-zoom-out"><i class="icon-zoom-out icon-large"></i></button>
+              <button class="btn btn-default" id ="btn-save"><i class="icon-camera icon-large"></i></button> 
+              <button class="btn btn-default" id ="btn-hide-node"><i class="icon-eye-close icon-large"></i></button>
+              <button class="btn btn-default" id ="btn-screen-fit"><i class="icon-repeat icon-large"></i></button>
               <div class="btn-group">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                   <i class="icon-th icon-large"></i>
@@ -174,8 +169,7 @@
         <p>© Company 2013</p>
       </footer>
     </div><!--/.fluid-container-->
-
-    <div class="modal fade" id="desmodal" style="display: none">
+    <div class="modal fade" id="desmodal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -202,16 +196,18 @@
         
         if ( typeof(isHeatmap) != undefined  && isHeatmap=='heatmap')
           $('#plotly-div').show()
+
       });
     </script>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
         var cy = window.cy = cytoscape({
         container: document.getElementById('cy'), 
-        boxSelectionEnabled: true,
+        //boxSelectionEnabled: true,
         //autounselectify: true,
+
         layout: {
-            name: 'cose',
+            name: 'spread',
             minDist: 40
           },  
           style: [
@@ -220,18 +216,18 @@
               style: {
                 'content': 'data(id)',
                 'font-size': 8,
-                'background-color': '#9fd9f6',
-                'size': 4
+                'background-color': '#ea8a31'
               }
             },  
+
             {
               selector: 'edge',
               style: {
                 'curve-style': 'haystack',
                 'haystack-radius': 0,
-                'width': 2,
+                'width': 3,
                 'opacity': 0.666,
-                'line-color': '#2dc16c'
+                'line-color': '#fcc694'
               }
             },
             {
@@ -245,15 +241,16 @@
               }
             }
           ], 
-        elements:data,
-        });//cy 
+
+
+        elements:data
+        });
   
         cy.on('tap', function(event){
           var evtTarget = event.cyTarget;
           $('#Detail').addClass('active in');
           if( evtTarget === cy ){
               console.log('tap on background');
-              cy.trigger('boxstart');
           } else {
             var node = event.cyTarget;
             nodeIndex = '#' + node.id();
@@ -267,6 +264,7 @@
             $('#arrow').hide();
             $('#help-text').hide();
             $('#gene-title').text(node.id());
+
             for(index in data) {
               netData = data[index]['data']
               if(netData['id'] == node.id()){
@@ -283,93 +281,13 @@
                 $('#UniProtID a').attr('href', geneUrl);
                 break;
               }
-            }// end-for-index 
-          }//end-else
-        });//end-cy.on
-
-
-        var selectAllOfTheSameType = function(ele) {
-            cy.elements().unselect();
-            if(ele.isNode()) {
-                cy.nodes().select();
             }
-            else if(ele.isEdge()) {
-                cy.edges().select();
-            }
-        };
-      
-        cy.contextMenus({
-            menuItems: [
-                {
-                    id: 'remove',
-                    title: 'remove',
-                    selector: 'node, edge',
-                    onClickFunction: function (event) {
-                      event.cyTarget.remove();
-                    },
-                    hasTrailingDivider: true
-                  },
-                  {
-                    id: 'hide',
-                    title: 'hide',
-                    selector: '*',
-                    onClickFunction: function (event) {
-                      event.cyTarget.hide();
-                    },
-                    disabled: false
-                  },
-                  {
-                    id: 'add-node',
-                    title: 'add node',
-                    coreAsWell: true,
-                    onClickFunction: function (event) {
-                      var data = {
-                          group: 'nodes'
-                      };
-                      
-                      cy.add({
-                          data: data,
-                          position: {
-                              x: event.cyPosition.x,
-                              y: event.cyPosition.y
-                          }
-                      });
-                    }
-                  },
-                  {
-                    id: 'remove-selected',
-                    title: 'remove selected',
-                    coreAsWell: true,
-                    onClickFunction: function (event) {
-                      cy.$(':selected').remove();
-                    }
-                  },
-                  {
-                    id: 'select-all-nodes',
-                    title: 'select all nodes',
-                    selector: 'node',
-                    onClickFunction: function (event) {
-                      selectAllOfTheSameType(event.cyTarget);
-                    }
-                  },
-                  {
-                    id: 'select-all-edges',
-                    title: 'select all edges',
-                    selector: 'edge',
-                    onClickFunction: function (event) {
-                      selectAllOfTheSameType(event.cyTarget);
-                    }
-                  }
-                ],
-                menuItemClasses: ['custom-menu-item'],
-                contextMenuClasses: ['custom-context-menu']
-          });//end-menu
-      })//get json
+
+          }
+        });
+      })
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
-    <script>
-      $()
-    </script>
     <script>
       $('#btn-screen-fit').click(function() {
          console.log(cy);
@@ -452,11 +370,7 @@
       })
     </script>
     <script>
-      $("#btn-hide-node").click(function(){
+      $("#More").on("click",function(){
         console.log('hello');
-        cy.$(':selected').hide();
-      })
-      $('#btn-showall').click(function() {
-        cy.$('node').show();
       })
     </script>
