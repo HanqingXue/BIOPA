@@ -14,13 +14,15 @@
     <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
     <link rel="stylesheet" href="{{ static_url('css/flat-ui.css')}}">
-    <link rel="stylesheet" href="{{static_url('css/vesion.css')}}">
+    <link rel="stylesheet" href="{{ static_url('css/vesion.css')}}">
+    <link rel="stylesheet" href="{{ static_url('css/cytoscape-context-menus.css')}}">
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
     <script src="{{ static_url('js/cytoscape.min.js')}}"></script>
     <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
     <script src="{{ static_url('js/download.js')}}"></script>
+    <script src="{{ static_url('js/cytoscape-context-menus.js')}}"></script>
     <style> 
       #cy {
         width: 100%;
@@ -242,8 +244,8 @@
           ], 
 
 
-        elements:data
-        });
+        elements:data,
+        });//cy 
   
         cy.on('tap', function(event){
           var evtTarget = event.cyTarget;
@@ -263,14 +265,16 @@
             $('#arrow').hide();
             $('#help-text').hide();
             $('#gene-title').text(node.id());
+
             for(index in data) {
               netData = data[index]['data']
               if(netData['id'] == node.id()){
                 var des = netData['uniprotdesc'];
+
                 if ( des.length > 300 ) {
                   description = des.slice(0, 300)
                   $('#summary').text(description);
-                  $('#summary').append('<a id="more" href="#">(More...)</a>');
+                  $('#summary').append('<span class="icon-more"><a id="more" href="#">......</a></span>');
                 } else {
                   $('#summary td').text(netData['uniprotdesc']);
                 }
@@ -279,12 +283,92 @@
                 $('#UniProtID a').attr('href', geneUrl);
                 break;
               }
+            }// end-for-index 
+          }//end-else
+        });//end-cy.on
+
+        var selectAllOfTheSameType = function(ele) {
+            cy.elements().unselect();
+            if(ele.isNode()) {
+                cy.nodes().select();
             }
-          }
-        });
-      })
+            else if(ele.isEdge()) {
+                cy.edges().select();
+            }
+        };
+      
+        cy.contextMenus({
+            menuItems: [
+                {
+                    id: 'remove',
+                    title: 'remove',
+                    selector: 'node, edge',
+                    onClickFunction: function (event) {
+                      event.cyTarget.remove();
+                    },
+                    hasTrailingDivider: true
+                  },
+                  {
+                    id: 'hide',
+                    title: 'hide',
+                    selector: '*',
+                    onClickFunction: function (event) {
+                      event.cyTarget.hide();
+                    },
+                    disabled: false
+                  },
+                  {
+                    id: 'add-node',
+                    title: 'add node',
+                    coreAsWell: true,
+                    onClickFunction: function (event) {
+                      var data = {
+                          group: 'nodes'
+                      };
+                      
+                      cy.add({
+                          data: data,
+                          position: {
+                              x: event.cyPosition.x,
+                              y: event.cyPosition.y
+                          }
+                      });
+                    }
+                  },
+                  {
+                    id: 'remove-selected',
+                    title: 'remove selected',
+                    coreAsWell: true,
+                    onClickFunction: function (event) {
+                      cy.$(':selected').remove();
+                    }
+                  },
+                  {
+                    id: 'select-all-nodes',
+                    title: 'select all nodes',
+                    selector: 'node',
+                    onClickFunction: function (event) {
+                      selectAllOfTheSameType(event.cyTarget);
+                    }
+                  },
+                  {
+                    id: 'select-all-edges',
+                    title: 'select all edges',
+                    selector: 'edge',
+                    onClickFunction: function (event) {
+                      selectAllOfTheSameType(event.cyTarget);
+                    }
+                  }
+                ],
+                menuItemClasses: ['custom-menu-item'],
+                contextMenuClasses: ['custom-context-menu']
+          });//end-menu
+      })//get json
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
+    <script>
+      $()
+    </script>
     <script>
       $('#btn-screen-fit').click(function() {
          console.log(cy);
@@ -367,8 +451,7 @@
       })
     </script>
     <script>
-      $('#more').click(function() {
-        console.log('helo');
-        $('#desmodal').modal();
-      });
+      $("#More").on("click",function(){
+        console.log('hello');
+      })
     </script>
