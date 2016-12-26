@@ -72,30 +72,26 @@
                   <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
                 </div><!--Detail-tips-->
                 <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed" style="display: none">
-                  <h5>Gene Name</h5>
+                  <h5  id="gene-title" style="margin-left: 10px">Gene Name</h5>
                   <table>
                     <tbody>
-                      <tr>
-                        <th class="span12">
-                      abdaksdfsdfsdafsdakfs
-                      Some intioduction info
-                        </th>
+                      <tr >
+                          <td class="span12" id="summary" colspan="2">
+                          abdaksdfsdfsdafsdakfs
+                          Some intioduction info
+                          </td>
                       </tr>
                       <tr>
-                        <th class="span1">Description</th>
-                        <td class="span10">null</td>
-                      </tr>
-                      <tr>
-                        <th>Aliases</th>
-                        <td>null</td>
+                        <th class="span1" >Aliases</th>
+                        <td class="span10" id="aliases">null</td>
                       </tr>
                       <tr>
                         <th>UniProtID</th>
-                        <td>null</td>
+                        <td id="UniProtID"><a href="">null</a></td>
                       </tr>
                       <tr>
                         <th>GnneID</th>
-                        <td>null</td>
+                        <td id="GeneID">null</td>
                       </tr>
                     </tbody>
                   </table>
@@ -104,7 +100,7 @@
               <div class="tab-pane fade"  role="tabpanel" id="Setting" aria-labelledby="node-setting" ><p>hello2</p></div>
               <div class="tab-pane fade"  role="tabpanel" id="Context" aria-labelledby="node-context" ><p>hello3</p></div>
             </div><!-- .tab-content-->
-          </div><!--.span2-->
+          </div><!--.span4-->
           <div class="hero-unit span8" style="padding: 10px">
             <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
@@ -130,10 +126,10 @@
             </div>                    
             </div><!--.btn-toolbar-->
             <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
-          </div><!--.span9-->
+          </div><!--.span8-->
       </div><!--row-->
 
-      <
+      
       <div class="bs-example bs-example-tabs row" data-example-id="togglable-tabs" style="margin-right: 20px;margin-left: 20px">
         <ul class="nav nav-tabs" id="myTabs" role="tablist">
           <li role="presentation" class="active">
@@ -167,12 +163,31 @@
           </div>
         </div><!--#tab-cotent-->
       </div><!--.bs-example-->
-      </div>
       <hr> 
       <footer>
         <p>© Company 2013</p>
       </footer>
     </div><!--/.fluid-container-->
+    <div class="modal fade" id="desmodal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <p>One fine body&hellip;</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <script type="text/javascript">
       $('a', '.sidebar-nav').click(function() {
         console.log($(this).attr('data-value'));
@@ -187,8 +202,8 @@
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
         var cy = window.cy = cytoscape({
         container: document.getElementById('cy'), 
-        boxSelectionEnabled: true,
-        autounselectify: true,
+        //boxSelectionEnabled: true,
+        //autounselectify: true,
 
         layout: {
             name: 'spread',
@@ -204,7 +219,7 @@
               }
             },  
 
-          {
+            {
               selector: 'edge',
               style: {
                 'curve-style': 'haystack',
@@ -213,21 +228,59 @@
                 'opacity': 0.666,
                 'line-color': '#fcc694'
               }
+            },
+            {
+              selector: ':selected',
+              style: {
+                'background-color': 'black',
+                'line-color': 'black',
+                'target-arrow-color': 'black',
+                'source-arrow-color': 'black',
+                'opacity': 1
+              }
             }
-          ],  
+          ], 
+
 
         elements:data
         });
-        cy.on('tap', 'node', { foo: 'bar' }, function(evt){
-          console.log( evt.data.foo ); // 'bar'
-          var node = evt.cyTarget;
-          console.log( 'tapped ' + node.id() );
-          nodeIndex = '#' + node.id();
-          cy.$(nodeIndex).select();
-          cy.zoom(2);
-          cy.center(nodeIndex);
-          $('#Deatil-table').show();
+  
+        cy.on('tap', function(event){
+          var evtTarget = event.cyTarget;
           $('#Detail').addClass('active in');
+          if( evtTarget === cy ){
+              console.log('tap on background');
+          } else {
+            var node = event.cyTarget;
+            nodeIndex = '#' + node.id();
+            cy.$(nodeIndex).select();
+            cy.$(nodeIndex).select();
+            cy.zoom(2);
+            cy.center(nodeIndex);
+            $('#Detail').addClass('active in');
+            $('#Detail-table').show();
+            $('Detail-tips').hide();
+            $('#arrow').hide();
+            $('#help-text').hide();
+            $('#gene-title').text(node.id());
+            for(index in data) {
+              netData = data[index]['data']
+              if(netData['id'] == node.id()){
+                var des = netData['uniprotdesc'];
+                if ( des.length > 300 ) {
+                  description = des.slice(0, 300)
+                  $('#summary').text(description);
+                  $('#summary').append('<a id="more" href="#">(More...)</a>');
+                } else {
+                  $('#summary td').text(netData['uniprotdesc']);
+                }
+                $('#UniProtID a').text(netData['uniprot']);
+                var geneUrl = "http://www.genecards.org/cgi-bin/carddisp.pl?gene="+netData['uniprot']
+                $('#UniProtID a').attr('href', geneUrl);
+                break;
+              }
+            }
+          }
         });
       })
     </script>
@@ -294,6 +347,7 @@
         $('#Setting').removeClass('active in');
         $('#Context').removeClass('active in');
         $('#Detail').addClass('active in');
+        $('#Detail-table').show();
   
       });
     </script>
@@ -312,4 +366,9 @@
         $('#Deatil-table').show();
       })
     </script>
-</body>
+    <script>
+      $('#more').click(function() {
+        console.log('helo');
+        $('#desmodal').modal();
+      });
+    </script>
