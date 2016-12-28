@@ -215,22 +215,50 @@
           },  
           style: [
             {
-              selector: 'node',
+              selector: 'node[importance = 2]',
               style: {
                 'content': 'data(id)',
                 'font-size': 8,
-                'background-color': '#9fd9f6',
+                'background-color': '#ff99cc',//#96d9f6
                 'size': 4
               }
-            },  
+            },
             {
-              selector: 'edge',
+              selector: 'node[importance = 3]',
+              style: {
+                'content': 'data(id)',
+                'font-size': 8,
+                'background-color': '#96d9f6',//#96d9f6
+                'size': 4
+              }
+            },
+            {
+              selector: 'node[importance = 4]',
+              style: {
+                'content': 'data(id)',
+                'font-size': 8,
+                'background-color': '#ff6666',//#96d9f6
+                'size': 4
+              }
+            }, 
+            {
+              selector: "edge[type = 'controls-state-change-of']",
               style: {
                 'curve-style': 'haystack',
                 'haystack-radius': 0,
-                'width': 2,
+                'width': 4,
                 'opacity': 0.666,
-                'line-color': 'cccccc'
+                'line-color': '#2dc16c'
+              }
+            },
+            {
+              selector: "edge[type = 'controls-expression-of']",
+              style: {
+                'curve-style': 'haystack',
+                'haystack-radius': 0,
+                'width': 4,
+                'opacity': 0.666,
+                'line-color': '#2980b9'
               }
             },
             {
@@ -240,30 +268,13 @@
                 'line-color': 'black',
                 'target-arrow-color': 'black',
                 'source-arrow-color': 'black',
-                'opacity': 1
+                'opacity': 3
               }
             }
           ], 
         elements:data,
         });//cy 
          
-        
-        var nodeclassOne = cy.filter("node[importance = 2]")
-          .style('background-color', '#ff99cc' );
-
-        var nodeclassTwo = cy.filter("node[importance = 4]")
-          .style('background-color', '#ff6666' );
-
-        var nodeclassThree = cy.filter("node[importance = 3]")
-          .style('background-color', '#ccccc' );
-        
-        /*
-        var edgeClassOne = cy.filter("edge[type = 'controls-state-change-of']")
-          .style('line-color', '#2dc16c');
-
-        var edgeClassTwo = cy.filter("edge[type = 'controls-expression-of']")
-          .style('line-color', '#2980b9');*/
-
         cy.on('tap', function(event){
           var evtTarget = event.cyTarget;
           $('#Detail').addClass('active in');
@@ -380,30 +391,6 @@
       })//get json
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
-    /*
-      align color to the nodes and  edges
-    */
-    <script>
-    /*
-      $(function() {
-        
-        var nodeclassOne = cy.filter("node[importance = 2]")
-          .style('background-color', '#ff99cc' );
-
-        var nodeclassTwo = cy.filter("node[importance = 4]")
-          .style('background-color', '#ff6666' );
-
-        var nodeclassThree = cy.filter("node[importance = 3]")
-          .style('background-color', '#ccccc' );
-        
-        var edgeClassOne = cy.filter("edge[type = 'controls-state-change-of']")
-          .style('line-color', '#2dc16c');
-
-        var edgeClassTwo = cy.filter("edge[type = 'controls-expression-of']")
-          .style('line-color', '#2980b9');
-        
-      });*/
-    </script>
     <script>
       $(function() {
         $('#num-state-change-of').text(cy.filter("edge[type = 'controls-state-change-of']").length);
@@ -508,7 +495,6 @@
         $('tr#' + edgeType).remove();
         var filter  = "edge[type = \'controls-" + edgeType + "\']";
         var selector = cy.filter(filter);
-        //cy.hide(selector);
         selector.hide();
       });
     </script>
