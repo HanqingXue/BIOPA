@@ -108,25 +108,16 @@
                       <tr>
                         <th colspan="3" class="span12"><h4>Edge Types</h4></th>
                       </tr>
-                      <tr id="Type1">
-                          <th class="span10">controls-state-change-of</th>
-                          <td class="span1"></td>
-                          <td class="span1"><a class="icon-remove" value="Type1"></a></td>
+                      <tr id="state-change-of">
+                          <th class="span10" id="state-change-of">controls-state-change-of</th>
+                          <td class="span1"  id="num-state-change-of"></td>
+                          <td class="span1"><a class="icon-remove" value="state-change-of"></a></td>
                       </tr>
-                      <tr id="Type2">
-                         <th class="span3">T3</th>
-                         <td class="span8"></td>
-                         <td class="span1"><a class="icon-remove" value="Type2"></a></td>
+                      <tr id="expression-of">
+                         <th class="span10">controls-expression-of</th>
+                         <td class="span1" id="num-expression-of"></td>
+                         <td class="span1"><a class="icon-remove" value="expression-of"></a></td>
                        </tr>
-                       <tr id="Type3">
-                         <th class="span3">T4</th>
-                         <td class="span8"></td>
-                         <td class="span1"><a class="icon-remove" value="Type3"></a></td>
-                       </tr>
-                       <tr id="Type4">
-                         <th class="span3">T5</th>
-                         <td class="span8"></td>
-                         <td class="span1"><a class="icon-remove" value="Type4"></a></td>
                        </tr>                 
                     </tbody>
                   </table>
@@ -205,38 +196,16 @@
       </footer>
     </div><!--/.fluid-container-->
 
-    <div class="modal fade" id="desmodal" style="display: none">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            <p>One fine body&hellip;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
     <script type="text/javascript">
-      $('a', '.sidebar-nav').click(function() {
-        console.log($(this).attr('data-value'));
-        var isHeatmap= $(this).attr('data-value');
-        
-        if ( typeof(isHeatmap) != undefined  && isHeatmap=='heatmap')
-          $('#plotly-div').show()
-      });
-    </script>
+      /*
+      Define the global variables
+      */
+      var cy = new Object();
+      var hello = 'hello';
+    </script>>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
-        var cy = window.cy = cytoscape({
+        cy = cytoscape({
         container: document.getElementById('cy'), 
         boxSelectionEnabled: true,
         //autounselectify: true,
@@ -261,7 +230,7 @@
                 'haystack-radius': 0,
                 'width': 2,
                 'opacity': 0.666,
-                'line-color': '#2dc16c'
+                'line-color': 'cccccc'
               }
             },
             {
@@ -277,20 +246,35 @@
           ], 
         elements:data,
         });//cy 
-  
+         
+        
+        var nodeclassOne = cy.filter("node[importance = 2]")
+          .style('background-color', '#ff99cc' );
+
+        var nodeclassTwo = cy.filter("node[importance = 4]")
+          .style('background-color', '#ff6666' );
+
+        var nodeclassThree = cy.filter("node[importance = 3]")
+          .style('background-color', '#ccccc' );
+        
+        /*
+        var edgeClassOne = cy.filter("edge[type = 'controls-state-change-of']")
+          .style('line-color', '#2dc16c');
+
+        var edgeClassTwo = cy.filter("edge[type = 'controls-expression-of']")
+          .style('line-color', '#2980b9');*/
+
         cy.on('tap', function(event){
           var evtTarget = event.cyTarget;
           $('#Detail').addClass('active in');
           if( evtTarget === cy ){
-              console.log('tap on background');
               cy.trigger('boxstart');
           } else {
             var node = event.cyTarget;
+            console.log(node);
             nodeIndex = '#' + node.id();
-            cy.$(nodeIndex).select();
             cy.zoom(2);
             cy.center(nodeIndex);
-            console.log(event.target);
             $('#Setting').removeClass('active');
             $('#li-detail').addClass('active');
             $('#li-setting').removeClass('active');
@@ -391,17 +375,47 @@
                 menuItemClasses: ['custom-menu-item'],
                 contextMenuClasses: ['custom-context-menu']
           });//end-menu
+        //console.log(typeof(cy));
+
       })//get json
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
+    /*
+      align color to the nodes and  edges
+    */
     <script>
-      $()
+    /*
+      $(function() {
+        
+        var nodeclassOne = cy.filter("node[importance = 2]")
+          .style('background-color', '#ff99cc' );
+
+        var nodeclassTwo = cy.filter("node[importance = 4]")
+          .style('background-color', '#ff6666' );
+
+        var nodeclassThree = cy.filter("node[importance = 3]")
+          .style('background-color', '#ccccc' );
+        
+        var edgeClassOne = cy.filter("edge[type = 'controls-state-change-of']")
+          .style('line-color', '#2dc16c');
+
+        var edgeClassTwo = cy.filter("edge[type = 'controls-expression-of']")
+          .style('line-color', '#2980b9');
+        
+      });*/
+    </script>
+    <script>
+      $(function() {
+        $('#num-state-change-of').text(cy.filter("edge[type = 'controls-state-change-of']").length);
+        $('#num-expression-of').text(cy.filter("edge[type = 'controls-expression-of']").length);
+      });
+    </script>
+    <script>
+      
     </script>
     <script>
       $('#btn-screen-fit').click(function() {
-         console.log(cy);
         cy.fit();
-        console.log(cy.zoom());
       });
     </script>
     <script>
@@ -415,7 +429,6 @@
     <script>
       $('#btn-zoom-in').click(function () {
        var zoom =  cy.zoom()
-       console.log(cy.zoom());
         zoom = zoom  + 0.05;
         if ( zoom > 9 ){
           zoom = 9;
@@ -427,7 +440,6 @@
     </script>
     <script>
       $('#btn-zoom-out').click(function () {
-        console.log(cy.zoom());
         var zoom = cy.zoom();
         zoom = zoom - 0.05;
         if( zoom < cy.minZoom()){
@@ -480,20 +492,23 @@
     </script>
     <script>
       $("#btn-hide-node").click(function(){
-        console.log('hello');
         cy.$(':selected').hide();
+
       })
       $('#btn-showall').click(function() {
         cy.$('node').show();
+        cy.$('edge').show();
+        console.log('hehe');
       })
     </script>
     <script>
       $('a.icon-remove').click(function() {
-        console.log('remove');
+        console.log('click me');
         var edgeType = $(this).attr('value');
-        //$('tr#edgeType').hide();
-        console.log('tr#' + edgeType);
-        console.log(edgeType);
         $('tr#' + edgeType).remove();
+        var filter  = "edge[type = \'controls-" + edgeType + "\']";
+        var selector = cy.filter(filter);
+        //cy.hide(selector);
+        selector.hide();
       });
     </script>
