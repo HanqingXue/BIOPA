@@ -64,7 +64,7 @@
             <ul class="nav nav-tabs " id="leftControlMenu" role="tabelist" style="margin-bottom: 0px " id="control-board">
               <li  class="active" id="li-detail"><a  href="#" id="node-detail" role="tab" data-toggle="tab" aria-controls="Detail" aria-expanded="true"><span class="fui-menu-16"></span>Detail</a></li>
               <li id="li-setting"><a  href="#" id="node-setting" role="tab" data-toggle="tab" aria-controls="Setting" aria-expanded="false"><span class="fui-menu-16"></span>Setting</a></li>
-              <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Context" aria-expanded="false"><span>Context</span></a></li>
+              <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Filter" aria-expanded="false"><span>Filter</span></a></li>
             </ul>
 
             <div class="tab-content" style="overflow: hidden; border-top: 0px">
@@ -123,7 +123,11 @@
                   </table>
                 </div><!---edge Type-->
               </div><!--#setting-->
-              <div class="tab-pane fade"  role="tabpanel" id="Context" aria-labelledby="node-context" ><p>hello3</p></div>
+              <div class="tab-pane fade"  role="tabpanel" id="Filter" aria-labelledby="node-context" >
+                <h6>Number of Gene</h6>
+                <div id="slider"></div>
+                <h6>Numeer of node</h6>
+              </div><!--Filter -->
             </div><!-- .tab-content-->
           </div><!--.span4-->
           <div class="hero-unit span8" style="padding: 10px">
@@ -202,6 +206,7 @@
       */
       var cy = new Object();
       var hello = 'hello';
+      var clickMenu = new Object();
     </script>>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
@@ -308,97 +313,98 @@
             }// end-for-index 
           }//end-else
         });//end-cy.on
-
-
-        var selectAllOfTheSameType = function(ele) {
-            cy.elements().unselect();
-            if(ele.isNode()) {
-                cy.nodes().select();
-            }
-            else if(ele.isEdge()) {
-                cy.edges().select();
-            }
-        };
-      
-        cy.contextMenus({
-            menuItems: [
-                {
-                    id: 'remove',
-                    title: 'remove',
-                    selector: 'node, edge',
-                    onClickFunction: function (event) {
-                      event.cyTarget.remove();
-                    },
-                    hasTrailingDivider: true
-                  },
-                  {
-                    id: 'hide',
-                    title: 'hide',
-                    selector: '*',
-                    onClickFunction: function (event) {
-                      event.cyTarget.hide();
-                    },
-                    disabled: false
-                  },
-                  {
-                    id: 'add-node',
-                    title: 'add node',
-                    coreAsWell: true,
-                    onClickFunction: function (event) {
-                      var data = {
-                          group: 'nodes'
-                      };
-                      
-                      cy.add({
-                          data: data,
-                          position: {
-                              x: event.cyPosition.x,
-                              y: event.cyPosition.y
-                          }
-                      });
-                    }
-                  },
-                  {
-                    id: 'remove-selected',
-                    title: 'remove selected',
-                    coreAsWell: true,
-                    onClickFunction: function (event) {
-                      cy.$(':selected').remove();
-                    }
-                  },
-                  {
-                    id: 'select-all-nodes',
-                    title: 'select all nodes',
-                    selector: 'node',
-                    onClickFunction: function (event) {
-                      selectAllOfTheSameType(event.cyTarget);
-                    }
-                  },
-                  {
-                    id: 'select-all-edges',
-                    title: 'select all edges',
-                    selector: 'edge',
-                    onClickFunction: function (event) {
-                      selectAllOfTheSameType(event.cyTarget);
-                    }
-                  }
-                ],
-                menuItemClasses: ['custom-menu-item'],
-                contextMenuClasses: ['custom-context-menu']
-          });//end-menu
-        //console.log(typeof(cy));
-
       })//get json
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
     <script>
-      $(function() {
-        $('#num-state-change-of').text(cy.filter("edge[type = 'controls-state-change-of']").length);
-        $('#num-expression-of').text(cy.filter("edge[type = 'controls-expression-of']").length);
-      });
+      function selectAllOfTheSameType(ele) {
+        cy.elements().unselect();
+        if(ele.isNode()) {
+            cy.nodes().select();
+        }
+        else if(ele.isEdge()) {
+            cy.edges().select();
+        }
+      }
     </script>
     <script>
-      
+      $(function() {
+        cy.contextMenus({
+          menuItems: [
+              {
+                  id: 'remove',
+                  title: 'remove',
+                  selector: 'node, edge',
+                  onClickFunction: function (event) {
+                    event.cyTarget.remove();
+                  },
+                  hasTrailingDivider: true
+                },
+                {
+                  id: 'hide',
+                  title: 'hide',
+                  selector: '*',
+                  onClickFunction: function (event) {
+                    event.cyTarget.hide();
+                  },
+                  disabled: false
+                },
+                {
+                  id: 'add-node',
+                  title: 'add node',
+                  coreAsWell: true,
+                  onClickFunction: function (event) {
+                    var data = {
+                        group: 'nodes'
+                    };
+                    
+                    cy.add({
+                        data: data,
+                        position: {
+                            x: event.cyPosition.x,
+                            y: event.cyPosition.y
+                        }
+                    });
+                  }
+                },
+                {
+                  id: 'remove-selected',
+                  title: 'remove selected',
+                  coreAsWell: true,
+                  onClickFunction: function (event) {
+                    cy.$(':selected').remove();
+                  }
+                },
+                {
+                  id: 'select-all-nodes',
+                  title: 'select all nodes',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    selectAllOfTheSameType(event.cyTarget);
+                  }
+                },
+                {
+                  id: 'select-all-edges',
+                  title: 'select all edges',
+                  selector: 'edge',
+                  onClickFunction: function (event) {
+                    selectAllOfTheSameType(event.cyTarget);
+                  }
+                },
+                {
+                  id: 'change-color',
+                  title: 'change color',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    selectAllOfTheSameType(event.cyTarget);
+                  }
+                }
+              ],
+              menuItemClasses: ['custom-menu-item'],
+              contextMenuClasses: ['custom-context-menu']
+          });//end-menu
+        //console.log(typeof(cy));
+      });
     </script>
     <script>
       $('#btn-screen-fit').click(function() {
@@ -449,14 +455,14 @@
     <script>
       $('#node-setting').click(function(){
         $('#Detail').removeClass('active in');
-        $('#Context').removeClass('active in');
+        $('#Filter').removeClass('active in');
         $('#Setting').addClass('active in');
       });
     </script>
     <script>
       $('#node-detail').click(function(){
         $('#Setting').removeClass('active in');
-        $('#Context').removeClass('active in');
+        $('#Filter').removeClass('active in');
         $('#Detail').addClass('active in');
         $('#Detail-table').show();
   
@@ -465,7 +471,7 @@
     <script>
       $('#node-context').click(function(){
         $('#Detail').removeClass('active in');
-        $('#Context').addClass('active in');
+        $('#Filter').addClass('active in');
         $('#Setting').removeClass('active in');
       });
     </script>
