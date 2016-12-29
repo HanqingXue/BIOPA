@@ -141,11 +141,13 @@
                   <table id = 'eles-style'>
                     <tbody>
                       <tr>
-                        <td colspan="2"><h5>Node style</h5></td>
+                        <td colspan="4"><h5>Node style</h5></td>
                       </tr>
                       <tr>
-                        <th >Node Type</th>
-                        <td ><!-- Single button -->
+                        <th class="span2" style="line-height: 50px">Shape</th>
+                        <td class="span4" style="line-height: 50px">Shape Name</td>
+                        <td class="span3" style="line-height: 50px">Node icon</td>
+                        <td class="span3"><!-- Single button -->
                           <!-- Inverted skin  -->
                             <div class="btn-group"">
                               <button class="btn " type="button" data-toggle="dropdown" style="background-color: '#f9f9f9'">
@@ -156,7 +158,7 @@
                                 <li><a href="#"  value="rectangle">Rectangle</a></li>
                                 <li><a href="#"  value="triangle">Triangle</a></li>
                                 <li><a href="#"  value="pentagon">Pentagon</a></li>
-                                <li><a href="#"  value="haxgon">Hexgon</a></li>
+                                <li><a href="#"  value="hexgon">Hexgon</a></li>
                                 <li><a href="#"  value="heptagon">Heptagon</a></li>
                                 <li><a href="#"  value="octagon">Octagon</a></li>
                                 <li><a href="#"  value="star">Star</a></li></li>
@@ -168,22 +170,27 @@
                         </td>
                       </tr>
                       <tr>
-                        <th class="span9">Node Color</th>
-                        <td class="span3">
+                        <th style="line-height: 50px">Color</th>
+                        <td>
+                          <div style="background-color: black;color: black; height: 48px"  id="colorBoard"> hllow</div>
+                        </td>
+                        <td style="line-height: 50px">
+                          #000000
+                        </td>
+                        <td ">
                           <div class="btn-group" ">
                             <button class="btn " id = 'full'><span class="icon-pencil"></span></button>
                           </div>
                         </td>
                       </tr>
-
                       <tr>
-                        <th>Node size</th>
-                        <td>
+                        <th>Size</th>
+                        <td colspan="3">
                          <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                         </td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="text-align: right;" class=""><a class="btn .btn-default" id="apply">Apply</a></th>
+                        <th colspan="4" style="text-align: right;" class=""><a class="btn .btn-default" id="apply">Apply</a></th>
                       </tr>
                     </tbody>              
                   </table>
@@ -389,7 +396,8 @@
            formatter: function(value) {
              return 'Current value: ' + value;
            }
-        });        
+        });  
+        //$('#colorBoard').style('background-color:'+"\'"+nodeColor+"\'");      
       });
     </script>
     <script>
@@ -474,8 +482,62 @@
                   onClickFunction: function (event) {
                     //selectAllOfTheSameType(event.cyTarget);
                     showPicker();
+                  },
+                  hasTrailingDivider: true
+                },
+                {
+                  id: 'link kegg',
+                  title: 'KEGG Link',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    var evtTarget = event.cyTarget;
+                    if (evtTarget.id() != 'undefined') {
+                      console.log(evtTarget.id());
+                      linkUrl = "http://www.kegg.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&dbkey=kegg&keywords=" + evtTarget.id();
+                      window.open(linkUrl);
+                    }
                   }
-                }
+                },
+                {
+                  id: 'link common Pathway',
+                  title: 'Pathway common DB Link',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    var evtTarget = event.cyTarget;
+                    if (evtTarget.id() != 'undefined') {
+                      console.log(evtTarget.id());
+                      linkUrl = "http://www.pathwaycommons.org/pc/webservice.do?version=3.0&snapshot_id=GLOBAL_FILTER_SETTINGS&record_type=PATHWAY&q="+evtTarget.id()+"&format=html&cmd=get_by_keyword"
+                      window.open(linkUrl);
+                    }
+                  }
+                },
+                {
+                  id: 'link reactome',
+                  title: 'Reactome DB link',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    var evtTarget = event.cyTarget;
+                    if (evtTarget.id() != 'undefined') {
+                      console.log(evtTarget.id());
+                      linkUrl = "http://www.reactome.org/content/query?q="+event.cyTarget+"&species=Homo+sapiens&species=Entries+without+species&cluster=true"
+                      window.open(linkUrl);
+                    }
+                  }
+                },
+                {
+                  id: 'link wikipathways',
+                  title: 'Wikipathways DB link',
+                  selector: 'node',
+                  onClickFunction: function (event) {
+                    var evtTarget = event.cyTarget;
+                    if (evtTarget.id() != 'undefined') {
+                      console.log(evtTarget.id());
+
+                      linkUrl = "http://www.wikipathways.org//index.php?query="+event.cyTarget+"&title=Special%3ASearchPathways&doSearch=1&sa=Search"
+                      window.open(linkUrl);
+                    }
+                  }
+                },
               ],
               menuItemClasses: ['custom-menu-item'],
               contextMenuClasses: ['custom-context-menu']
