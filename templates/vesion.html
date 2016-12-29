@@ -137,19 +137,11 @@
               </div><!--#setting-->
               <div class="tab-pane fade"  role="tabpanel" id="Filter" aria-labelledby="node-context" >
 
-                <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive" style="height: 470px">
-                  <table>
+                <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive" style="height: 500px">
+                  <table id = 'eles-style'>
                     <tbody>
                       <tr>
                         <td colspan="2"><h5>Node style</h5></td>
-                      </tr>
-                      <tr>
-                        <th class="span9">Node color</th>
-                        <td class="span3">
-                          <div class="btn-group" ">
-                            <button class="btn " id = 'full'><span class="icon-pencil"></span></button>
-                          </div>
-                        </td>
                       </tr>
                       <tr>
                         <th >Node Type</th>
@@ -159,16 +151,31 @@
                               <button class="btn " type="button" data-toggle="dropdown" style="background-color: '#f9f9f9'">
                                 <span class="icon-cog"></span>
                               </button>
-                              <ul class="dropdown-menu " role="menu">
-                                <li><a href="#">icon1</a></li>
-                                <li><a href="#">icon2</a></li>
-                                <li><a href="#">icon3</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                              <ul class="dropdown-menu " role="menu" id="Shape">
+                                <li><a href="#"  value="ellipse">Ellipse</a></li>
+                                <li><a href="#"  value="rectangle">Rectangle</a></li>
+                                <li><a href="#"  value="triangle">Triangle</a></li>
+                                <li><a href="#"  value="pentagon">Pentagon</a></li>
+                                <li><a href="#"  value="haxgon">Hexgon</a></li>
+                                <li><a href="#"  value="heptagon">Heptagon</a></li>
+                                <li><a href="#"  value="octagon">Octagon</a></li>
+                                <li><a href="#"  value="star">Star</a></li></li>
+                                <li><a href="#"  value= "diamond">Diamond</a></li>
+                                <li><a href="#"  value="vee">Vee</a></li>
+                                <li><a href="#"  value="rhomboid">Rhomboid</a></li>
                               </ul>
                             </div>
                         </td>
                       </tr>
+                      <tr>
+                        <th class="span9">Node Color</th>
+                        <td class="span3">
+                          <div class="btn-group" ">
+                            <button class="btn " id = 'full'><span class="icon-pencil"></span></button>
+                          </div>
+                        </td>
+                      </tr>
+
                       <tr>
                         <th>Node size</th>
                         <td>
@@ -176,7 +183,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th colspan="3" style="text-align: right;"><button class="btn">Apply</button></th>
+                        <th colspan="3" style="text-align: right;" class=""><a class="btn .btn-default" id="apply">Apply</a></th>
                       </tr>
                     </tbody>              
                   </table>
@@ -259,8 +266,8 @@
       Define the global variables
       */
       var cy = new Object();
-      var hello = 'hello';
       var clickMenu = new Object();
+      var nodeColor = '#eecccc';
     </script>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
@@ -279,7 +286,7 @@
                 'content': 'data(id)',
                 'font-size': 8,
                 'background-color': '#ff99cc',//#96d9f6
-                'size': 4
+                'size': 12
               }
             },
             {
@@ -288,7 +295,7 @@
                 'content': 'data(id)',
                 'font-size': 8,
                 'background-color': '#96d9f6',//#96d9f6
-                'size': 4
+                'size': 8
               }
             },
             {
@@ -351,6 +358,7 @@
             $('#li-content').removeClass('active');
             $('#Detail-table').show();
             $('Detail-tips').hide();
+            //$('#eles-style').hide();
             $('#arrow').hide();
             $('#help-text').hide();
             $('#gene-title').text(node.id());
@@ -561,6 +569,8 @@
         cy.$('node').show();
         cy.$('edge').show();
         console.log('hehe');
+
+        
       })
     </script>
     <script>
@@ -580,6 +590,10 @@
         $('#Filter').addClass('active in');
         $('#Setting').removeClass('active in');
         //$('')
+        $('#Deatil-table').hide();
+
+        console.log(cy.$(':selected'));
+        //cy.$(':selected').style('weight', 2);
       }
     </script>
     <script>
@@ -605,8 +619,9 @@
             hide: function () {
             
             },
-            change: function() {
-                
+            change: function(color) {
+              nodeColor = color.toHexString();
+              console.log(nodeColor);
             },
             palette: [
                 ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
@@ -625,4 +640,17 @@
                 "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
             ]
         });
+    </script>
+    <script>
+      function test() {
+        var node = nodeColor;
+        console.log('nodeColor'+ node);
+        return 0;
+      }
+    </script>
+    <script>
+      $('#apply').click(function() {
+        console
+        cy.$(':selected').style('background-color', nodeColor);
+      });
     </script>
