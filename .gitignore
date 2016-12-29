@@ -1,3 +1,4 @@
 /temp/*
 /.gitignore
+/templates/test.html
 
