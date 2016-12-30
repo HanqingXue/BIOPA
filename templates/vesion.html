@@ -136,9 +136,8 @@
                 </div><!---edge Type-->
               </div><!--#setting-->
               <div class="tab-pane fade"  role="tabpanel" id="Filter" aria-labelledby="node-context" >
-
                 <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive" style="height: 500px">
-                  <table id = 'eles-style'>
+                  <table id = 'node-style'>
                     <tbody>
                       <tr>
                         <td colspan="4"><h5>Node style</h5></td>
@@ -179,7 +178,7 @@
                         <td style="line-height: 50px" id="colorCode">
                           #000000
                         </td>
-                        <td ">
+                        <td>
                           <div class="btn-group" ">
                             <a href="" class="btn .btn-default icon-pencil" id="full"><span class="icon-pencil"></span></a>
                           </div>
@@ -188,16 +187,27 @@
                       <tr>
                         <th>Size</th>
                         <td colspan="3">
-                         <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                         <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="20" data-slider-max="100" data-slider-step="1" data-slider-value="30"/>
                         </td>
                       </tr>
                       <tr>
-                        <th colspan="4" style="text-align: right;" class=""><a class="btn .btn-default" id="apply">Apply</a></th>
+                        <th colspan="4"><h5>Edge Style</h5></th>
+                      </tr>
+                      <tr >
+                        <th style="line-height: 50px">Style</th>
+                        <td style="line-height: 50px">line icon</td>
+                        <td style="line-height: 50px">line text</td>
+                        <td><a href="" class="btn btn-default "><span class="icon-cog"></span></a></td>
+                      </tr>
+                      <tr>
+                        <th style="line-height: 50px">Color</th>
+                        <td style="line-height: 50px">Color</td>
+                        <td style="line-height: 50px">Color text</td>
+                        <td><a href="" class="btn btn-default "><span class="icon-pencil"></span></a></td>
                       </tr>
                     </tbody>              
                   </table>
                 </div><!--#color-picker-->
-                
               </div><!--Filter -->
             </div><!-- .tab-content-->
           </div><!--.span4-->
@@ -356,7 +366,6 @@
               cy.trigger('boxstart');
           } else {
             var node = event.cyTarget;
-            console.log(node);
             nodeIndex = '#' + node.id();
             cy.zoom(2);
             cy.center(nodeIndex);
@@ -366,7 +375,6 @@
             $('#li-content').removeClass('active');
             $('#Detail-table').show();
             $('Detail-tips').hide();
-            //$('#eles-style').hide();
             $('#arrow').hide();
             $('#help-text').hide();
             $('#gene-title').text(node.id());
@@ -491,7 +499,6 @@
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
                     if (evtTarget.id() != 'undefined') {
-                      console.log(evtTarget.id());
                       linkUrl = "http://www.kegg.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&dbkey=kegg&keywords=" + evtTarget.id();
                       window.open(linkUrl);
                     }
@@ -504,7 +511,6 @@
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
                     if (evtTarget.id() != 'undefined') {
-                      console.log(evtTarget.id());
                       linkUrl = "http://www.pathwaycommons.org/pc/webservice.do?version=3.0&snapshot_id=GLOBAL_FILTER_SETTINGS&record_type=PATHWAY&q="+evtTarget.id()+"&format=html&cmd=get_by_keyword"
                       window.open(linkUrl);
                     }
@@ -517,7 +523,6 @@
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
                     if (evtTarget.id() != 'undefined') {
-                      console.log(evtTarget.id());
                       linkUrl = "http://www.reactome.org/content/query?q="+event.cyTarget+"&species=Homo+sapiens&species=Entries+without+species&cluster=true"
                       window.open(linkUrl);
                     }
@@ -530,8 +535,6 @@
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
                     if (evtTarget.id() != 'undefined') {
-                      console.log(evtTarget.id());
-
                       linkUrl = "http://www.wikipathways.org//index.php?query="+event.cyTarget+"&title=Special%3ASearchPathways&doSearch=1&sa=Search"
                       window.open(linkUrl);
                     }
@@ -541,7 +544,6 @@
               menuItemClasses: ['custom-menu-item'],
               contextMenuClasses: ['custom-context-menu']
           });//end-menu
-        //console.log(typeof(cy));
       });
     </script>
     <script>
@@ -629,14 +631,10 @@
       $('#btn-showall').click(function() {
         cy.$('node').show();
         cy.$('edge').show();
-        console.log('hehe');
-
-        
       })
     </script>
     <script>
       $('a.icon-remove').click(function() {
-        console.log('click me');
         var edgeType = $(this).attr('value');
         $('tr#' + edgeType).remove();
         //$('#num-'+ edgeType).text();
@@ -654,7 +652,6 @@
         $('#Deatil-table').hide();
 
         console.log(cy.$(':selected'));
-        //cy.$(':selected').style('weight', 2);
       }
     </script>
     <script>
@@ -673,14 +670,12 @@
               $('#colorCode').text(nodeColor);
               $('#colorBoard').css("background-color", nodeColor);
               $('#colorBoard').css('color', nodeColor);
+              cy.$(':selected').style('background-color', nodeColor);
                 
             },
             show: function (color) {
               nodeColor = color.toHexString();
               $('#colorCode').text(nodeColor);
-              $('#colorBoard').css("background-color", nodeColor);
-              $('#colorBoard').css('color', nodeColor);
-
             },
             beforeShow: function () {
             
@@ -690,7 +685,6 @@
             },
             change: function(color) {
               nodeColor = color.toHexString();
-              console.log(nodeColor);
               $('#colorCode').text(nodeColor);
               $('#colorBoard').css("background-color", nodeColor);
               $('#colorBoard').css('color', nodeColor);
@@ -714,13 +708,6 @@
         });
     </script>
     <script>
-      function test() {
-        var node = nodeColor;
-        console.log('nodeColor'+ node);
-        return 0;
-      }
-    </script>
-    <script>
       $(function() {
         var bgcolor = "background-color:"+"\'" + nodeColor +"\'";
         $('#colorBoard').css("background-color", nodeColor);
@@ -730,25 +717,19 @@
     </script>
     <script>
       $("#Shape li a").click(function() {
-        console.log( $(this).attr('value'));
         var imgPath = "\'img/"+ $(this).attr('value') + ".png\'";
         var shape = $(this).attr('value');
         var path = "/static/img/" +  shape + '.png'
         $("#imgShape").attr("src", path);
         $("#imgShape").css('text-align', 'right');
         $('#shapeText').text(shape);
+        cy.$(':selected').style('shape', shape);
       });
     </script>
     <script>
-      $('#apply').click(function() {
-        console.log($('#imgShape').text());
-        console.log('hello');
-        console.log(cy.$(':selected'));
-        //console.log(cy.$('node#:selected'));
-        var colorCode = $('#colorCode').text();
-        var nodeShape = $('#shapeText').text();
-        console.log(nodeShape);
-        cy.$(':selected').style('background-color', colorCode);
-        cy.$(':selected').style('shape', nodeShape);
+    $('#ex1').slider()
+      .on('slide', function(ev){
+       cy.$('node:selected').style('height', ev.value);
+       cy.$('node:selected').style('width', ev.value);
       });
     </script>
