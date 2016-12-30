@@ -76,7 +76,7 @@
             <ul class="nav nav-tabs " id="leftControlMenu" role="tabelist" style="margin-bottom: 0px " id="control-board">
               <li  class="active" id="li-detail"><a  href="#" id="node-detail" role="tab" data-toggle="tab" aria-controls="Detail" aria-expanded="true"><span class="fui-menu-16"></span>Detail</a></li>
               <li id="li-setting"><a  href="#" id="node-setting" role="tab" data-toggle="tab" aria-controls="Setting" aria-expanded="false"><span class="fui-menu-16"></span>Setting</a></li>
-              <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Filter" aria-expanded="false"><span>Filter</span></a></li>
+              <li id="li-content"><a  href="#" id="node-context" role="tab" data-toggle="tab" aria-controls="Filter" aria-expanded="false"><span>Style</span></a></li>
             </ul>
 
             <div class="tab-content" style="overflow: hidden; border-top: 0px">
@@ -145,9 +145,11 @@
                       </tr>
                       <tr>
                         <th class="span2" style="line-height: 50px">Shape</th>
-                        <td class="span4" style="line-height: 50px">Shape Name</td>
-                        <td class="span3" style="line-height: 50px">Node icon</td>
-                        <td class="span3"><!-- Single button -->
+                        <td class="span3" style="line-height: 50px">
+                          <img src="{{ static_url('img/ellipse.png')}}" id="imgShape">
+                        </td>
+                        <td class="span3" style="line-height: 50px" id="shapeText">Ellipse</td>
+                        <td class="span4"><!-- Single button -->
                           <!-- Inverted skin  -->
                             <div class="btn-group"">
                               <button class="btn " type="button" data-toggle="dropdown" style="background-color: '#f9f9f9'">
@@ -174,12 +176,12 @@
                         <td>
                           <div style="background-color: black;color: black; height: 48px"  id="colorBoard"> hllow</div>
                         </td>
-                        <td style="line-height: 50px">
+                        <td style="line-height: 50px" id="colorCode">
                           #000000
                         </td>
                         <td ">
                           <div class="btn-group" ">
-                            <button class="btn " id = 'full'><span class="icon-pencil"></span></button>
+                            <a href="" class="btn .btn-default icon-pencil" id="full"><span class="icon-pencil"></span></a>
                           </div>
                         </td>
                       </tr>
@@ -252,7 +254,6 @@
             <p>Molecule Data</p>
           </div><!--.home-->
           <div class="tab-pane fade" role="tabpanel" id="profile" aria-labelledby="profile-tab">
-            <p>Expression Data</p>
             <div id="plotly-div"></div>
           </div><!--.profile-->
           <div class="tab-pane fade" role="tabpanel" id="dropdown1" aria-labelledby="dropdown1-tab">
@@ -387,7 +388,6 @@
     <script src="{{ static_url('js/heatmap.js')}}"></script>
     <script>
       $(function(){
-
         var TypeOne  = cy.filter("edge[type = \'controls-" + 'state-change-of' + "\']");
         var TypeTwo = cy.filter("edge[type = \'controls-" + 'expression-of' + "\']")
         $('#num-state-change-of').text(TypeOne.length);
@@ -397,7 +397,6 @@
              return 'Current value: ' + value;
            }
         });  
-        //$('#colorBoard').style('background-color:'+"\'"+nodeColor+"\'");      
       });
     </script>
     <script>
@@ -477,7 +476,7 @@
                 },
                 {
                   id: 'change-color',
-                  title: 'change color',
+                  title: 'change style',
                   selector: 'node',
                   onClickFunction: function (event) {
                     //selectAllOfTheSameType(event.cyTarget);
@@ -670,10 +669,18 @@
             preferredFormat: "hex",
             localStorageKey: "spectrum.demo",
             move: function (color) {
+              nodeColor = color.toHexString();
+              $('#colorCode').text(nodeColor);
+              $('#colorBoard').css("background-color", nodeColor);
+              $('#colorBoard').css('color', nodeColor);
                 
             },
-            show: function () {
-            
+            show: function (color) {
+              nodeColor = color.toHexString();
+              $('#colorCode').text(nodeColor);
+              $('#colorBoard').css("background-color", nodeColor);
+              $('#colorBoard').css('color', nodeColor);
+
             },
             beforeShow: function () {
             
@@ -684,6 +691,9 @@
             change: function(color) {
               nodeColor = color.toHexString();
               console.log(nodeColor);
+              $('#colorCode').text(nodeColor);
+              $('#colorBoard').css("background-color", nodeColor);
+              $('#colorBoard').css('color', nodeColor);
             },
             palette: [
                 ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
@@ -711,8 +721,34 @@
       }
     </script>
     <script>
+      $(function() {
+        var bgcolor = "background-color:"+"\'" + nodeColor +"\'";
+        $('#colorBoard').css("background-color", nodeColor);
+        $('#colorBoard').css("color", nodeColor);
+        $('#colorCode').css("text", nodeColor);
+      })
+    </script>
+    <script>
+      $("#Shape li a").click(function() {
+        console.log( $(this).attr('value'));
+        var imgPath = "\'img/"+ $(this).attr('value') + ".png\'";
+        var shape = $(this).attr('value');
+        var path = "/static/img/" +  shape + '.png'
+        $("#imgShape").attr("src", path);
+        $("#imgShape").css('text-align', 'right');
+        $('#shapeText').text(shape);
+      });
+    </script>
+    <script>
       $('#apply').click(function() {
-        console
-        cy.$(':selected').style('background-color', nodeColor);
+        console.log($('#imgShape').text());
+        console.log('hello');
+        console.log(cy.$(':selected'));
+        //console.log(cy.$('node#:selected'));
+        var colorCode = $('#colorCode').text();
+        var nodeShape = $('#shapeText').text();
+        console.log(nodeShape);
+        cy.$(':selected').style('background-color', colorCode);
+        cy.$(':selected').style('shape', nodeShape);
       });
     </script>
