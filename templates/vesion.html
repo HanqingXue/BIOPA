@@ -195,15 +195,40 @@
                       </tr>
                       <tr >
                         <th style="line-height: 50px">Style</th>
-                        <td style="line-height: 50px">line icon</td>
-                        <td style="line-height: 50px">line text</td>
-                        <td><a href="" class="btn btn-default "><span class="icon-cog"></span></a></td>
+                        <td style="line-height: 50px">
+                          <img src=" {{ static_url('img/solid.png') }}" id="imgLine">
+                        </td>
+                        <td style="line-height: 50px" id="lineText">Solid</td>
+                        <td>
+                            <div class="btn-group"">
+                              <button class="btn " type="button" data-toggle="dropdown" style="background-color: '#f9f9f9'">
+                                <span class="icon-cog"></span>
+                              </button>
+                              <ul class="dropdown-menu " role="menu" id="lineStyle">
+                                <li><a href="#"  value="solid">Solid</a></li>
+                                <li><a href="#"  value="dotted">Dotted</a></li>
+                                <li><a href="#"  value="dashed">Dashed</a></li>
+                              </ul>
+                            </div>
+                        </td>
                       </tr>
                       <tr>
                         <th style="line-height: 50px">Color</th>
-                        <td style="line-height: 50px">Color</td>
-                        <td style="line-height: 50px">Color text</td>
-                        <td><a href="" class="btn btn-default "><span class="icon-pencil"></span></a></td>
+                        <td style="line-height: 50px">
+                          <div style="background-color: black;color: black; height: 48px"  id="lineColorBoard"> hllow</div>
+                        </td>
+                        <td style="line-height: 50px" id="lineColorCode">#000000</td>
+                        <td>
+                          <div class="btn-group" ">
+                            <a href="" class="btn .btn-default icon-pencil" id="full2"><span class="icon-pencil"></span></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th style="line-height: 50px">Size</th>
+                        <td colspan="3">
+                            <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
+                        </td>
                       </tr>
                     </tbody>              
                   </table>
@@ -285,7 +310,7 @@
       */
       var cy = new Object();
       var clickMenu = new Object();
-      var nodeColor = '#eecccc';
+      var nodeColor = '#000000';
     </script>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
@@ -404,7 +429,12 @@
            formatter: function(value) {
              return 'Current value: ' + value;
            }
-        });  
+        });
+        $('#ex2').slider({
+           formatter: function(value) {
+             return 'Current value: ' + value;
+           }
+        });    
       });
     </script>
     <script>
@@ -481,16 +511,6 @@
                   onClickFunction: function (event) {
                     selectAllOfTheSameType(event.cyTarget);
                   }
-                },
-                {
-                  id: 'change-color',
-                  title: 'change style',
-                  selector: 'node',
-                  onClickFunction: function (event) {
-                    //selectAllOfTheSameType(event.cyTarget);
-                    showPicker();
-                  },
-                  hasTrailingDivider: true
                 },
                 {
                   id: 'link kegg',
@@ -644,19 +664,8 @@
       });
     </script>
     <script>
-      function showPicker() {
-        $('#Detail').removeClass('active in');
-        $('#Filter').addClass('active in');
-        $('#Setting').removeClass('active in');
-        //$('')
-        $('#Deatil-table').hide();
-
-        console.log(cy.$(':selected'));
-      }
-    </script>
-    <script>
       $('#full').spectrum({
-            color: "#ECC",
+            color: "#000000#",
             showInput: true,
             className: "full-spectrum",
             showInitial: true,
@@ -670,7 +679,7 @@
               $('#colorCode').text(nodeColor);
               $('#colorBoard').css("background-color", nodeColor);
               $('#colorBoard').css('color', nodeColor);
-              cy.$(':selected').style('background-color', nodeColor);
+              cy.$('node:selected').style('background-color', nodeColor);
                 
             },
             show: function (color) {
@@ -708,6 +717,53 @@
         });
     </script>
     <script>
+      $('#full2').spectrum({
+            color: "#000000",
+            showInput: true,
+            className: "full-spectrum",
+            showInitial: true,
+            showPalette: true,
+            showSelectionPalette: true,
+            maxSelectionSize: 10,
+            preferredFormat: "hex",
+            localStorageKey: "spectrum.demo",
+            move: function (color) {
+              //nodeColor = color.toHexString();
+              $('#lineColorCode').text(color.toHexString());
+              $('#lineColorBoard').css('color', color.toHexString());
+              $('#lineColorBoard').css('background-color', color.toHexString())
+              cy.$('edge:selected').style('line-color', color.toHexString());
+                
+            },
+            show: function (color) {
+            },
+            beforeShow: function () {
+            
+            },
+            hide: function () {
+            
+            },
+            change: function(color) {
+            },
+            palette: [
+                ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+                "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+                ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+                "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+                ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+                "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+                "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+                "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+                "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+                "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+                "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+                "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+                "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+                "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+            ]
+        });
+    </script>
+    <script>
       $(function() {
         var bgcolor = "background-color:"+"\'" + nodeColor +"\'";
         $('#colorBoard').css("background-color", nodeColor);
@@ -723,13 +779,32 @@
         $("#imgShape").attr("src", path);
         $("#imgShape").css('text-align', 'right');
         $('#shapeText').text(shape);
-        cy.$(':selected').style('shape', shape);
+        cy.$('node:selected').style('shape', shape);
       });
+    </script>
+    <script>
+      $("#lineStyle li a").click(function () {
+        console.log($(this).attr('value'));
+        var imgPath = "\'img/"+ $(this).attr('value') + ".png\'";
+        var lineStyle  = $(this).attr('value');
+        var path = "/static/img/" + lineStyle + '.png'
+        console.log(path);
+        $('#imgLine').attr('src', path);
+        $('#imgLine').css('text-align', 'right');
+        $('#lineText').text(lineStyle);
+        cy.$('edge:selected').style('line-style', lineStyle);
+     });
     </script>
     <script>
     $('#ex1').slider()
       .on('slide', function(ev){
        cy.$('node:selected').style('height', ev.value);
        cy.$('node:selected').style('width', ev.value);
+      });
+    </script>
+    <script>
+      $('#ex2').slider()
+      .on('slide', function(ev){
+        cy.$('edge:selected').style('width', ev.value);
       });
     </script>
