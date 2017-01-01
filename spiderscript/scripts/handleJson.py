@@ -16,6 +16,7 @@ class HandleJson(object):
 			net = netfile.read()
 			netParsed = json.loads(net)
 			nodes = set()
+			geneList = open('gene.txt', 'w')
 			'''
 			Label edges
 			'''
@@ -29,16 +30,21 @@ class HandleJson(object):
 				else:
 					nodeType = elms['data']['importance']
 					elms['classes'] = nodeType
+					geneid = elms['data']['id']
+					geneList.write("{0}\n".format(geneid))
 			'''
 			save the new json 
 			'''
-			labelNet = open('net_new.json', 'w')
-			json.dump(netParsed, labelNet)
+			#labelNet = open('net_new.json', 'w')
+			#json.dump(netParsed, labelNet)
 		finally:
 			netfile.close()
-
-if __name__ == "__main__":
+def  main():
 	netHandle = HandleJson('net.json')
 	netHandle.run()
+	pass
+
+if __name__ == "__main__":
+	main()
 	pass
 
