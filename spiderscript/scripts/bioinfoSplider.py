@@ -144,15 +144,15 @@ class KEGGSplider(object):
 		values = []
 		for pa in  paPrase.find_all('div'):
 			if pa['style'] == 'margin-left:2em':
-				print pa.text
 				values.append(pa.text)
 			elif pa['style'] == 'width:600px':
-				print pa.a.text
 				keys.append(pa.a.text)
 			else:
 				pass
-		pathwayDict = dict(zip(keys, values))
-		self.pathway[self.gene] = pathwayDict
+		#pathwayDict = dict(zip(keys, values))
+		self.pathway[self.gene] = dict(zip(keys, values))
+		#print self.pathway
+		return 1
 
             
 
@@ -175,7 +175,7 @@ class main(object):
 			
 	def run(self):
 		print 'Splider working'
-		infoList = []
+		infoList = {}
 		jsonaFile = open(self.JSONname, 'w')
 		genes = open(self.genesName)
 		genes = [item[0:-1] for item in genes.readlines()]
@@ -183,13 +183,15 @@ class main(object):
 		try:
 			for gene in genes:
 				print gene
-				splider = geneSplider(gene)
+				splider = KEGGSplider(gene)
 				#print splider
 				if splider.run() == 1:
-					infoList.append(splider.info)
+					print 'ok'
+					infoList[gene] = splider.pathway
+					#infoList.append(splider.pathway)
 				else:
 					continue
-
+			print len(infoList)
 			json.dump(infoList, jsonaFile)
 			print "Splider work done"
 		except :
@@ -199,7 +201,7 @@ class main(object):
 		
 
 if __name__ == "__main__":
-	#main('../files/GSE.json', '../files/gene.txt')
-	splider = KEGGSplider('TP53')
-	splider.run()
-	print splider.pathway
+	main('../files/pathway.json', '../files/gene.txt')
+	#splider = KEGGSplider('TP53')
+	#splider.run()
+	#print splider.pathway

@@ -353,29 +353,32 @@
       var nodeColor = '#000000';
       var tableDetail = new Object();
     </script>
-    <script>
-      $.getJSON("http://localhost:8000/static/json/GSE.json",function(data) {
+      <script> 
+      $.getJSON("http://localhost:8000/static/json/data.json",function(data) {
         tableDetail = data;
+        var count = 0;
         for ( index in data ) {
           $('#deatilGene').append('<tr id="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
-                data[index]['Gene name'],
-                data[index]['Gene Id'],
-                data[index]['Gene name'],
-                data[index]['Genomic Coordinates'],
-                data[index]['HGNC'],
-                data[index]['OMIM'],
-                data[index]['Pfam'],
-                data[index]['Protein Sequence'],
-                data[index]['Swiss-prot'],
-                data[index]['Synonyms'],
-                data[index]['TrEMBL'],
-                data[index]['Transcript'],
-                data[index]['cDNA Sequence'],
-                data[index]['Atlas Genetic Oncology'],
-                data[index]['CCDS'],
-                data[index]['Copy Number'],
-                data[index]['Genome Browsers']));
+                data[index]['gse']['Gene name'],
+                data[index]['gse']['Gene Id'],
+                data[index]['gse']['Gene name'],
+                data[index]['gse']['Genomic Coordinates'],
+                data[index]['gse']['HGNC'],
+                data[index]['gse']['OMIM'],
+                data[index]['gse']['Pfam'],
+                data[index]['gse']['Protein Sequence'],
+                data[index]['gse']['Swiss-prot'],
+                data[index]['gse']['Synonyms'],
+                data[index]['gse']['TrEMBL'],
+                data[index]['gse']['Transcript'],
+                data[index]['gse']['cDNA Sequence'],
+                data[index]['gse']['Atlas Genetic Oncology'],
+                data[index]['gse']['CCDS'],
+                data[index]['gse']['Copy Number'],
+                data[index]['gse']['Genome Browsers']));
+          count += 1;
         }
+        console.log(count);
         $('#deatilGene tr').hide();
         $('#deatilGene tr#tableHead').show();
       });
@@ -458,50 +461,45 @@
           if( evtTarget === cy ){
               cy.trigger('boxstart');
           } else {
-            var node = event.cyTarget;
-            nodeIndex = '#' + node.id();
-            cy.zoom(2);
-            cy.center(nodeIndex);
-            $('#li-detail').addClass('active');
-            $('#li-setting').removeClass('active');
-            $('#li-content').removeClass('active');
-            $('#myTab a:first').tab('show')
-            $('#Detail-table').show();
-            $('Detail-tips').hide();
-            $('#arrow').hide();
-            $('#help-text').hide();
-            $('#gene-title').text(node.id());
-            $("tr#"+node.id()).show();
-            /*
-            for(index in data) {
-              netData = data[index]['data']
-              if(netData['id'] == node.id()){
-                var des = netData['uniprotdesc'];
-                $('#summary td').text(netData['uniprotdesc']);
-                $('#UniProtID a').text(netData['uniprot']);
-                var geneUrl = "http://www.genecards.org/cgi-bin/carddisp.pl?gene="+netData['uniprot']
-                $('#UniProtID a').attr('href', geneUrl);
-                break;
-              }
-            }// end-for-index 
-            */
-            for (index in tableDetail) {
-              if (tableDetail[index]['Gene name'] == node.id() ) {
-                //console.log(tableDetail[index].attr());
-                console.log('hello');
-                var selectNode = tableDetail[index];
-                $('#UniProtID a').text(node.id());
-                $('#CCDS').text(selectNode['CCDS']);
-                $('#GeneID').text(selectNode['Gene Id']);
-                $('#HGNC').text(selectNode['HGNC']);
-                $('#OMIM').text(selectNode['OMIM']);
-                $('#Protein').text(selectNode['Protein Sequence']);
-                $('#cDNA').text(selectNode['cDNA Sequence']);
-                $('#Atlas').text(selectNode['Atlas Genetic Oncology']);
-                $('#Transcript').text(selectNode['Transcript']);
-                $('#Genomic').text(selectNode['Genomic Coordinates']);
-              }
-            }
+  
+            if (event.cyTarget.isNode()) {
+              var node = event.cyTarget;
+              nodeIndex = '#' + node.id();
+              cy.zoom(2);
+              cy.center(nodeIndex);
+              $('#li-detail').addClass('active');
+              $('#li-setting').removeClass('active');
+              $('#li-content').removeClass('active');
+              $('#myTab a:first').tab('show')
+              $('#Detail-table').show();
+              $('Detail-tips').hide();
+              $('#arrow').hide();
+              $('#help-text').hide();
+              $('#gene-title').text(node.id());
+              $("tr#"+node.id()).show();
+              $('#UniProtID a').text(node.id());
+              //console.log(tableDetail[node.id()]['gse']['CCDS']);
+              var geneID  = tableDetail[node.id()]['gse']['Gene Id'];
+              var CCDS    = tableDetail[node.id()]['gse']['CCDS'];
+              var HGNC    = tableDetail[node.id()]['gse']['HGNC'];
+              var OMIM    = tableDetail[node.id()]['gse']['OMIM'];
+              var Protein = tableDetail[node.id()]['gse']['Protein Sequence'];
+              var cDNA    = tableDetail[node.id()]['gse']['cDNA Sequence'];
+              var Atlas   = tableDetail[node.id()]['gse']['Atlas Genetic Oncology'];
+              var Transcript  = tableDetail[node.id()]['gse']['Transcript'];
+              var Genomic     = tableDetail[node.id()]['gse']['Genomic Coordinates'];
+
+              $('#GeneID').text(geneID);
+              $('#CCDS').text(CCDS);
+              $('#HGNC').text(HGNC);
+              $('#OMIM').text(OMIM);
+              $('#Protein').text(Protein);
+              $('#cDNA').text(cDNA);
+              $('#Atlas').text(Atlas);
+              $('#Transcript').text(Transcript);
+              $('#Genomic').text(Genomic);
+              $('#deatilGene tr#'+node.id()).show();
+            }//end of event.cyTarget.isNode()
           }//end-else
         });//end-cy.on
       })//get json
