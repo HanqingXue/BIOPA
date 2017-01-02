@@ -76,7 +76,7 @@ class geneSplider(object):
 					dts =  elm.findAll('dt')
 					#The dd labek store the content in deatil of ovrerview
 					dds =  elm.findAll('dd')
-					#filelds store keys of overview ,infomations were exacted 
+					#fields store keys of overview ,infomations were exacted 
 					#from dt label 
 					fields = [text.text for text in dts if len(text.text) != 0 ]
 					#values store the value of overview, information were exacted
@@ -154,8 +154,81 @@ class KEGGSplider(object):
 		#print self.pathway
 		return 1
 
-            
+class drugSplider(object):
+	"""docstring for drugSplider"""
+	'''
+	Init the drugSplider
+	Args: 
+	gene: string type that stand for the name of gene
+	self: Object self 
+	'''
+	def __init__(self, gene):
+		self.gene = gene
+		self.url = "http://www.kegg.jp/kegg-bin/search?q={}&display=disease&uid=148337620745467&from=drug&target=compound%2bdrug%2bdgroup%2benviron%2bdisease" .format(self.gene)
+		self.info = {}
+		self.run()
 
+	'''
+	Run a instance of drug splider, get the Url of kegg database to 
+	exact rugs and diseases
+	Args:
+		Object self
+	Return:
+	    A dict object
+	example: for gene TP53 
+		For return dicr object:
+		Key:   the disease code such as H000004
+		Value: Name, Description,	Category,  PathwayDrug
+	'''
+	def run(self):
+		print self.url
+		self.content = requests.get(self.url).content
+		drugs = BeautifulSoup(self.content, 'lxml').findAll('table', class_="list1")
+		'''
+		The fields meanings one row in a table,the index of fields
+		defined blow:
+		Index:
+		0 Entry      : the id of disease
+		1 Name       : the name of disease
+		2 Description: the discription of disease
+		3 Category   : the category of disese
+		4 pathway    : the pathway infomation
+		5 Drug       : the drug info
+
+		'''
+		for row in drugs[0].findAll('tr'):#get the row
+
+			fields = row.findAll('td')
+			if len(fields) == 6:
+				Entry         = fields[0].text.strip('\n')
+				Name          = fields[1].text.strip('\n')
+				Description	  = fields[2].text.strip('\n')
+				Category	  = fields[3].text.strip('\n')
+				Pathway	      = fields[4].text.strip('\n')
+				Drug	      = fields[5].text.strip('\n')
+
+				'''
+				Define the return dict object of splider, this nested 
+				dict object
+				For out layer:
+					key: the Entry 
+					value: a dict which include the Name, Description, Category
+					, pathway, Drug
+				For in layer:
+					key:  Name, Description, Category, pathway, Drug
+					value: the detail info about this field which exact from origin table
+				'''
+				self.info['gene'] = self.gene
+				self.info[Entry] = {}#out layer
+				self.info[Entry]['Name']        = Name#in layer
+				self.info[Entry]['Description'] = Description#in layer
+				self.info[Entry]['Category']    = Category #in layer
+				self.info[Entry]['Pathway']     = Pathway#in layer
+				self.info[Entry]['Drug']        = Drug#in layer
+
+			else:
+				continue
+			return 1
 
 class main(object):
 	"""Exact multigene overview information from network and store in the Json files"""
@@ -183,25 +256,20 @@ class main(object):
 		try:
 			for gene in genes:
 				print gene
-				splider = KEGGSplider(gene)
+				splider = drugSplider(gene)
 				#print splider
 				if splider.run() == 1:
 					print 'ok'
-					infoList[gene] = splider.pathway
+					infoList[gene] = splider.info
 					#infoList.append(splider.pathway)
 				else:
 					continue
-			print len(infoList)
 			json.dump(infoList, jsonaFile)
 			print "Splider work done"
 		except :
 			traceback.print_exc()
 
-
-		
-
 if __name__ == "__main__":
-	main('../files/pathway.json', '../files/gene.txt')
-	#splider = KEGGSplider('TP53')
-	#splider.run()
-	#print splider.pathway
+	main('../files/drug.json', '../files/gene.txt')
+	#main()
+
