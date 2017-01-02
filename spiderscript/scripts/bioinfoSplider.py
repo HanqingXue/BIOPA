@@ -196,6 +196,7 @@ class drugSplider(object):
 		5 Drug       : the drug info
 
 		'''
+		self.info[self.gene] = {}
 		for row in drugs[0].findAll('tr'):#get the row
 
 			fields = row.findAll('td')
@@ -218,17 +219,16 @@ class drugSplider(object):
 					key:  Name, Description, Category, pathway, Drug
 					value: the detail info about this field which exact from origin table
 				'''
-				self.info['gene'] = self.gene
-				self.info[Entry] = {}#out layer
-				self.info[Entry]['Name']        = Name#in layer
-				self.info[Entry]['Description'] = Description#in layer
-				self.info[Entry]['Category']    = Category #in layer
-				self.info[Entry]['Pathway']     = Pathway#in layer
-				self.info[Entry]['Drug']        = Drug#in layer
+				self.info[self.gene][Entry] = {}#out layer
+				self.info[self.gene][Entry]['Name']        = Name#in layer
+				self.info[self.gene][Entry]['Description'] = Description#in layer
+				self.info[self.gene][Entry]['Category']    = Category #in layer
+				self.info[self.gene][Entry]['Pathway']     = Pathway#in layer
+				self.info[self.gene][Entry]['Drug']        = Drug#in layer
 
 			else:
 				continue
-			return 1
+		return 1
 
 class main(object):
 	"""Exact multigene overview information from network and store in the Json files"""
@@ -260,7 +260,7 @@ class main(object):
 				#print splider
 				if splider.run() == 1:
 					print 'ok'
-					infoList[gene] = splider.info
+					infoList[gene] = splider.info[gene]
 					#infoList.append(splider.pathway)
 				else:
 					continue
@@ -269,7 +269,10 @@ class main(object):
 		except :
 			traceback.print_exc()
 
+
+
 if __name__ == "__main__":
 	main('../files/drug.json', '../files/gene.txt')
 	#main()
+	pass
 

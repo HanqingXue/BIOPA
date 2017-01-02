@@ -48,6 +48,34 @@ class mergeJSON(object):
 		Package data together
 		'''
 		json.dump(mergeDict, out)
+
+class mergeDrugData(object):
+	"""docstring for mergeDrugData"""
+	def __init__(self):
+		super(mergeDrugData, self).__init__()
+		self.path  = '../files/'
+		self.run()
+	
+	def run(self):
+		'''
+		originJSON : the data json file include the gse and pathway info
+		drugJSOn   : the data about the drug info
+		'''
+		originJSON = json.load( open('data.json') )
+		drugJSON   = json.load( open(self.path+'drug.json'))
+		'''
+		Add the drug as the atrt of originJSON files
+		indedx of originJSON is gene name
+		'''
+
+		for item in originJSON:
+			originJSON[item]['drug'] = drugJSON[item]
+		'''
+		New a json to pachage info 
+		'''
+		newJSON = open('newData.json', 'w')
+		json.dump(originJSON, newJSON)
 		
 if __name__ == "__main__":
-	mergeJSON('GSE.json', 'pathway.json', 'data')
+	#mergeJSON('GSE.json', 'pathway.json', 'data')
+	drug = mergeDrugData()
