@@ -89,36 +89,58 @@
                   <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
                   <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
                 </div><!--Detail-tips-->
-                <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed" style="display: none; " aria-labelledby="li-detail">
+                <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed table-hover" style="display: none; " aria-labelledby="li-detail">
                   <table style="border: 0">
                     <tbody>
                       <tr>
                         <td colspan="2" ><h5 id="gene-title">Gene Name</h5></td>
                       </tr>
-                      <tr >
-                          <td class="span12" id="summary" colspan="2">
-                          abdaksdfsdfsdafsdakfs
-                          Some intioduction info
-                          </td>
+                      <tr>
+                        <th class="span6">UniProtID</th>
+                        <td id="UniProtID" class="span6"><a href="">null</a></td>
                       </tr>
                       <tr>
-                        <th class="span1" >Aliases</th>
-                        <td class="span10" id="aliases">null</td>
-                      </tr>
-                      <tr>
-                        <th>UniProtID</th>
-                        <td id="UniProtID"><a href="">null</a></td>
-                      </tr>
-                      <tr>
-                        <th>GnneID</th>
+                        <th>Cosmic ID</th>
                         <td id="GeneID">null</td>
+                      </tr>
+                      <tr>
+                        <th>HGNC</th>
+                        <td id="HGNC"></td>
+                      </tr>
+                      <tr>
+                        <th>OMIM</th>
+                        <td id="OMIM"></td>
+                      </tr>
+                      <tr>
+                        <th>Protein Sequence</th>
+                        <td id="Protein"></td>
+                      </tr>
+                      <tr>
+                        <th>cDNA Sequence</th>
+                        <td id="cDNA"></td>
+                      </tr>
+                      <tr>
+                        <th>Atlas Genetic Oncology</th>
+                        <td id="Atlas"></td>
+                      </tr>
+                      <tr>
+                        <th>Transcript</th>
+                        <td id="Transcript"></td>
+                      </tr>
+                      <tr>
+                        <th>CCDS</th>
+                        <td id="CCDS"></td>
+                      </tr>
+                      <tr>
+                        <th>Genomic Coordinates</th>
+                        <td id="Genomic"></td>
                       </tr>
                     </tbody>
                   </table>
                 </div><!--Deatil-table-->
               </div><!--first tab-->
               <div class="tab-pane fade" id="ios" style="overflow: hidden; border-top: 0px">
-                <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed">
+                <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed table-hover">
                   <table >
                     <tbody>
                       <tr>
@@ -140,7 +162,7 @@
                 </div><!---edge Type-->
               </div>
               <div class="tab-pane fade" id="jmeter" style="overflow: hidden; border-top: 0px">
-                <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive" style="height: 500px">
+                <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive table-hover" style="height: 500px">
                   <table id = 'node-style'>
                     <tbody>
                       <tr>
@@ -277,23 +299,15 @@
                Gene Detail
             </a>
           </li>
-          <li><a href="#ios1" data-toggle="tab">iOS</a></li>
-          <li class="dropdown">
-            <a href="#" id="myTabDrop1" class="dropdown-toggle" 
-               data-toggle="dropdown">Java 
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-              <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
-              <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
-            </ul>
-          </li>
+          <li><a href="#jmeter1"  data-toggle="tab">Drug Detail</a></li>
+          <li><a href="#ejb" tabindex="-1" data-toggle="tab">Pathway Detail</a></li>
+          <li><a href="#ios1" data-toggle="tab">Exprssion</a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
           <div class="tab-pane fade in active" id="gene">
-            <div class="table table-striped table-bordered ">
+            <div class="table table-striped table-bordered table-hover ">
               <table id="deatilGene">
-                <tr>
+                <tr id="tableHead">
                   <th>Gene Id</th>
                   <th>Gene name</th>
                   <th>Genomic Coordinates</th>
@@ -309,7 +323,6 @@
                   <th>Atlas Genetic Oncology</th>
                   <th>CCDS</th>
                   <th>Copy Number</th>
-                  <th>Genome Browsers</th>
                 </tr>
               </table>
             </div><!--table-->
@@ -317,7 +330,7 @@
           <div class="tab-pane fade" id="ios1">
             <div id="plotly-div"></div>
           </div>
-          <div class="tab-pane fade" id="jmeter">
+          <div class="tab-pane fade" id="jmeter1">
             <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
           </div>
           <div class="tab-pane fade" id="ejb">
@@ -339,6 +352,33 @@
       var clickMenu = new Object();
       var nodeColor = '#000000';
       var tableDetail = new Object();
+    </script>
+    <script>
+      $.getJSON("http://localhost:8000/static/json/GSE.json",function(data) {
+        tableDetail = data;
+        for ( index in data ) {
+          $('#deatilGene').append('<tr id="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
+                data[index]['Gene name'],
+                data[index]['Gene Id'],
+                data[index]['Gene name'],
+                data[index]['Genomic Coordinates'],
+                data[index]['HGNC'],
+                data[index]['OMIM'],
+                data[index]['Pfam'],
+                data[index]['Protein Sequence'],
+                data[index]['Swiss-prot'],
+                data[index]['Synonyms'],
+                data[index]['TrEMBL'],
+                data[index]['Transcript'],
+                data[index]['cDNA Sequence'],
+                data[index]['Atlas Genetic Oncology'],
+                data[index]['CCDS'],
+                data[index]['Copy Number'],
+                data[index]['Genome Browsers']));
+        }
+        $('#deatilGene tr').hide();
+        $('#deatilGene tr#tableHead').show();
+      });
     </script>
     <script>
       $.getJSON("http://localhost:8000/static/json/net.json",function(data){ 
@@ -431,6 +471,8 @@
             $('#arrow').hide();
             $('#help-text').hide();
             $('#gene-title').text(node.id());
+            $("tr#"+node.id()).show();
+            /*
             for(index in data) {
               netData = data[index]['data']
               if(netData['id'] == node.id()){
@@ -442,33 +484,27 @@
                 break;
               }
             }// end-for-index 
+            */
+            for (index in tableDetail) {
+              if (tableDetail[index]['Gene name'] == node.id() ) {
+                //console.log(tableDetail[index].attr());
+                console.log('hello');
+                var selectNode = tableDetail[index];
+                $('#UniProtID a').text(node.id());
+                $('#CCDS').text(selectNode['CCDS']);
+                $('#GeneID').text(selectNode['Gene Id']);
+                $('#HGNC').text(selectNode['HGNC']);
+                $('#OMIM').text(selectNode['OMIM']);
+                $('#Protein').text(selectNode['Protein Sequence']);
+                $('#cDNA').text(selectNode['cDNA Sequence']);
+                $('#Atlas').text(selectNode['Atlas Genetic Oncology']);
+                $('#Transcript').text(selectNode['Transcript']);
+                $('#Genomic').text(selectNode['Genomic Coordinates']);
+              }
+            }
           }//end-else
         });//end-cy.on
       })//get json
-    </script>
-    <script>
-      $.getJSON("http://localhost:8000/static/json/GSE.json",function(data) {
-        tableDetail = data;
-        for ( index in data ) {
-          $('#deatilGene').append('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
-                data[index]['Gene Id'],
-                data[index]['Gene name'],
-                data[index]['Genomic Coordinates'],
-                data[index]['HGNC'],
-                data[index]['OMIM'],
-                data[index]['Pfam'],
-                data[index]['Protein Sequence'],
-                data[index]['Swiss-prot'],
-                data[index]['Synonyms'],
-                data[index]['TrEMBL'],
-                data[index]['Transcript'],
-                data[index]['cDNA Sequence'],
-                data[index]['Atlas Genetic Oncology'],
-                data[index]['CCDS'],
-                data[index]['Copy Number'],
-                data[index]['Genome Browsers']));
-        }
-      });
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
     <script>
@@ -838,4 +874,10 @@
       .on('slide', function(ev){
         cy.$('edge:selected').style('width', ev.value);
       });
+    </script>
+    <script>
+    function hideTr() {
+      //$('#deatilGene tr#EDN2').hide();
+      console.log(tableDetail);
+    }
     </script>
