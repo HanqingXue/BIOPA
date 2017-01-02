@@ -93,6 +93,70 @@ class geneSplider(object):
 
 		return 1
 
+class KEGGSplider(object):
+	"""docstring for KEGGSplider"""
+	'''
+	Init function of KEGG splider
+	Args: 
+		gene: string type that stand for the name of gene
+		self: Object self 
+	'''
+	def __init__(self, gene):
+		super(KEGGSplider, self).__init__()
+		self.gene    = gene
+		self.baseurl = "http://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&dbkey=genes&keywords="
+		self.pathway      = {}
+
+	'''
+	Run a instance of kegg splider, get the Url of kegg database to 
+	exact the relanvace pathway
+	Args:
+		Object self
+	Return:
+	    A dict object
+	example: for gene TP53 
+		the key of return dict is 'TP53'
+		the value of return dict is a dictionary object
+		:
+			key  : the id of pathway
+			value: the discript of this pathway
+	'''
+
+	def run(self):
+		'''
+		Baseurl is an url which use kegg database gene search;
+		Self.content include the all of content on the page
+		'''
+		self.url     = self.baseurl + self.gene
+		self.content = requests.get(self.url).content
+		'''
+		paPrase is praser of page
+		'''
+		paPrase      = BeautifulSoup(self.content, 'lxml').form    #.find('form')
+		'''
+		The discript of div label can be divided into two class, we 
+		can use stylesheet to label them :
+			margin-left:2em ------- discription of PA
+			width:600px     ------- include the link of PA id
+		'''
+		pathwayDict = {}
+		keys = []
+		values = []
+		for pa in  paPrase.find_all('div'):
+			if pa['style'] == 'margin-left:2em':
+				print pa.text
+				values.append(pa.text)
+			elif pa['style'] == 'width:600px':
+				print pa.a.text
+				keys.append(pa.a.text)
+			else:
+				pass
+		pathwayDict = dict(zip(keys, values))
+		self.pathway[self.gene] = pathwayDict
+
+            
+
+
 class main(object):
 	"""Exact multigene overview information from network and store in the Json files"""
 	'''
@@ -131,5 +195,11 @@ class main(object):
 		except :
 			traceback.print_exc()
 
+
+		
+
 if __name__ == "__main__":
-	main('../files/GSE.json', '../files/gene.txt')
+	#main('../files/GSE.json', '../files/gene.txt')
+	splider = KEGGSplider('TP53')
+	splider.run()
+	print splider.pathway
