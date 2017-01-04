@@ -67,7 +67,7 @@ class mergeDrugData(object):
 		Add the drug as the atrt of originJSON files
 		indedx of originJSON is gene name
 		'''
-
+		
 		for item in originJSON:
 			originJSON[item]['drug'] = drugJSON[item]
 		'''

@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /> 
   <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet" /> 
   <script src="{{ static_url('js/jquery.js')}}"></script> 
-  <script src="{{ static_url('js/bootstrap.min.js')}}"></script> 
+  <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
+  <script src="{{ static_url('js/site.js')}}"></script>
  </head> 
  <body> 
   <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px "> 
@@ -37,87 +38,53 @@
      <a href="/vesion" style="text-align: right;">Visualzation</a> 
     </div> 
    </div> 
-   <table class="table table-bordered table-striped table-responsive" id="table"> 
-    <thead> 
-     <tr> 
-      <th>Entry</th> 
-      <th>Entry</th> 
-      <th>Entry</th> 
-      <th>Entry</th> 
-      <th>Entry</th> 
-      <th>Entry</th> 
-     </tr> 
-    </thead><!--thread-->
-    <tbody>
-     <tr> 
-      <td>Sample</td> 
-      <td>Filter</td> 
-      <td>12-11-2011 11:11</td> 
-      <td>OK</td> 
-      <td>123</td> 
-      <td>Do some other</td> 
-     </tr> 
-     <tr> 
-      <td>Try</td> 
-      <td>It</td> 
-      <td>11-20-2013 08:56</td> 
-      <td>It</td> 
-      <td>Works</td> 
-      <td>Do some FILTERME</td> 
-     </tr> 
-     <tr> 
-      <td>&sect;</td> 
-      <td>$</td> 
-      <td>%</td> 
-      <td>&amp;</td> 
-      <td>/</td> 
-      <td>!</td> 
-     </tr> 
-     <tr> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-     </tr> 
-     <tr> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-     </tr> 
-     <tr> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-     </tr> 
-     <tr> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-      <td>w</td> 
-     </tr> 
-    </tbody><!--tbody-->
-   </table><!--table-->
-  </div><!--.container--> 
-  <script>
-      $('#search-btn').click(function(){
-        var table = $('#info-table');
-        if ( table.css('display') == 'none') {
-          console.log('hide');
-          table.show()
-        } else {
-          console.log('show');
-        }
-      });
-    </script>  
+  <div class="row">
+    <div class="table table-striped table-bordered table-hover ">
+      <table id="deatilGene">
+        <tr id="tableHead">
+          <th>Gene Id</th>
+          <th>Gene name</th>
+          <th>Genomic Coordinates</th>
+          <th>HGNC</th>
+          <th>OMIM</th>
+          <th>Pfam</th>
+          <th>Protein Sequence</th>
+          <th>Swiss-prot</th>
+          <th>TrEMBL</th>
+        </tr>
+      </table>
+    </div><!--table-->
+    <ul class="pagination">
+      <li><a href="#">&laquo;</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&raquo;</a></li>
+    </ul>
+   </div><!--row-->
+  </div><!--.container-->
  </body>
 </html>
+<script> 
+  $.getJSON("http://localhost:8000/static/json/data.json",function(data) {
+    tableDetail = data;
+    var count = 0;
+    console.log(data['TP53']);
+    console.log(data['SP1']);
+    for ( index in data ) {
+      $('#deatilGene').append('<tr id="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
+            data[index]['gse']['Gene name'],
+            data[index]['gse']['Gene Id'],
+            data[index]['gse']['Gene name'],
+            data[index]['gse']['Genomic Coordinates'],
+            data[index]['gse']['HGNC'],
+            data[index]['gse']['OMIM'],
+            data[index]['gse']['Pfam'],
+            data[index]['gse']['Protein Sequence'],
+            data[index]['gse']['Swiss-prot'],
+            data[index]['gse']['TrEMBL']));
+    }
+  });
+</script>
