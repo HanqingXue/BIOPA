@@ -1,11 +1,11 @@
 import os.path
 import random
-
+import json
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
-from db import *
+from dbutil import *
 
 from tornado.options import define, options
 define("port", default=8000, help="run on the given port", type=int)
@@ -15,8 +15,11 @@ class IndexHandler(tornado.web.RequestHandler):
         self.render('search.html', title = "Hello world")
 
 class VisionHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render('vesion.html')
+    def post(self):
+        with open('./static/json/net.json') as json_file:
+            data = json_file.read()
+
+        self.render('vesion.html', hello=data)
         pass
 
 class HeatMapHandler(tornado.web.RequestHandler):
@@ -35,13 +38,6 @@ class AboutHandler(tornado.web.RequestHandler):
         pass
 
 class DataHandler(tornado.web.RequestHandler):
-    '''
-    def get(self):
-        query = self.get_argument("query")
-        print query
-        self.render('data.html')
-    '''
-
     def post(self):
         noun1 = self.get_argument('noun1')
         db = DataBase()
@@ -52,6 +48,11 @@ class DataHandler(tornado.web.RequestHandler):
         else:
             self.render('data.html', noun1=result )
 
+class TestHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('test.html')
+
+    
 class UserHandler(tornado.web.RequestHandler):
     def post(self):
         user_name = self.get_argument("username")
@@ -70,7 +71,8 @@ if __name__ == '__main__':
                   (r'/search', SearchHandler),
                   (r'/data', DataHandler),
                   (r'/user', UserHandler),
-                  (r'/about', AboutHandler)],
+                  (r'/about', AboutHandler),
+                  (r'/test', TestHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),

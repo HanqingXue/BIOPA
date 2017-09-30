@@ -34,7 +34,7 @@
      <div style="padding-top: 20px "> 
       <ul id="myTab" class="nav nav-tabs"> 
        <li class="active"> <a href="#gene" data-toggle="tab"> Search Results </a> </li> 
-       <li> <a href="/vesion" style="text-align: right;">Visualzation</a> </li> 
+       <li> <a href="/vesion" style="text-align: right;" class="a_post">Visualzation</a> </li> 
       </ul> 
      </div> 
      <div class="table table-striped table-bordered table-hover "> 
@@ -81,34 +81,3 @@
   <!--.container-->  
  </body>
 </html>
-<!---
-<script> 
-  $.getJSON("http://localhost:8000/static/json/data.json",function(data) {
-    tableDetail = data;
-    var count = 0;
-    console.log(data['TP53']);
-    console.log(data['SP1']);
-    for ( index in data ) {
-      $('#deatilGene').append('<tr id="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
-            data[index]['gse']['Gene name'],
-            data[index]['gse']['Gene Id'],
-            data[index]['gse']['Gene name'],
-            data[index]['gse']['Genomic Coordinates'],
-            data[index]['gse']['HGNC'],
-            data[index]['gse']['OMIM'],
-            data[index]['gse']['Pfam'],
-            data[index]['gse']['Protein Sequence'],
-            data[index]['gse']['Swiss-prot'],
-            data[index]['gse']['TrEMBL']));
-    }
-  });
-</script>
-<script>
-  $(function() {
-    var bgcolor = "background-color:"+"\'" + nodeColor +"\'";
-    $('#colorBoard').css("background-color", nodeColor);
-    $('#colorBoard').css("color", nodeColor);
-    $('#colorCode').css("text", nodeColor);
-  })
-</script>
--->
