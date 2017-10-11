@@ -23,7 +23,7 @@
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
     <script src="{{ static_url('js/cytoscape.min.js')}}"></script>
-    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
+    <!--<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>-->
     <script src="{{ static_url('js/download.js')}}"></script>
     <script src="{{ static_url('js/cytoscape-context-menus.js')}}"></script>
     <script src="{{ static_url('js/spectrum.js') }}"></script>
@@ -404,6 +404,7 @@
     <script>
       $(function() {
         net = JSON.parse($('#net').text());
+        console.log(net);
         cy = cytoscape({
         container: document.getElementById('cy'), 
         boxSelectionEnabled: true,
@@ -497,7 +498,7 @@
               $('#gene-title').text(node.id());
               $("tr#"+node.id()).show();
               $('#UniProtID a').text(node.id());
-
+              /*
               var geneID  = tableDetail[node.id()]['gse']['Gene Id'];
               var CCDS    = tableDetail[node.id()]['gse']['CCDS'];
               var HGNC    = tableDetail[node.id()]['gse']['HGNC'];
@@ -536,6 +537,7 @@
               for (key in pathways) {
                 $('#pathwayTable').append('<tr><td>%s</td><td>%s</td></tr>'.format(key, pathways[key]));
               }
+              */
 
             }//end of event.cyTarget.isNode()
           }//end-else

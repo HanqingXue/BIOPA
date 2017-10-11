@@ -6,7 +6,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 from dbutil import *
-
+from versionutil import *
 from tornado.options import define, options
 define("port", default=8000, help="run on the given port", type=int)
 
@@ -16,11 +16,26 @@ class IndexHandler(tornado.web.RequestHandler):
 
 class VisionHandler(tornado.web.RequestHandler):
     def post(self):
-        with open('./static/json/net.json') as json_file:
+        noun1 = self.get_argument('noun1')
+        db = DataBase()
+        print db.get_database('BioPA').name
+        result = db.search_item({'PathID': noun1})
+        with open('./static/json/format.json') as json_file:
             data = json_file.read()
 
-        self.render('vesion.html', hello=data)
-        pass
+        versionData = []
+        nodes = []
+        for item in result:
+            nodes.append(item['Entity1'])
+            nodes.append(item['Entity2'])
+            versionData.append(set_edge(item['Entity1'], item['Entity2']))
+        nodes = set(nodes)
+        nodes = list(nodes)
+
+        for node in nodes:
+            versionData.append(set_node(node))
+
+        self.render('vesion.html', hello= json.dumps(versionData))
 
 class HeatMapHandler(tornado.web.RequestHandler):
     def get(self):
