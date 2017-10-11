@@ -20,8 +20,6 @@ class VisionHandler(tornado.web.RequestHandler):
         db = DataBase()
         print db.get_database('BioPA').name
         result = db.search_item({'PathID': noun1})
-        with open('./static/json/format.json') as json_file:
-            data = json_file.read()
 
         versionData = []
         nodes = []
@@ -61,20 +59,7 @@ class DataHandler(tornado.web.RequestHandler):
         if len(result) == 0:
             self.render('error.html')
         else:
-            self.render('data.html', noun1=result )
-
-class TestHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render('test.html')
-
-    
-class UserHandler(tornado.web.RequestHandler):
-    def post(self):
-        user_name = self.get_argument("username")
-        user_email = self.get_argument("email")
-        user_website = self.get_argument("website")
-        user_language = self.get_argument("language")
-        self.render("user.html",username=user_name,email=user_email,website=user_website,language=user_language)
+            self.render('data.html', noun1=result, keyword=noun1 )
 
 
 if __name__ == '__main__':
@@ -85,9 +70,7 @@ if __name__ == '__main__':
                   (r'/net', HeatMapHandler),
                   (r'/search', SearchHandler),
                   (r'/data', DataHandler),
-                  (r'/user', UserHandler),
-                  (r'/about', AboutHandler),
-                  (r'/test', TestHandler)],
+                  (r'/about', AboutHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),

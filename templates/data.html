@@ -34,9 +34,10 @@
      <div style="padding-top: 20px "> 
       <ul id="myTab" class="nav nav-tabs"> 
        <li class="active"> <a href="#gene" data-toggle="tab"> Search Results </a> </li> 
-       <li> <a href="/vesion" style="text-align: right;" class="a_post">Visualzation</a> </li> 
+       <li> <a  style="text-align: right;" class="a_post" id="version">Visualzation</a> </li> 
       </ul> 
      </div> 
+
      <div class="table table-striped table-bordered table-hover "> 
       <table id="deatilGene"> 
        <tbody>
@@ -74,6 +75,10 @@
       <li><a href="#" id="5">5</a></li> 
       <li><a href="#">&raquo;</a></li> 
      </ul> 
+     <form method="post" action="/vesion" id="myform">
+        <input id="input" type="text" name="noun1" style="display: none">
+        <h2 style="display: none" id="keyword">{{ keyword }}</h2>
+      </form>
     </div> 
    </div>
    <!--.container--> 
@@ -81,3 +86,14 @@
   <!--.container-->  
  </body>
 </html>
+
+<script>
+$(document).ready(function() {
+  $("#version").click(function(e) {
+      var key = $('#keyword').text();
+      $('#input').val(key);
+      $('#myform').submit();
+      return false;
+    })
+  });
+</script>
