@@ -783,7 +783,6 @@
       $('a.icon-remove').click(function() {
         var edgeType = $(this).attr('value');
         $('tr#' + edgeType).remove();
-        //$('#num-'+ edgeType).text();
         var filter  = "edge[type = \'controls-" + edgeType + "\']";
         var selector = cy.filter(filter);
         selector.hide();
