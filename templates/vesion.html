@@ -29,6 +29,9 @@
     <script src="{{ static_url('js/spectrum.js') }}"></script>
     <script src="{{ static_url('js/bootstrap-slider.js')}}"></script>
     <script src="{{ static_url('js/site.js')}}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-qtip/2.7.0/cytoscape-qtip.js"></script>
     <style> 
       #cy {
         width: 100%;
@@ -392,7 +395,6 @@
     <script>
       $(function() {
         net = JSON.parse($('#net').text());
-        console.log(net);
         cy = cytoscape({
         container: document.getElementById('cy'), 
         boxSelectionEnabled: true,
@@ -478,7 +480,7 @@
               $('#li-detail').addClass('active');
               $('#li-setting').removeClass('active');
               $('#li-content').removeClass('active');
-              $('#myTab a:first').tab('show')
+              $('#myTab a:first').tab('show');
               $('#Detail-table').show();
               $('Detail-tips').hide();
               $('#arrow').hide();
@@ -528,8 +530,28 @@
               */
 
             }//end of event.cyTarget.isNode()
+
+            if (event.cyTarget.isEdge) {
+              console.log('Change the Edge tab!');
+            }
           }//end-else
         });//end-cy.on
+
+        cy.on('mouseover', 'node', function(event) {
+          var node = event.cyTarget;
+          node.qtip({
+            content: 'hello',
+            
+            show: {
+              event: event.type,
+              ready: true
+            },
+
+            hide: {
+              event: 'mouseout unfocus'
+            }
+          }, event);
+        });
       })//get json
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
@@ -564,7 +586,6 @@
     </script>
     <script>
       $(function() {
-        console.log($('.net').text());
         cy.contextMenus({
           menuItems: [
               {
@@ -878,11 +899,9 @@
     </script>
     <script>
       $("#lineStyle li a").click(function () {
-        console.log($(this).attr('value'));
         var imgPath = "\'img/"+ $(this).attr('value') + ".png\'";
         var lineStyle  = $(this).attr('value');
         var path = "/static/img/" + lineStyle + '.png'
-        console.log(path);
         $('#imgLine').attr('src', path);
         $('#imgLine').css('text-align', 'right');
         $('#lineText').text(lineStyle);
