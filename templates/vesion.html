@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{ static_url('css/spectrum.css') }}">
     <link rel="stylesheet" href="{{ static_url('css/flat-ui.css')}}">
     <link rel="stylesheet" href="{{ static_url('css/slider.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/jquery.qtip.min.css')}}">
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
@@ -29,9 +30,8 @@
     <script src="{{ static_url('js/spectrum.js') }}"></script>
     <script src="{{ static_url('js/bootstrap-slider.js')}}"></script>
     <script src="{{ static_url('js/site.js')}}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.0/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-qtip/2.7.0/cytoscape-qtip.js"></script>
+    <script src="{{ static_url('js/juqery.qtip.min.js')}}"></script>
+    <script src="{{ static_url('js/qtip.js')}}"></script>
     <style> 
       #cy {
         width: 100%;
@@ -351,7 +351,7 @@
       </div><!--row-->
       <hr> 
       <footer>
-        <p>© Company 2013</p>
+        <p>© Harbin Institute of Technology 2017</p>
       </footer>
     </div><!--/.fluid-container-->
     <script type="text/javascript">
@@ -539,8 +539,10 @@
 
         cy.on('mouseover', 'node', function(event) {
           var node = event.cyTarget;
+          nodeIndex = '<p>%s</p>'.format(node.id());
+
           node.qtip({
-            content: 'hello',
+            content: nodeIndex,
             
             show: {
               event: event.type,
@@ -549,7 +551,16 @@
 
             hide: {
               event: 'mouseout unfocus'
+            },
+
+            style: {
+              classes: 'qtip-bootstrap',
+              tip: {
+                width: 16,
+                height: 8
+              }
             }
+
           }, event);
         });
       })//get json
