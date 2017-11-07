@@ -1,15 +1,103 @@
-<html>
-<head>
-    <title>Iframe标签显示目标网页的指定区域，方法1</title>
-</head>
-<body>
-<div align="left" style="margin:0 auto;">
-    <div style="width:1200px;height:800px;overflow:hidden;border:0px"> 
-         <div style="width:1000px;height:800px;margin:-220px -00px -00px -200px;">
-              <iFrame src="http://www.uniprot.org/uniprot/Q9BQI3#showFeaturesViewer" width="1200" height="650" scrolling="no">
-             </iFrame>
-         </div> 
-     </div> 
-</div> 
-</body>
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <title>Data</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /> 
+  <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet" /> 
+  <link rel="stylesheet" href="{{ static_url('css/style.css')}}">
+
+
+    <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
+    <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
+    <script src="{{ static_url('js/bootstrap-slider.js')}}"></script>
+ </head> 
+ <body> 
+	<div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px ">
+	  <div class="navbar-inner">
+	    <div class="container-fluid">
+	      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="brand" href="/">BioPA</a>
+	      <div class="nav-collapse collapse">
+	        <p class="navbar-text pull-right">Logged in as
+	          <a href="" class="navbar-link">Username</a></p>
+	        <ul class="nav">
+	          <li class="active">
+	            <a href="/">Home</a></li>
+	          <li>
+	            <a href="about">About</a></li>
+	          <li>
+	            <a href="contact">Contact</a></li>
+	        </ul>
+	      </div><!--/.nav-collapse -->
+		</div>
+	  </div>
+	</div><!-- guide-->
+
+	<div class="row-fluid">
+		<div class="span3 hero-unit bs-example bs-example-tabs">
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="node" style="overflow: hidden; border-top: 0px">
+                <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed table-hover" aria-labelledby="li-detail">
+                  <table style="border: 0">
+                    <tbody>
+                      <tr>
+                        <td colspan="2" ><h5 id="gene-title">Gene Name</h5></td>
+                      </tr>
+                      <tr>
+                        <th class="span6">UniProtID</th>
+                        <td id="UniProtID" class="span6"><a href="">null</a></td>
+                      </tr>
+                      <tr>
+                        <th>HGNC</th>
+                        <td id="HGNC">3233</td>
+                      </tr>
+                      <tr>
+                        <th>OMIM</th>
+                        <td id="OMIM">604267 </td>
+                      </tr>
+                      <tr>
+                        <th>UniProtKB</th>
+                        <td id="Protein">Q7Z7M0</td>
+                      </tr>
+                      <tr>
+                        <th>Ensembl</th>
+                        <td id="cDNA">ENSG00000105429</td>
+                      </tr>
+                      <tr>
+                        <th>Entrez Gene</th>
+                        <td id="Atlas">1954</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!--Deatil-table-->
+              </div><!--first tab-->
+            </div><!--tab content-->
+          </div><!--span4-->
+
+		<div class="span9">
+			<ul class="nav nav-tabs" >
+    			<li class="active">
+    				<a href="#home" data-toggle="tab">Gene Variants</a>
+    			</li>
+    		</ul>
+    		<div id="browser" class="tab-content">
+    			<div class="tab-pane fade in active" id="home">
+    				<div id="frame-out" style="width:1200px;height:450px;overflow:hidden;border-style: :none"> 
+         				<div id="frame-in" style="width:1200px;height:800px;margin:-220px -00px -500px -200px;border-style: none;">
+            			<iFrame src="http://www.uniprot.org/uniprot/Q9BQI3#showFeaturesViewer" width="1200" height="650" scrolling="no">
+            			</iFrame>
+            		</div>
+         		</div> 
+    			</div>
+    		</div>
+		</div><!--span9-->
+	</div> <!--row-fluid-->
+ </body>
 </html>

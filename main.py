@@ -57,7 +57,7 @@ class DataHandler(tornado.web.RequestHandler):
         print db.get_database('BioPA').name
         result = db.search_item({'PathID': noun1})
         if len(result) == 0:
-            self.render('error.html')
+            self.render('gene.html')
         else:
             self.render('data.html', noun1=result, keyword=noun1 )
 
