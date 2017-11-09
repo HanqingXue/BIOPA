@@ -363,35 +363,6 @@
       var nodeColor = '#000000';
       var tableDetail = new Object();
     </script>
-      <script> 
-      $.getJSON("http://localhost:8000/static/json/data.json",function(data) {
-        tableDetail = data;
-        var count = 0;
-        for ( index in data ) {
-          $('#deatilGene').append('<tr id="%s"><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(
-                data[index]['gse']['Gene name'],
-                data[index]['gse']['Gene Id'],
-                data[index]['gse']['Gene name'],
-                data[index]['gse']['Genomic Coordinates'],
-                data[index]['gse']['HGNC'],
-                data[index]['gse']['OMIM'],
-                data[index]['gse']['Pfam'],
-                data[index]['gse']['Protein Sequence'],
-                data[index]['gse']['Swiss-prot'],
-                data[index]['gse']['Synonyms'],
-                data[index]['gse']['TrEMBL'],
-                data[index]['gse']['Transcript'],
-                data[index]['gse']['cDNA Sequence'],
-                data[index]['gse']['Atlas Genetic Oncology'],
-                data[index]['gse']['CCDS'],
-                data[index]['gse']['Copy Number'],
-                data[index]['gse']['Genome Browsers']));
-        }
-        $('#deatilGene tr').hide();
-        $('#deatilGene tr#tableHead').show();
-
-      });
-    </script>
     <script>
       $(function() {
         net = JSON.parse($('#net').text());
@@ -563,7 +534,7 @@
 
           }, event);
         });
-      })//get json
+      })
     </script>
     <script src="{{ static_url('js/heatmap.js')}}"></script>
     <script>
