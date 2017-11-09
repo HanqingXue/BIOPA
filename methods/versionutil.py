@@ -1,4 +1,5 @@
 import random
+
 def set_node(node_id):
     node = {}
     node['data'] = {}
