@@ -1,4 +1,5 @@
 /temp/*
 /.gitignore
 /templates/test.html
+*.pyc
 
