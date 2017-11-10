@@ -71,24 +71,25 @@
                         <form class="form-search" method="post" action="/data" >
                             <ul id="myTab" class="nav nav-tabs">
                                 <li class="active">
-                                    <a href="#gene" data-toggle="tab">
+                                    <a href="#gene" data-toggle="tab" value = "0">
                                     Gene and Chemicals
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#disease" data-toggle="tab">Disease and Functions</a>
+                                    <a href="#disease" data-toggle="tab" value= "1">Disease and Functions</a>
                                 </li>
                                 <li>
-                                    <a href="#pathways" data-toggle="tab">Pathways and Tox list
+                                    <a href="#pathways" data-toggle="tab" value = "2">Pathways and Tox list
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#variation" tabindex="-1" data-toggle="tab" >Gene variation</a>
+                                    <a href="#variation" tabindex="-1"  value = "3"data-toggle="tab" >Gene variation</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
                                 <form action="/data" method="post">
                                     <input id="search" type="text" name="noun1" class="input-medium search-query" style="width: 600px" placeholder="Please input gene names/symbols" >
+                                    <input type="text" name="tabindex" style="display: none" id="tabindex">
                                     <input type="submit" value="Search" class="btn btn-info">
                                 </form>
                             </div>
@@ -97,26 +98,39 @@
                 </div><!---.row-->
             </div><!--end container-->
         </div><!--/.fluid-container-->
+        <script type="text/javascript">
+            $(function() {
+                console.log("hello");
+                $('#tabindex').val("0");
+                console.log($('#tabindex').attr('value'));
+            });
+        </script>
         <script>
             $('#search-btn').click(function() {
-                window.open('data')
+                window.open('data');
+                $('#tabindex').val("0");
             });
         </script>
         <script>
             $('#myTab a').click(function(e) {
-               // $('tab')
-               
                data = $(this).attr('href');
                if (data == '#gene') {
-                    console.log('gene');
                     $('#search').attr('placeholder', 'Please input gene names / symbols');
+
                } else if (data == '#disease') {
-                    console.log('disease');
                     $('#search').attr('placeholder', 'Enter function or disease names here');
-               } else {
-                    console.log('pathways');
+
+               } else if(data == "#pathways"){
                     $('#search').attr('placeholder', 'Enter pathway names or tox lists here');
+               } else {
+                    $('#search').attr('placeholder', 'Enter gene uniprot ID');
                }
+
+               var tabIndex = $(this).attr('value');
+
+               $('#tabindex').val(tabIndex);
+               console.log(tabIndex);
+
             })
         </script>
     </body><!--body-->

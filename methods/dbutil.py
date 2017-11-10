@@ -16,14 +16,23 @@ class DataBase(object):
 			result.append(item)
 
 		return result
+
+def search_db(db_instace, db_name, field, keyword):
+	db_instace.get_database(db_name).name
+	result = db_instace.search_item({field : keyword}) 
+	return result
+
 '''
 The test code for query item in database.
 '''
 
-'''
+
 if __name__ == '__main__':
 	db = DataBase()
+	'''
 	print db.get_database('BioPA').name
 	db.search_item({'PathID': 'pid_4796'})
-'''
+	'''
+	print search_db(db, 'BioPA', 'PathID', 'pid_4796')
+
 

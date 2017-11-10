@@ -74,7 +74,6 @@
       </div>
     </div>
 
-
     <div class="container-fluid">
       <div class="row">
           <div class="span4 hero-unit bs-example bs-example-tabs">
@@ -459,47 +458,6 @@
               $('#gene-title').text(node.id());
               $("tr#"+node.id()).show();
               $('#UniProtID a').text(node.id());
-              /*
-              var geneID  = tableDetail[node.id()]['gse']['Gene Id'];
-              var CCDS    = tableDetail[node.id()]['gse']['CCDS'];
-              var HGNC    = tableDetail[node.id()]['gse']['HGNC'];
-              var OMIM    = tableDetail[node.id()]['gse']['OMIM'];
-              var Protein = tableDetail[node.id()]['gse']['Protein Sequence'];
-              var cDNA    = tableDetail[node.id()]['gse']['cDNA Sequence'];
-              var Atlas   = tableDetail[node.id()]['gse']['Atlas Genetic Oncology'];
-              var Transcript  = tableDetail[node.id()]['gse']['Transcript'];
-              var Genomic     = tableDetail[node.id()]['gse']['Genomic Coordinates'];
-
-              //var Entry = 
-              drugFields = tableDetail[node.id()]['drug'];
-              for ( diseasid  in  drugFields) {
-                var Name        = drugFields[diseasid]['Name'];
-                var Description = drugFields[diseasid]['Description'];
-                var Category    = drugFields[diseasid]['Category'];
-                var Pathway     = drugFields[diseasid]['Pathway'];
-                var Drug        = drugFields[diseasid]['Drug'];
-                $('#drugTable').append('<tr><th>%s</th><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>'.format(diseasid, Name, Description, Category, Pathway, Drug));
-              }
-
-                console.log(index);
-
-              $('#GeneID').text(geneID);
-              $('#CCDS').text(CCDS);
-              $('#HGNC').text(HGNC);
-              $('#OMIM').text(OMIM);
-              $('#Protein').text(Protein);
-              $('#cDNA').text(cDNA);
-              $('#Atlas').text(Atlas);
-              $('#Transcript').text(Transcript);
-              $('#Genomic').text(Genomic);
-              $('#deatilGene tr#'+node.id()).show();
-
-              var pathways = tableDetail[node.id()]['pathway'][node.id()]
-              for (key in pathways) {
-                $('#pathwayTable').append('<tr><td>%s</td><td>%s</td></tr>'.format(key, pathways[key]));
-              }
-              */
-
             }//end of event.cyTarget.isNode()
 
             if (event.cyTarget.isEdge) {
