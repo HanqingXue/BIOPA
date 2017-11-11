@@ -22,7 +22,7 @@ class DataHandler(tornado.web.RequestHandler):
     		self.render('error.html')
        
         if tabindex == 3:
-        	self.render("gene.html")  
+        	self.render("gene.html", GeneID = noun1)  
 
         else:
             '''

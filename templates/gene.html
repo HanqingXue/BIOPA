@@ -7,12 +7,11 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /> 
   <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet" /> 
   <link rel="stylesheet" href="{{ static_url('css/style.css')}}">
-
-
-    <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
-    <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
-    <script src="{{ static_url('js/bootstrap-slider.js')}}"></script>
+  <link rel="stylesheet" href="{{ static_url('css/docs.min.css')}}">
+  <link href="{{ static_url('css/bootstrap-responsive.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ static_url('css/bootstrap.icon-large.min.css')}}">
+  <script src="{{ static_url('js/bootstrap-slider.js')}}"></script>
+  <script src="{{ static_url('js/jquery.js')}}"></script>
  </head> 
  <body> 
 	<div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px ">
@@ -48,11 +47,11 @@
                   <table style="border: 0">
                     <tbody>
                       <tr>
-                        <td colspan="2" ><h2 id="gene-title">Gene Name</h2></td>
+                        <td colspan="2" ><h2 id="gene-title">{{ GeneID }}</h2></td>
                       </tr>
                       <tr>
                         <th class="span6">UniProtID</th>
-                        <td id="UniProtID" class="span6"><a href="">null</a></td>
+                        <td id="UniProtID" class="span6"><a href="" id="UniProtAddr">{{ GeneID }}</a></td>
                       </tr>
                       <tr>
                         <th>HGNC</th>
@@ -91,7 +90,7 @@
     			<div class="tab-pane fade in active" id="home">
     				<div id="frame-out" style="width:900px;height:450px;overflow:hidden;border-style: :none"> 
          				<div id="frame-in" style="width:900px;height:800px;margin:-220px -00px -500px -200px;border-style: none;">
-            			<iFrame src="http://www.uniprot.org/uniprot/Q9BQI3#showFeaturesViewer" width="1200" height="650" scrolling="no">
+            			<iFrame src="" width="1200" height="650" scrolling="no" id="showFrame">
             			</iFrame>
             		</div>
          		</div> 
@@ -100,4 +99,12 @@
 		</div><!--span9-->
 	</div> <!--row-fluid-->
  </body>
+ <script type="text/javascript">
+   //http://www.uniprot.org/uniprot/Q9BQI3#
+  $(function() {
+    var keyword = $('#gene-title').text();
+    $('#UniProtAddr').attr("href", "http://www.uniprot.org/uniprot/" + keyword +'#');
+    $('#showFrame').attr("src", "http://www.uniprot.org/uniprot/" + keyword +"#showFeaturesViewer")
+  });
+ </script>
 </html>
