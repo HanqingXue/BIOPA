@@ -12,11 +12,13 @@ from handlers.about import AboutHandler
 from handlers.vision import VisionHandler
 from handlers.data import DataHandler
 from handlers.search import SearchHandler
+from handlers.contact import ContactHandler
 
 url = [
     (r'/', IndexHandler),
     (r'/about', AboutHandler),
     (r'/vesion', VisionHandler),
     (r'/data', DataHandler),
-    (r'/search', SearchHandler),
+    (r'/contact', ContactHandler),
+    (r'/search', SearchHandler)
 ] 
