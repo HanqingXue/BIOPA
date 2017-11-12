@@ -1,16 +1,7 @@
 {% extends "base.html" %}
 
 {% block header %}
-    <link href='http://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-        .content p{
-            font-family:  cursive;
-            font-size: 1.8em;
-            color:rgb(155, 155, 155);
-            text-shadow: 0px 0px 10px rgba(207, 207, 207, 0.8);
-        }
-    </style>>
+    <link rel="stylesheet" type="text/css" href="{{ static_url('contact.css') }}">
 {% end %}
 
 {% block body %}
@@ -18,7 +9,7 @@
         <div class="content" style="text-align: center;">
             <img src="{{ static_url('img/doctor.png') }}"  title="doctor" />
             <h1 style="font-family: fantasy; ">This page will come soon!</h1>
-           <a style="font-family: fantasy; height: 20px">Please visit our home page!</a>
+           <a style="font-family: fantasy; height: 20px" href="/">Please visit our home page!</a>
         </div>
 {% end %}
 
