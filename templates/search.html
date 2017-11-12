@@ -116,21 +116,16 @@
                data = $(this).attr('href');
                if (data == '#gene') {
                     $('#search').attr('placeholder', 'Please input gene names / symbols');
-
                } else if (data == '#disease') {
                     $('#search').attr('placeholder', 'Enter function or disease names here');
-
                } else if(data == "#pathways"){
                     $('#search').attr('placeholder', 'Enter pathway names or tox lists here');
                } else {
                     $('#search').attr('placeholder', 'Enter gene uniprot ID');
                }
-
                var tabIndex = $(this).attr('value');
-
                $('#tabindex').val(tabIndex);
                console.log(tabIndex);
-
             })
         </script>
     </body><!--body-->
