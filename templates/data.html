@@ -1,17 +1,34 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
 <html lang="en">
-{% block header %}
-  
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
   <title>Data</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /> 
+  <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet" /> 
+  <script src="{{ static_url('js/jquery.js')}}"></script> 
+  <script src="{{ static_url('js/bootstrap.min.js')}}"></script> 
   <script src="{{ static_url('js/site.js')}}"></script> 
-  <style type="text/css">
-    #guide 
-    {
-      margin-bottom: 20px;
-    }
-  </style>>
-{% end %}
-{% block body %}
+ </head> 
+ <body> 
+  <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px "> 
+   <div class="navbar-inner"> 
+    <div class="container-fluid"> 
+     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="brand" href="/">BioPA</a> 
+     <div class="nav-collapse collapse"> 
+      <p class="navbar-text pull-right"> Logged in as <a href="" class="navbar-link">Username</a> </p> 
+      <ul class="nav"> 
+       <li class="active"><a href="/">Home</a></li> 
+       <li><a href="about">About</a></li> 
+       <li><a href="contact">Contact</a></li> 
+      </ul> 
+     </div> 
+     <!--/.nav-collapse --> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- end gudie--> 
   <div class="container"> 
     <div class="container-fluid"> 
      <div style="padding-top: 20px "> 
@@ -64,18 +81,17 @@
       </form>
     </div> 
    </div>
-   <!--.container-fluid--> 
+   <!--.container--> 
   </div> 
   <!--.container-->  
-{% end %}
-
+ </body>
+</html>
 <script>
 $(document).ready(function() {
   $("#version").click(function(e) {
       var key = $('#keyword').text();
       $('#input').val(key);
       $('#myform').submit();
-      $('#guide').css('margin-bottom', "20px");
       return false;
     })
   });

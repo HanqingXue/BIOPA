@@ -15,6 +15,7 @@ class DataHandler(tornado.web.RequestHandler):
         noun1 = self.get_argument('noun1')
         tabindex = self.get_argument('tabindex')
         tabindex = int(tabindex)
+        print noun1
     	'''
     	Query is empty. Load the error page.
     	'''
@@ -30,9 +31,11 @@ class DataHandler(tornado.web.RequestHandler):
             '''
             db = DataBase()
             result = search_db(db, 'BioPA', 'PathID', noun1)
+            print 'The result is:'
+            print result
 
             if len(result) != 0:
-            	self.render('data.html', noun1=result, keyword=noun1 )
+            	self.render('data.html', noun1 = result, keyword = noun1, hello = result )
             else:
             	self.render('error.html')
             
