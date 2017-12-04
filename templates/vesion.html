@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ static_url('css/slider.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/jquery.qtip.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/cytoscape.js-panzoom.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}"
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
@@ -35,6 +35,8 @@
     <script src="{{ static_url('js/juqery.qtip.min.js')}}"></script>
     <script src="{{ static_url('js/qtip.js')}}"></script>
     <script src="{{ static_url('js/cytoscape-panzoom.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/dagre.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/cytoscape-dagre.js') }}"></script>
     <style> 
       #cy {
         width: 100%;
@@ -50,10 +52,9 @@
         background: #BABABA;
       }
     </style>
-
   </head>
-
   <body style="padding-top:0px">
+
     <div class="navbar navbar-inverse navbar-fixed-top" style="position: static" >
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -263,7 +264,7 @@
               <button class="btn btn-default" id="btn-showall"><a title="Showall" class="icon-eye-open icon-large"></a></button>
               <button class="btn btn-default" id ="btn-hide-node" ><a class="icon-eye-close icon-large"></a></button>
               <button class="btn btn-default" id ="btn-screen-fit"><a class="icon-repeat icon-large"></a></button>
-              <button class="btn btn-default" id = "btn-screen-full" data-toggle="modal" data-target="#screen-full"><a class="icon-resize-full icon-large"></a></button>
+              <button class="btn btn-default" id = "btn-screen-full"><a class="icon-resize-full icon-large"></a></button>
               <div class="btn-group">
                 <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                   <i class="icon-list icon-large"></i>
@@ -276,6 +277,7 @@
                   <li><a id="BreadthFirst" value="breadthfirst">Breadth First</a></li>
                   <li><a id="Cose"         value="cose">Cose</a></li>
                   <li><a id="Preset"       value="spread">Preset</a></li>
+                  <li><a id="Dagre"        value="dagre">Dagre</a>
                 </ul>
               </div><!--btn-group-->
             </div>                    
@@ -352,20 +354,6 @@
           </div>
         </div>
       </div><!--row-->
-      <div class="modal fade" id="screen-full">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <div class="modal-title"><p>The full screen view</p></div>
-            </div><!--.modal-header-->
-            <div class="moda-body"><div id="modal-net" style="height: 500px"></div></div><!--.modal-body-->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-            </div><!--.modal-footer-->
-          </div><!--.modal-content-->
-        </div><!--.modal-dialog -->
-      </div><!--.modal fade-->
       <hr> 
       <footer>
         <p>© Harbin Institute of Technology 2017</p>
@@ -393,7 +381,7 @@
           },  
           style: [
             {
-              selector: 'node[importance = 3]',
+              selector: 'node[importance = 1]',
               style: {
                 'content': 'data(id)',
                 'font-size': 8,
@@ -403,7 +391,7 @@
               }
             },
             {
-              selector: 'node[importance = 2]',
+              selector: 'node[importance = 3]',
               style: {
                 'content': 'data(id)',
                 'font-size': 8,
@@ -516,7 +504,7 @@
         });
       })
     </script>
-    <script src="{{ static_url('js/heatmap.js')}}"></script>
+   <!-- <script src="{{ static_url('js/heatmap.js')}}"></script>-->
     <script>
       $(function(){
         var TypeOne  = cy.filter("edge[type = \'controls-" + 'state-change-of' + "\']");
@@ -883,78 +871,11 @@
       });
     </script>
     <script type="text/javascript">
-      $('#screen-full').click(function() {
+
+
+    $('#btn-screen-full').click(function() {
         console.log("hello");
         console.log(cy);
-        var subnet  = cytoscape({
-        container: document.getElementById('modal-net'), 
-        boxSelectionEnabled: true,
-        //autounselectify: true,
-        layout: {
-            name: 'cose',
-            minDist: 40
-          },  
-          style: [
-            {
-              selector: 'node[importance = 3]',
-              style: {
-                'content': 'data(id)',
-                'font-size': 8,
-                'background-color': '#ff99cc',//#96d9f6
-                'size': 12,
-                'shape': 'roundrectangle'
-              }
-            },
-            {
-              selector: 'node[importance = 2]',
-              style: {
-                'content': 'data(id)',
-                'font-size': 8,
-                'background-color': '#96d9f6',//#96d9f6
-                'size': 8
-              }
-            },
-            {
-              selector: 'node[importance = 4]',
-              style: {
-                'content': 'data(id)',
-                'font-size': 8,
-                'background-color': '#ff6666',//#96d9f6
-                'size': 4
-              }
-            }, 
-            {
-              selector: "edge[type = 'controls-state-change-of']",
-              style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 4,
-                'opacity': 0.5,
-                'line-color': '#2dc16c'
-              }
-            },
-            {
-              selector: "edge[type = 'controls-expression-of']",
-              style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 4,
-                'opacity': 0.666,
-                'line-color': '#2980b9'
-              }
-            },
-            {
-              selector: ':selected',
-              style: {
-                'background-color': 'black',
-                'line-color': 'black',
-                'target-arrow-color': 'black',
-                'source-arrow-color': 'black',
-                'opacity': 3
-              }
-            }
-          ], 
-          elements:net,
-        });//cy 
+        //cy['container'] = document.getElementById('test');
       });
     </script>
