@@ -38,6 +38,7 @@
     <script src="{{ static_url('js/cytoscape-panzoom.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/dagre.js') }}"></script>
     <script type="text/javascript" src="{{ static_url('js/cytoscape-dagre.js') }}"></script>
+    <script type="text/javascript" src="{{ static_url('js/cytoscape-navigator.js') }}"></script>
     <script src="{{ static_url('js/iziModal.min.js')}}"></script>
     <style> 
       #cy {
@@ -52,6 +53,13 @@
       }
       #ex1Slider .slider-selection {
         background: #BABABA;
+      }
+      .edge_btn {
+        width: 100%;
+        height: 100%;
+        display: inline-table;
+        padding: 6px;
+        color: white;
       }
     </style>
   </head>
@@ -140,17 +148,17 @@
                       <tr>
                         <th colspan="3" class="span12"><h4>Edge Types</h4></th>
                       </tr>
-                      <tr id="state-change-of">
-                          <th class="span10" id="state-change-of">controls-state-change-of</th>
-                          <td class="span1"  id="num-state-change-of"></td>
-                          <td class="span1"><a class="icon-remove" value="state-change-of"></a></td>
-                      </tr>
-                      <tr id="expression-of">
-                         <th class="span10">controls-expression-of</th>
-                         <td class="span1" id="num-expression-of"></td>
-                         <td class="span1"><a class="icon-remove" value="expression-of"></a></td>
-                       </tr>
-                       </tr>                 
+                      {% for edge_name in edge_types %}
+                          <tr>
+                            <td class="span2" id="{{ edge_name }}-num"></td>
+                            <th class="span9">
+                              <button class="edge_btn" id="{{ edge_name }}-btn">{{ edge_name }}</button>
+                            </th>
+                            <td class="span1">
+                              <a class="icon-remove" value="{{ edge_name }}"></a>
+                            </td>
+                          </tr>
+                      {% end %}                 
                     </tbody>
                   </table>
                 </div><!---edge Type-->
@@ -322,47 +330,19 @@
         //autounselectify: true,
         layout: {
             name: 'spread',
-            minDist: 40
+            minDist: 100
           },  
           style: [
             {
               selector: 'node',
               style: {
-                'content': 'data(id)',
+                //'content': 'data(id)',
                 'font-size': 8,
                 'background-color': '#96d9f6',//#96d9f6
-                'size': 8
+                'size': 20
               }
             },
-            {
-              selector: 'node[importance = 4]',
-              style: {
-                'content': 'data(id)',
-                'font-size': 8,
-                'background-color': '#ff6666',//#96d9f6
-                'size': 4
-              }
-            }, 
-            {
-              selector: "edge[type = 'controls-state-change-of']",
-              style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 4,
-                'opacity': 0.5,
-                'line-color': '#2dc16c'
-              }
-            },
-            {
-              selector: "edge[type = 'controls-expression-of']",
-              style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 4,
-                'opacity': 0.666,
-                'line-color': '#2980b9'
-              }
-            },
+           
             {
               selector: ':selected',
               style: {
@@ -441,19 +421,23 @@
     </script>
     <script type="text/javascript">
       $(function() {
-
-         
-        // cy panzoom plugin 
-        $('#modal').iziModal();
+        $('#modal').iziModal({
+          onClosed: function(modal) {
+            $('.cy-panzoom').show();
+          }
+        });
       })
     </script>
    <!-- <script src="{{ static_url('js/heatmap.js')}}"></script>-->
     <script>
       $(function(){
-        var TypeOne  = cy.filter("edge[type = \'controls-" + 'state-change-of' + "\']");
-        var TypeTwo = cy.filter("edge[type = \'controls-" + 'expression-of' + "\']")
-        $('#num-state-change-of').text(TypeOne.length);
-        $('#num-expression-of').text(TypeTwo.length);
+        {% for edge_name in edge_types %}
+          var edge_name = "{{ edge_name }}";
+          var edge_color = "{{ edge_types[edge_name] }}";
+          var edge = cy.filter("edge[type = \'" + edge_name + "\']");
+          $('#' + edge_name + '-num').text(edge.length);
+          $('#' + edge_name + '-btn').css('background-color', edge_color);
+        {% end %}
         $('#ex1').slider({
            formatter: function(value) {
              return 'Current value: ' + value;
@@ -463,7 +447,7 @@
            formatter: function(value) {
              return 'Current value: ' + value;
            }
-        });    
+        });  
       });
     </script>
     <script>
@@ -833,11 +817,11 @@
                 'content': 'data(id)',
                 'font-size': 8,
                 'background-color': '#96d9f6',//#96d9f6
-                'size': 8
+                'size': 20
               }
             },
             {
-              selector: "edge[type = 'controls-state-change-of']",
+              selector: "edge",
               style: {
                 'curve-style': 'haystack',
                 'haystack-radius': 0,
@@ -860,6 +844,33 @@
           elements: net,        
         });//cy
 
-         cy2.panzoom({}); 
+        cy2.panzoom({}); 
+
+        cy2.on('mouseover', 'node', function(event) {
+          var node = event.cyTarget;
+          nodeIndex = '<p>%s</p>'.format(node.id());
+
+          node.qtip({
+            content: nodeIndex,
+            
+            show: {
+              event: event.type,
+              ready: true
+            },
+
+            hide: {
+              event: 'mouseout unfocus'
+            },
+
+            style: {
+              classes: 'qtip-bootstrap',
+              tip: {
+                width: 16,
+                height: 8
+              }
+            }
+
+          }, event);
+        });
       });
     </script>

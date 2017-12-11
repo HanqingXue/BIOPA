@@ -13,12 +13,12 @@ def set_node(node_id):
     node['removed'] = False
     node['grabbed'] = False
     node['position'] = {}
-    node['position']['x'] = random.randint(0, 200)
-    node['position']['y'] = random.randint(0, 200)
+    node['position']['x'] = random.randint(0, 800)
+    node['position']['y'] = random.randint(0, 800)
 
     return node
 
-def set_edge(source, target):
+def set_edge(source, target, edge_type):
     edge = {}
     edge["group"] = "edges"
     edge["locked"] =  False
@@ -33,6 +33,6 @@ def set_edge(source, target):
     edge['data']['target'] = target
     edge['data']['source'] = source
     edge['data']['isdirected'] = True
-    edge['data']["type"] = "controls-state-change-of"  
+    edge['data']["type"] = edge_type  
 
     return edge

@@ -30,9 +30,7 @@ class DataHandler(tornado.web.RequestHandler):
             Query the database with keyword.
             '''
             db = DataBase()
-            result = search_db(db, 'BioPA', 'PathID', noun1)
-            print 'The result is:'
-            print result
+            result = search_db(db, 'BioPA', 'Entity1', noun1)
 
             if len(result) != 0:
             	self.render('data.html', noun1 = result, keyword = noun1, hello = result )
