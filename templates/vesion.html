@@ -156,6 +156,7 @@
                             </th>
                             <td class="span1">
                               <a class="icon-remove" value="{{ edge_name }}"></a>
+                              <a class="icon-plus" value="{{ edge_name }}"></a>
                             </td>
                           </tr>
                       {% end %}                 
@@ -292,7 +293,7 @@
               </div><!--btn-group-->
             </div>                    
             </div><!--.btn-toolbar-->
-            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
+            <div id="cy" style="height: 450px; overflow: auto;overflow-x:auto"><p></p></div> 
           </div><!--.span8-->
       </div><!--row-->
       <div id="modal" class="iziModal isFullscreen">
@@ -336,10 +337,19 @@
             {
               selector: 'node',
               style: {
-                //'content': 'data(id)',
-                'font-size': 8,
+                'font-size': 4,
                 'background-color': '#96d9f6',//#96d9f6
-                'size': 20
+                'size': 100,
+                'content': 'data(id)',
+                "text-valign": "center",
+                "text-halign": "center",
+                "width": "mapData(score, 0, 0.006769776522008331, 20, 60)",
+                "height": "mapData(score, 0, 0.006769776522008331, 20, 60)",
+                "text-outline-color": "#555",
+                "text-outline-width": "2px",
+                "color": "#fff",
+                "overlay-padding": "6px",
+                "z-index": "10"
               }
             },
 
@@ -400,7 +410,7 @@
             {
               selector: ':selected',
               style: {
-                'background-color': 'black',
+                'background-color': '#000000',
                 'line-color': 'black',
                 'target-arrow-color': 'black',
                 'source-arrow-color': 'black',
@@ -703,9 +713,18 @@
       $('a.icon-remove').click(function() {
         var edgeType = $(this).attr('value');
         $('tr#' + edgeType).remove();
-        var filter  = "edge[type = \'controls-" + edgeType + "\']";
+        var filter  = "edge[type = \'" + edgeType + "\']";
         var selector = cy.filter(filter);
         selector.hide();
+      });
+    </script>
+    <script>
+      $('a.icon-plus').click(function() {
+        var edgeType = $(this).attr('value');
+        $('tr#' + edgeType).remove();
+        var filter  = "edge[type = \'" + edgeType + "\']";
+        var selector = cy.filter(filter);
+        selector.show();
       });
     </script>
     <script>

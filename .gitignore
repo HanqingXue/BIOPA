@@ -3,4 +3,5 @@
 /templates/test.html
 /templates/test2.html
 *.pyc
+/templates/un*.html
 
