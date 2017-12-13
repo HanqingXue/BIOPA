@@ -321,9 +321,15 @@
       var clickMenu = new Object();
       var nodeColor = '#000000';
       var tableDetail = new Object();
+      var opt = new Object();
     </script>
     <script>
     $(function() {
+      $.ajaxSetup({async:false});
+      $.getJSON("http://localhost:8000/static/json/versionOption.json",function(data){ 
+          opt  = data;
+      });
+
       net = JSON.parse($('#net').text());
       cy = cytoscape({
         container: document.getElementById('cy'), 
@@ -331,16 +337,15 @@
         //autounselectify: true,
         layout: {
             name: 'spread',
-            minDist: 100
-          },  
+          }, 
           style: [
             {
               selector: 'node',
               style: {
                 'font-size': 4,
                 'background-color': '#96d9f6',//#96d9f6
-                'size': 100,
-                'content': 'data(id)',
+                'size': 20,
+                //'content': 'data(id)',
                 "text-valign": "center",
                 "text-halign": "center",
                 "width": "mapData(score, 0, 0.006769776522008331, 20, 60)",
@@ -352,14 +357,30 @@
                 "z-index": "10"
               }
             },
-
+            {
+              selector: "node:selected",
+              style: {
+                'border-width': '6px',
+                'border-color': '#AAD8FF',
+                'border-opacity': 0.5,
+                'background-color': '#77828C',
+                'text-outline-color': '#77828C'
+              }
+            },
+            {
+              selector: "edge",
+              style : {
+                'curve-style': 'haystack',
+                'haystack-radius': 0.5,
+                'opacity': 0.4,
+                'line-color': "#bbb",
+                'width': "mapData(weight, 0, 1, 1, 8)",
+                'overlay-padding': "3px"
+              }
+            },
             {
               selector:  "edge[type = 'MI']",
               style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 2,
-                'opacity': 0.5,
                 'line-color': '#1139AA'
               }
             },
@@ -367,10 +388,6 @@
             {
               selector:  "edge[type = 'BRR']",
               style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 2,
-                'opacity': 0.5,
                 'line-color': '#1DC600'
               }
             },
@@ -378,10 +395,6 @@
             {
               selector:  "edge[type = 'CAI']",
               style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 2,
-                'opacity': 0.5,
                 'line-color': '#8840A7'
               }
             },
@@ -389,10 +402,6 @@
             {
               selector:  "edge[type = 'TBRR']",
               style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 2,
-                'opacity': 0.5,
                 'line-color': '#20C3C9'
               }
             },
@@ -400,10 +409,6 @@
             {
               selector:  "edge[type = 'ER']",
               style: {
-                'curve-style': 'haystack',
-                'haystack-radius': 0,
-                'width': 2,
-                'opacity': 0.5,
                 'line-color': '#C8AA64'
               }
             },
@@ -418,6 +423,7 @@
               }
             }
           ], 
+          //style: opt,
           elements: net,        
         });//cy 
          
