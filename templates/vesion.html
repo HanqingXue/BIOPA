@@ -338,6 +338,7 @@
         layout: {
             name: 'spread',
           }, 
+          
           style: [
             {
               selector: 'node',
@@ -357,16 +358,7 @@
                 "z-index": "10"
               }
             },
-            {
-              selector: "node:selected",
-              style: {
-                'border-width': '6px',
-                'border-color': '#AAD8FF',
-                'border-opacity': 0.5,
-                'background-color': '#77828C',
-                'text-outline-color': '#77828C'
-              }
-            },
+
             {
               selector: "edge",
               style : {
@@ -379,23 +371,23 @@
               }
             },
             {
-              selector:  "edge[type = 'MI']",
+              selector:  "edge[type = 'CAI']",
               style: {
-                'line-color': '#1139AA'
+                'line-color': '#8840A7'
               }
             },
            
             {
               selector:  "edge[type = 'BRR']",
               style: {
-                'line-color': '#1DC600'
+                'line-color': '#1139AA'
               }
             },
 
             {
-              selector:  "edge[type = 'CAI']",
+              selector:  "edge[type = 'MI']",
               style: {
-                'line-color': '#8840A7'
+                'line-color': '#1DC600'
               }
             },
 
@@ -423,7 +415,7 @@
               }
             }
           ], 
-          //style: opt,
+    
           elements: net,        
         });//cy 
          

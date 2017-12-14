@@ -34,8 +34,14 @@ class VisionHandler(tornado.web.RequestHandler):
         for node in nodes:
             versionData.append(set_node(node))
 
-        color = ['#1139AA', '#1DC600', '#8840A7', '#20C3C9', '#C8AA64', '#4B2E32']
         edge2list = list(set(edge_types))
-        edge_info = dict(zip(edge2list, color[:len(edge2list)]))
+        edge_info = {
+            'CAI': '#8840A7',
+            'BRR': '#1139AA',#1139AA
+            'MI': '#1DC600',
+            'TBRR': '#20C3C9',
+            'ER': '#C8AA64',
+            'OTHER': '#4B2E32'
+        }
         #list(set(edge_types))
-        self.render('vesion.html', hello= json.dumps(versionData), edge_types = edge_info)
+        self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
