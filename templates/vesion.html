@@ -87,19 +87,20 @@
         </div>
       </div>
     </div>
-
+    
+    <h2 id="net" style="display: none"> {{ hello }}</h2>
     <div class="container-fluid">
       <div class="row">
           <div class="span4 hero-unit bs-example bs-example-tabs">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active">
-                <a href="#home" data-toggle="tab">
+                <a href="#home" data-toggle="tab" id="Nodetab">
                    Node
-                  <h2 id="net" style="display: none"> {{ hello }}</h2>
                 </a>
               </li>
-              <li><a href="#ios" data-toggle="tab">Edge</a></li>
-              <li><a href="#jmeter" tabindex="-1" data-toggle="tab">Style</a></li>
+             <li><a href="#edge-detail" data-toggle="tab">Edge</a></li>
+            <li><a href="#ios" data-toggle="tab">Summary</a></li>
+            <li><a href="#jmeter" tabindex="-1" data-toggle="tab">Style</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade in active" id="home" style="overflow: hidden; border-top: 0px">
@@ -160,6 +161,35 @@
                             </td>
                           </tr>
                       {% end %}                 
+                    </tbody>
+                  </table>
+                </div><!---edge Type-->
+              </div>
+              <div class="tab-pane fade" id="edge-detail">
+                <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed table-hover">
+                  <table style="border: 0" id="interactTable">
+                    <tbody>
+                      <tr>
+                        <td colspan="2" ><h5 id="edge-title">Edge-Edge</h5></td>
+                      </tr>
+                      <tr>
+                        <th class="span6">Interactions</th>
+                        <td id="interactions" class="span6">
+                          <span class="label label-info" id="edgeTypeLabel">null</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Pathway Name</th>
+                        <td id="PathwayName"><span class="label label-info">null</span></td>
+                      </tr>
+                      <tr>
+                        <th>Manuscripts</th>
+                        <td id="Manuscripts">null</td>
+                      </tr>
+                      <tr>
+                        <th>Effect</th>
+                        <td id="Effect">null</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div><!---edge Type-->
@@ -296,6 +326,7 @@
             <div id="cy" style="height: 450px; overflow: auto;overflow-x:auto"><p></p></div> 
           </div><!--.span8-->
       </div><!--row-->
+
       <div id="modal" class="iziModal isFullscreen">
         <div class="iziModal-header iziModal-noSubtitle" style="background: rgb(136, 160, 185);padding-right: 70px">
           <h2 class="iziModal-header-title">Fullscreen of network</h2>
@@ -303,8 +334,8 @@
             <button class="iziModal-button iziModal-button-close" data-izimodal-close="" data-izimodal-transitionout="bounceOutDown" id="close-btn"></button>
           </div>
         </div>
-        <div class="iziModal-wrap">
-          <div class="iziModal-content" id="cy2" style="height: 600px;">
+        <div class="iziModal-wrap span6" >
+          <div class="iziModal-content" id="cy2" style="height: 600px; width: 700px">
           </div>
         </div>
       </div>
@@ -325,11 +356,6 @@
     </script>
     <script>
     $(function() {
-      $.ajaxSetup({async:false});
-      $.getJSON("http://localhost:8000/static/json/versionOption.json",function(data){ 
-          opt  = data;
-      });
-
       net = JSON.parse($('#net').text());
       cy = cytoscape({
         container: document.getElementById('cy'), 
@@ -346,7 +372,7 @@
                 'font-size': 4,
                 'background-color': '#96d9f6',//#96d9f6
                 'size': 20,
-                //'content': 'data(id)',
+                'content': 'data(id)',
                 "text-valign": "center",
                 "text-halign": "center",
                 "width": "mapData(score, 0, 0.006769776522008331, 20, 60)",
@@ -445,21 +471,33 @@
               nodeIndex = '#' + node.id();
               cy.zoom(2);
               cy.center(nodeIndex);
-              $('#li-detail').addClass('active');
-              $('#li-setting').removeClass('active');
-              $('#li-content').removeClass('active');
-              $('#myTab a:first').tab('show');
+
+              $('#myTab li:eq(0) a').tab('show');
               $('#Detail-table').show();
-              $('Detail-tips').hide();
+              $('#Detail-tips').hide();
               $('#arrow').hide();
               $('#help-text').hide();
+              $('#interactTable').hide();
+              $('#Nodetab').text('Node');
               $('#gene-title').text(node.id());
               $("tr#"+node.id()).show();
               $('#UniProtID a').text(node.id());
             }//end of event.cyTarget.isNode()
 
-            if (event.cyTarget.isEdge) {
-              console.log('Change the Edge tab!');
+            if (event.cyTarget.isEdge()) {
+              $('#Nodetab').text('Edge');
+              $('#Detail-table').hide();
+
+              $('#myTab li:eq(1) a').tab('show');
+
+              var edge = event.cyTarget;
+              var source = edge.source();
+              var target = edge.target();
+              $('#edge-title').text(source.id() + '-' + target.id());
+              var edgeInfo = getEdge(source.id(), target.id());
+              console.log(edgeInfo);
+              $('#interactTable').show();
+              fillEdgeTable(edgeInfo);
             }
           }//end-else
         });//end-cy.on
@@ -955,4 +993,32 @@
           }, event);
         });
       });
+    </script>
+    <script type="text/javascript">
+      function getEdge(source, target) {
+        for (var item in net) {
+          //if(net[item].id)
+          if(net[item]['data']['source'] == source && net[item]['data']['target'] == target) {
+            return net[item]['data'];
+          }
+        }
+        return null;
+      }
+    </script>
+    <script type="text/javascript">
+      function fillEdgeTable(edgeInfo) {
+        $('#edgeTypeLabel').text(edgeInfo['type']);
+        $('#PathwayName').text(edgeInfo['PathName']);
+        $('#Manuscripts').text(edgeInfo['Manuscripts']);
+        $('#Effect').text(edgeInfo['Effect']);
+        var typeColor = new Object();
+        
+        {% for edge_name in edge_types %}
+          var edge_name = "{{ edge_name }}";
+          var edge_color = "{{ edge_types[edge_name] }}";
+          typeColor[edge_name] = edge_color;
+        {% end %}
+
+        $('#edgeTypeLabel').css('background-color', typeColor[edgeInfo['type']]);
+      }
     </script>

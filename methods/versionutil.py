@@ -18,7 +18,7 @@ def set_node(node_id):
 
     return node
 
-def set_edge(source, target, edge_type):
+def set_edge(source, target, edge_type, path_id, path_name, manscripts, effect):
     edge = {}
     edge["group"] = "edges"
     edge["locked"] =  False
@@ -33,6 +33,11 @@ def set_edge(source, target, edge_type):
     edge['data']['target'] = target
     edge['data']['source'] = source
     edge['data']['isdirected'] = True
-    edge['data']["type"] = edge_type  
+    edge['data']["type"] = edge_type
+    edge['data']['PathID'] = path_id
+    edge['data']['PathName'] = path_name
+    edge['data']['Manuscripts'] = manscripts
+    edge['data']['Effect'] = effect
+
 
     return edge

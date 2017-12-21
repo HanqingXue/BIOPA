@@ -16,7 +16,10 @@ class VisionHandler(tornado.web.RequestHandler):
         db = DataBase()
         print db.get_database('BioPA').name
 
-        result = db.search_item({'Entity1': noun1})
+        result = search_db(db, 'BioPA', 'Entity1', noun1)
+        print result
+        for item in result:
+            print item
 
         versionData = []
 
@@ -26,8 +29,14 @@ class VisionHandler(tornado.web.RequestHandler):
             nodes.append(item['Entity1'])
             nodes.append(item['Entity2'])
             edge_types.append(item['Interaction'])
-            versionData.append(set_edge(item['Entity1'], item['Entity2'], item['Interaction']))
-        
+            versionData.append(
+                set_edge(item['Entity1'], 
+                item['Entity2'], 
+                item['Interaction'], 
+                item['PathID'], 
+                item['PathName'], 
+                item['ManuscriptID'], 
+                item['Effect']))
         nodes = set(nodes)
         nodes = list(nodes)
 
@@ -41,6 +50,7 @@ class VisionHandler(tornado.web.RequestHandler):
             'MI': '#1DC600',
             'TBRR': '#20C3C9',
             'ER': '#C8AA64',
-            'OTHER': '#4B2E32'
+            'OTHER': '#4B2E32',
+            'CAR': '#FFFFFF'
         }
         self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
