@@ -61,6 +61,17 @@
         padding: 6px;
         color: white;
       }
+    
+     .pubmed {
+        background-color: #285287;
+      }
+
+      .mex {
+        background-color: #796395;
+      }
+      span > a {
+        color: white;
+      }
     </style>
   </head>
   <body style="padding-top:0px">
@@ -485,11 +496,8 @@
             }//end of event.cyTarget.isNode()
 
             if (event.cyTarget.isEdge()) {
-              $('#Nodetab').text('Edge');
               $('#Detail-table').hide();
-
               $('#myTab li:eq(1) a').tab('show');
-
               var edge = event.cyTarget;
               var source = edge.source();
               var target = edge.target();
@@ -1006,12 +1014,42 @@
       }
     </script>
     <script type="text/javascript">
+      function formatManuscripts(refs) {
+        var manuscripts = refs.toString();
+        var format = manuscripts.replace('|', ';');
+        var word = format.split(';');
+        return word;
+      }
+    </script>
+    <script type="text/javascript">
+      function getManuscriptsDatabase(ref) {
+        if(ref.indexOf('imex')!=-1)
+          return 'mex';
+        return 'pubmed';
+      }
+    </script>>
+    <script type="text/javascript">
       function fillEdgeTable(edgeInfo) {
+        var manuscripts = edgeInfo['Manuscripts'];
+        var typeColor = new Object();
+        var manuscriptsList = formatManuscripts(manuscripts);
+
         $('#edgeTypeLabel').text(edgeInfo['type']);
         $('#PathwayName').text(edgeInfo['PathName']);
-        $('#Manuscripts').text(edgeInfo['Manuscripts']);
         $('#Effect').text(edgeInfo['Effect']);
-        var typeColor = new Object();
+        $('#Manuscripts').empty();
+
+        for (var index in manuscriptsList){
+          var manuscript = manuscriptsList[index];
+          var dbname = getManuscriptsDatabase(manuscript);
+          console.log(dbname);
+          console.log(dbname == 'pubmed');
+          if(dbname == 'pubmed') {
+            $('#Manuscripts').append("<span class='label label-info pubmed'><a href='https://www.ncbi.nlm.nih.gov/pubmed/?term=%s' >Pubmed:%s</a></span>".format(manuscript, manuscript)); 
+          } else {
+            $('#Manuscripts').append("<span class='label label-info mex'><a href='https://www.ncbi.nlm.nih.gov/pubmed/?term=%s' >%s</a></span>".format(manuscript, manuscript)); 
+          }
+         }
         
         {% for edge_name in edge_types %}
           var edge_name = "{{ edge_name }}";
@@ -1020,5 +1058,6 @@
         {% end %}
 
         $('#edgeTypeLabel').css('background-color', typeColor[edgeInfo['type']]);
+        //$('#PathwayName').append("<a>hello</a>");
       }
     </script>
