@@ -338,6 +338,94 @@
           </div><!--.span8-->
       </div><!--row-->
 
+      <div class="bs-example bs-example-tabs row" data-example-id="togglable-tabs" style="margin-right: auto;margin-left: auto;">
+         <ul id="bottomTabs" class="nav nav-tabs">
+           <li class="active">
+             <a href="#gene" data-toggle="tab">
+                Gene Detail
+             </a>
+           </li>
+           <li><a href="#jmeter1"  data-toggle="tab">Disease & Drug Detail</a></li>
+           <li><a href="#ejb" tabindex="-1" data-toggle="tab">Pathway Detail</a></li>
+           <li><a href="#analysis" data-toggle="tab">Network Analysis</a></li>
+           <li><a href="#ios1" data-toggle="tab">Exprssion</a></li>
+         </ul>
+         <div id="myTabContent" class="tab-content">
+           <div class="tab-pane fade in active" id="gene">
+             <div class="table table-striped table-bordered table-hover ">
+               <table id="deatilGene">
+                 <tr id="tableHead">
+                   <th>Gene Id</th>
+                   <th>Gene name</th>
+                   <th>Genomic Coordinates</th>
+                   <th>HGNC</th>
+                   <th>OMIM</th>
+                   <th>Pfam</th>
+                   <th>Protein Sequence</th>
+                   <th>Swiss-prot</th>
+                   <th>Synonyms</th>
+                   <th>TrEMBL</th>
+                   <th>Transcript</th>
+                   <th>cDNA Sequence</th>
+                   <th>Atlas Genetic Oncology</th>
+                   <th>CCDS</th>
+                   <th>Copy Number</th>
+                 </tr>
+               </table>
+             </div><!--table-->
+           </div><!--#home1-->
+           <div class="tab-pane fade" id="ios1">
+             <div id="plotly-div"></div>
+           </div>
+           <div class="tab-pane fade" id="jmeter1">
+             <div class="table table-striped table-bordered table-responsive table-hover">
+               <table id="drugTable">
+                 <tr id="drugtableTitle">
+                   <th class="span1">Entry</th>
+                   <th class="span2">Name</th>
+                   <th class="span6">Description</th>
+                   <th class="span1">Category</th>
+                   <th class="span1">Pathway</th>
+                   <th class="span1">Drug</th>
+                 </tr>
+               </table>
+             </div>
+           </div>
+           <div class="tab-pane fade" id="analysis">
+             <table class="table table-striped table-bordered table-responsive table-hover">
+               <tbody>
+                <tr>
+                 <th>Degree</th>
+                 <th>Degree Centrality</th>
+                 <th>Closeness Centrality</th>
+                 <th>Betweenness Centrality</th>
+                </tr>
+                <tr>
+                  <th id="degree">null</th>
+                  <th id="node_dc">null</th>
+                  <th id="node_cc">null</th>
+                  <th id="node_bc">null</th>
+                </tr>
+               </tbody>
+             </table>
+           </div>
+           <div class="tab-pane fade" id="ejb">
+             <div class="table table-striped table-bordered table-hover table-responsive span12">
+               <table id="pathwayTable">
+                 <tr>
+                   <th>PathwayID</th>
+                   <th>Discript</th>
+                 </tr>
+                 <td>
+                   <th>PID_4796</th>
+                   <th>To link to full-text access for this article, visit this link: http:/​/​dx.doi.org/​10.1016/​j.asr.2012.05.024 Byline: Liming Zhao (a), Nancy Tanjung (a), Gaurav Swarnkar (a), Eric Ledet (b), Hiroki Yokota (a)(c) Keywords: eIF2[alpha]; Phosphorylation; Hindlimb unloading; Tibia loading; STS-135; Unloading Abstract: a* Mechanical loading to the tibia decreases integrated stress responses. a* Hindlimb unloading increases integrated stress responses in the tibia. a* A release from hindlimb unloading reduces integrated stress responses. a* A return to Earth gravity from space suppresses integrated stress responses. a* A period of 2-4h is sufficient to induce this suppressive outcome. Author Affiliation: (a) Department of Biomedical Engineering, Indiana University Purdue University Indianapolis, Indianapolis, IN 46202, USA (b) Department of Biomedical Engineering, Rensselaer Polytechnic Institute, Troy, NY 12180, USA (c) Department of Anatomy and Cell Biology, Indiana University School of Medicine, Indianapolis, IN 46202, USA Article History: Received 14 April 2012; Revised 24 May 2012; Accepted 26 May 2012</th>
+                 </td>
+               </table>
+             </div><!--TABLE-->
+           </div>
+          </div>
+        </div><!--row-->
+
       <div id="modal" class="iziModal isFullscreen">
         <div class="iziModal-header iziModal-noSubtitle" style="background: rgb(136, 160, 185);padding-right: 70px">
           <h2 class="iziModal-header-title">Fullscreen of network</h2>
@@ -484,6 +572,7 @@
               cy.center(nodeIndex);
 
               $('#myTab li:eq(0) a').tab('show');
+              $('#bottomTabs li:eq(3) a').tab('show');
               $('#Detail-table').show();
               $('#Detail-tips').hide();
               $('#arrow').hide();
@@ -493,6 +582,7 @@
               $('#gene-title').text(node.id());
               $("tr#"+node.id()).show();
               $('#UniProtID a').text(node.id());
+              setUpAnalysisTable(node.id());
             }//end of event.cyTarget.isNode()
 
             if (event.cyTarget.isEdge()) {
@@ -1058,6 +1148,19 @@
         {% end %}
 
         $('#edgeTypeLabel').css('background-color', typeColor[edgeInfo['type']]);
-        //$('#PathwayName').append("<a>hello</a>");
+      }
+    </script>
+    <script type="text/javascript">
+      function setUpAnalysisTable(nodeId) {
+        console.log(nodeId);
+        var keyword = '#' + nodeId;
+        var degree = cy.filter("node[id='%s']".format(nodeId)).degree();
+        var bc = cy.$().bc().betweenness(keyword);
+        var cc = cy.$().cc({ root: keyword });
+        var dc = cy.$().dc({ root: keyword }).degree;
+        $('#degree').text(degree);
+        $('#node_bc').text(bc);
+        $('#node_cc').text(cc);
+        $('#node_dc').text(dc);
       }
     </script>
