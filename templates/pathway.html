@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <title>Data</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" /> 
+  <link href="{{ static_url('css/bootstrap.css') }}" rel="stylesheet" /> 
+  <script src="{{ static_url('js/jquery.js')}}"></script> 
+  <script src="{{ static_url('js/bootstrap.min.js')}}"></script> 
+  <script src="{{ static_url('js/site.js')}}"></script> 
+ </head> 
+ <body> 
+  <div id="guide" class="navbar navbar-inverse navbar-fixed-top" style="position: static; margin-bottom: 40px "> 
+   <div class="navbar-inner"> 
+    <div class="container-fluid"> 
+     <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="brand" href="/">BioPA</a> 
+     <div class="nav-collapse collapse"> 
+      <p class="navbar-text pull-right"> Logged in as <a  class="navbar-link">Username</a> </p> 
+      <ul class="nav"> 
+       <li class="active"><a href="/">Home</a></li> 
+       <li><a href="about">About</a></li> 
+       <li><a href="contact">Contact</a></li> 
+      </ul> 
+     </div> 
+     <!--/.nav-collapse --> 
+    </div> 
+   </div> 
+  </div> 
+  <!-- end gudie--> 
+  <div class="container"> 
+    <div class="container-fluid"> 
+     <div style="padding-top: 20px "> 
+      <ul id="myTab" class="nav nav-tabs"> 
+       <li class="active"> <a href="#gene" data-toggle="tab"> Search Results </a> </li> 
+      </ul> 
+     </div> 
+
+     <div class="table table-striped table-bordered table-hover " style="word-break:break-all; word-wrap:break-all;" > 
+      <table id="deatilGene"> 
+       <tbody>
+        <tr>
+         <th class="span2">Pathway Name</th> 
+         <th class="span2">Species</th> 
+         <th class="span2">DataBase</th> 
+         <th class="span2">Pathway Identifier</th> 
+         <th class="span3">Description</th> 
+         <th></th>
+        </tr>
+        <tr>
+          <th>Transcriptional regulation by RUNX1</th>
+          <th>Homo sapiens</th>
+          <th>Reactome</th>
+          <th><a class="site">R-HSA-8878171</a></th>
+          <th>The RUNX1 (AML1) transcription factor is a master regulator of hematopoiesis (Ichikawa et al. 2004) that is frequently translocated in acute myeloid leukemia (AML), resulting in formation of fusion ..</th>
+          <th><a class="version" value="R-HSA-8878171">Visualzation</a></th>
+        </tr>
+        <tr>
+          <th>PTEN Regulation</th>
+          <th>Homo sapiens</th>
+          <th>Reactome</th>
+          <th><a class="site" >R-HSA-6807070</a></th>
+          <th>PTEN is regulated at the level of gene transcription, mRNA translation, localization and protein stability...</th>
+          <th><a  class="version" value="R-HSA-6807070">Visualzation</a></th>
+        </tr>
+        <tr>
+          <th>Senescence-Associated Secretory Phenotype (SASP)</th>
+          <th>Homo sapiens</th>
+          <th>Reactome</th>
+          <th><a class="site">R-HSA-2559582</a></th>
+          <th>The culture medium of senescent cells in enriched in secreted proteins when compared with the culture medium of quiescent i.e. presenescent cells and these secreted proteins constitute the so-called..</th>
+          <th><a class="version" value="R-HSA-2559582">Visualzation</a></th>
+        </tr>
+        <tr>
+          <th>SUMOylation of RNA binding proteins</th>
+          <th>Homo sapiens</th>
+          <th>Reactome</th>
+          <th><a class="site">R-HSA-2559582</a></th>
+          <th>SUMOylation of RNA-binding proteins (Li et al. 2004, reviewed in Filosa et al. 2013) alters their interactions with nucleic acids and with proteins. Whereas SUMOylation of HNRNPC decreases its affinity for nucleic acid (ssDNA..）</th>
+          <th><a class="version" id="R-HSA-2559582">Visualzation</a></th>
+        </tr>
+        <tr>
+          <th>The role of GTSE1 in G2/M progression after G2 checkpoint</th>
+          <th>Homo sapiens</th>
+          <th>Reactome</th>
+          <th><a class="site">R-HSA-8852276</a></th>
+          <th>GTSE1 (B99) was identified as a microtubule-associated protein product of the mouse B99 gene, which exhibits both a cell cycle regulated expression, with highest levels in G2, and DNA damage triggered expression under direct control of TP53 (p53) (Utrera et al. 1998, Collavin et al. 2000)...</th>
+          <th><a class="version" value="R-HSA-8852276">Visualzation</a></th>
+        </tr>
+       </tbody>
+      </table> 
+      <form method="post" action="/pathway" id="myform">
+        <input id="input" type="text" name="noun1" style="display: none">
+        <h2 style="display: none" id="keyword"></h2>
+      </form>
+     </div>
+     <ul class="inline pagination" style="text-align: center;"> 
+      <li><a href="#">&laquo;</a></li> 
+      <li><a href="#" id="1">1</a></li> 
+      <li><a href="#" id="2">2</a></li> 
+      <li><a href="#" id="3">3</a></li> 
+      <li><a href="#" id="4">4</a></li> 
+      <li><a href="#" id="5">5</a></li> 
+      <li><a href="#">&raquo;</a></li> 
+     </ul> 
+    </div> 
+   </div>
+   <!--.container--> 
+  </div> 
+  <!--.container-->  
+ </body>
+</html>
+<script>
+$(document).ready(function() {
+  $("#version").click(function(e) {
+      var key = $('#keyword').text();
+      $('#input').val(key);
+      $('#myform').submit();
+      return false;
+    })
+  });
+</script>
+<script type="text/javascript">
+    $('.site').click(function (e) {
+        var term = $(this).text();
+        var url = "https://reactome.org/content/detail/%s".format(term)
+        $(this).attr("href", url);
+    });
+</script>
+<script type="text/javascript">
+    $('.version').click(function (e) {
+        var keyword = $(this).attr("value");
+        $('#input').val(keyword);
+        $('#myform').submit();
+    });
+</script>

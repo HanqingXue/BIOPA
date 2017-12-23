@@ -25,6 +25,9 @@ class DataHandler(tornado.web.RequestHandler):
         if tabindex == 3:
         	self.render("gene.html", GeneID = noun1)  
 
+        elif tabindex == 2:
+            self.render("pathway.html", GeneID = noun1)
+
         else:
             '''
             Query the database with keyword.
