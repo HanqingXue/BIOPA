@@ -2,6 +2,9 @@ import random
 
 def set_node(node_id):
     node = {}
+    if '*' in node_id:
+        node_id = node_id.replace('*', '_')
+
     node['data'] = {}
     node['data']['id'] = node_id
     node['data']['importance'] = 3
@@ -39,5 +42,9 @@ def set_edge(source, target, edge_type, path_id, path_name, manscripts, effect):
     edge['data']['Manuscripts'] = manscripts
     edge['data']['Effect'] = effect
 
-
     return edge
+
+def check_node_Id(node_id):
+    if '*' in node_id:
+        node_id = node_id.replace('*', '_')
+    return node_id

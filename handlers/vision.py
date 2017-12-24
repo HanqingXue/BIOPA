@@ -26,12 +26,12 @@ class VisionHandler(tornado.web.RequestHandler):
         nodes = []
         edge_types = []
         for item in result:
-            nodes.append(item['Entity1'])
-            nodes.append(item['Entity2'])
+            nodes.append(check_node_Id(item['Entity1']))
+            nodes.append(check_node_Id(item['Entity2']))
             edge_types.append(item['Interaction'])
             versionData.append(
-                set_edge(item['Entity1'], 
-                item['Entity2'], 
+                set_edge(check_node_Id(item['Entity1']), 
+                check_node_Id(item['Entity2']), 
                 item['Interaction'], 
                 item['PathID'], 
                 item['PathName'], 
