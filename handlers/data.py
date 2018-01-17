@@ -15,6 +15,7 @@ class DataHandler(tornado.web.RequestHandler):
         noun1 = self.get_argument('noun1')
         tabindex = self.get_argument('tabindex')
         tabindex = int(tabindex)
+        print tabindex
         print noun1
     	'''
     	Query is empty. Load the error page.
@@ -28,7 +29,12 @@ class DataHandler(tornado.web.RequestHandler):
         elif tabindex == 2:
             self.render("pathway.html", GeneID = noun1)
 
-        else:
+        elif tabindex == 4:
+
+            self.render('location.html', chr = noun1)
+            pass
+
+        elif tabindex == 0:
             '''
             Query the database with keyword.
             '''
@@ -39,6 +45,7 @@ class DataHandler(tornado.web.RequestHandler):
             	self.render('data.html', noun1 = result, keyword = noun1, hello = result )
             else:
             	self.render('error.html')
+
             
 
 

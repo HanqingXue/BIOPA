@@ -38,17 +38,18 @@
     </div>
     </div>
   </div><!-- guide-->
-  
+
   <div class="row-fluid">
       <ul class="nav nav-tabs" >
           <li class="active">
-            <a href="#home" data-toggle="tab">xxx</a>
+            <a href="#home" data-toggle="tab">Gene Browse</a>
+            <a id="segment">{{ chr }}</a>
           </li>
         </ul>
         <div id="browser" class="tab-content" style="text-align: center;">
           <div class="tab-pane fade in active" id="home">
             <div id="frame-out" style="width:1600px;height:900px;overflow:hidden;border-style: :none"> 
-                <div id="frame-in" style="width:1600px;height:900px;margin:-100px -00px -500px -200px;border-style: none;">
+                <div id="frame-in" style="width:1600px;height:900px;margin:-30px -00px -500px -200px;border-style: none;">
                   <iFrame src="" width="1200" height="1000" scrolling="no" id="showFrame" style="border: none">
                   </iFrame>
                 </div>
@@ -56,13 +57,12 @@
           </div>
         </div>
   </div> <!--row-fluid-->
-
  </body>
 </html>
 <script type="text/javascript">
-   //http://www.uniprot.org/uniprot/Q9BQI3#
   $(function() {
-    $('#showFrame').attr("src", "http://www.pathwaycommons.org/pathways/#/view?uri=http%3A%2F%2Fidentifiers.org%2Freactome%2FR-HSA-2559582")
+    var chr = $('#segment').text();
+    $('#showFrame').attr("src", "http://browse2.big.ac.cn/jbrowse/?data=human_GRCh38&loc=" + chr + "%3A1..170805979&tracks=Gene%2CTranscript%2ClncRNA%2CmiRNA&highlight=")
   });
 </script>
 </html>

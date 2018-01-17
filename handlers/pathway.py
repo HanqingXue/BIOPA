@@ -13,7 +13,6 @@ class PathwayHandler(tornado.web.RequestHandler):
     	Get arguments from front page. 
     	'''
         noun1 = self.get_argument('noun1')
-        print "hello world"
         self.render("pathviz.html")
             
 

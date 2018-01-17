@@ -83,7 +83,10 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#variation" tabindex="-1"  value = "3"data-toggle="tab" >Gene variation</a>
+                                    <a href="#variation"  value = "3" data-toggle="tab" >Gene variation</a>
+                                </li>
+                                <li>
+                                    <a href="#loctaion" tabindex="-1"  value = "4" data-toggle="tab" >Gene location</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -120,8 +123,10 @@
                     $('#search').attr('placeholder', 'Enter function or disease names here');
                } else if(data == "#pathways"){
                     $('#search').attr('placeholder', 'Enter pathway names or tox lists here');
-               } else {
+               } else if(data == '#variation') {
                     $('#search').attr('placeholder', 'Enter gene uniprot ID');
+               } else {
+                    $('#search').attr('placeholder', 'Enter gene location infomation(Eg: chr6:31678771..31820970)')
                }
                var tabIndex = $(this).attr('value');
                $('#tabindex').val(tabIndex);
