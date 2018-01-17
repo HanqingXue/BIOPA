@@ -635,10 +635,10 @@
 
         cy.on('mouseover', 'node', function(event) {
           var node = event.cyTarget;
-          nodeIndex = '<p>%s</p>'.format(node.id());
+          nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
 
           node.qtip({
-            content: 'table',
+            content: nodeIndex,
             
             show: {
               event: event.type,
