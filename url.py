@@ -15,6 +15,7 @@ from handlers.search import SearchHandler
 from handlers.contact import ContactHandler
 from handlers.test import TestHandler
 from handlers.pathway import PathwayHandler
+from handlers.plot import PlotHandler
 
 url = [
     (r'/', IndexHandler),
@@ -24,5 +25,6 @@ url = [
     (r'/contact', ContactHandler),
     (r'/search', SearchHandler),
     (r'/test', TestHandler),
-    (r'/pathway', PathwayHandler)
+    (r'/pathway', PathwayHandler),
+    (r'/pathwayplot', PlotHandler),
 ] 

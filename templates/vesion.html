@@ -497,13 +497,14 @@
     <script>
     $(function() {
       net = JSON.parse($('#net').text());
+      console.log(net);
       cy = cytoscape({
         container: document.getElementById('cy'), 
         boxSelectionEnabled: true,
         //autounselectify: true,
         layout: {
             name: 'spread',
-          }, 
+          },
           
           style: [
             {

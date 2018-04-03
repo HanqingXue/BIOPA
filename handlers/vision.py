@@ -53,4 +53,5 @@ class VisionHandler(tornado.web.RequestHandler):
             'OTHER': '#4B2E32',
             'CAR': '#FFFFFF'
         }
+        print versionData
         self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))

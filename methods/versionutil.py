@@ -44,6 +44,24 @@ def set_edge(source, target, edge_type, path_id, path_name, manscripts, effect):
 
     return edge
 
+def set_base_edge(source, target):
+    edge = {}
+    edge["group"] = "edges"
+    edge["locked"] =  False
+    edge["selected"] =  False
+    edge["classes"] = 1
+    edge["grabbable"] =  True
+    edge["position"] =  {}
+    edge["selectable"] =  True
+    edge["removed"] = False
+              
+    edge['data'] = {}
+    edge['data']['target'] = target
+    edge['data']['source'] = source
+
+    return edge
+
+
 def check_node_Id(node_id):
     if '*' in node_id:
         node_id = node_id.replace('*', '_')
