@@ -24,5 +24,5 @@ class PlotHandler(tornado.web.RequestHandler):
         for item in nodes:
         	versionData.append(set_node(item))
 
-        self.render('plotter.html', hello= json.dumps(versionData), pathname=pathname)
+        self.render('plotter.html', hello= json.dumps(versionData), pathname=pathname[:-4])
 

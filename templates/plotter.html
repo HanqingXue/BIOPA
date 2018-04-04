@@ -4,6 +4,7 @@
   <head>
     <title>Pathway Plotter</title>
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/cytoscape.js-panzoom.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/cytoscape-navigator.css') }}">
     <script src="{{ static_url('js/cytoscape.min.js') }}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
 
@@ -12,7 +13,8 @@
     <script src="{{ static_url('js/cytoscape-panzoom.js') }}"></script>
     <script src="{{ static_url('js/dagre.min.js') }}"></script>
     <script src="{{ static_url('js/cytoscape-dagre.js') }}"></script>
-
+    
+    <script src="{{ static_url('js/cytoscape-navigator.js') }}"></script>
     <link rel="stylesheet" href="{{ static_url('css/style.css')}}">
     
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
@@ -31,6 +33,11 @@
         z-index: 999;
       }
 
+      #pathname {
+        padding-left: 40px;
+        padding-top: 15px;
+      }
+
       h1 {
         opacity: 0.5;
         font-size: 1em;
@@ -38,7 +45,7 @@
     </style>
   </head>
   <body>
-    <h1>{{ pathname }}</h1>
+    <h1 id="pathname">{{ pathname }}</h1>
     <div id="cy"></div>
     <h2 id="net" style="display: none"> {{ hello }}</h2>
     <!-- Load application code at the end to ensure DOM is loaded -->
@@ -84,5 +91,6 @@
     });
 
     cy.panzoom({});
+    cy.navigator({});
   </script>
 </html>
