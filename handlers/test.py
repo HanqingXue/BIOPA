@@ -6,4 +6,4 @@ sys.path.append('../')
 
 class TestHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('location.html', title = "Gene Browse")
+        self.render('compound.html')

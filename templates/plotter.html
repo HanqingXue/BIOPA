@@ -15,6 +15,7 @@
     <script src="{{ static_url('js/cytoscape-dagre.js') }}"></script>
     
     <script src="{{ static_url('js/cytoscape-navigator.js') }}"></script>
+
     <link rel="stylesheet" href="{{ static_url('css/style.css')}}">
     
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
@@ -60,7 +61,7 @@
       autounselectify: true,    
 
       layout: {
-        name: 'dagre'
+        name: 'breadthfirst'
       },   
 
       style: [

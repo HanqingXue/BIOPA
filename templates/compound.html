@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- This code is for demonstration purposes only.  You should not hotlink to Github, Rawgit, or files from the Cytoscape.js documentation in your production apps. -->
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+<title>Compound nodes</title>
+<script src="{{ static_url('js/cytoscape.min.js') }}"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
+<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.6.5/cytoscape-cose-bilkent.js"></script>
+<script src="{{ static_url('js/dagre.min.js') }}"></script>
+<script src="{{ static_url('js/cytoscape-dagre.js') }}"></script>
+<style type="text/css">
+	body { 
+  		font: 14px helvetica neue, helvetica, arial, sans-serif;
+	}
+
+	#cy {
+	  height: 100%;
+	  width: 100%;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	}
+</style>
+</head>
+<body>
+<div id="cy"></div>
+<!-- Load application code at the end to ensure DOM is loaded -->
+<script type="text/javascript">
+	var cy = window.cy = cytoscape({
+  container: document.getElementById('cy'),
+
+  boxSelectionEnabled: false,
+  autounselectify: true,
+
+  style: [
+    {
+      selector: 'node',
+      css: {
+        'content': 'data(id)',
+        'text-valign': 'center',
+        'text-halign': 'center',
+        'color': '#fff'
+      }
+    },
+    {
+      selector: '$node > node',
+      css: {
+        'padding-top': '10px',
+        'padding-left': '10px',
+        'padding-bottom': '10px',
+        'padding-right': '10px',
+        'text-valign': 'left',
+        'text-halign': 'top',
+        'background-color': '#fff',
+        'width': '80px'
+      }
+    },
+    {
+      selector: 'edge',
+      css: {
+        'target-arrow-shape': 'triangle'
+      },
+      /*style: {
+    "curve-style": "unbundled-bezier",
+    "control-point-distances": [40, -40],
+    "control-point-weights": [0.250, 0.75]
+      },*/
+    },
+    {
+      selector: ':selected',
+      css: {
+        'background-color': 'black',
+        'line-color': 'black',
+        'target-arrow-color': 'black',
+        'source-arrow-color': 'black'
+      }
+    }
+  ],
+
+  elements: {
+    nodes: [
+      { data: { id: 'a', parent: 'a;b;c' } },
+      { data: { id: 'b', parent: 'a;b;c' } },
+      { data: { id: 'c', parent: 'a;b;c' } },
+      { data: { id: 'h', parent: 'h;i' } },
+      { data: { id: 'i', parent: 'h;i' } },
+	  { data: { id: 'h;i' } },
+
+
+      { data: { id: 'a;b;c' } },
+      { data: { id: 'e' } },
+      { data: { id: 'f' } },
+      { data: { id: 'g' } },
+      { data: { id: 'm' } },
+      { data: { id: 'k' } }
+    ],
+    edges: [
+      { data: { id: 'abce', source: 'e', target: 'a;b;c' } },
+      { data: { id: 'abcf', source: 'f', target: 'a;b;c' } },
+      { data: { id: 'gc', source: 'g', target: 'c' } },
+      { data: { id: 'he', source: 'h', target: 'e' } },
+      { data: { id: 'mi', source: 'm', target: 'i' } },
+      { data: { id: 'kf', source: 'k', target: 'f' } },
+      { data: { id: 'km', source: 'k', target: 'm' } },
+
+
+    ]
+  },
+
+  layout: {
+    name: 'dagre',
+    padding: 100
+  }
+});
+</script>
+</body>
+</html>

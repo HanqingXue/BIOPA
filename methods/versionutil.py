@@ -21,6 +21,28 @@ def set_node(node_id):
 
     return node
 
+def set_comp_node(node_id, parent):
+    node = {}
+    if '*' in node_id:
+        node_id = node_id.replace('*', '_')
+
+    node['data'] = {}
+    node['data']['id'] = node_id
+    node['data']['importance'] = 3
+    node['group'] = "nodes"
+    node['selected'] = False
+    node['classes'] = 2
+    node['grabbable'] = True
+    node['locked'] = False
+    node['removed'] = False
+    node['grabbed'] = False
+    node['position'] = {}
+    node['position']['x'] = random.randint(0, 800)
+    node['position']['y'] = random.randint(0, 800)
+    node['parent'] = parent
+
+    return node
+
 def set_edge(source, target, edge_type, path_id, path_name, manscripts, effect):
     edge = {}
     edge["group"] = "edges"

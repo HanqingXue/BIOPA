@@ -1,3 +1,4 @@
+import copy
 import networkx as nx 
 import matplotlib.pyplot as plt
 
@@ -5,8 +6,22 @@ import matplotlib.pyplot as plt
 def detect_gene_family():
 	fname = '../Insulin receptor signalling cascade.txt'
 	g = init_graph(fname)
+
 	degree_dist = gen_degree_dist(g)
-	print gen_family_base_degree(g, 1)
+	for degree in degree_dist.keys():
+		if degree == 0:
+			continue
+		familys =  gen_family_base_degree(g, degree)
+
+		'''
+		Rebulid the edge
+		'''
+		rebulid_net(g, familys)
+
+	f = open('new_net.txt', 'w')
+	for edge in g.edges():
+		f.write('{0}\t{1}\n'.format(edge[0], edge[1]))
+	f.close()
 
 def init_graph(fname):
 	pathway_records  = open(fname)
@@ -62,6 +77,25 @@ def gen_family_base_degree(g, degree):
 			familys[family_name]['num'] += 1
 
 	return familys
+
+def rebulid_net(g, familys):
+	'''
+	Maybe have many familys
+	'''
+	for family_name in familys:
+		if len(familys[family_name]['target']) < 1:
+			continue
+		g.add_node(family_name)
+		
+
+		target = familys[family_name]['target']
+		old_edges = copy.deepcopy(g.edges())
+		for edge in old_edges:
+			if edge[1] in target:
+				g.add_edge(edge[0], family_name)
+				g.remove_edge(edge[0], edge[1])
+		
+	return g 
 
 if __name__ == '__main__':
 	detect_gene_family()
