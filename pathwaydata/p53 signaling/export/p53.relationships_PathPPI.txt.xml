@@ -1,0 +1,4120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entrySet xmlns="net:sf:psidev:mi" version="5" level="2">
+    <entry>
+        <source>
+            <names>
+                <shortLabel>Cytoscape Generated Network</shortLabel>
+            </names>
+        </source>
+        <interactorList>
+            <interactor id="0">
+                <names>
+                    <shortLabel>GADD45</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="1">
+                <names>
+                    <shortLabel>CyclinG</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="2">
+                <names>
+                    <shortLabel>Maspin</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="3">
+                <names>
+                    <shortLabel>CyclinK</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="4">
+                <names>
+                    <shortLabel>TSP1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="5">
+                <names>
+                    <shortLabel>PTEN</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="6">
+                <names>
+                    <shortLabel>Nucleostemin</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="7">
+                <names>
+                    <shortLabel>UCN-01</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="8">
+                <names>
+                    <shortLabel>p53</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="9">
+                <names>
+                    <shortLabel>p53AIP1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="10">
+                <names>
+                    <shortLabel>Angiogenesis</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="11">
+                <names>
+                    <shortLabel>TRAP220</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="12">
+                <names>
+                    <shortLabel>PI3K</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="13">
+                <names>
+                    <shortLabel>CK1δ</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="14">
+                <names>
+                    <shortLabel>TRIM29</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="15">
+                <names>
+                    <shortLabel>PAI-1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="16">
+                <names>
+                    <shortLabel>BAI1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="17">
+                <names>
+                    <shortLabel>DRAM</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="18">
+                <names>
+                    <shortLabel>CDK2-Cyclin D1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="19">
+                <names>
+                    <shortLabel>TOPBP1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="20">
+                <names>
+                    <shortLabel>ZAC1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="21">
+                <names>
+                    <shortLabel>PIDD</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="22">
+                <names>
+                    <shortLabel>Caspase 6</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="23">
+                <names>
+                    <shortLabel>PIG3</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="24">
+                <names>
+                    <shortLabel>Teap</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="25">
+                <names>
+                    <shortLabel>GML</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="26">
+                <names>
+                    <shortLabel>p21Cip1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="27">
+                <names>
+                    <shortLabel>JNK1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="28">
+                <names>
+                    <shortLabel>DR4/5</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="29">
+                <names>
+                    <shortLabel>Survivin</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="30">
+                <names>
+                    <shortLabel>p63</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="31">
+                <names>
+                    <shortLabel>ASPP</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="32">
+                <names>
+                    <shortLabel>p38 MAPK</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="33">
+                <names>
+                    <shortLabel>p300</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="34">
+                <names>
+                    <shortLabel>SCO2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="35">
+                <names>
+                    <shortLabel>Apaf1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="36">
+                <names>
+                    <shortLabel>Jmy-p300</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="37">
+                <names>
+                    <shortLabel>CABC1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="38">
+                <names>
+                    <shortLabel>SIRT</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="39">
+                <names>
+                    <shortLabel>HDAC</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="40">
+                <names>
+                    <shortLabel>Bcl-2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="41">
+                <names>
+                    <shortLabel>Cell cycle progression</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="42">
+                <names>
+                    <shortLabel>Senescence</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="43">
+                <names>
+                    <shortLabel>PCNA</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="44">
+                <names>
+                    <shortLabel>Chk1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="45">
+                <names>
+                    <shortLabel>Chk2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="46">
+                <names>
+                    <shortLabel>p73</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="47">
+                <names>
+                    <shortLabel>DNA repair</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="48">
+                <names>
+                    <shortLabel>HIF1A</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="49">
+                <names>
+                    <shortLabel>HDAC9</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="50">
+                <names>
+                    <shortLabel>Autophagy</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="51">
+                <names>
+                    <shortLabel>NOXA</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="52">
+                <names>
+                    <shortLabel>Rb</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="53">
+                <names>
+                    <shortLabel>p19arf</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="54">
+                <names>
+                    <shortLabel>β-catenin</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="55">
+                <names>
+                    <shortLabel>Tumor suppression</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="56">
+                <names>
+                    <shortLabel>PERP</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="57">
+                <names>
+                    <shortLabel>Mitochondrial respiration</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="58">
+                <names>
+                    <shortLabel>E2F1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="59">
+                <names>
+                    <shortLabel>CDK4-Cyclin D2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="60">
+                <names>
+                    <shortLabel>Gsk3β</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="61">
+                <names>
+                    <shortLabel>TIGAR</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="62">
+                <names>
+                    <shortLabel>Cell survival</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="63">
+                <names>
+                    <shortLabel>DNA-PK</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="64">
+                <names>
+                    <shortLabel>Cell cycle arrest</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="65">
+                <names>
+                    <shortLabel>AKT</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="66">
+                <names>
+                    <shortLabel>14-3-3σ</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="67">
+                <names>
+                    <shortLabel>Slug</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="68">
+                <names>
+                    <shortLabel>p53R2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="69">
+                <names>
+                    <shortLabel>PML</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="70">
+                <names>
+                    <shortLabel>Reprimo</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="71">
+                <names>
+                    <shortLabel>HIPK2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="72">
+                <names>
+                    <shortLabel>c-Jun</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="73">
+                <names>
+                    <shortLabel>STAG1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="74">
+                <names>
+                    <shortLabel>Bcl-xL</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="75">
+                <names>
+                    <shortLabel>Brca1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="76">
+                <names>
+                    <shortLabel>WT1</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="77">
+                <names>
+                    <shortLabel>p48</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="78">
+                <names>
+                    <shortLabel>JMY</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="79">
+                <names>
+                    <shortLabel>MDM2</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="80">
+                <names>
+                    <shortLabel>Glycolysis</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="81">
+                <names>
+                    <shortLabel>FAS</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="82">
+                <names>
+                    <shortLabel>BAX</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="83">
+                <names>
+                    <shortLabel>MDM4</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="84">
+                <names>
+                    <shortLabel>ATM</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="85">
+                <names>
+                    <shortLabel>PUMA</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="86">
+                <names>
+                    <shortLabel>PCAF</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="87">
+                <names>
+                    <shortLabel>Apoptosis</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+            <interactor id="88">
+                <names>
+                    <shortLabel>ATR</shortLabel>
+                </names>
+                <interactorType>
+                    <names/>
+                    <xref>
+                        <primaryRef/>
+                    </xref>
+                </interactorType>
+                <organism ncbiTaxId="0">
+                    <names/>
+                </organism>
+            </interactor>
+        </interactorList>
+        <interactionList>
+            <interaction id="0">
+                <experimentList>
+                    <experimentDescription id="0">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="0">
+                        <interactorRef>20</interactorRef>
+                    </participant>
+                    <participant id="1">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="1">
+                <experimentList>
+                    <experimentDescription id="1">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="2">
+                        <interactorRef>76</interactorRef>
+                    </participant>
+                    <participant id="3">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="2">
+                <experimentList>
+                    <experimentDescription id="2">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="4">
+                        <interactorRef>7</interactorRef>
+                    </participant>
+                    <participant id="5">
+                        <interactorRef>45</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="3">
+                <experimentList>
+                    <experimentDescription id="3">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="6">
+                        <interactorRef>7</interactorRef>
+                    </participant>
+                    <participant id="7">
+                        <interactorRef>44</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="4">
+                <experimentList>
+                    <experimentDescription id="4">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="8">
+                        <interactorRef>11</interactorRef>
+                    </participant>
+                    <participant id="9">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="5">
+                <experimentList>
+                    <experimentDescription id="5">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="10">
+                        <interactorRef>19</interactorRef>
+                    </participant>
+                    <participant id="11">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="6">
+                <experimentList>
+                    <experimentDescription id="6">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="12">
+                        <interactorRef>38</interactorRef>
+                    </participant>
+                    <participant id="13">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="7">
+                <experimentList>
+                    <experimentDescription id="7">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="14">
+                        <interactorRef>69</interactorRef>
+                    </participant>
+                    <participant id="15">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="8">
+                <experimentList>
+                    <experimentDescription id="8">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="16">
+                        <interactorRef>69</interactorRef>
+                    </participant>
+                    <participant id="17">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="9">
+                <experimentList>
+                    <experimentDescription id="9">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="18">
+                        <interactorRef>69</interactorRef>
+                    </participant>
+                    <participant id="19">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="10">
+                <experimentList>
+                    <experimentDescription id="10">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="20">
+                        <interactorRef>12</interactorRef>
+                    </participant>
+                    <participant id="21">
+                        <interactorRef>65</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="11">
+                <experimentList>
+                    <experimentDescription id="11">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="22">
+                        <interactorRef>86</interactorRef>
+                    </participant>
+                    <participant id="23">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="12">
+                <experimentList>
+                    <experimentDescription id="12">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="24">
+                        <interactorRef>46</interactorRef>
+                    </participant>
+                    <participant id="25">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="13">
+                <experimentList>
+                    <experimentDescription id="13">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="26">
+                        <interactorRef>30</interactorRef>
+                    </participant>
+                    <participant id="27">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="14">
+                <experimentList>
+                    <experimentDescription id="14">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="28">
+                        <interactorRef>4</interactorRef>
+                    </participant>
+                    <participant id="29">
+                        <interactorRef>10</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="15">
+                <experimentList>
+                    <experimentDescription id="15">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="30">
+                        <interactorRef>61</interactorRef>
+                    </participant>
+                    <participant id="31">
+                        <interactorRef>80</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="16">
+                <experimentList>
+                    <experimentDescription id="16">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="32">
+                        <interactorRef>24</interactorRef>
+                    </participant>
+                    <participant id="33">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="17">
+                <experimentList>
+                    <experimentDescription id="17">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="34">
+                        <interactorRef>29</interactorRef>
+                    </participant>
+                    <participant id="35">
+                        <interactorRef>62</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="18">
+                <experimentList>
+                    <experimentDescription id="18">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="36">
+                        <interactorRef>73</interactorRef>
+                    </participant>
+                    <participant id="37">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="19">
+                <experimentList>
+                    <experimentDescription id="19">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="38">
+                        <interactorRef>34</interactorRef>
+                    </participant>
+                    <participant id="39">
+                        <interactorRef>57</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="20">
+                <experimentList>
+                    <experimentDescription id="20">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="40">
+                        <interactorRef>70</interactorRef>
+                    </participant>
+                    <participant id="41">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="21">
+                <experimentList>
+                    <experimentDescription id="21">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="42">
+                        <interactorRef>85</interactorRef>
+                    </participant>
+                    <participant id="43">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="22">
+                <experimentList>
+                    <experimentDescription id="22">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="44">
+                        <interactorRef>5</interactorRef>
+                    </participant>
+                    <participant id="45">
+                        <interactorRef>55</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="23">
+                <experimentList>
+                    <experimentDescription id="23">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="46">
+                        <interactorRef>23</interactorRef>
+                    </participant>
+                    <participant id="47">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="24">
+                <experimentList>
+                    <experimentDescription id="24">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="48">
+                        <interactorRef>21</interactorRef>
+                    </participant>
+                    <participant id="49">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="25">
+                <experimentList>
+                    <experimentDescription id="25">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="50">
+                        <interactorRef>56</interactorRef>
+                    </participant>
+                    <participant id="51">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="26">
+                <experimentList>
+                    <experimentDescription id="26">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="52">
+                        <interactorRef>43</interactorRef>
+                    </participant>
+                    <participant id="53">
+                        <interactorRef>47</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="27">
+                <experimentList>
+                    <experimentDescription id="27">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="54">
+                        <interactorRef>15</interactorRef>
+                    </participant>
+                    <participant id="55">
+                        <interactorRef>42</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="28">
+                <experimentList>
+                    <experimentDescription id="28">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="56">
+                        <interactorRef>68</interactorRef>
+                    </participant>
+                    <participant id="57">
+                        <interactorRef>47</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="29">
+                <experimentList>
+                    <experimentDescription id="29">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="58">
+                        <interactorRef>9</interactorRef>
+                    </participant>
+                    <participant id="59">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="30">
+                <experimentList>
+                    <experimentDescription id="30">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="60">
+                        <interactorRef>77</interactorRef>
+                    </participant>
+                    <participant id="61">
+                        <interactorRef>47</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="31">
+                <experimentList>
+                    <experimentDescription id="31">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="62">
+                        <interactorRef>32</interactorRef>
+                    </participant>
+                    <participant id="63">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="32">
+                <experimentList>
+                    <experimentDescription id="32">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="64">
+                        <interactorRef>33</interactorRef>
+                    </participant>
+                    <participant id="65">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="33">
+                <experimentList>
+                    <experimentDescription id="33">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="66">
+                        <interactorRef>33</interactorRef>
+                    </participant>
+                    <participant id="67">
+                        <interactorRef>78</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="34">
+                <experimentList>
+                    <experimentDescription id="34">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="68">
+                        <interactorRef>26</interactorRef>
+                    </participant>
+                    <participant id="69">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="35">
+                <experimentList>
+                    <experimentDescription id="35">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="70">
+                        <interactorRef>53</interactorRef>
+                    </participant>
+                    <participant id="71">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="36">
+                <experimentList>
+                    <experimentDescription id="36">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="72">
+                        <interactorRef>6</interactorRef>
+                    </participant>
+                    <participant id="73">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="37">
+                <experimentList>
+                    <experimentDescription id="37">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="74">
+                        <interactorRef>51</interactorRef>
+                    </participant>
+                    <participant id="75">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="38">
+                <experimentList>
+                    <experimentDescription id="38">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="76">
+                        <interactorRef>83</interactorRef>
+                    </participant>
+                    <participant id="77">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="39">
+                <experimentList>
+                    <experimentDescription id="39">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="78">
+                        <interactorRef>2</interactorRef>
+                    </participant>
+                    <participant id="79">
+                        <interactorRef>10</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="40">
+                <experimentList>
+                    <experimentDescription id="40">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="80">
+                        <interactorRef>27</interactorRef>
+                    </participant>
+                    <participant id="81">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="41">
+                <experimentList>
+                    <experimentDescription id="41">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="82">
+                        <interactorRef>36</interactorRef>
+                    </participant>
+                    <participant id="83">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="42">
+                <experimentList>
+                    <experimentDescription id="42">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="84">
+                        <interactorRef>71</interactorRef>
+                    </participant>
+                    <participant id="85">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="43">
+                <experimentList>
+                    <experimentDescription id="43">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="86">
+                        <interactorRef>48</interactorRef>
+                    </participant>
+                    <participant id="87">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="44">
+                <experimentList>
+                    <experimentDescription id="44">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="88">
+                        <interactorRef>48</interactorRef>
+                    </participant>
+                    <participant id="89">
+                        <interactorRef>48</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="45">
+                <experimentList>
+                    <experimentDescription id="45">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="90">
+                        <interactorRef>14</interactorRef>
+                    </participant>
+                    <participant id="91">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="46">
+                <experimentList>
+                    <experimentDescription id="46">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="92">
+                        <interactorRef>49</interactorRef>
+                    </participant>
+                    <participant id="93">
+                        <interactorRef>14</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="47">
+                <experimentList>
+                    <experimentDescription id="47">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="94">
+                        <interactorRef>39</interactorRef>
+                    </participant>
+                    <participant id="95">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="48">
+                <experimentList>
+                    <experimentDescription id="48">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="96">
+                        <interactorRef>54</interactorRef>
+                    </participant>
+                    <participant id="97">
+                        <interactorRef>54</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="49">
+                <experimentList>
+                    <experimentDescription id="49">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="98">
+                        <interactorRef>54</interactorRef>
+                    </participant>
+                    <participant id="99">
+                        <interactorRef>53</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="50">
+                <experimentList>
+                    <experimentDescription id="50">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="100">
+                        <interactorRef>25</interactorRef>
+                    </participant>
+                    <participant id="101">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="51">
+                <experimentList>
+                    <experimentDescription id="51">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="102">
+                        <interactorRef>0</interactorRef>
+                    </participant>
+                    <participant id="103">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="52">
+                <experimentList>
+                    <experimentDescription id="52">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="104">
+                        <interactorRef>81</interactorRef>
+                    </participant>
+                    <participant id="105">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="53">
+                <experimentList>
+                    <experimentDescription id="53">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="106">
+                        <interactorRef>58</interactorRef>
+                    </participant>
+                    <participant id="107">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="54">
+                <experimentList>
+                    <experimentDescription id="54">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="108">
+                        <interactorRef>58</interactorRef>
+                    </participant>
+                    <participant id="109">
+                        <interactorRef>41</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="55">
+                <experimentList>
+                    <experimentDescription id="55">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="110">
+                        <interactorRef>17</interactorRef>
+                    </participant>
+                    <participant id="111">
+                        <interactorRef>50</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="56">
+                <experimentList>
+                    <experimentDescription id="56">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="112">
+                        <interactorRef>28</interactorRef>
+                    </participant>
+                    <participant id="113">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="57">
+                <experimentList>
+                    <experimentDescription id="57">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="114">
+                        <interactorRef>3</interactorRef>
+                    </participant>
+                    <participant id="115">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="58">
+                <experimentList>
+                    <experimentDescription id="58">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="116">
+                        <interactorRef>1</interactorRef>
+                    </participant>
+                    <participant id="117">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="59">
+                <experimentList>
+                    <experimentDescription id="59">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="118">
+                        <interactorRef>13</interactorRef>
+                    </participant>
+                    <participant id="119">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="60">
+                <experimentList>
+                    <experimentDescription id="60">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="120">
+                        <interactorRef>59</interactorRef>
+                    </participant>
+                    <participant id="121">
+                        <interactorRef>52</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="61">
+                <experimentList>
+                    <experimentDescription id="61">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="122">
+                        <interactorRef>52</interactorRef>
+                    </participant>
+                    <participant id="123">
+                        <interactorRef>58</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="62">
+                <experimentList>
+                    <experimentDescription id="62">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="124">
+                        <interactorRef>52</interactorRef>
+                    </participant>
+                    <participant id="125">
+                        <interactorRef>41</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="63">
+                <experimentList>
+                    <experimentDescription id="63">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="126">
+                        <interactorRef>18</interactorRef>
+                    </participant>
+                    <participant id="127">
+                        <interactorRef>52</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="64">
+                <experimentList>
+                    <experimentDescription id="64">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="128">
+                        <interactorRef>22</interactorRef>
+                    </participant>
+                    <participant id="129">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="65">
+                <experimentList>
+                    <experimentDescription id="65">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="130">
+                        <interactorRef>37</interactorRef>
+                    </participant>
+                    <participant id="131">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="66">
+                <experimentList>
+                    <experimentDescription id="66">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="132">
+                        <interactorRef>72</interactorRef>
+                    </participant>
+                    <participant id="133">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="67">
+                <experimentList>
+                    <experimentDescription id="67">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="134">
+                        <interactorRef>75</interactorRef>
+                    </participant>
+                    <participant id="135">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="68">
+                <experimentList>
+                    <experimentDescription id="68">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="136">
+                        <interactorRef>74</interactorRef>
+                    </participant>
+                    <participant id="137">
+                        <interactorRef>62</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="69">
+                <experimentList>
+                    <experimentDescription id="69">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="138">
+                        <interactorRef>40</interactorRef>
+                    </participant>
+                    <participant id="139">
+                        <interactorRef>62</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="70">
+                <experimentList>
+                    <experimentDescription id="70">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="140">
+                        <interactorRef>82</interactorRef>
+                    </participant>
+                    <participant id="141">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="71">
+                <experimentList>
+                    <experimentDescription id="71">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="142">
+                        <interactorRef>16</interactorRef>
+                    </participant>
+                    <participant id="143">
+                        <interactorRef>10</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="72">
+                <experimentList>
+                    <experimentDescription id="72">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="144">
+                        <interactorRef>44</interactorRef>
+                    </participant>
+                    <participant id="145">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="73">
+                <experimentList>
+                    <experimentDescription id="73">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="146">
+                        <interactorRef>88</interactorRef>
+                    </participant>
+                    <participant id="147">
+                        <interactorRef>44</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="74">
+                <experimentList>
+                    <experimentDescription id="74">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="148">
+                        <interactorRef>63</interactorRef>
+                    </participant>
+                    <participant id="149">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="75">
+                <experimentList>
+                    <experimentDescription id="75">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="150">
+                        <interactorRef>45</interactorRef>
+                    </participant>
+                    <participant id="151">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="76">
+                <experimentList>
+                    <experimentDescription id="76">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="152">
+                        <interactorRef>84</interactorRef>
+                    </participant>
+                    <participant id="153">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="77">
+                <experimentList>
+                    <experimentDescription id="77">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="154">
+                        <interactorRef>84</interactorRef>
+                    </participant>
+                    <participant id="155">
+                        <interactorRef>63</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="78">
+                <experimentList>
+                    <experimentDescription id="78">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="156">
+                        <interactorRef>84</interactorRef>
+                    </participant>
+                    <participant id="157">
+                        <interactorRef>45</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="79">
+                <experimentList>
+                    <experimentDescription id="79">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="158">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="159">
+                        <interactorRef>4</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="80">
+                <experimentList>
+                    <experimentDescription id="80">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="160">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="161">
+                        <interactorRef>61</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="81">
+                <experimentList>
+                    <experimentDescription id="81">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="162">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="163">
+                        <interactorRef>24</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="82">
+                <experimentList>
+                    <experimentDescription id="82">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="164">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="165">
+                        <interactorRef>29</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="83">
+                <experimentList>
+                    <experimentDescription id="83">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="166">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="167">
+                        <interactorRef>73</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="84">
+                <experimentList>
+                    <experimentDescription id="84">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="168">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="169">
+                        <interactorRef>67</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="85">
+                <experimentList>
+                    <experimentDescription id="85">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="170">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="171">
+                        <interactorRef>34</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="86">
+                <experimentList>
+                    <experimentDescription id="86">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="172">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="173">
+                        <interactorRef>70</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="87">
+                <experimentList>
+                    <experimentDescription id="87">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="174">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="175">
+                        <interactorRef>85</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="88">
+                <experimentList>
+                    <experimentDescription id="88">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="176">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="177">
+                        <interactorRef>5</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="89">
+                <experimentList>
+                    <experimentDescription id="89">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="178">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="179">
+                        <interactorRef>23</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="90">
+                <experimentList>
+                    <experimentDescription id="90">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="180">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="181">
+                        <interactorRef>21</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="91">
+                <experimentList>
+                    <experimentDescription id="91">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="182">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="183">
+                        <interactorRef>56</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="92">
+                <experimentList>
+                    <experimentDescription id="92">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="184">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="185">
+                        <interactorRef>43</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="93">
+                <experimentList>
+                    <experimentDescription id="93">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="186">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="187">
+                        <interactorRef>15</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="94">
+                <experimentList>
+                    <experimentDescription id="94">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="188">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="189">
+                        <interactorRef>68</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="95">
+                <experimentList>
+                    <experimentDescription id="95">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="190">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="191">
+                        <interactorRef>9</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="96">
+                <experimentList>
+                    <experimentDescription id="96">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="192">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="193">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="97">
+                <experimentList>
+                    <experimentDescription id="97">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="194">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="195">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="98">
+                <experimentList>
+                    <experimentDescription id="98">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="196">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="197">
+                        <interactorRef>77</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="99">
+                <experimentList>
+                    <experimentDescription id="99">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="198">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="199">
+                        <interactorRef>26</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="100">
+                <experimentList>
+                    <experimentDescription id="100">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="200">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="201">
+                        <interactorRef>51</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="101">
+                <experimentList>
+                    <experimentDescription id="101">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="202">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="203">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="102">
+                <experimentList>
+                    <experimentDescription id="102">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="204">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="205">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="103">
+                <experimentList>
+                    <experimentDescription id="103">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="206">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="207">
+                        <interactorRef>2</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="104">
+                <experimentList>
+                    <experimentDescription id="104">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="208">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="209">
+                        <interactorRef>25</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="105">
+                <experimentList>
+                    <experimentDescription id="105">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="210">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="211">
+                        <interactorRef>0</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="106">
+                <experimentList>
+                    <experimentDescription id="106">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="212">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="213">
+                        <interactorRef>81</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="107">
+                <experimentList>
+                    <experimentDescription id="107">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="214">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="215">
+                        <interactorRef>17</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="108">
+                <experimentList>
+                    <experimentDescription id="108">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="216">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="217">
+                        <interactorRef>28</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="109">
+                <experimentList>
+                    <experimentDescription id="109">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="218">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="219">
+                        <interactorRef>3</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="110">
+                <experimentList>
+                    <experimentDescription id="110">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="220">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="221">
+                        <interactorRef>1</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="111">
+                <experimentList>
+                    <experimentDescription id="111">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="222">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="223">
+                        <interactorRef>22</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="112">
+                <experimentList>
+                    <experimentDescription id="112">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="224">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="225">
+                        <interactorRef>37</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="113">
+                <experimentList>
+                    <experimentDescription id="113">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="226">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="227">
+                        <interactorRef>74</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="114">
+                <experimentList>
+                    <experimentDescription id="114">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="228">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="229">
+                        <interactorRef>40</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="115">
+                <experimentList>
+                    <experimentDescription id="115">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="230">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="231">
+                        <interactorRef>82</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="116">
+                <experimentList>
+                    <experimentDescription id="116">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="232">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="233">
+                        <interactorRef>16</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="117">
+                <experimentList>
+                    <experimentDescription id="117">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="234">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="235">
+                        <interactorRef>35</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="118">
+                <experimentList>
+                    <experimentDescription id="118">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="236">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                    <participant id="237">
+                        <interactorRef>66</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="119">
+                <experimentList>
+                    <experimentDescription id="119">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="238">
+                        <interactorRef>31</interactorRef>
+                    </participant>
+                    <participant id="239">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="120">
+                <experimentList>
+                    <experimentDescription id="120">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="240">
+                        <interactorRef>35</interactorRef>
+                    </participant>
+                    <participant id="241">
+                        <interactorRef>87</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="121">
+                <experimentList>
+                    <experimentDescription id="121">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="242">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                    <participant id="243">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="122">
+                <experimentList>
+                    <experimentDescription id="122">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="244">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                    <participant id="245">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="123">
+                <experimentList>
+                    <experimentDescription id="123">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="246">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                    <participant id="247">
+                        <interactorRef>83</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="124">
+                <experimentList>
+                    <experimentDescription id="124">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="248">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                    <participant id="249">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="125">
+                <experimentList>
+                    <experimentDescription id="125">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="250">
+                        <interactorRef>60</interactorRef>
+                    </participant>
+                    <participant id="251">
+                        <interactorRef>54</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="126">
+                <experimentList>
+                    <experimentDescription id="126">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="252">
+                        <interactorRef>60</interactorRef>
+                    </participant>
+                    <participant id="253">
+                        <interactorRef>8</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="127">
+                <experimentList>
+                    <experimentDescription id="127">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="254">
+                        <interactorRef>65</interactorRef>
+                    </participant>
+                    <participant id="255">
+                        <interactorRef>79</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="128">
+                <experimentList>
+                    <experimentDescription id="128">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="256">
+                        <interactorRef>65</interactorRef>
+                    </participant>
+                    <participant id="257">
+                        <interactorRef>60</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+            <interaction id="129">
+                <experimentList>
+                    <experimentDescription id="129">
+                        <interactionDetectionMethod>
+                            <names>
+<shortLabel>Not Specified</shortLabel>
+                            </names>
+                            <xref>
+<primaryRef id="Not Specified" db="PSI-MI"/>
+                            </xref>
+                        </interactionDetectionMethod>
+                    </experimentDescription>
+                </experimentList>
+                <participantList>
+                    <participant id="258">
+                        <interactorRef>66</interactorRef>
+                    </participant>
+                    <participant id="259">
+                        <interactorRef>64</interactorRef>
+                    </participant>
+                </participantList>
+            </interaction>
+        </interactionList>
+    </entry>
+</entrySet>

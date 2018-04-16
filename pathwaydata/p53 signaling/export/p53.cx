@@ -1,0 +1,5945 @@
+[ {
+  "numberVerification" : [ {
+    "longNumber" : 281474976710655
+  } ]
+}, {
+  "metaData" : [ {
+    "consistencyGroup" : 1,
+    "elementCount" : 89,
+    "idCounter" : 512,
+    "name" : "nodes",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "elementCount" : 130,
+    "idCounter" : 512,
+    "name" : "edges",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyTableColumn",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "networkAttributes",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyHiddenAttributes",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "nodeAttributes",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "edgeAttributes",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cartesianLayout",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyVisualProperties",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cySubNetworks",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyViews",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyGroups",
+    "properties" : [ ],
+    "version" : "1.0"
+  }, {
+    "consistencyGroup" : 1,
+    "name" : "cyNetworkRelations",
+    "properties" : [ ],
+    "version" : "1.0"
+  } ]
+}, {
+  "nodes" : [ {
+    "@id" : 287,
+    "n" : "ZAC1"
+  }, {
+    "@id" : 285,
+    "n" : "WT1"
+  }, {
+    "@id" : 282,
+    "n" : "UCN-01"
+  }, {
+    "@id" : 278,
+    "n" : "TRAP220"
+  }, {
+    "@id" : 276,
+    "n" : "TOPBP1"
+  }, {
+    "@id" : 274,
+    "n" : "Glycolysis"
+  }, {
+    "@id" : 269,
+    "n" : "SIRT"
+  }, {
+    "@id" : 267,
+    "n" : "Mitochondrial respiration"
+  }, {
+    "@id" : 261,
+    "n" : "Tumor suppression"
+  }, {
+    "@id" : 257,
+    "n" : "PML"
+  }, {
+    "@id" : 253,
+    "n" : "PI3K"
+  }, {
+    "@id" : 249,
+    "n" : "PCAF"
+  }, {
+    "@id" : 247,
+    "n" : "Senescence"
+  }, {
+    "@id" : 245,
+    "n" : "p73"
+  }, {
+    "@id" : 243,
+    "n" : "p63"
+  }, {
+    "@id" : 239,
+    "n" : "TSP1"
+  }, {
+    "@id" : 237,
+    "n" : "TIGAR"
+  }, {
+    "@id" : 235,
+    "n" : "Teap"
+  }, {
+    "@id" : 233,
+    "n" : "Survivin"
+  }, {
+    "@id" : 231,
+    "n" : "STAG1"
+  }, {
+    "@id" : 229,
+    "n" : "Slug"
+  }, {
+    "@id" : 227,
+    "n" : "SCO2"
+  }, {
+    "@id" : 225,
+    "n" : "Reprimo"
+  }, {
+    "@id" : 223,
+    "n" : "PUMA"
+  }, {
+    "@id" : 221,
+    "n" : "PTEN"
+  }, {
+    "@id" : 219,
+    "n" : "PIG3"
+  }, {
+    "@id" : 217,
+    "n" : "PIDD"
+  }, {
+    "@id" : 215,
+    "n" : "PERP"
+  }, {
+    "@id" : 213,
+    "n" : "PCNA"
+  }, {
+    "@id" : 211,
+    "n" : "PAI-1"
+  }, {
+    "@id" : 209,
+    "n" : "p53R2"
+  }, {
+    "@id" : 207,
+    "n" : "p53AIP1"
+  }, {
+    "@id" : 182,
+    "n" : "DNA repair"
+  }, {
+    "@id" : 181,
+    "n" : "p48"
+  }, {
+    "@id" : 179,
+    "n" : "p38 MAPK"
+  }, {
+    "@id" : 176,
+    "n" : "JMY"
+  }, {
+    "@id" : 175,
+    "n" : "p300"
+  }, {
+    "@id" : 173,
+    "n" : "p21Cip1"
+  }, {
+    "@id" : 171,
+    "n" : "p19arf"
+  }, {
+    "@id" : 169,
+    "n" : "Nucleostemin"
+  }, {
+    "@id" : 167,
+    "n" : "NOXA"
+  }, {
+    "@id" : 162,
+    "n" : "MDM4"
+  }, {
+    "@id" : 159,
+    "n" : "Maspin"
+  }, {
+    "@id" : 157,
+    "n" : "JNK1"
+  }, {
+    "@id" : 155,
+    "n" : "Jmy-p300"
+  }, {
+    "@id" : 153,
+    "n" : "HIPK2"
+  }, {
+    "@id" : 150,
+    "n" : "HIF1A"
+  }, {
+    "@id" : 148,
+    "n" : "TRIM29"
+  }, {
+    "@id" : 147,
+    "n" : "HDAC9"
+  }, {
+    "@id" : 145,
+    "n" : "HDAC"
+  }, {
+    "@id" : 143,
+    "n" : "β-catenin"
+  }, {
+    "@id" : 140,
+    "n" : "GML"
+  }, {
+    "@id" : 138,
+    "n" : "GADD45"
+  }, {
+    "@id" : 136,
+    "n" : "FAS"
+  }, {
+    "@id" : 133,
+    "n" : "Cell cycle progression"
+  }, {
+    "@id" : 132,
+    "n" : "E2F1"
+  }, {
+    "@id" : 130,
+    "n" : "Autophagy"
+  }, {
+    "@id" : 129,
+    "n" : "DRAM"
+  }, {
+    "@id" : 127,
+    "n" : "DR4/5"
+  }, {
+    "@id" : 124,
+    "n" : "CyclinK"
+  }, {
+    "@id" : 122,
+    "n" : "CyclinG"
+  }, {
+    "@id" : 120,
+    "n" : "CK1δ"
+  }, {
+    "@id" : 116,
+    "n" : "CDK4-Cyclin D2"
+  }, {
+    "@id" : 114,
+    "n" : "Rb"
+  }, {
+    "@id" : 113,
+    "n" : "CDK2-Cyclin D1"
+  }, {
+    "@id" : 111,
+    "n" : "Caspase 6"
+  }, {
+    "@id" : 109,
+    "n" : "CABC1"
+  }, {
+    "@id" : 107,
+    "n" : "c-Jun"
+  }, {
+    "@id" : 105,
+    "n" : "Brca1"
+  }, {
+    "@id" : 103,
+    "n" : "Bcl-xL"
+  }, {
+    "@id" : 101,
+    "n" : "Cell survival"
+  }, {
+    "@id" : 100,
+    "n" : "Bcl-2"
+  }, {
+    "@id" : 98,
+    "n" : "BAX"
+  }, {
+    "@id" : 96,
+    "n" : "Angiogenesis"
+  }, {
+    "@id" : 95,
+    "n" : "BAI1"
+  }, {
+    "@id" : 93,
+    "n" : "Chk1"
+  }, {
+    "@id" : 92,
+    "n" : "ATR"
+  }, {
+    "@id" : 89,
+    "n" : "DNA-PK"
+  }, {
+    "@id" : 87,
+    "n" : "Chk2"
+  }, {
+    "@id" : 86,
+    "n" : "ATM"
+  }, {
+    "@id" : 84,
+    "n" : "p53"
+  }, {
+    "@id" : 83,
+    "n" : "ASPP"
+  }, {
+    "@id" : 81,
+    "n" : "Apoptosis"
+  }, {
+    "@id" : 80,
+    "n" : "Apaf1"
+  }, {
+    "@id" : 78,
+    "n" : "MDM2"
+  }, {
+    "@id" : 76,
+    "n" : "Gsk3β"
+  }, {
+    "@id" : 75,
+    "n" : "AKT"
+  }, {
+    "@id" : 73,
+    "n" : "Cell cycle arrest"
+  }, {
+    "@id" : 72,
+    "n" : "14-3-3σ"
+  } ]
+}, {
+  "edges" : [ {
+    "@id" : 288,
+    "s" : 287,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 286,
+    "s" : 285,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 284,
+    "s" : 282,
+    "t" : 87,
+    "i" : "SR"
+  }, {
+    "@id" : 283,
+    "s" : 282,
+    "t" : 93,
+    "i" : "SR"
+  }, {
+    "@id" : 279,
+    "s" : 278,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 277,
+    "s" : 276,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 270,
+    "s" : 269,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 260,
+    "s" : 257,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 259,
+    "s" : 257,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 258,
+    "s" : 257,
+    "t" : 78,
+    "i" : "MI"
+  }, {
+    "@id" : 254,
+    "s" : 253,
+    "t" : 75,
+    "i" : "SR"
+  }, {
+    "@id" : 250,
+    "s" : 249,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 246,
+    "s" : 245,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 244,
+    "s" : 243,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 281,
+    "s" : 239,
+    "t" : 96,
+    "i" : "causation"
+  }, {
+    "@id" : 275,
+    "s" : 237,
+    "t" : 274,
+    "i" : "causation"
+  }, {
+    "@id" : 273,
+    "s" : 235,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 272,
+    "s" : 233,
+    "t" : 101,
+    "i" : "causation"
+  }, {
+    "@id" : 271,
+    "s" : 231,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 268,
+    "s" : 227,
+    "t" : 267,
+    "i" : "causation"
+  }, {
+    "@id" : 266,
+    "s" : 225,
+    "t" : 73,
+    "i" : "causation"
+  }, {
+    "@id" : 263,
+    "s" : 223,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 262,
+    "s" : 221,
+    "t" : 261,
+    "i" : "causation"
+  }, {
+    "@id" : 256,
+    "s" : 219,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 255,
+    "s" : 217,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 252,
+    "s" : 215,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 251,
+    "s" : 213,
+    "t" : 182,
+    "i" : "causation"
+  }, {
+    "@id" : 248,
+    "s" : 211,
+    "t" : 247,
+    "i" : "causation"
+  }, {
+    "@id" : 242,
+    "s" : 209,
+    "t" : 182,
+    "i" : "causation"
+  }, {
+    "@id" : 241,
+    "s" : 207,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 183,
+    "s" : 181,
+    "t" : 182,
+    "i" : "causation"
+  }, {
+    "@id" : 180,
+    "s" : 179,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 178,
+    "s" : 175,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 177,
+    "s" : 175,
+    "t" : 176,
+    "i" : "MI"
+  }, {
+    "@id" : 174,
+    "s" : 173,
+    "t" : 73,
+    "i" : "causation"
+  }, {
+    "@id" : 172,
+    "s" : 171,
+    "t" : 78,
+    "i" : "MI"
+  }, {
+    "@id" : 170,
+    "s" : 169,
+    "t" : 78,
+    "i" : "MI"
+  }, {
+    "@id" : 168,
+    "s" : 167,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 166,
+    "s" : 162,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 160,
+    "s" : 159,
+    "t" : 96,
+    "i" : "causation"
+  }, {
+    "@id" : 158,
+    "s" : 157,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 156,
+    "s" : 155,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 154,
+    "s" : 153,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 152,
+    "s" : 150,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 151,
+    "s" : 150,
+    "t" : 150,
+    "i" : "molecular cleavage"
+  }, {
+    "@id" : 280,
+    "s" : 148,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 149,
+    "s" : 147,
+    "t" : 148,
+    "i" : "SR"
+  }, {
+    "@id" : 146,
+    "s" : 145,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 290,
+    "s" : 143,
+    "t" : 143,
+    "i" : "molecular cleavage"
+  }, {
+    "@id" : 289,
+    "s" : 143,
+    "t" : 171,
+    "i" : "ER"
+  }, {
+    "@id" : 141,
+    "s" : 140,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 139,
+    "s" : 138,
+    "t" : 73,
+    "i" : "causation"
+  }, {
+    "@id" : 137,
+    "s" : 136,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 135,
+    "s" : 132,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 134,
+    "s" : 132,
+    "t" : 133,
+    "i" : "causation"
+  }, {
+    "@id" : 131,
+    "s" : 129,
+    "t" : 130,
+    "i" : "causation"
+  }, {
+    "@id" : 128,
+    "s" : 127,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 125,
+    "s" : 124,
+    "t" : 73,
+    "i" : "causation"
+  }, {
+    "@id" : 123,
+    "s" : 122,
+    "t" : 73,
+    "i" : "causation"
+  }, {
+    "@id" : 121,
+    "s" : 120,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 117,
+    "s" : 116,
+    "t" : 114,
+    "i" : "SR"
+  }, {
+    "@id" : 265,
+    "s" : 114,
+    "t" : 132,
+    "i" : "MI"
+  }, {
+    "@id" : 264,
+    "s" : 114,
+    "t" : 133,
+    "i" : "causation"
+  }, {
+    "@id" : 115,
+    "s" : 113,
+    "t" : 114,
+    "i" : "SR"
+  }, {
+    "@id" : 112,
+    "s" : 111,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 110,
+    "s" : 109,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 108,
+    "s" : 107,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 106,
+    "s" : 105,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 104,
+    "s" : 103,
+    "t" : 101,
+    "i" : "causation"
+  }, {
+    "@id" : 102,
+    "s" : 100,
+    "t" : 101,
+    "i" : "causation"
+  }, {
+    "@id" : 99,
+    "s" : 98,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 97,
+    "s" : 95,
+    "t" : 96,
+    "i" : "causation"
+  }, {
+    "@id" : 118,
+    "s" : 93,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 94,
+    "s" : 92,
+    "t" : 93,
+    "i" : "SR"
+  }, {
+    "@id" : 126,
+    "s" : 89,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 119,
+    "s" : 87,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 91,
+    "s" : 86,
+    "t" : 84,
+    "i" : "SR"
+  }, {
+    "@id" : 90,
+    "s" : 86,
+    "t" : 89,
+    "i" : "MI"
+  }, {
+    "@id" : 88,
+    "s" : 86,
+    "t" : 87,
+    "i" : "SR"
+  }, {
+    "@id" : 240,
+    "s" : 84,
+    "t" : 239,
+    "i" : "ER"
+  }, {
+    "@id" : 238,
+    "s" : 84,
+    "t" : 237,
+    "i" : "ER"
+  }, {
+    "@id" : 236,
+    "s" : 84,
+    "t" : 235,
+    "i" : "ER"
+  }, {
+    "@id" : 234,
+    "s" : 84,
+    "t" : 233,
+    "i" : "ER"
+  }, {
+    "@id" : 232,
+    "s" : 84,
+    "t" : 231,
+    "i" : "ER"
+  }, {
+    "@id" : 230,
+    "s" : 84,
+    "t" : 229,
+    "i" : "ER"
+  }, {
+    "@id" : 228,
+    "s" : 84,
+    "t" : 227,
+    "i" : "ER"
+  }, {
+    "@id" : 226,
+    "s" : 84,
+    "t" : 225,
+    "i" : "ER"
+  }, {
+    "@id" : 224,
+    "s" : 84,
+    "t" : 223,
+    "i" : "ER"
+  }, {
+    "@id" : 222,
+    "s" : 84,
+    "t" : 221,
+    "i" : "ER"
+  }, {
+    "@id" : 220,
+    "s" : 84,
+    "t" : 219,
+    "i" : "ER"
+  }, {
+    "@id" : 218,
+    "s" : 84,
+    "t" : 217,
+    "i" : "ER"
+  }, {
+    "@id" : 216,
+    "s" : 84,
+    "t" : 215,
+    "i" : "ER"
+  }, {
+    "@id" : 214,
+    "s" : 84,
+    "t" : 213,
+    "i" : "ER"
+  }, {
+    "@id" : 212,
+    "s" : 84,
+    "t" : 211,
+    "i" : "ER"
+  }, {
+    "@id" : 210,
+    "s" : 84,
+    "t" : 209,
+    "i" : "ER"
+  }, {
+    "@id" : 208,
+    "s" : 84,
+    "t" : 207,
+    "i" : "ER"
+  }, {
+    "@id" : 206,
+    "s" : 84,
+    "t" : 84,
+    "i" : "TR"
+  }, {
+    "@id" : 205,
+    "s" : 84,
+    "t" : 84,
+    "i" : "molecular cleavage"
+  }, {
+    "@id" : 204,
+    "s" : 84,
+    "t" : 181,
+    "i" : "ER"
+  }, {
+    "@id" : 203,
+    "s" : 84,
+    "t" : 173,
+    "i" : "ER"
+  }, {
+    "@id" : 202,
+    "s" : 84,
+    "t" : 167,
+    "i" : "ER"
+  }, {
+    "@id" : 201,
+    "s" : 84,
+    "t" : 78,
+    "i" : "MI"
+  }, {
+    "@id" : 200,
+    "s" : 84,
+    "t" : 78,
+    "i" : "ER"
+  }, {
+    "@id" : 199,
+    "s" : 84,
+    "t" : 159,
+    "i" : "ER"
+  }, {
+    "@id" : 198,
+    "s" : 84,
+    "t" : 140,
+    "i" : "ER"
+  }, {
+    "@id" : 197,
+    "s" : 84,
+    "t" : 138,
+    "i" : "ER"
+  }, {
+    "@id" : 196,
+    "s" : 84,
+    "t" : 136,
+    "i" : "ER"
+  }, {
+    "@id" : 195,
+    "s" : 84,
+    "t" : 129,
+    "i" : "ER"
+  }, {
+    "@id" : 194,
+    "s" : 84,
+    "t" : 127,
+    "i" : "ER"
+  }, {
+    "@id" : 193,
+    "s" : 84,
+    "t" : 124,
+    "i" : "ER"
+  }, {
+    "@id" : 192,
+    "s" : 84,
+    "t" : 122,
+    "i" : "ER"
+  }, {
+    "@id" : 191,
+    "s" : 84,
+    "t" : 111,
+    "i" : "ER"
+  }, {
+    "@id" : 190,
+    "s" : 84,
+    "t" : 109,
+    "i" : "ER"
+  }, {
+    "@id" : 189,
+    "s" : 84,
+    "t" : 103,
+    "i" : "ER"
+  }, {
+    "@id" : 188,
+    "s" : 84,
+    "t" : 100,
+    "i" : "ER"
+  }, {
+    "@id" : 187,
+    "s" : 84,
+    "t" : 98,
+    "i" : "ER"
+  }, {
+    "@id" : 186,
+    "s" : 84,
+    "t" : 95,
+    "i" : "ER"
+  }, {
+    "@id" : 185,
+    "s" : 84,
+    "t" : 80,
+    "i" : "ER"
+  }, {
+    "@id" : 184,
+    "s" : 84,
+    "t" : 72,
+    "i" : "ER"
+  }, {
+    "@id" : 85,
+    "s" : 83,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 82,
+    "s" : 80,
+    "t" : 81,
+    "i" : "causation"
+  }, {
+    "@id" : 165,
+    "s" : 78,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 164,
+    "s" : 78,
+    "t" : 84,
+    "i" : "ER"
+  }, {
+    "@id" : 163,
+    "s" : 78,
+    "t" : 162,
+    "i" : "molecular cleavage"
+  }, {
+    "@id" : 161,
+    "s" : 78,
+    "t" : 78,
+    "i" : "TR"
+  }, {
+    "@id" : 144,
+    "s" : 76,
+    "t" : 143,
+    "i" : "SR"
+  }, {
+    "@id" : 142,
+    "s" : 76,
+    "t" : 84,
+    "i" : "MI"
+  }, {
+    "@id" : 79,
+    "s" : 75,
+    "t" : 78,
+    "i" : "MI"
+  }, {
+    "@id" : 77,
+    "s" : 75,
+    "t" : 76,
+    "i" : "SR"
+  }, {
+    "@id" : 74,
+    "s" : 72,
+    "t" : 73,
+    "i" : "causation"
+  } ]
+}, {
+  "cyTableColumn" : [ {
+    "s" : 62,
+    "applies_to" : "node_table",
+    "n" : "shared name"
+  }, {
+    "s" : 62,
+    "applies_to" : "node_table",
+    "n" : "name"
+  }, {
+    "s" : 62,
+    "applies_to" : "node_table",
+    "n" : "selected",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "shared name"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "shared interaction"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "name"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "selected",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "interaction"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "Activity",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "Phosphorylation",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "applies_to" : "edge_table",
+    "n" : "Modification",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "applies_to" : "network_table",
+    "n" : "shared name"
+  }, {
+    "s" : 62,
+    "applies_to" : "network_table",
+    "n" : "name"
+  }, {
+    "s" : 62,
+    "applies_to" : "network_table",
+    "n" : "selected",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "applies_to" : "network_table",
+    "n" : "__Annotations",
+    "d" : "list_of_string"
+  } ]
+}, {
+  "networkAttributes" : [ {
+    "n" : "name",
+    "v" : "p53.relationships_PathPPI.txt"
+  }, {
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "n" : "name",
+    "v" : "p53.relationships_PathPPI.txt"
+  }, {
+    "s" : 62,
+    "n" : "selected",
+    "v" : "true",
+    "d" : "boolean"
+  } ]
+}, {
+  "cyHiddenAttributes" : [ {
+    "s" : 62,
+    "n" : "layoutAlgorithm",
+    "v" : "yFiles Organic Edge Router"
+  } ]
+}, {
+  "nodeAttributes" : [ {
+    "s" : 62,
+    "po" : 287,
+    "n" : "name",
+    "v" : "ZAC1"
+  }, {
+    "s" : 62,
+    "po" : 287,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 285,
+    "n" : "name",
+    "v" : "WT1"
+  }, {
+    "s" : 62,
+    "po" : 285,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 282,
+    "n" : "name",
+    "v" : "UCN-01"
+  }, {
+    "s" : 62,
+    "po" : 282,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 278,
+    "n" : "name",
+    "v" : "TRAP220"
+  }, {
+    "s" : 62,
+    "po" : 278,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 276,
+    "n" : "name",
+    "v" : "TOPBP1"
+  }, {
+    "s" : 62,
+    "po" : 276,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 274,
+    "n" : "name",
+    "v" : "Glycolysis"
+  }, {
+    "s" : 62,
+    "po" : 274,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 269,
+    "n" : "name",
+    "v" : "SIRT"
+  }, {
+    "s" : 62,
+    "po" : 269,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 267,
+    "n" : "name",
+    "v" : "Mitochondrial respiration"
+  }, {
+    "s" : 62,
+    "po" : 267,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 261,
+    "n" : "name",
+    "v" : "Tumor suppression"
+  }, {
+    "s" : 62,
+    "po" : 261,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 257,
+    "n" : "name",
+    "v" : "PML"
+  }, {
+    "s" : 62,
+    "po" : 257,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 253,
+    "n" : "name",
+    "v" : "PI3K"
+  }, {
+    "s" : 62,
+    "po" : 253,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 249,
+    "n" : "name",
+    "v" : "PCAF"
+  }, {
+    "s" : 62,
+    "po" : 249,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 247,
+    "n" : "name",
+    "v" : "Senescence"
+  }, {
+    "s" : 62,
+    "po" : 247,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 245,
+    "n" : "name",
+    "v" : "p73"
+  }, {
+    "s" : 62,
+    "po" : 245,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 243,
+    "n" : "name",
+    "v" : "p63"
+  }, {
+    "s" : 62,
+    "po" : 243,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 239,
+    "n" : "name",
+    "v" : "TSP1"
+  }, {
+    "s" : 62,
+    "po" : 239,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 237,
+    "n" : "name",
+    "v" : "TIGAR"
+  }, {
+    "s" : 62,
+    "po" : 237,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 235,
+    "n" : "name",
+    "v" : "Teap"
+  }, {
+    "s" : 62,
+    "po" : 235,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 233,
+    "n" : "name",
+    "v" : "Survivin"
+  }, {
+    "s" : 62,
+    "po" : 233,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 231,
+    "n" : "name",
+    "v" : "STAG1"
+  }, {
+    "s" : 62,
+    "po" : 231,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 229,
+    "n" : "name",
+    "v" : "Slug"
+  }, {
+    "s" : 62,
+    "po" : 229,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 227,
+    "n" : "name",
+    "v" : "SCO2"
+  }, {
+    "s" : 62,
+    "po" : 227,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 225,
+    "n" : "name",
+    "v" : "Reprimo"
+  }, {
+    "s" : 62,
+    "po" : 225,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 223,
+    "n" : "name",
+    "v" : "PUMA"
+  }, {
+    "s" : 62,
+    "po" : 223,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 221,
+    "n" : "name",
+    "v" : "PTEN"
+  }, {
+    "s" : 62,
+    "po" : 221,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 219,
+    "n" : "name",
+    "v" : "PIG3"
+  }, {
+    "s" : 62,
+    "po" : 219,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 217,
+    "n" : "name",
+    "v" : "PIDD"
+  }, {
+    "s" : 62,
+    "po" : 217,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 215,
+    "n" : "name",
+    "v" : "PERP"
+  }, {
+    "s" : 62,
+    "po" : 215,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 213,
+    "n" : "name",
+    "v" : "PCNA"
+  }, {
+    "s" : 62,
+    "po" : 213,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 211,
+    "n" : "name",
+    "v" : "PAI-1"
+  }, {
+    "s" : 62,
+    "po" : 211,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 209,
+    "n" : "name",
+    "v" : "p53R2"
+  }, {
+    "s" : 62,
+    "po" : 209,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 207,
+    "n" : "name",
+    "v" : "p53AIP1"
+  }, {
+    "s" : 62,
+    "po" : 207,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 182,
+    "n" : "name",
+    "v" : "DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 182,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 181,
+    "n" : "name",
+    "v" : "p48"
+  }, {
+    "s" : 62,
+    "po" : 181,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 179,
+    "n" : "name",
+    "v" : "p38 MAPK"
+  }, {
+    "s" : 62,
+    "po" : 179,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 176,
+    "n" : "name",
+    "v" : "JMY"
+  }, {
+    "s" : 62,
+    "po" : 176,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 175,
+    "n" : "name",
+    "v" : "p300"
+  }, {
+    "s" : 62,
+    "po" : 175,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 173,
+    "n" : "name",
+    "v" : "p21Cip1"
+  }, {
+    "s" : 62,
+    "po" : 173,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 171,
+    "n" : "name",
+    "v" : "p19arf"
+  }, {
+    "s" : 62,
+    "po" : 171,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 169,
+    "n" : "name",
+    "v" : "Nucleostemin"
+  }, {
+    "s" : 62,
+    "po" : 169,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 167,
+    "n" : "name",
+    "v" : "NOXA"
+  }, {
+    "s" : 62,
+    "po" : 167,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 162,
+    "n" : "name",
+    "v" : "MDM4"
+  }, {
+    "s" : 62,
+    "po" : 162,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 159,
+    "n" : "name",
+    "v" : "Maspin"
+  }, {
+    "s" : 62,
+    "po" : 159,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 157,
+    "n" : "name",
+    "v" : "JNK1"
+  }, {
+    "s" : 62,
+    "po" : 157,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 155,
+    "n" : "name",
+    "v" : "Jmy-p300"
+  }, {
+    "s" : 62,
+    "po" : 155,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 153,
+    "n" : "name",
+    "v" : "HIPK2"
+  }, {
+    "s" : 62,
+    "po" : 153,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 150,
+    "n" : "name",
+    "v" : "HIF1A"
+  }, {
+    "s" : 62,
+    "po" : 150,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 148,
+    "n" : "name",
+    "v" : "TRIM29"
+  }, {
+    "s" : 62,
+    "po" : 148,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 147,
+    "n" : "name",
+    "v" : "HDAC9"
+  }, {
+    "s" : 62,
+    "po" : 147,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 145,
+    "n" : "name",
+    "v" : "HDAC"
+  }, {
+    "s" : 62,
+    "po" : 145,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 143,
+    "n" : "name",
+    "v" : "β-catenin"
+  }, {
+    "s" : 62,
+    "po" : 143,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 140,
+    "n" : "name",
+    "v" : "GML"
+  }, {
+    "s" : 62,
+    "po" : 140,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 138,
+    "n" : "name",
+    "v" : "GADD45"
+  }, {
+    "s" : 62,
+    "po" : 138,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 136,
+    "n" : "name",
+    "v" : "FAS"
+  }, {
+    "s" : 62,
+    "po" : 136,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 133,
+    "n" : "name",
+    "v" : "Cell cycle progression"
+  }, {
+    "s" : 62,
+    "po" : 133,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 132,
+    "n" : "name",
+    "v" : "E2F1"
+  }, {
+    "s" : 62,
+    "po" : 132,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 130,
+    "n" : "name",
+    "v" : "Autophagy"
+  }, {
+    "s" : 62,
+    "po" : 130,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 129,
+    "n" : "name",
+    "v" : "DRAM"
+  }, {
+    "s" : 62,
+    "po" : 129,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 127,
+    "n" : "name",
+    "v" : "DR4/5"
+  }, {
+    "s" : 62,
+    "po" : 127,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 124,
+    "n" : "name",
+    "v" : "CyclinK"
+  }, {
+    "s" : 62,
+    "po" : 124,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 122,
+    "n" : "name",
+    "v" : "CyclinG"
+  }, {
+    "s" : 62,
+    "po" : 122,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 120,
+    "n" : "name",
+    "v" : "CK1δ"
+  }, {
+    "s" : 62,
+    "po" : 120,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 116,
+    "n" : "name",
+    "v" : "CDK4-Cyclin D2"
+  }, {
+    "s" : 62,
+    "po" : 116,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 114,
+    "n" : "name",
+    "v" : "Rb"
+  }, {
+    "s" : 62,
+    "po" : 114,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 113,
+    "n" : "name",
+    "v" : "CDK2-Cyclin D1"
+  }, {
+    "s" : 62,
+    "po" : 113,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 111,
+    "n" : "name",
+    "v" : "Caspase 6"
+  }, {
+    "s" : 62,
+    "po" : 111,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 109,
+    "n" : "name",
+    "v" : "CABC1"
+  }, {
+    "s" : 62,
+    "po" : 109,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 107,
+    "n" : "name",
+    "v" : "c-Jun"
+  }, {
+    "s" : 62,
+    "po" : 107,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 105,
+    "n" : "name",
+    "v" : "Brca1"
+  }, {
+    "s" : 62,
+    "po" : 105,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 103,
+    "n" : "name",
+    "v" : "Bcl-xL"
+  }, {
+    "s" : 62,
+    "po" : 103,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 101,
+    "n" : "name",
+    "v" : "Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 101,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 100,
+    "n" : "name",
+    "v" : "Bcl-2"
+  }, {
+    "s" : 62,
+    "po" : 100,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 98,
+    "n" : "name",
+    "v" : "BAX"
+  }, {
+    "s" : 62,
+    "po" : 98,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 96,
+    "n" : "name",
+    "v" : "Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 96,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 95,
+    "n" : "name",
+    "v" : "BAI1"
+  }, {
+    "s" : 62,
+    "po" : 95,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 93,
+    "n" : "name",
+    "v" : "Chk1"
+  }, {
+    "s" : 62,
+    "po" : 93,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 92,
+    "n" : "name",
+    "v" : "ATR"
+  }, {
+    "s" : 62,
+    "po" : 92,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 89,
+    "n" : "name",
+    "v" : "DNA-PK"
+  }, {
+    "s" : 62,
+    "po" : 89,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 87,
+    "n" : "name",
+    "v" : "Chk2"
+  }, {
+    "s" : 62,
+    "po" : 87,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 86,
+    "n" : "name",
+    "v" : "ATM"
+  }, {
+    "s" : 62,
+    "po" : 86,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 84,
+    "n" : "name",
+    "v" : "p53"
+  }, {
+    "s" : 62,
+    "po" : 84,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 83,
+    "n" : "name",
+    "v" : "ASPP"
+  }, {
+    "s" : 62,
+    "po" : 83,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 81,
+    "n" : "name",
+    "v" : "Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 81,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 80,
+    "n" : "name",
+    "v" : "Apaf1"
+  }, {
+    "s" : 62,
+    "po" : 80,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 78,
+    "n" : "name",
+    "v" : "MDM2"
+  }, {
+    "s" : 62,
+    "po" : 78,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 76,
+    "n" : "name",
+    "v" : "Gsk3β"
+  }, {
+    "s" : 62,
+    "po" : 76,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 75,
+    "n" : "name",
+    "v" : "AKT"
+  }, {
+    "s" : 62,
+    "po" : 75,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 73,
+    "n" : "name",
+    "v" : "Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 73,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 72,
+    "n" : "name",
+    "v" : "14-3-3σ"
+  }, {
+    "s" : 62,
+    "po" : 72,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  } ]
+}, {
+  "edgeAttributes" : [ {
+    "s" : 62,
+    "po" : 288,
+    "n" : "shared name",
+    "v" : "ZAC1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 288,
+    "n" : "name",
+    "v" : "ZAC1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 288,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 288,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 286,
+    "n" : "shared name",
+    "v" : "WT1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 286,
+    "n" : "name",
+    "v" : "WT1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 286,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 286,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 284,
+    "n" : "shared name",
+    "v" : "UCN-01 (SR) Chk2"
+  }, {
+    "s" : 62,
+    "po" : 284,
+    "n" : "name",
+    "v" : "UCN-01 (SR) Chk2"
+  }, {
+    "s" : 62,
+    "po" : 284,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 284,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 284,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 283,
+    "n" : "shared name",
+    "v" : "UCN-01 (SR) Chk1"
+  }, {
+    "s" : 62,
+    "po" : 283,
+    "n" : "name",
+    "v" : "UCN-01 (SR) Chk1"
+  }, {
+    "s" : 62,
+    "po" : 283,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 283,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 283,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 279,
+    "n" : "shared name",
+    "v" : "TRAP220 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 279,
+    "n" : "name",
+    "v" : "TRAP220 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 279,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 279,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 277,
+    "n" : "shared name",
+    "v" : "TOPBP1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 277,
+    "n" : "name",
+    "v" : "TOPBP1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 277,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 277,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 277,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 270,
+    "n" : "shared name",
+    "v" : "SIRT (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 270,
+    "n" : "name",
+    "v" : "SIRT (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 270,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 270,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 270,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 260,
+    "n" : "shared name",
+    "v" : "PML (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 260,
+    "n" : "name",
+    "v" : "PML (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 260,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 260,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 259,
+    "n" : "shared name",
+    "v" : "PML (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 259,
+    "n" : "name",
+    "v" : "PML (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 259,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 259,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 259,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 258,
+    "n" : "shared name",
+    "v" : "PML (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 258,
+    "n" : "name",
+    "v" : "PML (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 258,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 258,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "shared name",
+    "v" : "PI3K (SR) AKT"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "name",
+    "v" : "PI3K (SR) AKT"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 254,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "shared name",
+    "v" : "PCAF (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "Modification",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "name",
+    "v" : "PCAF (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 250,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 246,
+    "n" : "shared name",
+    "v" : "p73 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 246,
+    "n" : "name",
+    "v" : "p73 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 246,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 246,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 246,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 244,
+    "n" : "shared name",
+    "v" : "p63 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 244,
+    "n" : "name",
+    "v" : "p63 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 244,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 244,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 244,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 281,
+    "n" : "shared name",
+    "v" : "TSP1 (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 281,
+    "n" : "name",
+    "v" : "TSP1 (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 281,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 281,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 275,
+    "n" : "shared name",
+    "v" : "TIGAR (causation) Glycolysis"
+  }, {
+    "s" : 62,
+    "po" : 275,
+    "n" : "name",
+    "v" : "TIGAR (causation) Glycolysis"
+  }, {
+    "s" : 62,
+    "po" : 275,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 275,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 273,
+    "n" : "shared name",
+    "v" : "Teap (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 273,
+    "n" : "name",
+    "v" : "Teap (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 273,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 273,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 272,
+    "n" : "shared name",
+    "v" : "Survivin (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 272,
+    "n" : "name",
+    "v" : "Survivin (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 272,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 272,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 271,
+    "n" : "shared name",
+    "v" : "STAG1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 271,
+    "n" : "name",
+    "v" : "STAG1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 271,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 271,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 268,
+    "n" : "shared name",
+    "v" : "SCO2 (causation) Mitochondrial respiration"
+  }, {
+    "s" : 62,
+    "po" : 268,
+    "n" : "name",
+    "v" : "SCO2 (causation) Mitochondrial respiration"
+  }, {
+    "s" : 62,
+    "po" : 268,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 268,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 266,
+    "n" : "shared name",
+    "v" : "Reprimo (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 266,
+    "n" : "name",
+    "v" : "Reprimo (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 266,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 266,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 263,
+    "n" : "shared name",
+    "v" : "PUMA (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 263,
+    "n" : "name",
+    "v" : "PUMA (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 263,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 263,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 262,
+    "n" : "shared name",
+    "v" : "PTEN (causation) Tumor suppression"
+  }, {
+    "s" : 62,
+    "po" : 262,
+    "n" : "name",
+    "v" : "PTEN (causation) Tumor suppression"
+  }, {
+    "s" : 62,
+    "po" : 262,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 262,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 256,
+    "n" : "shared name",
+    "v" : "PIG3 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 256,
+    "n" : "name",
+    "v" : "PIG3 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 256,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 256,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 255,
+    "n" : "shared name",
+    "v" : "PIDD (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 255,
+    "n" : "name",
+    "v" : "PIDD (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 255,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 255,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 252,
+    "n" : "shared name",
+    "v" : "PERP (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 252,
+    "n" : "name",
+    "v" : "PERP (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 252,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 252,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 251,
+    "n" : "shared name",
+    "v" : "PCNA (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 251,
+    "n" : "name",
+    "v" : "PCNA (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 251,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 251,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 248,
+    "n" : "shared name",
+    "v" : "PAI-1 (causation) Senescence"
+  }, {
+    "s" : 62,
+    "po" : 248,
+    "n" : "name",
+    "v" : "PAI-1 (causation) Senescence"
+  }, {
+    "s" : 62,
+    "po" : 248,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 248,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 242,
+    "n" : "shared name",
+    "v" : "p53R2 (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 242,
+    "n" : "name",
+    "v" : "p53R2 (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 242,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 242,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 241,
+    "n" : "shared name",
+    "v" : "p53AIP1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 241,
+    "n" : "name",
+    "v" : "p53AIP1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 241,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 241,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 183,
+    "n" : "shared name",
+    "v" : "p48 (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 183,
+    "n" : "name",
+    "v" : "p48 (causation) DNA repair"
+  }, {
+    "s" : 62,
+    "po" : 183,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 183,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 180,
+    "n" : "shared name",
+    "v" : "p38 MAPK (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 180,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 180,
+    "n" : "name",
+    "v" : "p38 MAPK (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 180,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 180,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "shared name",
+    "v" : "p300 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "Modification",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "name",
+    "v" : "p300 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 178,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 177,
+    "n" : "shared name",
+    "v" : "p300 (MI) JMY"
+  }, {
+    "s" : 62,
+    "po" : 177,
+    "n" : "name",
+    "v" : "p300 (MI) JMY"
+  }, {
+    "s" : 62,
+    "po" : 177,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 177,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 174,
+    "n" : "shared name",
+    "v" : "p21Cip1 (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 174,
+    "n" : "name",
+    "v" : "p21Cip1 (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 174,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 174,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 172,
+    "n" : "shared name",
+    "v" : "p19arf (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 172,
+    "n" : "name",
+    "v" : "p19arf (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 172,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 172,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 172,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 170,
+    "n" : "shared name",
+    "v" : "Nucleostemin (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 170,
+    "n" : "name",
+    "v" : "Nucleostemin (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 170,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 170,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 170,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 168,
+    "n" : "shared name",
+    "v" : "NOXA (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 168,
+    "n" : "name",
+    "v" : "NOXA (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 168,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 168,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 166,
+    "n" : "shared name",
+    "v" : "MDM4 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 166,
+    "n" : "name",
+    "v" : "MDM4 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 166,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 166,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 166,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 160,
+    "n" : "shared name",
+    "v" : "Maspin (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 160,
+    "n" : "name",
+    "v" : "Maspin (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 160,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 160,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 158,
+    "n" : "shared name",
+    "v" : "JNK1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 158,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 158,
+    "n" : "name",
+    "v" : "JNK1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 158,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 158,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 156,
+    "n" : "shared name",
+    "v" : "Jmy-p300 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 156,
+    "n" : "name",
+    "v" : "Jmy-p300 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 156,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 156,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 156,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "shared name",
+    "v" : "HIPK2 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "name",
+    "v" : "HIPK2 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 154,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 152,
+    "n" : "shared name",
+    "v" : "HIF1A (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 152,
+    "n" : "name",
+    "v" : "HIF1A (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 152,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 152,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 151,
+    "n" : "shared name",
+    "v" : "HIF1A (molecular cleavage) HIF1A"
+  }, {
+    "s" : 62,
+    "po" : 151,
+    "n" : "name",
+    "v" : "HIF1A (molecular cleavage) HIF1A"
+  }, {
+    "s" : 62,
+    "po" : 151,
+    "n" : "interaction",
+    "v" : "molecular cleavage"
+  }, {
+    "s" : 62,
+    "po" : 151,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 280,
+    "n" : "shared name",
+    "v" : "TRIM29 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 280,
+    "n" : "name",
+    "v" : "TRIM29 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 280,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 280,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 280,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 149,
+    "n" : "shared name",
+    "v" : "HDAC9 (SR) TRIM29"
+  }, {
+    "s" : 62,
+    "po" : 149,
+    "n" : "name",
+    "v" : "HDAC9 (SR) TRIM29"
+  }, {
+    "s" : 62,
+    "po" : 149,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 149,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 149,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 146,
+    "n" : "shared name",
+    "v" : "HDAC (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 146,
+    "n" : "name",
+    "v" : "HDAC (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 146,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 146,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 146,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 290,
+    "n" : "shared name",
+    "v" : "β-catenin (molecular cleavage) β-catenin"
+  }, {
+    "s" : 62,
+    "po" : 290,
+    "n" : "name",
+    "v" : "β-catenin (molecular cleavage) β-catenin"
+  }, {
+    "s" : 62,
+    "po" : 290,
+    "n" : "interaction",
+    "v" : "molecular cleavage"
+  }, {
+    "s" : 62,
+    "po" : 290,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 289,
+    "n" : "shared name",
+    "v" : "β-catenin (ER) p19arf"
+  }, {
+    "s" : 62,
+    "po" : 289,
+    "n" : "name",
+    "v" : "β-catenin (ER) p19arf"
+  }, {
+    "s" : 62,
+    "po" : 289,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 289,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 141,
+    "n" : "shared name",
+    "v" : "GML (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 141,
+    "n" : "name",
+    "v" : "GML (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 141,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 141,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 139,
+    "n" : "shared name",
+    "v" : "GADD45 (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 139,
+    "n" : "name",
+    "v" : "GADD45 (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 139,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 139,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 137,
+    "n" : "shared name",
+    "v" : "FAS (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 137,
+    "n" : "name",
+    "v" : "FAS (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 137,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 137,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 135,
+    "n" : "shared name",
+    "v" : "E2F1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 135,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 135,
+    "n" : "name",
+    "v" : "E2F1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 135,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 135,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 134,
+    "n" : "shared name",
+    "v" : "E2F1 (causation) Cell cycle progression"
+  }, {
+    "s" : 62,
+    "po" : 134,
+    "n" : "name",
+    "v" : "E2F1 (causation) Cell cycle progression"
+  }, {
+    "s" : 62,
+    "po" : 134,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 134,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 131,
+    "n" : "shared name",
+    "v" : "DRAM (causation) Autophagy"
+  }, {
+    "s" : 62,
+    "po" : 131,
+    "n" : "name",
+    "v" : "DRAM (causation) Autophagy"
+  }, {
+    "s" : 62,
+    "po" : 131,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 131,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 128,
+    "n" : "shared name",
+    "v" : "DR4/5 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 128,
+    "n" : "name",
+    "v" : "DR4/5 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 128,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 128,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 125,
+    "n" : "shared name",
+    "v" : "CyclinK (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 125,
+    "n" : "name",
+    "v" : "CyclinK (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 125,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 125,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 123,
+    "n" : "shared name",
+    "v" : "CyclinG (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 123,
+    "n" : "name",
+    "v" : "CyclinG (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 123,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 123,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 121,
+    "n" : "shared name",
+    "v" : "CK1δ (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 121,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 121,
+    "n" : "name",
+    "v" : "CK1δ (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 121,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 121,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 117,
+    "n" : "shared name",
+    "v" : "CDK4-Cyclin D2 (SR) Rb"
+  }, {
+    "s" : 62,
+    "po" : 117,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 117,
+    "n" : "name",
+    "v" : "CDK4-Cyclin D2 (SR) Rb"
+  }, {
+    "s" : 62,
+    "po" : 117,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 117,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 265,
+    "n" : "shared name",
+    "v" : "Rb (MI) E2F1"
+  }, {
+    "s" : 62,
+    "po" : 265,
+    "n" : "name",
+    "v" : "Rb (MI) E2F1"
+  }, {
+    "s" : 62,
+    "po" : 265,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 265,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 264,
+    "n" : "shared name",
+    "v" : "Rb (causation) Cell cycle progression"
+  }, {
+    "s" : 62,
+    "po" : 264,
+    "n" : "name",
+    "v" : "Rb (causation) Cell cycle progression"
+  }, {
+    "s" : 62,
+    "po" : 264,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 264,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 115,
+    "n" : "shared name",
+    "v" : "CDK2-Cyclin D1 (SR) Rb"
+  }, {
+    "s" : 62,
+    "po" : 115,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 115,
+    "n" : "name",
+    "v" : "CDK2-Cyclin D1 (SR) Rb"
+  }, {
+    "s" : 62,
+    "po" : 115,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 115,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 112,
+    "n" : "shared name",
+    "v" : "Caspase 6 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 112,
+    "n" : "name",
+    "v" : "Caspase 6 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 112,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 112,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 110,
+    "n" : "shared name",
+    "v" : "CABC1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 110,
+    "n" : "name",
+    "v" : "CABC1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 110,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 110,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 108,
+    "n" : "shared name",
+    "v" : "c-Jun (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 108,
+    "n" : "name",
+    "v" : "c-Jun (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 108,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 108,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 108,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 106,
+    "n" : "shared name",
+    "v" : "Brca1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 106,
+    "n" : "name",
+    "v" : "Brca1 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 106,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 106,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 104,
+    "n" : "shared name",
+    "v" : "Bcl-xL (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 104,
+    "n" : "name",
+    "v" : "Bcl-xL (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 104,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 104,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 102,
+    "n" : "shared name",
+    "v" : "Bcl-2 (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 102,
+    "n" : "name",
+    "v" : "Bcl-2 (causation) Cell survival"
+  }, {
+    "s" : 62,
+    "po" : 102,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 102,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 99,
+    "n" : "shared name",
+    "v" : "BAX (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 99,
+    "n" : "name",
+    "v" : "BAX (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 99,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 99,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 97,
+    "n" : "shared name",
+    "v" : "BAI1 (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 97,
+    "n" : "name",
+    "v" : "BAI1 (causation) Angiogenesis"
+  }, {
+    "s" : 62,
+    "po" : 97,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 97,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 118,
+    "n" : "shared name",
+    "v" : "Chk1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 118,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 118,
+    "n" : "name",
+    "v" : "Chk1 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 118,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 118,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "shared name",
+    "v" : "ATR (SR) Chk1"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "name",
+    "v" : "ATR (SR) Chk1"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 94,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 126,
+    "n" : "shared name",
+    "v" : "DNA-PK (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 126,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 126,
+    "n" : "name",
+    "v" : "DNA-PK (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 126,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 126,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "shared name",
+    "v" : "Chk2 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "name",
+    "v" : "Chk2 (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 119,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "shared name",
+    "v" : "ATM (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "name",
+    "v" : "ATM (SR) p53"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 91,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 90,
+    "n" : "shared name",
+    "v" : "ATM (MI) DNA-PK"
+  }, {
+    "s" : 62,
+    "po" : 90,
+    "n" : "name",
+    "v" : "ATM (MI) DNA-PK"
+  }, {
+    "s" : 62,
+    "po" : 90,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 90,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "shared name",
+    "v" : "ATM (SR) Chk2"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "name",
+    "v" : "ATM (SR) Chk2"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 88,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 240,
+    "n" : "shared name",
+    "v" : "p53 (ER) TSP1"
+  }, {
+    "s" : 62,
+    "po" : 240,
+    "n" : "name",
+    "v" : "p53 (ER) TSP1"
+  }, {
+    "s" : 62,
+    "po" : 240,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 240,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 240,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 238,
+    "n" : "shared name",
+    "v" : "p53 (ER) TIGAR"
+  }, {
+    "s" : 62,
+    "po" : 238,
+    "n" : "name",
+    "v" : "p53 (ER) TIGAR"
+  }, {
+    "s" : 62,
+    "po" : 238,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 238,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 238,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 236,
+    "n" : "shared name",
+    "v" : "p53 (ER) Teap"
+  }, {
+    "s" : 62,
+    "po" : 236,
+    "n" : "name",
+    "v" : "p53 (ER) Teap"
+  }, {
+    "s" : 62,
+    "po" : 236,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 236,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 236,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 234,
+    "n" : "shared name",
+    "v" : "p53 (ER) Survivin"
+  }, {
+    "s" : 62,
+    "po" : 234,
+    "n" : "name",
+    "v" : "p53 (ER) Survivin"
+  }, {
+    "s" : 62,
+    "po" : 234,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 234,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 234,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 232,
+    "n" : "shared name",
+    "v" : "p53 (ER) STAG1"
+  }, {
+    "s" : 62,
+    "po" : 232,
+    "n" : "name",
+    "v" : "p53 (ER) STAG1"
+  }, {
+    "s" : 62,
+    "po" : 232,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 232,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 232,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 230,
+    "n" : "shared name",
+    "v" : "p53 (ER) Slug"
+  }, {
+    "s" : 62,
+    "po" : 230,
+    "n" : "name",
+    "v" : "p53 (ER) Slug"
+  }, {
+    "s" : 62,
+    "po" : 230,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 230,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 230,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 228,
+    "n" : "shared name",
+    "v" : "p53 (ER) SCO2"
+  }, {
+    "s" : 62,
+    "po" : 228,
+    "n" : "name",
+    "v" : "p53 (ER) SCO2"
+  }, {
+    "s" : 62,
+    "po" : 228,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 228,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 228,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 226,
+    "n" : "shared name",
+    "v" : "p53 (ER) Reprimo"
+  }, {
+    "s" : 62,
+    "po" : 226,
+    "n" : "name",
+    "v" : "p53 (ER) Reprimo"
+  }, {
+    "s" : 62,
+    "po" : 226,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 226,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 226,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 224,
+    "n" : "shared name",
+    "v" : "p53 (ER) PUMA"
+  }, {
+    "s" : 62,
+    "po" : 224,
+    "n" : "name",
+    "v" : "p53 (ER) PUMA"
+  }, {
+    "s" : 62,
+    "po" : 224,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 224,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 224,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 222,
+    "n" : "shared name",
+    "v" : "p53 (ER) PTEN"
+  }, {
+    "s" : 62,
+    "po" : 222,
+    "n" : "name",
+    "v" : "p53 (ER) PTEN"
+  }, {
+    "s" : 62,
+    "po" : 222,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 222,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 222,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 220,
+    "n" : "shared name",
+    "v" : "p53 (ER) PIG3"
+  }, {
+    "s" : 62,
+    "po" : 220,
+    "n" : "name",
+    "v" : "p53 (ER) PIG3"
+  }, {
+    "s" : 62,
+    "po" : 220,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 220,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 220,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 218,
+    "n" : "shared name",
+    "v" : "p53 (ER) PIDD"
+  }, {
+    "s" : 62,
+    "po" : 218,
+    "n" : "name",
+    "v" : "p53 (ER) PIDD"
+  }, {
+    "s" : 62,
+    "po" : 218,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 218,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 218,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 216,
+    "n" : "shared name",
+    "v" : "p53 (ER) PERP"
+  }, {
+    "s" : 62,
+    "po" : 216,
+    "n" : "name",
+    "v" : "p53 (ER) PERP"
+  }, {
+    "s" : 62,
+    "po" : 216,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 216,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 216,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 214,
+    "n" : "shared name",
+    "v" : "p53 (ER) PCNA"
+  }, {
+    "s" : 62,
+    "po" : 214,
+    "n" : "name",
+    "v" : "p53 (ER) PCNA"
+  }, {
+    "s" : 62,
+    "po" : 214,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 214,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 214,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 212,
+    "n" : "shared name",
+    "v" : "p53 (ER) PAI-1"
+  }, {
+    "s" : 62,
+    "po" : 212,
+    "n" : "name",
+    "v" : "p53 (ER) PAI-1"
+  }, {
+    "s" : 62,
+    "po" : 212,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 212,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 212,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 210,
+    "n" : "shared name",
+    "v" : "p53 (ER) p53R2"
+  }, {
+    "s" : 62,
+    "po" : 210,
+    "n" : "name",
+    "v" : "p53 (ER) p53R2"
+  }, {
+    "s" : 62,
+    "po" : 210,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 210,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 210,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 208,
+    "n" : "shared name",
+    "v" : "p53 (ER) p53AIP1"
+  }, {
+    "s" : 62,
+    "po" : 208,
+    "n" : "name",
+    "v" : "p53 (ER) p53AIP1"
+  }, {
+    "s" : 62,
+    "po" : 208,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 208,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 208,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 206,
+    "n" : "shared name",
+    "v" : "p53 (TR) p53"
+  }, {
+    "s" : 62,
+    "po" : 206,
+    "n" : "name",
+    "v" : "p53 (TR) p53"
+  }, {
+    "s" : 62,
+    "po" : 206,
+    "n" : "interaction",
+    "v" : "TR"
+  }, {
+    "s" : 62,
+    "po" : 206,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 205,
+    "n" : "shared name",
+    "v" : "p53 (molecular cleavage) p53"
+  }, {
+    "s" : 62,
+    "po" : 205,
+    "n" : "name",
+    "v" : "p53 (molecular cleavage) p53"
+  }, {
+    "s" : 62,
+    "po" : 205,
+    "n" : "interaction",
+    "v" : "molecular cleavage"
+  }, {
+    "s" : 62,
+    "po" : 205,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 204,
+    "n" : "shared name",
+    "v" : "p53 (ER) p48"
+  }, {
+    "s" : 62,
+    "po" : 204,
+    "n" : "name",
+    "v" : "p53 (ER) p48"
+  }, {
+    "s" : 62,
+    "po" : 204,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 204,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 204,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 203,
+    "n" : "shared name",
+    "v" : "p53 (ER) p21Cip1"
+  }, {
+    "s" : 62,
+    "po" : 203,
+    "n" : "name",
+    "v" : "p53 (ER) p21Cip1"
+  }, {
+    "s" : 62,
+    "po" : 203,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 203,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 203,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 202,
+    "n" : "shared name",
+    "v" : "p53 (ER) NOXA"
+  }, {
+    "s" : 62,
+    "po" : 202,
+    "n" : "name",
+    "v" : "p53 (ER) NOXA"
+  }, {
+    "s" : 62,
+    "po" : 202,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 202,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 202,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 201,
+    "n" : "shared name",
+    "v" : "p53 (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 201,
+    "n" : "name",
+    "v" : "p53 (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 201,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 201,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 200,
+    "n" : "shared name",
+    "v" : "p53 (ER) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 200,
+    "n" : "name",
+    "v" : "p53 (ER) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 200,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 200,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 200,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 199,
+    "n" : "shared name",
+    "v" : "p53 (ER) Maspin"
+  }, {
+    "s" : 62,
+    "po" : 199,
+    "n" : "name",
+    "v" : "p53 (ER) Maspin"
+  }, {
+    "s" : 62,
+    "po" : 199,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 199,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 199,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 198,
+    "n" : "shared name",
+    "v" : "p53 (ER) GML"
+  }, {
+    "s" : 62,
+    "po" : 198,
+    "n" : "name",
+    "v" : "p53 (ER) GML"
+  }, {
+    "s" : 62,
+    "po" : 198,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 198,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 198,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 197,
+    "n" : "shared name",
+    "v" : "p53 (ER) GADD45"
+  }, {
+    "s" : 62,
+    "po" : 197,
+    "n" : "name",
+    "v" : "p53 (ER) GADD45"
+  }, {
+    "s" : 62,
+    "po" : 197,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 197,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 197,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 196,
+    "n" : "shared name",
+    "v" : "p53 (ER) FAS"
+  }, {
+    "s" : 62,
+    "po" : 196,
+    "n" : "name",
+    "v" : "p53 (ER) FAS"
+  }, {
+    "s" : 62,
+    "po" : 196,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 196,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 196,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 195,
+    "n" : "shared name",
+    "v" : "p53 (ER) DRAM"
+  }, {
+    "s" : 62,
+    "po" : 195,
+    "n" : "name",
+    "v" : "p53 (ER) DRAM"
+  }, {
+    "s" : 62,
+    "po" : 195,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 195,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 195,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 194,
+    "n" : "shared name",
+    "v" : "p53 (ER) DR4/5"
+  }, {
+    "s" : 62,
+    "po" : 194,
+    "n" : "name",
+    "v" : "p53 (ER) DR4/5"
+  }, {
+    "s" : 62,
+    "po" : 194,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 194,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 194,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 193,
+    "n" : "shared name",
+    "v" : "p53 (ER) CyclinK"
+  }, {
+    "s" : 62,
+    "po" : 193,
+    "n" : "name",
+    "v" : "p53 (ER) CyclinK"
+  }, {
+    "s" : 62,
+    "po" : 193,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 193,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 193,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 192,
+    "n" : "shared name",
+    "v" : "p53 (ER) CyclinG"
+  }, {
+    "s" : 62,
+    "po" : 192,
+    "n" : "name",
+    "v" : "p53 (ER) CyclinG"
+  }, {
+    "s" : 62,
+    "po" : 192,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 192,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 192,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 191,
+    "n" : "shared name",
+    "v" : "p53 (ER) Caspase 6"
+  }, {
+    "s" : 62,
+    "po" : 191,
+    "n" : "name",
+    "v" : "p53 (ER) Caspase 6"
+  }, {
+    "s" : 62,
+    "po" : 191,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 191,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 191,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 190,
+    "n" : "shared name",
+    "v" : "p53 (ER) CABC1"
+  }, {
+    "s" : 62,
+    "po" : 190,
+    "n" : "name",
+    "v" : "p53 (ER) CABC1"
+  }, {
+    "s" : 62,
+    "po" : 190,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 190,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 190,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 189,
+    "n" : "shared name",
+    "v" : "p53 (ER) Bcl-xL"
+  }, {
+    "s" : 62,
+    "po" : 189,
+    "n" : "name",
+    "v" : "p53 (ER) Bcl-xL"
+  }, {
+    "s" : 62,
+    "po" : 189,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 189,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 189,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 188,
+    "n" : "shared name",
+    "v" : "p53 (ER) Bcl-2"
+  }, {
+    "s" : 62,
+    "po" : 188,
+    "n" : "name",
+    "v" : "p53 (ER) Bcl-2"
+  }, {
+    "s" : 62,
+    "po" : 188,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 188,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 188,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 187,
+    "n" : "shared name",
+    "v" : "p53 (ER) BAX"
+  }, {
+    "s" : 62,
+    "po" : 187,
+    "n" : "name",
+    "v" : "p53 (ER) BAX"
+  }, {
+    "s" : 62,
+    "po" : 187,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 187,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 187,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 186,
+    "n" : "shared name",
+    "v" : "p53 (ER) BAI1"
+  }, {
+    "s" : 62,
+    "po" : 186,
+    "n" : "name",
+    "v" : "p53 (ER) BAI1"
+  }, {
+    "s" : 62,
+    "po" : 186,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 186,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 186,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 185,
+    "n" : "shared name",
+    "v" : "p53 (ER) Apaf1"
+  }, {
+    "s" : 62,
+    "po" : 185,
+    "n" : "name",
+    "v" : "p53 (ER) Apaf1"
+  }, {
+    "s" : 62,
+    "po" : 185,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 185,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 185,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 184,
+    "n" : "shared name",
+    "v" : "p53 (ER) 14-3-3σ"
+  }, {
+    "s" : 62,
+    "po" : 184,
+    "n" : "name",
+    "v" : "p53 (ER) 14-3-3σ"
+  }, {
+    "s" : 62,
+    "po" : 184,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 184,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 184,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 85,
+    "n" : "shared name",
+    "v" : "ASPP (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 85,
+    "n" : "name",
+    "v" : "ASPP (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 85,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 85,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 82,
+    "n" : "shared name",
+    "v" : "Apaf1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 82,
+    "n" : "name",
+    "v" : "Apaf1 (causation) Apoptosis"
+  }, {
+    "s" : 62,
+    "po" : 82,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 82,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 165,
+    "n" : "shared name",
+    "v" : "MDM2 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 165,
+    "n" : "name",
+    "v" : "MDM2 (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 165,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 165,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 164,
+    "n" : "shared name",
+    "v" : "MDM2 (ER) p53"
+  }, {
+    "s" : 62,
+    "po" : 164,
+    "n" : "name",
+    "v" : "MDM2 (ER) p53"
+  }, {
+    "s" : 62,
+    "po" : 164,
+    "n" : "interaction",
+    "v" : "ER"
+  }, {
+    "s" : 62,
+    "po" : 164,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 164,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 163,
+    "n" : "shared name",
+    "v" : "MDM2 (molecular cleavage) MDM4"
+  }, {
+    "s" : 62,
+    "po" : 163,
+    "n" : "name",
+    "v" : "MDM2 (molecular cleavage) MDM4"
+  }, {
+    "s" : 62,
+    "po" : 163,
+    "n" : "interaction",
+    "v" : "molecular cleavage"
+  }, {
+    "s" : 62,
+    "po" : 163,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 161,
+    "n" : "shared name",
+    "v" : "MDM2 (TR) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 161,
+    "n" : "name",
+    "v" : "MDM2 (TR) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 161,
+    "n" : "interaction",
+    "v" : "TR"
+  }, {
+    "s" : 62,
+    "po" : 161,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "shared name",
+    "v" : "Gsk3β (SR) β-catenin"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "name",
+    "v" : "Gsk3β (SR) β-catenin"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 144,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "shared name",
+    "v" : "Gsk3β (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "name",
+    "v" : "Gsk3β (MI) p53"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "Activity",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 142,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 79,
+    "n" : "shared name",
+    "v" : "AKT (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 79,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 79,
+    "n" : "name",
+    "v" : "AKT (MI) MDM2"
+  }, {
+    "s" : 62,
+    "po" : 79,
+    "n" : "interaction",
+    "v" : "MI"
+  }, {
+    "s" : 62,
+    "po" : 79,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "shared name",
+    "v" : "AKT (SR) Gsk3β"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "Phosphorylation",
+    "v" : "1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "name",
+    "v" : "AKT (SR) Gsk3β"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "interaction",
+    "v" : "SR"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "Activity",
+    "v" : "-1",
+    "d" : "integer"
+  }, {
+    "s" : 62,
+    "po" : 77,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  }, {
+    "s" : 62,
+    "po" : 74,
+    "n" : "shared name",
+    "v" : "14-3-3σ (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 74,
+    "n" : "name",
+    "v" : "14-3-3σ (causation) Cell cycle arrest"
+  }, {
+    "s" : 62,
+    "po" : 74,
+    "n" : "interaction",
+    "v" : "causation"
+  }, {
+    "s" : 62,
+    "po" : 74,
+    "n" : "selected",
+    "v" : "false",
+    "d" : "boolean"
+  } ]
+}, {
+  "cartesianLayout" : [ {
+    "node" : 287,
+    "view" : 291,
+    "x" : 313.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 285,
+    "view" : 291,
+    "x" : 1048.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 282,
+    "view" : 291,
+    "x" : 141.3806848582144,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 278,
+    "view" : 291,
+    "x" : -946.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 276,
+    "view" : 291,
+    "x" : -1.1193151417855915,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 274,
+    "view" : 291,
+    "x" : -1995.5399500624203,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 269,
+    "view" : 291,
+    "x" : 733.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 267,
+    "view" : 291,
+    "x" : -2100.5399500624203,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 261,
+    "view" : 291,
+    "x" : 1469.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 257,
+    "view" : 291,
+    "x" : 1394.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 253,
+    "view" : 291,
+    "x" : 1668.3767166042462,
+    "y" : -672.2471910112359
+  }, {
+    "node" : 249,
+    "view" : 291,
+    "x" : -106.11931514178559,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 247,
+    "view" : 291,
+    "x" : 1049.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 245,
+    "view" : 291,
+    "x" : -211.11931514178536,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 243,
+    "view" : 291,
+    "x" : 838.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 239,
+    "view" : 291,
+    "x" : -210.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 237,
+    "view" : 291,
+    "x" : -1995.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 235,
+    "view" : 291,
+    "x" : -1155.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 233,
+    "view" : 291,
+    "x" : 209.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 231,
+    "view" : 291,
+    "x" : -1890.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 229,
+    "view" : 291,
+    "x" : 1574.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 227,
+    "view" : 291,
+    "x" : -2100.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 225,
+    "view" : 291,
+    "x" : 944.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 223,
+    "view" : 291,
+    "x" : -1050.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 221,
+    "view" : 291,
+    "x" : 1469.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 219,
+    "view" : 291,
+    "x" : -1260.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 217,
+    "view" : 291,
+    "x" : -840.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 215,
+    "view" : 291,
+    "x" : -735.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 213,
+    "view" : 291,
+    "x" : 1364.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 211,
+    "view" : 291,
+    "x" : 1049.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 209,
+    "view" : 291,
+    "x" : 1259.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 207,
+    "view" : 291,
+    "x" : -1785.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 182,
+    "view" : 291,
+    "x" : 1259.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 181,
+    "view" : 291,
+    "x" : 1154.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 179,
+    "view" : 291,
+    "x" : 1289.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 176,
+    "view" : 291,
+    "x" : -1069.8693151417854,
+    "y" : -94.24719101123594
+  }, {
+    "node" : 175,
+    "view" : 291,
+    "x" : -1051.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 173,
+    "view" : 291,
+    "x" : 524.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 171,
+    "view" : 291,
+    "x" : 1642.1267166042462,
+    "y" : -94.24719101123594
+  }, {
+    "node" : 169,
+    "view" : 291,
+    "x" : 1747.1267166042462,
+    "y" : -94.24719101123594
+  }, {
+    "node" : 167,
+    "view" : 291,
+    "x" : -420.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 162,
+    "view" : 291,
+    "x" : 1574.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 159,
+    "view" : 291,
+    "x" : -315.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 157,
+    "view" : 291,
+    "x" : 418.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 155,
+    "view" : 291,
+    "x" : 628.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 153,
+    "view" : 291,
+    "x" : -526.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 150,
+    "view" : 291,
+    "x" : 1184.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 148,
+    "view" : 291,
+    "x" : -736.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 147,
+    "view" : 291,
+    "x" : -736.1193151417854,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 145,
+    "view" : 291,
+    "x" : 208.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 143,
+    "view" : 291,
+    "x" : 1642.1267166042462,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 140,
+    "view" : 291,
+    "x" : -630.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 138,
+    "view" : 291,
+    "x" : 419.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 136,
+    "view" : 291,
+    "x" : -1470.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 133,
+    "view" : 291,
+    "x" : -1189.8693151417854,
+    "y" : -94.24719101123594
+  }, {
+    "node" : 132,
+    "view" : 291,
+    "x" : -1156.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 130,
+    "view" : 291,
+    "x" : 314.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 129,
+    "view" : 291,
+    "x" : 314.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 127,
+    "view" : 291,
+    "x" : -945.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 124,
+    "view" : 291,
+    "x" : 839.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 122,
+    "view" : 291,
+    "x" : 734.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 120,
+    "view" : 291,
+    "x" : -421.11931514178536,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 116,
+    "view" : 291,
+    "x" : -1193.6193151417854,
+    "y" : -607.2471910112359
+  }, {
+    "node" : 114,
+    "view" : 291,
+    "x" : -1174.8693151417854,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 113,
+    "view" : 291,
+    "x" : -1088.6193151417854,
+    "y" : -607.2471910112359
+  }, {
+    "node" : 111,
+    "view" : 291,
+    "x" : -1680.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 109,
+    "view" : 291,
+    "x" : -1365.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 107,
+    "view" : 291,
+    "x" : -631.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 105,
+    "view" : 291,
+    "x" : 943.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 103,
+    "view" : 291,
+    "x" : 104.4600499375797,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 101,
+    "view" : 291,
+    "x" : 104.4600499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 100,
+    "view" : 291,
+    "x" : -0.5399500624203029,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 98,
+    "view" : 291,
+    "x" : -1575.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 96,
+    "view" : 291,
+    "x" : -210.5399500624203,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 95,
+    "view" : 291,
+    "x" : -105.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 93,
+    "view" : 291,
+    "x" : 523.8806848582144,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 92,
+    "view" : 291,
+    "x" : 542.6306848582144,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 89,
+    "view" : 291,
+    "x" : -316.11931514178536,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 87,
+    "view" : 291,
+    "x" : 103.88068485821441,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 86,
+    "view" : 291,
+    "x" : -316.11931514178536,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 84,
+    "view" : 291,
+    "x" : 102.63068485821441,
+    "y" : -94.24719101123594
+  }, {
+    "node" : 83,
+    "view" : 291,
+    "x" : -841.1193151417854,
+    "y" : -401.24719101123594
+  }, {
+    "node" : 81,
+    "view" : 291,
+    "x" : -1155.5399500624203,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 80,
+    "view" : 291,
+    "x" : -525.5399500624203,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 78,
+    "view" : 291,
+    "x" : 1713.7933832709132,
+    "y" : 300.75280898876406
+  }, {
+    "node" : 76,
+    "view" : 291,
+    "x" : 1642.1267166042462,
+    "y" : -512.2471910112359
+  }, {
+    "node" : 75,
+    "view" : 291,
+    "x" : 1668.3767166042462,
+    "y" : -607.2471910112359
+  }, {
+    "node" : 73,
+    "view" : 291,
+    "x" : 728.2100499375797,
+    "y" : 485.75280898876406
+  }, {
+    "node" : 72,
+    "view" : 291,
+    "x" : 629.4600499375797,
+    "y" : 300.75280898876406
+  } ]
+}, {
+  "cyVisualProperties" : [ {
+    "properties_of" : "network",
+    "applies_to" : 291,
+    "view" : 291,
+    "properties" : {
+      "NETWORK_BACKGROUND_PAINT" : "#FFFFFF",
+      "NETWORK_CENTER_X_LOCATION" : "0.0",
+      "NETWORK_CENTER_Y_LOCATION" : "0.0",
+      "NETWORK_CENTER_Z_LOCATION" : "0.0",
+      "NETWORK_DEPTH" : "0.0",
+      "NETWORK_EDGE_SELECTION" : "true",
+      "NETWORK_HEIGHT" : "400.0",
+      "NETWORK_NODE_SELECTION" : "true",
+      "NETWORK_SCALE_FACTOR" : "1.0",
+      "NETWORK_SIZE" : "550.0",
+      "NETWORK_WIDTH" : "550.0"
+    }
+  }, {
+    "properties_of" : "nodes:default",
+    "applies_to" : 291,
+    "view" : 291,
+    "properties" : {
+      "COMPOUND_NODE_PADDING" : "10.0",
+      "COMPOUND_NODE_SHAPE" : "ROUND_RECTANGLE",
+      "NODE_BORDER_PAINT" : "#CCCCCC",
+      "NODE_BORDER_STROKE" : "SOLID",
+      "NODE_BORDER_TRANSPARENCY" : "255",
+      "NODE_BORDER_WIDTH" : "0.0",
+      "NODE_CUSTOMGRAPHICS_1" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_2" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_3" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_4" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_5" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_6" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_7" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_8" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_9" : "org.cytoscape.ding.customgraphics.NullCustomGraphics,0,[ Remove Graphics ],",
+      "NODE_CUSTOMGRAPHICS_POSITION_1" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_2" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_3" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_4" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_5" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_6" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_7" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_8" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_POSITION_9" : "C,C,c,0.00,0.00",
+      "NODE_CUSTOMGRAPHICS_SIZE_1" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_2" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_3" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_4" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_5" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_6" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_7" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_8" : "50.0",
+      "NODE_CUSTOMGRAPHICS_SIZE_9" : "50.0",
+      "NODE_CUSTOMPAINT_1" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_1, name=Node Custom Paint 1)",
+      "NODE_CUSTOMPAINT_2" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_2, name=Node Custom Paint 2)",
+      "NODE_CUSTOMPAINT_3" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_3, name=Node Custom Paint 3)",
+      "NODE_CUSTOMPAINT_4" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_4, name=Node Custom Paint 4)",
+      "NODE_CUSTOMPAINT_5" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_5, name=Node Custom Paint 5)",
+      "NODE_CUSTOMPAINT_6" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_6, name=Node Custom Paint 6)",
+      "NODE_CUSTOMPAINT_7" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_7, name=Node Custom Paint 7)",
+      "NODE_CUSTOMPAINT_8" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_8, name=Node Custom Paint 8)",
+      "NODE_CUSTOMPAINT_9" : "DefaultVisualizableVisualProperty(id=NODE_CUSTOMPAINT_9, name=Node Custom Paint 9)",
+      "NODE_DEPTH" : "0.0",
+      "NODE_FILL_COLOR" : "#89D0F5",
+      "NODE_HEIGHT" : "35.0",
+      "NODE_LABEL_COLOR" : "#000000",
+      "NODE_LABEL_FONT_FACE" : "SansSerif.plain,plain,12",
+      "NODE_LABEL_FONT_SIZE" : "12",
+      "NODE_LABEL_POSITION" : "C,C,c,0.00,0.00",
+      "NODE_LABEL_TRANSPARENCY" : "255",
+      "NODE_LABEL_WIDTH" : "200.0",
+      "NODE_NESTED_NETWORK_IMAGE_VISIBLE" : "true",
+      "NODE_PAINT" : "#1E90FF",
+      "NODE_SELECTED" : "false",
+      "NODE_SELECTED_PAINT" : "#FFFF00",
+      "NODE_SHAPE" : "ROUND_RECTANGLE",
+      "NODE_SIZE" : "35.0",
+      "NODE_TRANSPARENCY" : "255",
+      "NODE_VISIBLE" : "true",
+      "NODE_WIDTH" : "75.0",
+      "NODE_X_LOCATION" : "0.0",
+      "NODE_Y_LOCATION" : "0.0",
+      "NODE_Z_LOCATION" : "0.0"
+    },
+    "dependencies" : {
+      "nodeCustomGraphicsSizeSync" : "true",
+      "nodeSizeLocked" : "false"
+    },
+    "mappings" : {
+      "NODE_LABEL" : {
+        "type" : "PASSTHROUGH",
+        "definition" : "COL=name,T=string"
+      }
+    }
+  }, {
+    "properties_of" : "edges:default",
+    "applies_to" : 291,
+    "view" : 291,
+    "properties" : {
+      "EDGE_CURVED" : "true",
+      "EDGE_LABEL_COLOR" : "#000000",
+      "EDGE_LABEL_FONT_FACE" : "Dialog.plain,plain,10",
+      "EDGE_LABEL_FONT_SIZE" : "10",
+      "EDGE_LABEL_TRANSPARENCY" : "255",
+      "EDGE_LABEL_WIDTH" : "200.0",
+      "EDGE_LINE_TYPE" : "SOLID",
+      "EDGE_PAINT" : "#323232",
+      "EDGE_SELECTED" : "false",
+      "EDGE_SELECTED_PAINT" : "#FF0000",
+      "EDGE_SOURCE_ARROW_SELECTED_PAINT" : "#FFFF00",
+      "EDGE_SOURCE_ARROW_SHAPE" : "NONE",
+      "EDGE_SOURCE_ARROW_UNSELECTED_PAINT" : "#000000",
+      "EDGE_STROKE_SELECTED_PAINT" : "#FF0000",
+      "EDGE_STROKE_UNSELECTED_PAINT" : "#848484",
+      "EDGE_TARGET_ARROW_SELECTED_PAINT" : "#FFFF00",
+      "EDGE_TARGET_ARROW_SHAPE" : "NONE",
+      "EDGE_TARGET_ARROW_UNSELECTED_PAINT" : "#000000",
+      "EDGE_TRANSPARENCY" : "255",
+      "EDGE_UNSELECTED_PAINT" : "#404040",
+      "EDGE_VISIBLE" : "true",
+      "EDGE_WIDTH" : "2.0"
+    },
+    "dependencies" : {
+      "arrowColorMatchesEdge" : "false"
+    }
+  } ]
+}, {
+  "cySubNetworks" : [ {
+    "@id" : 62,
+    "nodes" : [ 287, 285, 282, 278, 276, 274, 269, 267, 261, 257, 253, 249, 247, 245, 243, 239, 237, 235, 233, 231, 229, 227, 225, 223, 221, 219, 217, 215, 213, 211, 209, 207, 182, 181, 179, 176, 175, 173, 171, 169, 167, 162, 159, 157, 155, 153, 150, 148, 147, 145, 143, 140, 138, 136, 133, 132, 130, 129, 127, 124, 122, 120, 116, 114, 113, 111, 109, 107, 105, 103, 101, 100, 98, 96, 95, 93, 92, 89, 87, 86, 84, 83, 81, 80, 78, 76, 75, 73, 72 ],
+    "edges" : [ 288, 286, 284, 283, 279, 277, 270, 260, 259, 258, 254, 250, 246, 244, 281, 275, 273, 272, 271, 268, 266, 263, 262, 256, 255, 252, 251, 248, 242, 241, 183, 180, 178, 177, 174, 172, 170, 168, 166, 160, 158, 156, 154, 152, 151, 280, 149, 146, 290, 289, 141, 139, 137, 135, 134, 131, 128, 125, 123, 121, 117, 265, 264, 115, 112, 110, 108, 106, 104, 102, 99, 97, 118, 94, 126, 119, 91, 90, 88, 240, 238, 236, 234, 232, 230, 228, 226, 224, 222, 220, 218, 216, 214, 212, 210, 208, 206, 205, 204, 203, 202, 201, 200, 199, 198, 197, 196, 195, 194, 193, 192, 191, 190, 189, 188, 187, 186, 185, 184, 85, 82, 165, 164, 163, 161, 144, 142, 79, 77, 74 ]
+  } ]
+}, {
+  "cyViews" : [ {
+    "@id" : 291,
+    "s" : 62
+  } ]
+}, {
+  "cyNetworkRelations" : [ {
+    "p" : 62,
+    "c" : 291,
+    "r" : "view",
+    "name" : "p53.relationships_PathPPI.txt view"
+  }, {
+    "c" : 62,
+    "r" : "subnetwork",
+    "name" : "p53.relationships_PathPPI.txt"
+  } ]
+}, {
+  "metaData" : [ {
+    "elementCount" : 15,
+    "name" : "cyTableColumn"
+  }, {
+    "elementCount" : 4,
+    "name" : "networkAttributes"
+  }, {
+    "elementCount" : 1,
+    "name" : "cyHiddenAttributes"
+  }, {
+    "elementCount" : 178,
+    "name" : "nodeAttributes"
+  }, {
+    "elementCount" : 604,
+    "name" : "edgeAttributes"
+  }, {
+    "elementCount" : 89,
+    "name" : "cartesianLayout"
+  }, {
+    "elementCount" : 3,
+    "name" : "cyVisualProperties"
+  }, {
+    "elementCount" : 1,
+    "name" : "cySubNetworks"
+  }, {
+    "elementCount" : 1,
+    "name" : "cyViews"
+  }, {
+    "elementCount" : 0,
+    "name" : "cyGroups"
+  }, {
+    "elementCount" : 2,
+    "name" : "cyNetworkRelations"
+  } ]
+}, {
+  "status" : [ {
+    "error" : "",
+    "success" : true
+  } ]
+} ]

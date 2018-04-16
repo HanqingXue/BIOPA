@@ -97,6 +97,27 @@ def rebulid_net(g, familys):
 		
 	return g 
 
+def extract_net(fname):
+	f = open('../' + fname + '.txt')
+	out_net = open(fname + '_net.txt', 'w')
+	count = 0 
+	for item in f.readlines():
+		'''
+		if count == 0:
+			continue
+		item = item.split('\t')
+		print item
+		count += 1
+		out_net.write('{0}\t{1}\n'.format(item[0], item[2]))
+		'''
+		print item
+		item = item.split()
+		print item
+		out_net.write('{0}\t{1}\n'.format(item[0], item[2]))
+
+	out_net.close()
+
 if __name__ == '__main__':
-	detect_gene_family()
+	#detect_gene_family()
+	extract_net('p53.relationships_PathPPI')
 	pass

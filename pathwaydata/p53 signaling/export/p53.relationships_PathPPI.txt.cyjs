@@ -1,0 +1,2947 @@
+{
+  "format_version" : "1.0",
+  "generated_by" : "cytoscape-3.5.1",
+  "target_cytoscapejs_version" : "~2.1",
+  "data" : {
+    "shared_name" : "p53.relationships_PathPPI.txt",
+    "name" : "p53.relationships_PathPPI.txt",
+    "SUID" : 62,
+    "__Annotations" : [ ],
+    "selected" : true
+  },
+  "elements" : {
+    "nodes" : [ {
+      "data" : {
+        "id" : "287",
+        "shared_name" : "ZAC1",
+        "name" : "ZAC1",
+        "SUID" : 287,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 313.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "285",
+        "shared_name" : "WT1",
+        "name" : "WT1",
+        "SUID" : 285,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1048.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "282",
+        "shared_name" : "UCN-01",
+        "name" : "UCN-01",
+        "SUID" : 282,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 141.3806848582144,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "278",
+        "shared_name" : "TRAP220",
+        "name" : "TRAP220",
+        "SUID" : 278,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -946.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "276",
+        "shared_name" : "TOPBP1",
+        "name" : "TOPBP1",
+        "SUID" : 276,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1.1193151417855915,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "274",
+        "shared_name" : "Glycolysis",
+        "name" : "Glycolysis",
+        "SUID" : 274,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1995.5399500624203,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "269",
+        "shared_name" : "SIRT",
+        "name" : "SIRT",
+        "SUID" : 269,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 733.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "267",
+        "shared_name" : "Mitochondrial respiration",
+        "name" : "Mitochondrial respiration",
+        "SUID" : 267,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -2100.5399500624203,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "261",
+        "shared_name" : "Tumor suppression",
+        "name" : "Tumor suppression",
+        "SUID" : 261,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1469.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "257",
+        "shared_name" : "PML",
+        "name" : "PML",
+        "SUID" : 257,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1394.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "253",
+        "shared_name" : "PI3K",
+        "name" : "PI3K",
+        "SUID" : 253,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1668.3767166042462,
+        "y" : -672.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "249",
+        "shared_name" : "PCAF",
+        "name" : "PCAF",
+        "SUID" : 249,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -106.11931514178559,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "247",
+        "shared_name" : "Senescence",
+        "name" : "Senescence",
+        "SUID" : 247,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1049.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "245",
+        "shared_name" : "p73",
+        "name" : "p73",
+        "SUID" : 245,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -211.11931514178536,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "243",
+        "shared_name" : "p63",
+        "name" : "p63",
+        "SUID" : 243,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 838.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "239",
+        "shared_name" : "TSP1",
+        "name" : "TSP1",
+        "SUID" : 239,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -210.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "237",
+        "shared_name" : "TIGAR",
+        "name" : "TIGAR",
+        "SUID" : 237,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1995.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "235",
+        "shared_name" : "Teap",
+        "name" : "Teap",
+        "SUID" : 235,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1155.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "233",
+        "shared_name" : "Survivin",
+        "name" : "Survivin",
+        "SUID" : 233,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 209.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "231",
+        "shared_name" : "STAG1",
+        "name" : "STAG1",
+        "SUID" : 231,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1890.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "229",
+        "shared_name" : "Slug",
+        "name" : "Slug",
+        "SUID" : 229,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1574.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "227",
+        "shared_name" : "SCO2",
+        "name" : "SCO2",
+        "SUID" : 227,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -2100.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "225",
+        "shared_name" : "Reprimo",
+        "name" : "Reprimo",
+        "SUID" : 225,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 944.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "223",
+        "shared_name" : "PUMA",
+        "name" : "PUMA",
+        "SUID" : 223,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1050.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "221",
+        "shared_name" : "PTEN",
+        "name" : "PTEN",
+        "SUID" : 221,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1469.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "219",
+        "shared_name" : "PIG3",
+        "name" : "PIG3",
+        "SUID" : 219,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1260.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "217",
+        "shared_name" : "PIDD",
+        "name" : "PIDD",
+        "SUID" : 217,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -840.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "215",
+        "shared_name" : "PERP",
+        "name" : "PERP",
+        "SUID" : 215,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -735.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "213",
+        "shared_name" : "PCNA",
+        "name" : "PCNA",
+        "SUID" : 213,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1364.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "211",
+        "shared_name" : "PAI-1",
+        "name" : "PAI-1",
+        "SUID" : 211,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1049.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "209",
+        "shared_name" : "p53R2",
+        "name" : "p53R2",
+        "SUID" : 209,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1259.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "207",
+        "shared_name" : "p53AIP1",
+        "name" : "p53AIP1",
+        "SUID" : 207,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1785.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "182",
+        "shared_name" : "DNA repair",
+        "name" : "DNA repair",
+        "SUID" : 182,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1259.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "181",
+        "shared_name" : "p48",
+        "name" : "p48",
+        "SUID" : 181,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1154.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "179",
+        "shared_name" : "p38 MAPK",
+        "name" : "p38 MAPK",
+        "SUID" : 179,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1289.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "176",
+        "shared_name" : "JMY",
+        "name" : "JMY",
+        "SUID" : 176,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1069.8693151417854,
+        "y" : -94.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "175",
+        "shared_name" : "p300",
+        "name" : "p300",
+        "SUID" : 175,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1051.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "173",
+        "shared_name" : "p21Cip1",
+        "name" : "p21Cip1",
+        "SUID" : 173,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 524.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "171",
+        "shared_name" : "p19arf",
+        "name" : "p19arf",
+        "SUID" : 171,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1642.1267166042462,
+        "y" : -94.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "169",
+        "shared_name" : "Nucleostemin",
+        "name" : "Nucleostemin",
+        "SUID" : 169,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1747.1267166042462,
+        "y" : -94.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "167",
+        "shared_name" : "NOXA",
+        "name" : "NOXA",
+        "SUID" : 167,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -420.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "162",
+        "shared_name" : "MDM4",
+        "name" : "MDM4",
+        "SUID" : 162,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1574.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "159",
+        "shared_name" : "Maspin",
+        "name" : "Maspin",
+        "SUID" : 159,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -315.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "157",
+        "shared_name" : "JNK1",
+        "name" : "JNK1",
+        "SUID" : 157,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 418.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "155",
+        "shared_name" : "Jmy-p300",
+        "name" : "Jmy-p300",
+        "SUID" : 155,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 628.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "153",
+        "shared_name" : "HIPK2",
+        "name" : "HIPK2",
+        "SUID" : 153,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -526.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "150",
+        "shared_name" : "HIF1A",
+        "name" : "HIF1A",
+        "SUID" : 150,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1184.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "148",
+        "shared_name" : "TRIM29",
+        "name" : "TRIM29",
+        "SUID" : 148,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -736.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "147",
+        "shared_name" : "HDAC9",
+        "name" : "HDAC9",
+        "SUID" : 147,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -736.1193151417854,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "145",
+        "shared_name" : "HDAC",
+        "name" : "HDAC",
+        "SUID" : 145,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 208.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "143",
+        "shared_name" : "β-catenin",
+        "name" : "β-catenin",
+        "SUID" : 143,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1642.1267166042462,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "140",
+        "shared_name" : "GML",
+        "name" : "GML",
+        "SUID" : 140,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -630.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "138",
+        "shared_name" : "GADD45",
+        "name" : "GADD45",
+        "SUID" : 138,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 419.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "136",
+        "shared_name" : "FAS",
+        "name" : "FAS",
+        "SUID" : 136,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1470.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "133",
+        "shared_name" : "Cell cycle progression",
+        "name" : "Cell cycle progression",
+        "SUID" : 133,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1189.8693151417854,
+        "y" : -94.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "132",
+        "shared_name" : "E2F1",
+        "name" : "E2F1",
+        "SUID" : 132,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1156.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "130",
+        "shared_name" : "Autophagy",
+        "name" : "Autophagy",
+        "SUID" : 130,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 314.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "129",
+        "shared_name" : "DRAM",
+        "name" : "DRAM",
+        "SUID" : 129,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 314.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "127",
+        "shared_name" : "DR4/5",
+        "name" : "DR4/5",
+        "SUID" : 127,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -945.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "124",
+        "shared_name" : "CyclinK",
+        "name" : "CyclinK",
+        "SUID" : 124,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 839.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "122",
+        "shared_name" : "CyclinG",
+        "name" : "CyclinG",
+        "SUID" : 122,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 734.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "120",
+        "shared_name" : "CK1δ",
+        "name" : "CK1δ",
+        "SUID" : 120,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -421.11931514178536,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "116",
+        "shared_name" : "CDK4-Cyclin D2",
+        "name" : "CDK4-Cyclin D2",
+        "SUID" : 116,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1193.6193151417854,
+        "y" : -607.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "114",
+        "shared_name" : "Rb",
+        "name" : "Rb",
+        "SUID" : 114,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1174.8693151417854,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "113",
+        "shared_name" : "CDK2-Cyclin D1",
+        "name" : "CDK2-Cyclin D1",
+        "SUID" : 113,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1088.6193151417854,
+        "y" : -607.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "111",
+        "shared_name" : "Caspase 6",
+        "name" : "Caspase 6",
+        "SUID" : 111,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1680.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "109",
+        "shared_name" : "CABC1",
+        "name" : "CABC1",
+        "SUID" : 109,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1365.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "107",
+        "shared_name" : "c-Jun",
+        "name" : "c-Jun",
+        "SUID" : 107,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -631.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "105",
+        "shared_name" : "Brca1",
+        "name" : "Brca1",
+        "SUID" : 105,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 943.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "103",
+        "shared_name" : "Bcl-xL",
+        "name" : "Bcl-xL",
+        "SUID" : 103,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 104.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "101",
+        "shared_name" : "Cell survival",
+        "name" : "Cell survival",
+        "SUID" : 101,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 104.4600499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "100",
+        "shared_name" : "Bcl-2",
+        "name" : "Bcl-2",
+        "SUID" : 100,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -0.5399500624203029,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "98",
+        "shared_name" : "BAX",
+        "name" : "BAX",
+        "SUID" : 98,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1575.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "96",
+        "shared_name" : "Angiogenesis",
+        "name" : "Angiogenesis",
+        "SUID" : 96,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -210.5399500624203,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "95",
+        "shared_name" : "BAI1",
+        "name" : "BAI1",
+        "SUID" : 95,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -105.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "93",
+        "shared_name" : "Chk1",
+        "name" : "Chk1",
+        "SUID" : 93,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 523.8806848582144,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "92",
+        "shared_name" : "ATR",
+        "name" : "ATR",
+        "SUID" : 92,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 542.6306848582144,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "89",
+        "shared_name" : "DNA-PK",
+        "name" : "DNA-PK",
+        "SUID" : 89,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -316.11931514178536,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "87",
+        "shared_name" : "Chk2",
+        "name" : "Chk2",
+        "SUID" : 87,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 103.88068485821441,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "86",
+        "shared_name" : "ATM",
+        "name" : "ATM",
+        "SUID" : 86,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -316.11931514178536,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "84",
+        "shared_name" : "p53",
+        "name" : "p53",
+        "SUID" : 84,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 102.63068485821441,
+        "y" : -94.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "83",
+        "shared_name" : "ASPP",
+        "name" : "ASPP",
+        "SUID" : 83,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -841.1193151417854,
+        "y" : -401.24719101123594
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "81",
+        "shared_name" : "Apoptosis",
+        "name" : "Apoptosis",
+        "SUID" : 81,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -1155.5399500624203,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "80",
+        "shared_name" : "Apaf1",
+        "name" : "Apaf1",
+        "SUID" : 80,
+        "selected" : false
+      },
+      "position" : {
+        "x" : -525.5399500624203,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "78",
+        "shared_name" : "MDM2",
+        "name" : "MDM2",
+        "SUID" : 78,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1713.7933832709132,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "76",
+        "shared_name" : "Gsk3β",
+        "name" : "Gsk3β",
+        "SUID" : 76,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1642.1267166042462,
+        "y" : -512.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "75",
+        "shared_name" : "AKT",
+        "name" : "AKT",
+        "SUID" : 75,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 1668.3767166042462,
+        "y" : -607.2471910112359
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "73",
+        "shared_name" : "Cell cycle arrest",
+        "name" : "Cell cycle arrest",
+        "SUID" : 73,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 728.2100499375797,
+        "y" : 485.75280898876406
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "72",
+        "shared_name" : "14-3-3σ",
+        "name" : "14-3-3σ",
+        "SUID" : 72,
+        "selected" : false
+      },
+      "position" : {
+        "x" : 629.4600499375797,
+        "y" : 300.75280898876406
+      },
+      "selected" : false
+    } ],
+    "edges" : [ {
+      "data" : {
+        "id" : "288",
+        "source" : "287",
+        "target" : "84",
+        "shared_name" : "ZAC1 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "ZAC1 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 288,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "286",
+        "source" : "285",
+        "target" : "84",
+        "shared_name" : "WT1 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "WT1 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 286,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "284",
+        "source" : "282",
+        "target" : "87",
+        "shared_name" : "UCN-01 (SR) Chk2",
+        "shared_interaction" : "SR",
+        "name" : "UCN-01 (SR) Chk2",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 284,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "283",
+        "source" : "282",
+        "target" : "93",
+        "shared_name" : "UCN-01 (SR) Chk1",
+        "shared_interaction" : "SR",
+        "name" : "UCN-01 (SR) Chk1",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 283,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "279",
+        "source" : "278",
+        "target" : "84",
+        "shared_name" : "TRAP220 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "TRAP220 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 279,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "277",
+        "source" : "276",
+        "target" : "84",
+        "shared_name" : "TOPBP1 (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "TOPBP1 (SR) p53",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 277,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "270",
+        "source" : "269",
+        "target" : "84",
+        "shared_name" : "SIRT (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "SIRT (SR) p53",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 270,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "260",
+        "source" : "257",
+        "target" : "84",
+        "shared_name" : "PML (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "PML (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 260,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "259",
+        "source" : "257",
+        "target" : "84",
+        "shared_name" : "PML (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "PML (SR) p53",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 259,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "258",
+        "source" : "257",
+        "target" : "78",
+        "shared_name" : "PML (MI) MDM2",
+        "shared_interaction" : "MI",
+        "name" : "PML (MI) MDM2",
+        "interaction" : "MI",
+        "SUID" : 258,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "254",
+        "source" : "253",
+        "target" : "75",
+        "shared_name" : "PI3K (SR) AKT",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "PI3K (SR) AKT",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 254,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "250",
+        "source" : "249",
+        "target" : "84",
+        "shared_name" : "PCAF (MI) p53",
+        "Modification" : 1,
+        "shared_interaction" : "MI",
+        "name" : "PCAF (MI) p53",
+        "interaction" : "MI",
+        "Activity" : 1,
+        "SUID" : 250,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "246",
+        "source" : "245",
+        "target" : "84",
+        "shared_name" : "p73 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "p73 (MI) p53",
+        "interaction" : "MI",
+        "Activity" : 1,
+        "SUID" : 246,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "244",
+        "source" : "243",
+        "target" : "84",
+        "shared_name" : "p63 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "p63 (MI) p53",
+        "interaction" : "MI",
+        "Activity" : 1,
+        "SUID" : 244,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "281",
+        "source" : "239",
+        "target" : "96",
+        "shared_name" : "TSP1 (causation) Angiogenesis",
+        "shared_interaction" : "causation",
+        "name" : "TSP1 (causation) Angiogenesis",
+        "interaction" : "causation",
+        "SUID" : 281,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "275",
+        "source" : "237",
+        "target" : "274",
+        "shared_name" : "TIGAR (causation) Glycolysis",
+        "shared_interaction" : "causation",
+        "name" : "TIGAR (causation) Glycolysis",
+        "interaction" : "causation",
+        "SUID" : 275,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "273",
+        "source" : "235",
+        "target" : "81",
+        "shared_name" : "Teap (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "Teap (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 273,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "272",
+        "source" : "233",
+        "target" : "101",
+        "shared_name" : "Survivin (causation) Cell survival",
+        "shared_interaction" : "causation",
+        "name" : "Survivin (causation) Cell survival",
+        "interaction" : "causation",
+        "SUID" : 272,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "271",
+        "source" : "231",
+        "target" : "81",
+        "shared_name" : "STAG1 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "STAG1 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 271,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "268",
+        "source" : "227",
+        "target" : "267",
+        "shared_name" : "SCO2 (causation) Mitochondrial respiration",
+        "shared_interaction" : "causation",
+        "name" : "SCO2 (causation) Mitochondrial respiration",
+        "interaction" : "causation",
+        "SUID" : 268,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "266",
+        "source" : "225",
+        "target" : "73",
+        "shared_name" : "Reprimo (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "Reprimo (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 266,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "263",
+        "source" : "223",
+        "target" : "81",
+        "shared_name" : "PUMA (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "PUMA (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 263,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "262",
+        "source" : "221",
+        "target" : "261",
+        "shared_name" : "PTEN (causation) Tumor suppression",
+        "shared_interaction" : "causation",
+        "name" : "PTEN (causation) Tumor suppression",
+        "interaction" : "causation",
+        "SUID" : 262,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "256",
+        "source" : "219",
+        "target" : "81",
+        "shared_name" : "PIG3 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "PIG3 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 256,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "255",
+        "source" : "217",
+        "target" : "81",
+        "shared_name" : "PIDD (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "PIDD (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 255,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "252",
+        "source" : "215",
+        "target" : "81",
+        "shared_name" : "PERP (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "PERP (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 252,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "251",
+        "source" : "213",
+        "target" : "182",
+        "shared_name" : "PCNA (causation) DNA repair",
+        "shared_interaction" : "causation",
+        "name" : "PCNA (causation) DNA repair",
+        "interaction" : "causation",
+        "SUID" : 251,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "248",
+        "source" : "211",
+        "target" : "247",
+        "shared_name" : "PAI-1 (causation) Senescence",
+        "shared_interaction" : "causation",
+        "name" : "PAI-1 (causation) Senescence",
+        "interaction" : "causation",
+        "SUID" : 248,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "242",
+        "source" : "209",
+        "target" : "182",
+        "shared_name" : "p53R2 (causation) DNA repair",
+        "shared_interaction" : "causation",
+        "name" : "p53R2 (causation) DNA repair",
+        "interaction" : "causation",
+        "SUID" : 242,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "241",
+        "source" : "207",
+        "target" : "81",
+        "shared_name" : "p53AIP1 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "p53AIP1 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 241,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "183",
+        "source" : "181",
+        "target" : "182",
+        "shared_name" : "p48 (causation) DNA repair",
+        "shared_interaction" : "causation",
+        "name" : "p48 (causation) DNA repair",
+        "interaction" : "causation",
+        "SUID" : 183,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "180",
+        "source" : "179",
+        "target" : "84",
+        "shared_name" : "p38 MAPK (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "p38 MAPK (SR) p53",
+        "interaction" : "SR",
+        "SUID" : 180,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "178",
+        "source" : "175",
+        "target" : "84",
+        "shared_name" : "p300 (MI) p53",
+        "Modification" : 1,
+        "shared_interaction" : "MI",
+        "name" : "p300 (MI) p53",
+        "interaction" : "MI",
+        "Activity" : 1,
+        "SUID" : 178,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "177",
+        "source" : "175",
+        "target" : "176",
+        "shared_name" : "p300 (MI) JMY",
+        "shared_interaction" : "MI",
+        "name" : "p300 (MI) JMY",
+        "interaction" : "MI",
+        "SUID" : 177,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "174",
+        "source" : "173",
+        "target" : "73",
+        "shared_name" : "p21Cip1 (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "p21Cip1 (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 174,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "172",
+        "source" : "171",
+        "target" : "78",
+        "shared_name" : "p19arf (MI) MDM2",
+        "shared_interaction" : "MI",
+        "name" : "p19arf (MI) MDM2",
+        "interaction" : "MI",
+        "Activity" : -1,
+        "SUID" : 172,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "170",
+        "source" : "169",
+        "target" : "78",
+        "shared_name" : "Nucleostemin (MI) MDM2",
+        "shared_interaction" : "MI",
+        "name" : "Nucleostemin (MI) MDM2",
+        "interaction" : "MI",
+        "Activity" : -1,
+        "SUID" : 170,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "168",
+        "source" : "167",
+        "target" : "81",
+        "shared_name" : "NOXA (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "NOXA (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 168,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "166",
+        "source" : "162",
+        "target" : "84",
+        "shared_name" : "MDM4 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "MDM4 (MI) p53",
+        "interaction" : "MI",
+        "Activity" : -1,
+        "SUID" : 166,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "160",
+        "source" : "159",
+        "target" : "96",
+        "shared_name" : "Maspin (causation) Angiogenesis",
+        "shared_interaction" : "causation",
+        "name" : "Maspin (causation) Angiogenesis",
+        "interaction" : "causation",
+        "SUID" : 160,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "158",
+        "source" : "157",
+        "target" : "84",
+        "shared_name" : "JNK1 (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "JNK1 (SR) p53",
+        "interaction" : "SR",
+        "SUID" : 158,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "156",
+        "source" : "155",
+        "target" : "84",
+        "shared_name" : "Jmy-p300 (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "Jmy-p300 (SR) p53",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 156,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "154",
+        "source" : "153",
+        "target" : "84",
+        "shared_name" : "HIPK2 (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "HIPK2 (SR) p53",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 154,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "152",
+        "source" : "150",
+        "target" : "84",
+        "shared_name" : "HIF1A (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "HIF1A (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 152,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "151",
+        "source" : "150",
+        "target" : "150",
+        "shared_name" : "HIF1A (molecular cleavage) HIF1A",
+        "shared_interaction" : "molecular cleavage",
+        "name" : "HIF1A (molecular cleavage) HIF1A",
+        "interaction" : "molecular cleavage",
+        "SUID" : 151,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "280",
+        "source" : "148",
+        "target" : "84",
+        "shared_name" : "TRIM29 (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "TRIM29 (SR) p53",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 280,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "149",
+        "source" : "147",
+        "target" : "148",
+        "shared_name" : "HDAC9 (SR) TRIM29",
+        "shared_interaction" : "SR",
+        "name" : "HDAC9 (SR) TRIM29",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 149,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "146",
+        "source" : "145",
+        "target" : "84",
+        "shared_name" : "HDAC (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "HDAC (SR) p53",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 146,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "290",
+        "source" : "143",
+        "target" : "143",
+        "shared_name" : "β-catenin (molecular cleavage) β-catenin",
+        "shared_interaction" : "molecular cleavage",
+        "name" : "β-catenin (molecular cleavage) β-catenin",
+        "interaction" : "molecular cleavage",
+        "SUID" : 290,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "289",
+        "source" : "143",
+        "target" : "171",
+        "shared_name" : "β-catenin (ER) p19arf",
+        "shared_interaction" : "ER",
+        "name" : "β-catenin (ER) p19arf",
+        "interaction" : "ER",
+        "SUID" : 289,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "141",
+        "source" : "140",
+        "target" : "81",
+        "shared_name" : "GML (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "GML (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 141,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "139",
+        "source" : "138",
+        "target" : "73",
+        "shared_name" : "GADD45 (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "GADD45 (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 139,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "137",
+        "source" : "136",
+        "target" : "81",
+        "shared_name" : "FAS (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "FAS (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 137,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "135",
+        "source" : "132",
+        "target" : "84",
+        "shared_name" : "E2F1 (MI) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "MI",
+        "name" : "E2F1 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 135,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "134",
+        "source" : "132",
+        "target" : "133",
+        "shared_name" : "E2F1 (causation) Cell cycle progression",
+        "shared_interaction" : "causation",
+        "name" : "E2F1 (causation) Cell cycle progression",
+        "interaction" : "causation",
+        "SUID" : 134,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "131",
+        "source" : "129",
+        "target" : "130",
+        "shared_name" : "DRAM (causation) Autophagy",
+        "shared_interaction" : "causation",
+        "name" : "DRAM (causation) Autophagy",
+        "interaction" : "causation",
+        "SUID" : 131,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "128",
+        "source" : "127",
+        "target" : "81",
+        "shared_name" : "DR4/5 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "DR4/5 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 128,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "125",
+        "source" : "124",
+        "target" : "73",
+        "shared_name" : "CyclinK (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "CyclinK (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 125,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "123",
+        "source" : "122",
+        "target" : "73",
+        "shared_name" : "CyclinG (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "CyclinG (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 123,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "121",
+        "source" : "120",
+        "target" : "84",
+        "shared_name" : "CK1δ (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "CK1δ (SR) p53",
+        "interaction" : "SR",
+        "SUID" : 121,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "117",
+        "source" : "116",
+        "target" : "114",
+        "shared_name" : "CDK4-Cyclin D2 (SR) Rb",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "CDK4-Cyclin D2 (SR) Rb",
+        "interaction" : "SR",
+        "SUID" : 117,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "265",
+        "source" : "114",
+        "target" : "132",
+        "shared_name" : "Rb (MI) E2F1",
+        "shared_interaction" : "MI",
+        "name" : "Rb (MI) E2F1",
+        "interaction" : "MI",
+        "SUID" : 265,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "264",
+        "source" : "114",
+        "target" : "133",
+        "shared_name" : "Rb (causation) Cell cycle progression",
+        "shared_interaction" : "causation",
+        "name" : "Rb (causation) Cell cycle progression",
+        "interaction" : "causation",
+        "SUID" : 264,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "115",
+        "source" : "113",
+        "target" : "114",
+        "shared_name" : "CDK2-Cyclin D1 (SR) Rb",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "CDK2-Cyclin D1 (SR) Rb",
+        "interaction" : "SR",
+        "SUID" : 115,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "112",
+        "source" : "111",
+        "target" : "81",
+        "shared_name" : "Caspase 6 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "Caspase 6 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 112,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "110",
+        "source" : "109",
+        "target" : "81",
+        "shared_name" : "CABC1 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "CABC1 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 110,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "108",
+        "source" : "107",
+        "target" : "84",
+        "shared_name" : "c-Jun (SR) p53",
+        "shared_interaction" : "SR",
+        "name" : "c-Jun (SR) p53",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 108,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "106",
+        "source" : "105",
+        "target" : "84",
+        "shared_name" : "Brca1 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "Brca1 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 106,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "104",
+        "source" : "103",
+        "target" : "101",
+        "shared_name" : "Bcl-xL (causation) Cell survival",
+        "shared_interaction" : "causation",
+        "name" : "Bcl-xL (causation) Cell survival",
+        "interaction" : "causation",
+        "SUID" : 104,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "102",
+        "source" : "100",
+        "target" : "101",
+        "shared_name" : "Bcl-2 (causation) Cell survival",
+        "shared_interaction" : "causation",
+        "name" : "Bcl-2 (causation) Cell survival",
+        "interaction" : "causation",
+        "SUID" : 102,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "99",
+        "source" : "98",
+        "target" : "81",
+        "shared_name" : "BAX (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "BAX (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 99,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "97",
+        "source" : "95",
+        "target" : "96",
+        "shared_name" : "BAI1 (causation) Angiogenesis",
+        "shared_interaction" : "causation",
+        "name" : "BAI1 (causation) Angiogenesis",
+        "interaction" : "causation",
+        "SUID" : 97,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "118",
+        "source" : "93",
+        "target" : "84",
+        "shared_name" : "Chk1 (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "Chk1 (SR) p53",
+        "interaction" : "SR",
+        "SUID" : 118,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "94",
+        "source" : "92",
+        "target" : "93",
+        "shared_name" : "ATR (SR) Chk1",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "ATR (SR) Chk1",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 94,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "126",
+        "source" : "89",
+        "target" : "84",
+        "shared_name" : "DNA-PK (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "DNA-PK (SR) p53",
+        "interaction" : "SR",
+        "SUID" : 126,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "119",
+        "source" : "87",
+        "target" : "84",
+        "shared_name" : "Chk2 (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "Chk2 (SR) p53",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 119,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "91",
+        "source" : "86",
+        "target" : "84",
+        "shared_name" : "ATM (SR) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "ATM (SR) p53",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 91,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "90",
+        "source" : "86",
+        "target" : "89",
+        "shared_name" : "ATM (MI) DNA-PK",
+        "shared_interaction" : "MI",
+        "name" : "ATM (MI) DNA-PK",
+        "interaction" : "MI",
+        "SUID" : 90,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "88",
+        "source" : "86",
+        "target" : "87",
+        "shared_name" : "ATM (SR) Chk2",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "ATM (SR) Chk2",
+        "interaction" : "SR",
+        "Activity" : 1,
+        "SUID" : 88,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "240",
+        "source" : "84",
+        "target" : "239",
+        "shared_name" : "p53 (ER) TSP1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) TSP1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 240,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "238",
+        "source" : "84",
+        "target" : "237",
+        "shared_name" : "p53 (ER) TIGAR",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) TIGAR",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 238,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "236",
+        "source" : "84",
+        "target" : "235",
+        "shared_name" : "p53 (ER) Teap",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Teap",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 236,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "234",
+        "source" : "84",
+        "target" : "233",
+        "shared_name" : "p53 (ER) Survivin",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Survivin",
+        "interaction" : "ER",
+        "Activity" : -1,
+        "SUID" : 234,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "232",
+        "source" : "84",
+        "target" : "231",
+        "shared_name" : "p53 (ER) STAG1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) STAG1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 232,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "230",
+        "source" : "84",
+        "target" : "229",
+        "shared_name" : "p53 (ER) Slug",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Slug",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 230,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "228",
+        "source" : "84",
+        "target" : "227",
+        "shared_name" : "p53 (ER) SCO2",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) SCO2",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 228,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "226",
+        "source" : "84",
+        "target" : "225",
+        "shared_name" : "p53 (ER) Reprimo",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Reprimo",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 226,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "224",
+        "source" : "84",
+        "target" : "223",
+        "shared_name" : "p53 (ER) PUMA",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PUMA",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 224,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "222",
+        "source" : "84",
+        "target" : "221",
+        "shared_name" : "p53 (ER) PTEN",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PTEN",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 222,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "220",
+        "source" : "84",
+        "target" : "219",
+        "shared_name" : "p53 (ER) PIG3",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PIG3",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 220,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "218",
+        "source" : "84",
+        "target" : "217",
+        "shared_name" : "p53 (ER) PIDD",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PIDD",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 218,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "216",
+        "source" : "84",
+        "target" : "215",
+        "shared_name" : "p53 (ER) PERP",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PERP",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 216,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "214",
+        "source" : "84",
+        "target" : "213",
+        "shared_name" : "p53 (ER) PCNA",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PCNA",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 214,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "212",
+        "source" : "84",
+        "target" : "211",
+        "shared_name" : "p53 (ER) PAI-1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) PAI-1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 212,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "210",
+        "source" : "84",
+        "target" : "209",
+        "shared_name" : "p53 (ER) p53R2",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) p53R2",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 210,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "208",
+        "source" : "84",
+        "target" : "207",
+        "shared_name" : "p53 (ER) p53AIP1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) p53AIP1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 208,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "206",
+        "source" : "84",
+        "target" : "84",
+        "shared_name" : "p53 (TR) p53",
+        "shared_interaction" : "TR",
+        "name" : "p53 (TR) p53",
+        "interaction" : "TR",
+        "SUID" : 206,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "205",
+        "source" : "84",
+        "target" : "84",
+        "shared_name" : "p53 (molecular cleavage) p53",
+        "shared_interaction" : "molecular cleavage",
+        "name" : "p53 (molecular cleavage) p53",
+        "interaction" : "molecular cleavage",
+        "SUID" : 205,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "204",
+        "source" : "84",
+        "target" : "181",
+        "shared_name" : "p53 (ER) p48",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) p48",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 204,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "203",
+        "source" : "84",
+        "target" : "173",
+        "shared_name" : "p53 (ER) p21Cip1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) p21Cip1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 203,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "202",
+        "source" : "84",
+        "target" : "167",
+        "shared_name" : "p53 (ER) NOXA",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) NOXA",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 202,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "201",
+        "source" : "84",
+        "target" : "78",
+        "shared_name" : "p53 (MI) MDM2",
+        "shared_interaction" : "MI",
+        "name" : "p53 (MI) MDM2",
+        "interaction" : "MI",
+        "SUID" : 201,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "200",
+        "source" : "84",
+        "target" : "78",
+        "shared_name" : "p53 (ER) MDM2",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) MDM2",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 200,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "199",
+        "source" : "84",
+        "target" : "159",
+        "shared_name" : "p53 (ER) Maspin",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Maspin",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 199,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "198",
+        "source" : "84",
+        "target" : "140",
+        "shared_name" : "p53 (ER) GML",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) GML",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 198,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "197",
+        "source" : "84",
+        "target" : "138",
+        "shared_name" : "p53 (ER) GADD45",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) GADD45",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 197,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "196",
+        "source" : "84",
+        "target" : "136",
+        "shared_name" : "p53 (ER) FAS",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) FAS",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 196,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "195",
+        "source" : "84",
+        "target" : "129",
+        "shared_name" : "p53 (ER) DRAM",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) DRAM",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 195,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "194",
+        "source" : "84",
+        "target" : "127",
+        "shared_name" : "p53 (ER) DR4/5",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) DR4/5",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 194,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "193",
+        "source" : "84",
+        "target" : "124",
+        "shared_name" : "p53 (ER) CyclinK",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) CyclinK",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 193,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "192",
+        "source" : "84",
+        "target" : "122",
+        "shared_name" : "p53 (ER) CyclinG",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) CyclinG",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 192,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "191",
+        "source" : "84",
+        "target" : "111",
+        "shared_name" : "p53 (ER) Caspase 6",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Caspase 6",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 191,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "190",
+        "source" : "84",
+        "target" : "109",
+        "shared_name" : "p53 (ER) CABC1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) CABC1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 190,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "189",
+        "source" : "84",
+        "target" : "103",
+        "shared_name" : "p53 (ER) Bcl-xL",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Bcl-xL",
+        "interaction" : "ER",
+        "Activity" : -1,
+        "SUID" : 189,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "188",
+        "source" : "84",
+        "target" : "100",
+        "shared_name" : "p53 (ER) Bcl-2",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Bcl-2",
+        "interaction" : "ER",
+        "Activity" : -1,
+        "SUID" : 188,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "187",
+        "source" : "84",
+        "target" : "98",
+        "shared_name" : "p53 (ER) BAX",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) BAX",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 187,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "186",
+        "source" : "84",
+        "target" : "95",
+        "shared_name" : "p53 (ER) BAI1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) BAI1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 186,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "185",
+        "source" : "84",
+        "target" : "80",
+        "shared_name" : "p53 (ER) Apaf1",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) Apaf1",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 185,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "184",
+        "source" : "84",
+        "target" : "72",
+        "shared_name" : "p53 (ER) 14-3-3σ",
+        "shared_interaction" : "ER",
+        "name" : "p53 (ER) 14-3-3σ",
+        "interaction" : "ER",
+        "Activity" : 1,
+        "SUID" : 184,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "85",
+        "source" : "83",
+        "target" : "84",
+        "shared_name" : "ASPP (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "ASPP (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 85,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "82",
+        "source" : "80",
+        "target" : "81",
+        "shared_name" : "Apaf1 (causation) Apoptosis",
+        "shared_interaction" : "causation",
+        "name" : "Apaf1 (causation) Apoptosis",
+        "interaction" : "causation",
+        "SUID" : 82,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "165",
+        "source" : "78",
+        "target" : "84",
+        "shared_name" : "MDM2 (MI) p53",
+        "shared_interaction" : "MI",
+        "name" : "MDM2 (MI) p53",
+        "interaction" : "MI",
+        "SUID" : 165,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "164",
+        "source" : "78",
+        "target" : "84",
+        "shared_name" : "MDM2 (ER) p53",
+        "shared_interaction" : "ER",
+        "name" : "MDM2 (ER) p53",
+        "interaction" : "ER",
+        "Activity" : -1,
+        "SUID" : 164,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "163",
+        "source" : "78",
+        "target" : "162",
+        "shared_name" : "MDM2 (molecular cleavage) MDM4",
+        "shared_interaction" : "molecular cleavage",
+        "name" : "MDM2 (molecular cleavage) MDM4",
+        "interaction" : "molecular cleavage",
+        "SUID" : 163,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "161",
+        "source" : "78",
+        "target" : "78",
+        "shared_name" : "MDM2 (TR) MDM2",
+        "shared_interaction" : "TR",
+        "name" : "MDM2 (TR) MDM2",
+        "interaction" : "TR",
+        "SUID" : 161,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "144",
+        "source" : "76",
+        "target" : "143",
+        "shared_name" : "Gsk3β (SR) β-catenin",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "Gsk3β (SR) β-catenin",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 144,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "142",
+        "source" : "76",
+        "target" : "84",
+        "shared_name" : "Gsk3β (MI) p53",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "MI",
+        "name" : "Gsk3β (MI) p53",
+        "interaction" : "MI",
+        "Activity" : 1,
+        "SUID" : 142,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "79",
+        "source" : "75",
+        "target" : "78",
+        "shared_name" : "AKT (MI) MDM2",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "MI",
+        "name" : "AKT (MI) MDM2",
+        "interaction" : "MI",
+        "SUID" : 79,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "77",
+        "source" : "75",
+        "target" : "76",
+        "shared_name" : "AKT (SR) Gsk3β",
+        "Phosphorylation" : 1,
+        "shared_interaction" : "SR",
+        "name" : "AKT (SR) Gsk3β",
+        "interaction" : "SR",
+        "Activity" : -1,
+        "SUID" : 77,
+        "selected" : false
+      },
+      "selected" : false
+    }, {
+      "data" : {
+        "id" : "74",
+        "source" : "72",
+        "target" : "73",
+        "shared_name" : "14-3-3σ (causation) Cell cycle arrest",
+        "shared_interaction" : "causation",
+        "name" : "14-3-3σ (causation) Cell cycle arrest",
+        "interaction" : "causation",
+        "SUID" : 74,
+        "selected" : false
+      },
+      "selected" : false
+    } ]
+  }
+}

@@ -10,7 +10,7 @@ from methods.versionutil import *
 class PlotHandler(tornado.web.RequestHandler):
     def get(self): 
     	#pathname = 'Insulin receptor signalling cascade.txt'
-        pathname = 'new_net.txt'
+        pathname = 'p53net.txt'
         result = open(pathname)
         versionData = []
 
@@ -20,9 +20,10 @@ class PlotHandler(tornado.web.RequestHandler):
             item = item.split('\t')
             nodes.add(item[0])
             nodes.add(item[1])
-            versionData.append(set_base_edge(item[0], item[1]))
+            versionData.append(set_base_edge(item[1], item[0]))
 
         for item in nodes:
+            print item
             versionData.append(set_node(item))
 
             if ';' in item:
