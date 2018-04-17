@@ -37,8 +37,8 @@ def set_comp_node(node_id, parent):
     node['removed'] = False
     node['grabbed'] = False
     node['position'] = {}
-    node['position']['x'] = random.randint(0, 800)
-    node['position']['y'] = random.randint(0, 800)
+    node['position']['x'] = random.randint(0, 100)
+    node['position']['y'] = random.randint(0, 100)
     node['parent'] = parent
 
     return node
@@ -63,6 +63,28 @@ def set_edge(source, target, edge_type, path_id, path_name, manscripts, effect):
     edge['data']['PathName'] = path_name
     edge['data']['Manuscripts'] = manscripts
     edge['data']['Effect'] = effect
+
+    return edge
+
+def set_edge_test(source, target, edge_type, path_id, path_name, manscripts):
+    edge = {}
+    edge["group"] = "edges"
+    edge["locked"] =  False
+    edge["selected"] =  False
+    edge["classes"] = 1
+    edge["grabbable"] =  True
+    edge["position"] =  {}
+    edge["selectable"] =  True
+    edge["removed"] = False
+              
+    edge['data'] = {}
+    edge['data']['target'] = target
+    edge['data']['source'] = source
+    edge['data']['isdirected'] = True
+    edge['data']["type"] = edge_type
+    edge['data']['PathID'] = path_id
+    edge['data']['PathName'] = path_name
+    edge['data']['Manuscripts'] = manscripts
 
     return edge
 

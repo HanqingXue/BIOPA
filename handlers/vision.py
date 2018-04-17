@@ -9,20 +9,19 @@ sys.path.append('../')
 
 from methods.dbutil import *
 from methods.versionutil import *
+from methods.simulation import *
 
 class VisionHandler(tornado.web.RequestHandler):
     def post(self):
         noun1 = self.get_argument('noun1')
+        '''
         db = DataBase()
         print db.get_database('BioPA').name
 
         result = search_db(db, 'BioPA', 'Entity1', noun1)
-        print type(result)
-        print result
         '''
-        for item in result:
-            print item
-        '''
+
+        result = simulation()
 
         versionData = []
 
@@ -33,13 +32,13 @@ class VisionHandler(tornado.web.RequestHandler):
             nodes.append(check_node_Id(item['Entity2']))
             edge_types.append(item['Interaction'])
             versionData.append(
-                set_edge(check_node_Id(item['Entity1']), 
+                set_edge_test(check_node_Id(item['Entity1']), 
                 check_node_Id(item['Entity2']), 
                 item['Interaction'], 
                 item['PathID'], 
                 item['PathName'], 
-                item['ManuscriptID'], 
-                item['Effect']))
+                item['ManuscriptID']))
+
         nodes = set(nodes)
         nodes = list(nodes)
 
@@ -50,7 +49,8 @@ class VisionHandler(tornado.web.RequestHandler):
         edge_info = {
             'CAI': '#8840A7',
             'BRR': '#1139AA',#1139AA
-            'MI': '#1DC600',
+            #'MI': '#1DC600',
+            'MI': '#ADADAD',
             'TBRR': '#20C3C9',
             'ER': '#C8AA64',
             'OTHER': '#4B2E32',

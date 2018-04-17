@@ -42,6 +42,8 @@
     <script type="text/javascript" src="{{ static_url('js/cytoscape-navigator.js') }}"></script>
     <script src="{{ static_url('js/iziModal.min.js')}}"></script>
     <script src="{{ static_url('js/echarts.min.js') }}"></script>
+    <script src="{{ static_url('js/arbor.js') }}"></script>
+    <script src="{{ static_url('js/cytoscape-arbor.js') }}"></script>
     <style> 
       #cy {
         width: 100%;
@@ -93,7 +95,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/">BioPA</a>
+          <a class="brand" href="/">Pmap</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               Logged in as <a href="" class="navbar-link">Username</a>
@@ -140,7 +142,7 @@
                       </tr>
                       <tr>
                         <th>HGNC</th>
-                        <td id="HGNC">3233</td>
+                        <td id="HGNC">11195</td>
                       </tr>
                       <tr>
                         <th>OMIM</th>
@@ -152,11 +154,11 @@
                       </tr>
                       <tr>
                         <th>Ensembl</th>
-                        <td id="cDNA">ENSG00000105429</td>
+                        <td id="cDNA">ENST00000325404</td>
                       </tr>
                       <tr>
                         <th>Entrez Gene</th>
-                        <td id="Atlas">1954</td>
+                        <td id="Atlas">6657</td>
                       </tr>
                     </tbody>
                   </table>
@@ -513,36 +515,39 @@
         boxSelectionEnabled: true,
         //autounselectify: true,
         layout: {
-            name: 'spread',
+            name: 'arbor',
+            refresh: .1,
+
           },
           
           style: [
             {
               selector: 'node',
               style: {
-                'font-size': 4,
+                'font-size': 2,
                 'background-color': '#96d9f6',//#96d9f6
                 'size': 20,
                 'content': 'data(id)',
                 "text-valign": "center",
-                "text-halign": "center",
+                "text-halign": "center"/*
                 "width": "mapData(score, 0, 0.006769776522008331, 20, 60)",
                 "height": "mapData(score, 0, 0.006769776522008331, 20, 60)",
                 "text-outline-color": "#555",
                 "text-outline-width": "2px",
                 "color": "#fff",
                 "overlay-padding": "6px",
-                "z-index": "10"
+                "z-index": "10"*/
               }
             },
 
             {
               selector: "edge",
               style : {
-                'curve-style': 'haystack',
-                'haystack-radius': 0.5,
-                'opacity': 0.4,
-                'line-color': "#bbb",
+                'curve-style': 'bezier',
+                'target-arrow-shape': 'triangle',
+                //'haystack-radius': 0.5,
+                'opacity': 1,
+                'line-color': "#ADADAD",
                 'width': "mapData(weight, 0, 1, 1, 8)",
                 'overlay-padding': "3px"
               }
@@ -605,74 +610,72 @@
           ], 
     
           elements: net,        
-        });//cy 
-         
+      });//cy  
         // cy panzoom plugin 
-        cy.panzoom({});
+      cy.panzoom({});
 
-        cy.on('tap', function(event){
-          var evtTarget = event.cyTarget;
-          console.log("hello");
-          $('#Detail').addClass('active in');
-          if( evtTarget === cy ){
-              cy.trigger('boxstart');
-          } else {
+      cy.on('tap', function(event){
+        var evtTarget = event.cyTarget;
+        console.log("hello");
+        $('#Detail').addClass('active in');
+        if( evtTarget === cy ){
+            cy.trigger('boxstart');
+        } else {
   
-            if (event.cyTarget.isNode()) {
-              var node = event.cyTarget;
-              nodeIndex = '#' + node.id();
-              cy.zoom(2);
-              cy.center(nodeIndex);
+         if (event.cyTarget.isNode()) {
+            var node = event.cyTarget;
+            nodeIndex = '#' + node.id();
+            cy.zoom(2);
+            cy.center(nodeIndex);
 
-              $('#myTab li:eq(0) a').tab('show');
-              $('#bottomTabs li:eq(0) a').tab('show');
-              firstNodeClick();
-              setUpNodeTable(node.id());
-              setUpAnalysisTable(node.id());
-              setUpFrameUrl(node.id());
-            }//end of event.cyTarget.isNode()
+          $('#myTab li:eq(0) a').tab('show');
+            $('#bottomTabs li:eq(0) a').tab('show');
+            firstNodeClick();
+            setUpNodeTable(node.id());
+            setUpAnalysisTable(node.id());
+            setUpFrameUrl(node.id());
+          }//end of event.cyTarget.isNode()
 
-            if (event.cyTarget.isEdge()) {
-              $('#Detail-table').hide();
-              $('#myTab li:eq(1) a').tab('show');
-              var edge = event.cyTarget;
-              var source = edge.source();
-              var target = edge.target();
-              $('#edge-title').text(source.id() + '-' + target.id());
-              var edgeInfo = getEdge(source.id(), target.id());
-              $('#interactTable').show();
-              setUpEdgeTable(edgeInfo);
+        if (event.cyTarget.isEdge()) {
+            $('#Detail-table').hide();
+            $('#myTab li:eq(1) a').tab('show');
+            var edge = event.cyTarget;
+            var source = edge.source();
+            var target = edge.target();
+            $('#edge-title').text(source.id() + '-' + target.id());
+            var edgeInfo = getEdge(source.id(), target.id());
+            $('#interactTable').show();
+            setUpEdgeTable(edgeInfo);
+          }
+        }//end-else
+      });//end-cy.on
+
+      cy.on('mouseover', 'node', function(event) {
+        var node = event.cyTarget;
+        nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
+
+        node.qtip({
+          content: nodeIndex,
+          
+          show: {
+            event: event.type,
+            ready: true
+          },
+
+          hide: {
+            event: 'mouseout unfocus'
+          },
+
+          style: {
+            classes: 'qtip-bootstrap',
+            tip: {
+              width: 16,
+              height: 8
             }
-          }//end-else
-        });//end-cy.on
+          }
+      }, event); });
+    })
 
-        cy.on('mouseover', 'node', function(event) {
-          var node = event.cyTarget;
-          nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
-
-          node.qtip({
-            content: nodeIndex,
-            
-            show: {
-              event: event.type,
-              ready: true
-            },
-
-            hide: {
-              event: 'mouseout unfocus'
-            },
-
-            style: {
-              classes: 'qtip-bootstrap',
-              tip: {
-                width: 16,
-                height: 8
-              }
-            }
-
-          }, event);
-        });
-      })
     </script>
     <script type="text/javascript">
       $(function() {
