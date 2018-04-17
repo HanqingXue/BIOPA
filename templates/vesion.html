@@ -377,8 +377,8 @@
            </div><!--#home1-->
           <div class="tab-pane fade" id="disease">
               <div id="frame-out-disease" style="width:100%;height:100%;overflow:hidden;border-style: :none"> 
-                <div id="frame-in-disease" style="width:100%;height:100%;margin: -0% -20px 0px -15%;border-style: none;">
-                  <iFrame src="" width="84%" height="700" scrolling="auto" id="showFrameDisease">
+                <div id="frame-in-disease" style="width:100%;height:100%;margin: -20% 0px -70px -1.5%;border-style: none;">
+                  <iFrame src="" width="84%" height="500" scrolling="auto" id="showFrameDisease">
                   </iFrame>
                 </div>
             </div> 
@@ -851,15 +851,16 @@
     <script type="text/javascript">
       function setUpFrameUrl(nodeId)
       {
-        var url = "http://www.genecards.org/cgi-bin/carddisp.pl?gene=" + nodeId;
-        var diseaseUrl = "http://kb4md.org:4000/gene?q=EGFR#drugs";
+        var url = "http://kb4md.org:4000/gene?q=" + nodeId;
+        //var diseaseUrl = url + "#drugs";
+        var diseaseUrl = "http://www.malacards.org/search/results?query="+nodeId;
         var pathUrl = "http://pathcards.genecards.org/Search/Results?query=" + nodeId;
         var expImgUrl = "http://genecardsdata.blob.core.windows.net/rna-expression-v470/gene_expression_" + nodeId + ".png"
 
-        $('#showFrame').attr("src", "http://kb4md.org:4000/gene?q=EGFR");
+        $('#showFrame').attr("src", url);
         $('#showFrameDisease').attr("src", diseaseUrl);
         $('#showFramePath').attr("src", "http://pathcards.genecards.org/Search/Results?query="+nodeId);
-        $('#showFrameDrug').attr("src", "http://www.genecards.org/cgi-bin/carddisp.pl?gene=A2M#drugs_compounds");
+        $('#showFrameDrug').attr("src", "http://www.genecards.org/cgi-bin/carddisp.pl?gene=" + nodeId + "#drugs_compounds");
         $('#expImg').attr("src", expImgUrl);
         $('#curgene').text(nodeId);
       }
