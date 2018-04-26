@@ -38,15 +38,29 @@ class DataHandler(tornado.web.RequestHandler):
             '''
             Query the database with keyword.
             '''
+            '''
             db = DataBase()
             result = search_db(db, 'BioPA', 'Entity1', noun1)
+            '''
+            result = []
+            test_dict = {}
+            test_dict['Entity1'] = 'gene1'
+            test_dict['Entity2'] = 'gene2'
+            test_dict['Interaction'] = 'MI'
+            test_dict['ManuscriptID'] = 112
+            test_dict['PathName'] = 'pathname1'
+            test_dict['Modification'] = 122
+            test_dict['Effect'] = 11
+            test_dict['PathID'] = ''
+            result.append(test_dict)
 
             if len(result) != 0:
             	self.render('data.html', noun1 = result, keyword = noun1, hello = result )
             else:
             	self.render('error.html')
 
-            
+    
+            pass
 
 
 
