@@ -19,6 +19,7 @@ def simulation():
 			pathway['PathID'] = 'ipa'
 			pathway['PathName'] = 'ipa'
 			pathway['ManuscriptID'] = '21900206;21900206|imex:IM-16799'
+			#pathway[''] = 
 			version_data.append(pathway)
 
 			if source_entity not in type_mapper.keys():
