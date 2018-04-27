@@ -1,3 +1,5 @@
+#coding=utf-8
+
 import tornado.web
 import tornado.log
 import json
@@ -58,3 +60,9 @@ class VisionHandler(tornado.web.RequestHandler):
         }
         #print versionData
         self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
+
+    def get(self):
+        str1 =self.get_argument("dat",None)
+        print str1
+        data = {'status':0,'message':'successfully','data':[str1]}
+        self.write(json.dumps(data))
