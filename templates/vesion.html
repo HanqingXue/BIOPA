@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/loading.css') }}"> 
     <link href="{{ static_url('css/iziModal.min.css')}}" rel="stylesheet" >
+    <link href="{{ static_url('css/spinner.css')}}" rel="stylesheet" >
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
@@ -88,7 +89,15 @@
                   <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
                   <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
                 </div><!--Detail-tips-->
+                <div class="spinner" style="display: none">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+                </div>
                 <div id="Detail-table" class="table table-bordered table-striped table-responsive table-condensed table-hover" style="display: none; " aria-labelledby="li-detail">
+  
                   <table style="border: 0">
                     <tbody>
                       <tr>
@@ -460,17 +469,24 @@
                 url:"/vesion",//调用的是这个url对应的那个Handler
                 type:"GET",//get方法
                 data:{keyword: nodeId},//要往服务器传递的数据
+                beforeSend: function () {
+                    $(".spinner").show();
+                    $('#Detail-table').hide();
+                  },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
-                    console.log(obj.status);
-                    console.log(obj.message);
-                    console.log(obj.data);
 
                     $('#geneSummary').text(obj.data[1]);
                     $('#HGNC').text(obj.data[0]['HGNC']);
                     $('#Atlas').text(obj.data[0]['entrez']);
                     $('#synonyms').text(obj.data[0]['synonyms']);
                 },
+
+                complete: function () {
+                  $(".spinner").hide();
+                  $('#Detail-table').show();
+                },
+
                 error:function(){//获取失败
                     console.log("failed");
                 }
@@ -599,7 +615,6 @@
 
       cy.on('tap', function(event){
         var evtTarget = event.cyTarget;
-        console.log("hello");
         $('#Detail').addClass('active in');
         if( evtTarget === cy ){
             cy.trigger('boxstart');
