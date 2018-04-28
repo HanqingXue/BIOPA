@@ -462,8 +462,8 @@
             var temp = $('#na').val();//从第一个输入框里获取数据
             $.ajax({
                 url:"/vesion",//调用的是这个url对应的那个Handler
-                type:"GET",//Post方法
-                data:{dat:temp},//要往服务器传递的数据
+                type:"GET",//get方法
+                data:{keyword: temp},//要往服务器传递的数据
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
                     console.log(obj.status);

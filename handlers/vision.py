@@ -12,10 +12,11 @@ sys.path.append('../')
 from methods.dbutil import *
 from methods.versionutil import *
 from methods.simulation import *
+from mapper.EntityMapper import EntityMapper
 
 class VisionHandler(tornado.web.RequestHandler):
     def initialize(self, db_session):
-        self.db_session = db_session
+        self.user_mapper = EntityMapper(db_session)
 
     def post(self):
         noun1 = self.get_argument('noun1')
@@ -53,8 +54,8 @@ class VisionHandler(tornado.web.RequestHandler):
         edge2list = list(set(edge_types))
         edge_info = {
             'CAI': '#8840A7',
-            'BRR': '#1139AA',#1139AA
-            #'MI': '#1DC600',
+            'BRR': '#1139AA',
+            'MI': '#1DC600',
             'MI': '#ADADAD',
             'TBRR': '#20C3C9',
             'ER': '#C8AA64',
@@ -65,7 +66,9 @@ class VisionHandler(tornado.web.RequestHandler):
         self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
 
     def get(self):
-        str1 =self.get_argument("dat",None)
+        str1 =self.get_argument("keyword",None)
         print str1
-        data = {'status':0,'message':'successfully','data':[str1]}
+        #summary = self.entity_mapper.get_selected_gene_summary(keyword)
+        #print summary
+        data = {'status':0,'message':'successfully','data':["hello"]}
         self.write(json.dumps(data))
