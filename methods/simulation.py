@@ -1,7 +1,6 @@
 #coding=utf-8
 import csv
 
-
 def simulation():
 	with open('network_bak.csv') as net:
 		reader = csv.DictReader(net)
@@ -20,10 +19,4 @@ def simulation():
 			pathway['ManuscriptID'] = '21900206;21900206|imex:IM-16799'
 			version_data.append(pathway)
 
-	return version_data
-
-print simulation()
-
-
-
-		
+	return version_data	

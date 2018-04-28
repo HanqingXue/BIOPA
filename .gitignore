@@ -1,0 +1,6 @@
+*.pyc
+*_bak.csv
+/.gitignore
+*.csv
+*.txt
+config.py

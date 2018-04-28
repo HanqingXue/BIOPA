@@ -14,6 +14,9 @@ from methods.versionutil import *
 from methods.simulation import *
 
 class VisionHandler(tornado.web.RequestHandler):
+    def initialize(self, db_session):
+        self.db_session = db_session
+
     def post(self):
         noun1 = self.get_argument('noun1')
         '''

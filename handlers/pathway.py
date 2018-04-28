@@ -14,7 +14,3 @@ class PathwayHandler(tornado.web.RequestHandler):
     	'''
         noun1 = self.get_argument('noun1')
         self.render("pathviz.html")
-            
-
-
-
