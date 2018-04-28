@@ -16,7 +16,7 @@ from mapper.EntityMapper import EntityMapper
 
 class VisionHandler(tornado.web.RequestHandler):
     def initialize(self, db_session):
-        self.user_mapper = EntityMapper(db_session)
+        self.entity_mapper = EntityMapper(db_session)
 
     def post(self):
         noun1 = self.get_argument('noun1')
@@ -64,11 +64,12 @@ class VisionHandler(tornado.web.RequestHandler):
         }
         #print versionData
         self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
-
+    
+    @tornado.web.asynchronous
     def get(self):
-        str1 =self.get_argument("keyword",None)
-        print str1
-        #summary = self.entity_mapper.get_selected_gene_summary(keyword)
-        #print summary
-        data = {'status':0,'message':'successfully','data':["hello"]}
-        self.write(json.dumps(data))
+        keyword =self.get_argument("keyword", None)
+        geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
+        summary = self.entity_mapper.get_selected_gene_summary(geneinfo['entrez'])
+        ensembl_id = self.entity_mapper.get_selected_gene_ensembl_id(geneinfo['entrez'])
+        data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id]}
+        self.finish(json.dumps(data))

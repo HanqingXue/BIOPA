@@ -3,7 +3,7 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from url import url 
+
 import tornado.web
 import os
 from handlers.index import IndexHandler
@@ -27,6 +27,7 @@ import logging
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
+from mapper.EntityMapper import *
 
 define("http_port", default = 8000, help = "run on the given port", type = int)
 
@@ -70,6 +71,19 @@ if __name__ == '__main__':
 
 	db_session  = scoped_session(sessionmaker(bind=db_engine,
 						autocommit=True, autoflush=True, expire_on_commit=False))
+	
+	gene_info = {}
+
+	try:
+		gene = EntityMapper(db_session)
+		#gene_info = gene.get_selected_gene_ids('A2M')
+		summary_info = gene.get_selected_gene_summary(111)
+
+		#$print gene_info
+		print summary_info
+	except Exception as ex:
+		logging.error('Error occurred: %s' % ex)
+
 	'''
 	Start HTTP Server
 	'''

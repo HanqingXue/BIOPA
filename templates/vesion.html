@@ -103,20 +103,20 @@
                         <td id="HGNC">4127</td>
                       </tr>
                       <tr>
-                        <th>OMIM</th>
-                        <td id="OMIM">131320</td>
-                      </tr>
-                      <tr>
-                        <th>UniProtKB</th>
-                        <td id="Protein">Q7Z7M0</td>
+                        <th>Synonyms</th>
+                        <td id="synonyms">Q7Z7M0</td>
                       </tr>
                       <tr>
                         <th>Ensembl</th>
-                        <td id="cDNA">ENSG00000107485</td>
+                        <td id="Ensembl">ENSG00000107485</td>
                       </tr>
                       <tr>
                         <th>Entrez Gene</th>
                         <td id="Atlas">2625</td>
+                      </tr>
+                      <tr>
+                        <th>Summary</th>
+                        <td id="geneSummary"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -454,22 +454,22 @@
         <p>© Harbin Institute of Technology 2017</p>
       </footer>
     </div><!--/.fluid-container-->
-    <input type="text" id="na" />
-    <input type="button" value="click" onclick="DoAjax();" />
-    <input type="text" id="nb" />
     <script type="text/javascript">
-        function DoAjax(){
-            var temp = $('#na').val();//从第一个输入框里获取数据
+        function DoAjax(nodeId){
             $.ajax({
                 url:"/vesion",//调用的是这个url对应的那个Handler
                 type:"GET",//get方法
-                data:{keyword: temp},//要往服务器传递的数据
+                data:{keyword: nodeId},//要往服务器传递的数据
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
                     console.log(obj.status);
                     console.log(obj.message);
                     console.log(obj.data);
-                    $('#nb').val(obj.data[0]);//给第二个输入框赋值
+
+                    $('#geneSummary').text(obj.data[1]);
+                    $('#HGNC').text(obj.data[0]['HGNC']);
+                    $('#Atlas').text(obj.data[0]['entrez']);
+                    $('#synonyms').text(obj.data[0]['synonyms']);
                 },
                 error:function(){//获取失败
                     console.log("failed");
@@ -1226,6 +1226,7 @@
     </script>
     <script type="text/javascript">
       function setUpNodeTable(nodeId) {
+        DoAjax(nodeId);
         $('#gene-title').text(nodeId);
         $("tr#"+nodeId).show();
         $('#UniProtID a').text(nodeId);

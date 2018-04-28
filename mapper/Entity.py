@@ -7,7 +7,6 @@ Base = declarative_base()
 
 class Geneinfo(Base):
 	__tablename__ = "geneinfo_ncbihgnc"
-
 	table_ID = Column(Integer, primary_key=True)
 	gene_id = Column(String(64))
 	entrez_id = Column(Integer)
@@ -24,3 +23,28 @@ class Summaryinfo(Base):
 	__tablename__ = "gene_summary_ncbi"
 	entrez_id = Column(String(64), primary_key=True)
 	Summary = Column(String(1024))
+
+class Ensemblinfo(Base):
+	"""docstring for Ensemblinfo"""
+	__tablename__ = "gene2ensembl_ensembl"
+	table_ID = Column(Integer, primary_key=True)
+	gene_id = Column(String(64))
+	entrez_id = Column(Integer)
+	Refseq_rna = Column(String(64))
+	Refseq_protein = Column(String(64))
+	Ensembl_gene = Column(String(64))
+	Ensembl_rna = Column(String(64))
+	Ensembl_protein = Column(String(64))
+	Ensembl_description = Column(String(64))
+
+class Uniprotinfo(object):
+	"""docstring for """
+	__tablename__ = "gene2uniprot_uniprot"
+	table_ID = Column(Integer, primary_key=True)
+	gene_id = Column(String(64))
+	Uniprot_id = Column(String(64))
+	PDB_id = Column(String(64))
+	InterPro_id = Column(String(64))
+	InterPro_name = Column(String(64))
+	Uniprot_description = Column(String(1024))
+		
