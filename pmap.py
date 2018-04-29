@@ -45,7 +45,7 @@ class Application(tornado.web.Application):
 			(r'/data', DataHandler),
 			(r'/contact', ContactHandler),
 			(r'/search', SearchHandler),
-			(r'/test', TestHandler),
+			(r'/test', TestHandler, dict(db_session=db_session)),
 			(r'/pathway', PathwayHandler),
 			(r'/pathwayplot', PlotHandler),
 		] 

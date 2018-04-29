@@ -24,7 +24,39 @@
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/loading.css') }}"> 
     <link href="{{ static_url('css/iziModal.min.css')}}" rel="stylesheet" >
-    <link href="{{ static_url('css/spinner.css')}}" rel="stylesheet" >
+    <link href="{{ static_url('css/spinner.css')}}" rel="stylesheet">
+    <style type="text/css">
+      .attribution {
+  border:medium none;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  border-radius:20px;
+  padding-left:5px;
+  display:inline-block;
+  font-size:12px;
+  padding-right:10px;
+  margin-left:5px;
+  margin-right:.1em;
+  margin-bottom:.1em;
+  position:relative;
+  vertical-align:top;
+  background-position:top left;
+  background-color:#fbefb6
+}
+.attribution:hover {
+  cursor:default
+}
+.attribution:before {
+  margin-left:.2em;
+  display:inline-block;
+  background-color:#fbefb6;
+  content:url('data:image/svg+xml,<svg%20xmlns="http://www.w3.org/2000/svg"%20height="15px"%20width="15px"><rect%20fill="grey"%20y="5"%20x="5"%20height="4.5px"%20width="4.5px"/><rect%20fill="grey"%20x="7"%20height="7px"%20width="7px"%20transform="rotate(45)"/><circle%20fill="white"%20cx="7px"%20cy="7px"%20r="1.25px"/></svg>')
+}
+.attributionHeader {
+  cursor:pointer;
+  white-space:nowrap
+}
+    </style>
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
@@ -89,7 +121,7 @@
                   <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
                   <img id="arrow" src="{{ static_url('img/turn-right.png')}}">
                 </div><!--Detail-tips-->
-                <div class="spinner" style="display: none">
+                <div class="spinner" style="display: none" id="spinnerAbstract">
                   <div class="rect1"></div>
                   <div class="rect2"></div>
                   <div class="rect3"></div>
@@ -351,21 +383,16 @@
            </div><!--#home1-->
           <div class="tab-pane fade" id="disease">
               <div id="frame-out-disease" style="width:100%;height:100%;overflow:hidden;border-style: :none"> 
-                <div id="frame-in-disease" style="width:100%;height:100%;margin: -20% 0px -70px -1.5%;border-style: none;">
-                  <iFrame src="" width="84%" height="500" scrolling="auto" id="showFrameDisease">
+                <div id="frame-in-disease" style="width:100%;height:100%;margin: -10% 0px -70px -1.5%;border-style: none;">
+                  <iFrame src="" width="84%" height="1000" scrolling="yes" id="showFrameDisease">
                   </iFrame>
                 </div>
             </div> 
           </div>
            <div class="tab-pane fade" id="drug">
-              <div id="frame-out-drug" style="width:100%;height:100%;overflow:hidden;border-style: :none"> 
-                <div id="frame-in-drug" style="width:100%;height:100%;margin: -20% -0px -15% -1%;border-style: none;">
-                  <iFrame src="" width="84%" height="700" scrolling="yes" id="showFrameDrug">
-                  </iFrame>
-                </div>
-            </div> 
+            <ul id="drugList" class="noNumbering">
+            </ul>
            </div>
-
            <div class="tab-pane fade" id="jmeter1">
              <div class="table table-striped table-bordered table-responsive table-hover">
                <table id="drugTable">
@@ -470,7 +497,7 @@
                 type:"GET",//get方法
                 data:{keyword: nodeId},//要往服务器传递的数据
                 beforeSend: function () {
-                    $(".spinner").show();
+                    $("#spinnerAbstract").show();
                     $('#Detail-table').hide();
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
@@ -493,7 +520,36 @@
             });
         }
     </script>
+    <script type="text/javascript">
+        function loadDrug(nodeId){
+            $.ajax({
+                url:"/test",//调用的是这个url对应的那个Handler
+                type:"GET",//get方法
+                data:{keyword: nodeId},//要往服务器传递的数据
+                beforeSend: function () {
+                    $('#drugList').children().filter('li').remove();
+                  },
+                success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
+                    var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
+                    console.log(obj);
+                    var drugs = obj.data[0];
+                    console.log(drugs);
+                    for(var i in drugs) {
+                      console.log(i,":",drugs[i]);
+                      $('#drugList').append("<li><a>" + i +"</a><span class='attribution'><span class='attributionHeader'></span>" + drugs[i] + "</span></li>"
+                      );
+                    }
+                },
 
+                complete: function () {
+                },
+
+                error:function(){//获取失败
+                    console.log("failed");
+                }
+            });
+        }
+    </script>
     <script type="text/javascript">
       /*
       Define the global variables
@@ -1242,6 +1298,7 @@
     <script type="text/javascript">
       function setUpNodeTable(nodeId) {
         DoAjax(nodeId);
+        loadDrug(nodeId);
         $('#gene-title').text(nodeId);
         $("tr#"+nodeId).show();
         $('#UniProtID a').text(nodeId);

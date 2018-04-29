@@ -27,7 +27,7 @@ class EntityMapper(object):
 				'description': gene.description
 			}	
 		except Exception as ex:
-			logging.error('Error occurred: %s' % ex)
+			logging.error('Error occurred: %s in querying gene ids' % ex)
 		return gene_info
 
 
@@ -38,7 +38,7 @@ class EntityMapper(object):
 			summary = self.db_session.query(Summaryinfo).filter(Summaryinfo.entrez_id == entrez_id).one()
 			summary_info = summary.Summary 
 		except Exception as ex:
-			logging.error('Error occurred %s' % ex)
+			logging.error('Error occurred %s in querying gene summary'  % ex)
 			summary_info = '' 
 
 		return summary_info
@@ -47,10 +47,10 @@ class EntityMapper(object):
 		ensembl_id = ''
 
 		try:
-			ensembl_info = self.db_session.query(Ensemblinfo).filter(Ensemblinfo.entrez_id == entrez_id).one()
+			ensembl_info = self.db_session.query(Ensemblinfo).filter(Ensemblinfo.entrez_id == entrez_id).first()
 			ensembl_id = ensembl_info.gene_id
 		except Exception as ex:
-			logging.error('Error occurred %s' % ex)
+			logging.error('Error occurred %s in querying ensembl_id' % ex)
 
 		return ensembl_id
 
@@ -61,6 +61,24 @@ class EntityMapper(object):
 			uniprot = self.db_session.query(Uniprotinfo).filter(Uniprotinfo.gene_id == ensembl_id).one()
 			uniprot_id = uniport.Uniprot_id
 		except Exception as ex:
-			logging.error('Error occurred %s' % ex)
+			logging.error('Error occurred %s in qrurying uniport ' % ex)
 
 		return uniprot_id
+
+	def get_selected_relate_drug(self, entrez_id):
+		result_proxy = {}
+		try:
+			result = self.db_session.execute('SELECT * FROM drugtarge_pharmagkbttd where entrez_id = :entrez_id;', {
+				'entrez_id': entrez_id
+			}).fetchall()
+
+			for item in result:
+				if item[1] not in result_proxy.keys():
+					result_proxy[item[1]] = item[-1]
+				else:
+					continue
+
+		except Exception as ex:
+			logging.error('Error occurred %s in qrurying drug' % ex)
+
+		return result_proxy
