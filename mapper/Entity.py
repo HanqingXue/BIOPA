@@ -37,7 +37,7 @@ class Ensemblinfo(Base):
 	Ensembl_protein = Column(String(64))
 	Ensembl_description = Column(String(64))
 
-class Uniprotinfo(object):
+class Uniprotinfo(Base):
 	"""docstring for """
 	__tablename__ = "gene2uniprot_uniprot"
 	table_ID = Column(Integer, primary_key=True)
@@ -47,4 +47,3 @@ class Uniprotinfo(object):
 	InterPro_id = Column(String(64))
 	InterPro_name = Column(String(64))
 	Uniprot_description = Column(String(1024))
-		

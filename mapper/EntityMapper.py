@@ -82,3 +82,46 @@ class EntityMapper(object):
 			logging.error('Error occurred %s in qrurying drug' % ex)
 
 		return result_proxy
+	
+	def get_selected_relate_drug_id(self, entrez_id):
+		result_proxy = {}
+		try:
+			result = self.db_session.execute('SELECT * FROM drugtarge_pharmagkbttd where entrez_id = :entrez_id;', {
+				'entrez_id': entrez_id
+			}).fetchall()
+
+			for item in result:
+				if item[0] not in result_proxy.keys():
+					result_proxy[item[0]] = item[-1]
+				else:
+					continue
+		except Exception as ex:
+			logging.error('Error occurred %s in qrurying drug' % ex)
+
+		return result_proxy
+
+
+	def get_selected_relate_disease(self, drugbank_id):
+		result_proxy = {}
+		try:
+			result_proxy = self.db_session.execute('SELECT drug_commonname, indication, sources FROM drugtodisease_all WHERE drugtodisease_all.DrugBank_id = :drugbank_id;', {'drugbank_id': drugbank_id}).fetchall()
+		except Exception as e:
+			raise e
+		
+		return result_proxy 
+
+	def get_seleted_relate_all_diseases(self, drug_ids):
+		diseases = []
+		result_proxy = {}
+
+		for drug in drug_ids:
+			diseases.extend(self.get_selected_relate_disease(drug))
+
+		for index in range(0, len(diseases)):
+			disease = {}
+			disease['name'] = diseases[index][1]
+			disease['drug'] = diseases[index][0]
+			disease['source'] = diseases[index][-1]
+			result_proxy[index] = disease
+
+		return result_proxy
