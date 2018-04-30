@@ -57,6 +57,19 @@
         cursor:pointer;
         white-space:nowrap
       }
+      #entry-overview>div {
+  padding-bottom:.3em;
+  min-height:2.2em
+}
+#entry-overview #content-status {
+  display:inline-flex;
+  flex-direction:row;
+  align-items:flex-end
+}
+#entry-overview #content-status span.sep {
+  margin-left:.3em;
+  margin-right:.3em
+}
     </style>
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
@@ -142,7 +155,7 @@
                       </tr>
                       <tr>
                         <th>HGNC</th>
-                        <td id="HGNC">4127</td>
+                        <td id="HGNC" class="hgnc">4127</td>
                       </tr>
                       <tr>
                         <th>Synonyms</th>
@@ -374,14 +387,74 @@
            <li><a href="#expression" data-toggle="tab">Expression</a></li>
          </ul>
          <div id="myTabContent" class="tab-content">
-           <div class="tab-pane fade in active" id="gene">
+          <div class="tab-pane fade in active" id="gene">
+              <!---
               <div id="frame-out" style="width:80%;height:200px;overflow:hidden;border-style: :none"> 
                 <div id="frame-in" style="width:80%;height:200px;margin:-12% -20px 0px -20%;border-style: none;">
                   <iFrame src="" width="1200" height="1000" scrolling="no" id="showFrame">
                   </iFrame>
                 </div>
               </div> 
-           </div><!--#home1-->
+            -->
+            <div id="Detail-tips"">
+                  <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
+                </div><!--Detail-tips-->
+            <div class="spinner" id="spinnerGene" style="display: none">
+              <div class="rect1"></div>
+              <div class="rect2"></div>
+              <div class="rect3"></div>
+              <div class="rect4"></div>
+              <div class="rect5"></div>
+            </div>
+            <table class="table table-striped table-bordered table-responsive table-hover" id="contentTable" style="display: none">
+               <tbody>
+                <tr>
+                 <th colspan="2">Gene detail information</th>
+                </tr>
+                <tr>
+                  <th>UniProtID</th>
+                  <td id="UniProtIDetail">-</th>
+                </tr>
+                <tr>
+                  <th>HGNC</th>
+                  <td id="HGNCDetail">-</th>
+                </tr>
+                <tr>
+                  <th>Gene Type</th>
+                  <td id="geneType">-</td>
+                </tr>
+                <tr>
+                  <th class="span2">Synonyms</th>
+                  <td id="synonymsDetail" class="span10">-</th>
+                </tr>
+                <tr>
+                  <th>Entrez Gene</th>
+                  <td id="entrezDetail">-</td>
+                </tr>
+                <tr>
+                  <th>Ensembl</th>
+                  <td id="ensemblDetail">-</th>
+                </tr>
+                <tr>
+                  <th>Description</th>
+                  <td id="description">-</td>
+                </tr>
+                <tr>
+                  <th>Pubmed</th>
+                  <td id="Pubmed"></td>
+                </tr>
+                <tr>
+                  <th>Gene Location </th>
+                  <td><a id="chr"></a><br><a id="band"></a></td>
+                </tr>
+                <tr>
+                  <th colspan="2">
+                    <b>Summary:</b><p id="summaryDetail"></p>
+                  </th>
+                </tr>
+               </tbody>
+             </table>
+          </div>
           <div class="tab-pane fade" id="disease">
               <div class="spinner" id="spinnerDisease">
                 <div class="rect1"></div>
@@ -524,20 +597,36 @@
                 data:{keyword: nodeId},//要往服务器传递的数据
                 beforeSend: function () {
                     $("#spinnerAbstract").show();
+                    $('#spinnerGene').show();
                     $('#Detail-table').hide();
+                    $('#contentTable').hide();
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
-
+                    console.log(obj);
                     $('#geneSummary').text(obj.data[1]);
+                    $('#UniProtIDetail').text(nodeId);
                     $('#HGNC').text(obj.data[0]['HGNC']);
+                    $('#HGNCDetail').text(obj.data[0]['HGNC']);
                     $('#Atlas').text(obj.data[0]['entrez']);
                     $('#synonyms').text(obj.data[0]['synonyms']);
+                    $('#synonymsDetail').text(obj.data[0]['synonyms']);
+                    $('#geneType').text(obj.data[0]['type']);
+                    $('#entrezDetail').text(obj.data[0]['entrez']);
+                    $('#description').text(obj.data[0]['description']);
+                    $('#chr').text('Chr:' + obj.data[0]['chr']);
+                    $('#band').text('Chromosome_band:' + obj.data[0]['chromosome_band'] );
+                    $('#summaryDetail').text(obj.data[1]);
+                    $('#Ensembl').text(obj.data[2]);
+                    $('#ensemblDetail').text(obj.data[2]);
+                    $('#Pubmed').text(obj.data[3]);
                 },
 
                 complete: function () {
                   $("#spinnerAbstract").hide();
+                  $('#spinnerGene').hide();
                   $('#Detail-table').show();
+                   $('#contentTable').show();
                 },
 
                 error:function(){//获取失败

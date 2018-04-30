@@ -35,8 +35,8 @@ class EntityMapper(object):
 		summary_info = ''
 		
 		try:
-			summary = self.db_session.query(Summaryinfo).filter(Summaryinfo.entrez_id == entrez_id).one()
-			summary_info = summary.Summary 
+			summary = self.db_session.query(Summaryinfo).filter(Summaryinfo.entrez_id == entrez_id).all()
+			summary_info = summary[0].Summary 
 		except Exception as ex:
 			logging.error('Error occurred %s in querying gene summary'  % ex)
 			summary_info = '' 
@@ -123,5 +123,20 @@ class EntityMapper(object):
 			disease['drug'] = diseases[index][0]
 			disease['source'] = diseases[index][-1]
 			result_proxy[index] = disease
+
+		return result_proxy
+
+	def get_seleted_relate_pubmedids(self, entrez_id):
+		pubmedids = ''
+		try:
+			result_proxy = self.db_session.execute('SELECT pubmed_id FROM gene_pumedid_ncbi where entrez_id = :entrez_id;', {'entrez_id': entrez_id}).fetchone()
+			
+			if result_proxy == None:
+				result_proxy = ''
+			else:
+				result_proxy = result_proxy[0]
+
+		except Exception as e:
+			raise e
 
 		return result_proxy

@@ -71,5 +71,7 @@ class VisionHandler(tornado.web.RequestHandler):
         geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
         summary = self.entity_mapper.get_selected_gene_summary(geneinfo['entrez'])
         ensembl_id = self.entity_mapper.get_selected_gene_ensembl_id(geneinfo['entrez'])
-        data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id]}
+        pubmed_id = self.entity_mapper.get_seleted_relate_pubmedids(geneinfo['entrez'])
+        print pubmed_id
+        data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id, pubmed_id]}
         self.finish(json.dumps(data))
