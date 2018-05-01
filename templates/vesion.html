@@ -58,18 +58,18 @@
         white-space:nowrap
       }
       #entry-overview>div {
-  padding-bottom:.3em;
-  min-height:2.2em
-}
-#entry-overview #content-status {
-  display:inline-flex;
-  flex-direction:row;
-  align-items:flex-end
-}
-#entry-overview #content-status span.sep {
-  margin-left:.3em;
-  margin-right:.3em
-}
+        padding-bottom:.3em;
+        min-height:2.2em
+      }
+      #entry-overview #content-status {
+        display:inline-flex;
+        flex-direction:row;
+        align-items:flex-end
+      }
+      #entry-overview #content-status span.sep {
+        margin-left:.3em;
+        margin-right:.3em
+      }
     </style>
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
@@ -396,9 +396,9 @@
                 </div>
               </div> 
             -->
-            <div id="Detail-tips"">
-                  <p id="help-text" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
-                </div><!--Detail-tips-->
+            <div>
+              <p id="help-text-detail" class="help-text palette palette-silver">Click on the node or edge on in the network to see more info</p>
+            </div><!--Detail-tips-->
             <div class="spinner" id="spinnerGene" style="display: none">
               <div class="rect1"></div>
               <div class="rect2"></div>
@@ -408,9 +408,6 @@
             </div>
             <table class="table table-striped table-bordered table-responsive table-hover" id="contentTable" style="display: none">
                <tbody>
-                <tr>
-                 <th colspan="2">Gene detail information</th>
-                </tr>
                 <tr>
                   <th>UniProtID</th>
                   <td id="UniProtIDetail">-</th>
@@ -600,11 +597,13 @@
                     $('#spinnerGene').show();
                     $('#Detail-table').hide();
                     $('#contentTable').hide();
+                    $('#help-text-detail').hide();
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
                     console.log(obj);
                     $('#geneSummary').text(obj.data[1]);
+                    $('#help-text-detail').text("Gene Detail Information of " + nodeId);
                     $('#UniProtIDetail').text(nodeId);
                     $('#HGNC').text(obj.data[0]['HGNC']);
                     $('#HGNCDetail').text(obj.data[0]['HGNC']);
@@ -619,14 +618,15 @@
                     $('#summaryDetail').text(obj.data[1]);
                     $('#Ensembl').text(obj.data[2]);
                     $('#ensemblDetail').text(obj.data[2]);
-                    $('#Pubmed').text(obj.data[3]);
+                    setUpPebMedids(obj.data[3]);
                 },
 
                 complete: function () {
                   $("#spinnerAbstract").hide();
                   $('#spinnerGene').hide();
                   $('#Detail-table').show();
-                   $('#contentTable').show();
+                  $('#contentTable').show();
+                  $('#help-text-detail').show();
                 },
 
                 error:function(){//获取失败
@@ -1555,5 +1555,17 @@
         }
       }
       return pathdist;
+    }
+  </script>
+  <script type="text/javascript">
+    function setUpPebMedids(pubmedIds) {
+      var ids = pubmedIds.split(';')
+      if(ids[0] == "")
+        return true;
+      
+      for( var index in ids) {
+        $('#Pubmed').append("<span class='attribution'><span class='attributionHeader'></span>Pubmed:" + ids[index] + "</span>");
+      }
+      return true;
     }
   </script>
