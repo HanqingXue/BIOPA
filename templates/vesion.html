@@ -921,25 +921,26 @@
           menuItems: [
               {
                   id: 'remove',
-                  title: 'remove',
+                  title: 'Remove selected node',
                   selector: 'node, edge',
                   onClickFunction: function (event) {
                     event.cyTarget.remove();
                   },
-                  hasTrailingDivider: true
+                  //hasTrailingDivider: true
                 },
                 {
                   id: 'hide',
-                  title: 'hide',
+                  title: 'Hide selected node',
                   selector: '*',
                   onClickFunction: function (event) {
                     event.cyTarget.hide();
                   },
-                  disabled: false
+                  disabled: false,
+                  hasTrailingDivider: true
                 },
                 {
                   id: 'add-node',
-                  title: 'add node',
+                  title: 'Add a node',
                   coreAsWell: true,
                   onClickFunction: function (event) {
                     var data = {
@@ -957,31 +958,15 @@
                 },
                 {
                   id: 'remove-selected',
-                  title: 'remove selected',
+                  title: 'Remove selected node',
                   coreAsWell: true,
                   onClickFunction: function (event) {
                     cy.$(':selected').remove();
                   }
                 },
                 {
-                  id: 'select-all-nodes',
-                  title: 'select all nodes',
-                  selector: 'node',
-                  onClickFunction: function (event) {
-                    selectAllOfTheSameType(event.cyTarget);
-                  }
-                },
-                {
-                  id: 'select-all-edges',
-                  title: 'select all edges',
-                  selector: 'edge',
-                  onClickFunction: function (event) {
-                    selectAllOfTheSameType(event.cyTarget);
-                  }
-                },
-                {
                   id: 'link kegg',
-                  title: 'KEGG Link',
+                  title: 'Link to KEGG database',
                   selector: 'node',
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
@@ -993,7 +978,7 @@
                 },
                 {
                   id: 'link common Pathway',
-                  title: 'Pathway common DB Link',
+                  title: ' Link to Pathway common Database',
                   selector: 'node',
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
@@ -1005,7 +990,7 @@
                 },
                 {
                   id: 'link reactome',
-                  title: 'Reactome DB link',
+                  title: 'Link to Reactome Database ',
                   selector: 'node',
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
@@ -1017,7 +1002,7 @@
                 },
                 {
                   id: 'link wikipathways',
-                  title: 'Wikipathways DB link',
+                  title: 'Link to Wikipathways Database',
                   selector: 'node',
                   onClickFunction: function (event) {
                     var evtTarget = event.cyTarget;
