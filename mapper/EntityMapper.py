@@ -3,6 +3,7 @@
 
 import logging
 from Entity import *
+from methods.WebParseHelper import *
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
@@ -140,3 +141,6 @@ class EntityMapper(object):
 			raise e
 
 		return result_proxy
+
+	def get_seleted_relate_superpathway(self, gene_symbol):
+		pass 
