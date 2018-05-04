@@ -137,7 +137,7 @@
   
     <h2 id="net" style="display: none"> {{ hello }}</h2>
     <div class="container-fluid" style="padding: 0px 50px 0px 50px">
-      <div class="span3 hero-unit bs-example bs-example-tabs" style="width: 25%;  margin-left: 0px ">
+      <div class="span3 hero-unit bs-example bs-example-tabs" style="margin-left: 0px " id="geneboard">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active">
                 <a href="#home" data-toggle="tab" id="Nodetab">
@@ -359,7 +359,7 @@
             </div><!--tab content-->
       </div><!--span4-->
       
-      <div class="hero-unit span9" style="margin-left: 0px; width: 65%;  float: right;">
+      <div class="hero-unit span9" style="margin-left: 0px;   float: right;" id="vboard">
             <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
               <button class="btn btn-default" id ="btn-zoom-in" ><a title="Zoom in" class="icon-zoom-in icon-large"></a></button>
@@ -912,7 +912,6 @@
           }
       }, event); });
     })
-
     </script>
     <script type="text/javascript">
       $(function() {
@@ -922,6 +921,17 @@
           }
         });
       })
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        if( $(window).width() > 1440) {
+           $('#geneboard').css('width', "25%");
+           $('#vboard').css('width', "65%");
+        } else {
+           $('#geneboard').css('width', "30%");
+           $('#vboard').css('width', "60%");
+        }
+    })
     </script>
     <script type="text/javascript">
       $('#btn-analysis').click(function() {
@@ -1397,7 +1407,6 @@
     <script type="text/javascript">
       function getEdge(source, target) {
         for (var item in net) {
-          //if(net[item].id)
           if(net[item]['data']['source'] == source && net[item]['data']['target'] == target) {
             return net[item]['data'];
           }
