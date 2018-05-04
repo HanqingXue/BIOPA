@@ -173,31 +173,31 @@
                       </tr>
                       <tr class="Aliases">
                         <th class="gene-attr-info">Aliases</th>
-                        <td id="synonyms" class="gene-abstrct-info">Q7Z7M0</td>
+                        <td id="synonyms" class="gene-abstrct-info">-</td>
                       </tr>
                       <tr>
                         <th class="gene-attr-info">Description</th>
-                        <td id="descriptionAbstrct" class="gene-abstrct-info"></td>
+                        <td id="descriptionAbstrct" class="gene-abstrct-info">-</td>
                       </tr>
                       <tr>
                         <th class="gene-attr-info">Chromosome Location</th>
-                        <td class="gene-abstrct-info" id="localtion"></td>
+                        <td class="gene-abstrct-info" id="localtion">-</td>
                       </tr>
                       <tr>
                         <th class="span4 gene-attr-info">UniProt ID</th>
-                        <td id="UniProtID" class="span8 gene-abstrct-info" ><a href="">null</a></td>
+                        <td id="UniProtID" class="span8 gene-abstrct-info" ><a href="">-</a></td>
                       </tr>
                       <tr>
                         <th class="gene-attr-info">HGNC</th>
-                        <td class="hgnc gene-abstrct-info">4127</td>
+                        <td class="hgnc gene-abstrct-info" id="hgnc">-</td>
                       </tr>
                       <tr class="expandable">
                         <th class="gene-attr-info">Ensembl</th>
-                        <td id="Ensembl" class="gene-abstrct-info"><p>ENSG00000107485</p></td>
+                        <td id="Ensembl" class="gene-abstrct-info"><p>-</p></td>
                       </tr>
                       <tr>
                         <th class="gene-attr-info">Entrez Gene</th>
-                        <td id="Atlas" class="gene-abstrct-info">2625</td>
+                        <td id="Atlas" class="gene-abstrct-info">-</td>
                       </tr>
                     </tbody>
                   </table>
@@ -644,7 +644,7 @@
 
                     $('#help-text-detail').text("Gene Detail Information of " + nodeId);
                     $('#UniProtIDetail').text(nodeId);
-                    $('#HGNC').text(obj.data[0]['HGNC']);
+                    $('#hgnc').text(obj.data[0]['HGNC']);
                     $('#HGNCDetail').text(obj.data[0]['HGNC']);
                     $('#Atlas').text(obj.data[0]['entrez']);
                     $('#synonyms').text(obj.data[0]['synonyms']);
@@ -854,8 +854,8 @@
             //cy.zoom(2);
             //cy.center(nodeIndex);
 
-          $('#myTab li:eq(0) a').tab('show');
-            $('#bottomTabs li:eq(0) a').tab('show');
+          //$('#myTab li:eq(0) a').tab('show');
+           // $('#bottomTabs li:eq(0) a').tab('show');
             firstNodeClick();
             setUpNodeTable(node.id());
             setUpAnalysisTable(node.id());
