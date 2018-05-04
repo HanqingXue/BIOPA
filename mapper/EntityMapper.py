@@ -143,4 +143,11 @@ class EntityMapper(object):
 		return result_proxy
 
 	def get_seleted_relate_superpathway(self, gene_symbol):
-		pass 
+		result_proxy = {}
+		try:
+			result_proxy = pathcards_parser(gene_symbol)
+			
+		except Exception as ex:
+			logging.error('Error occurred %s in querying pathway' % ex)
+		
+		return result_proxy
