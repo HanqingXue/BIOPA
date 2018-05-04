@@ -73,7 +73,6 @@ class VisionHandler(tornado.web.RequestHandler):
         ensembl_id = self.entity_mapper.get_selected_gene_ensembl_id(geneinfo['entrez'])
         pubmed_id = self.entity_mapper.get_seleted_relate_pubmedids(geneinfo['entrez'])
         super_pathway = self.entity_mapper.get_seleted_relate_superpathway(keyword)
-        print pubmed_id
-        print super_pathway
-        data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id, pubmed_id]}
+
+        data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id, pubmed_id, super_pathway]}
         self.finish(json.dumps(data))

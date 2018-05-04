@@ -71,23 +71,10 @@ if __name__ == '__main__':
 
 	db_session  = scoped_session(sessionmaker(bind=db_engine,
 						autocommit=True, autoflush=True, expire_on_commit=False))
-	
-	gene_info = {}
-
-	try:
-		gene = EntityMapper(db_session)
-		#gene_info = gene.get_selected_gene_ids('A2M')
-		summary_info = gene.get_selected_gene_summary(111)
-
-		#$print gene_info
-		print summary_info
-	except Exception as ex:
-		logging.error('Error occurred: %s' % ex)
-
 	'''
 	Start HTTP Server
 	'''
 	http_server = HTTPServer(Application(config.base_url, db_session), max_buffer_size=10485760000)
-	http_server.listen(options.http_port)
 	logging.info('Pmap web application is running on port: %d.' % options.http_port)
+	http_server.listen(options.http_port)
 	IOLoop.current().start()

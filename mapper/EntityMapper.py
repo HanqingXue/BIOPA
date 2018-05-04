@@ -36,8 +36,14 @@ class EntityMapper(object):
 		summary_info = ''
 		
 		try:
-			summary = self.db_session.query(Summaryinfo).filter(Summaryinfo.entrez_id == entrez_id).all()
-			summary_info = summary[0].Summary 
+			result_proxy = self.db_session.execute('SELECT * FROM gene_summary_ncbi where entrez_id = :entrez_id;', {
+				'entrez_id': entrez_id
+			}).fetchall()
+
+			if len(result_proxy) == 0:
+			 	summary_info = ''
+			else:
+				summary_info = result_proxy[0][1]
 		except Exception as ex:
 			logging.error('Error occurred %s in querying gene summary'  % ex)
 			summary_info = '' 

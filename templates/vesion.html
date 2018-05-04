@@ -259,7 +259,7 @@
 
               <div class="tab-pane fade" id="jmeter" style="overflow: hidden; border-top: 0px">
                 <div id="color-picker" class="table table-striped table-condensed table-striped table-responsive table-hover" style="height: 500px">
-                  <table id = 'node-style'>
+                  <table id = 'node-style' style="width: 100%">
                     <tbody>
                       <tr>
                         <td colspan="4"><h5>Node style</h5></td>
@@ -276,7 +276,7 @@
                               <button class="btn " type="button" data-toggle="dropdown" style="background-color: '#f9f9f9'">
                                 <span class="icon-cog"></span>
                               </button>
-                              <ul class="dropdown-menu " role="menu" id="Shape">
+                              <ul class="dropdown-menu " role="menu" id="Shape" style="z-index: 100">
                                 <li><a href="#"  value="ellipse">Ellipse</a></li>
                                 <li><a href="#"  value="rectangle">Rectangle</a></li>
                                 <li><a href="#"  value="triangle">Triangle</a></li>
@@ -573,12 +573,23 @@
               </div>
            </div>
            <div class="tab-pane fade" id="pathway">
+              <!--
               <div id="frame-out-path" style="width:100%;height:100%;overflow:hidden;border-style: :none"> 
                 <div id="frame-in-path" style="width:100%;height:100%;margin: -15% -0px -15% -3%;border-style: none;">
                   <iFrame src="" width="84%" height="700" scrolling="yes" id="showFramePath">
                   </iFrame>
                 </div>
               </div>
+              -->
+              <table class="table table-striped table-bordered table-responsive table-hover" id="pathwayTable">
+                <tbody>
+                  <tr>
+                    <th>SuperPathway Name</th>
+                    <th>Genes Count</th>
+                    <th>Relevance Score</th>
+                  </tr>
+                </tbody>
+              </table>
             </div>
            <div class="tab-pane fade" id="expression">
              <table class="table table-striped table-bordered table-responsive table-hover">
@@ -661,6 +672,7 @@
                     $('#Ensembl').text(obj.data[2]);
                     $('#ensemblDetail').text(obj.data[2]);
                     setUpPebMedids(obj.data[3]);
+                    setUpPathwayTable(obj.data[4]);
                 },
 
                 complete: function () {
@@ -691,11 +703,8 @@
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
-                    console.log(obj);
                     var drugs = obj.data[0];
-                    console.log(drugs);
                     for(var i in drugs) {
-                      console.log(i,":",drugs[i]);
                       $('#drugList').append("<li><a>" + i +"</a><span class='attribution'><span class='attributionHeader'></span>Source：" + drugs[i] + "</span></li>"
                       );
                     }
@@ -736,7 +745,6 @@
     <script>
     $(function() {
       net = JSON.parse($('#net').text());
-      console.log(net);
       cy = cytoscape({
         container: document.getElementById('cy'), 
         boxSelectionEnabled: true,
@@ -857,6 +865,7 @@
 
           //$('#myTab li:eq(0) a').tab('show');
            // $('#bottomTabs li:eq(0) a').tab('show');
+            $('#myTab li:eq(0) a').text('Node');
             firstNodeClick();
             setUpNodeTable(node.id());
             setUpAnalysisTable(node.id());
@@ -865,7 +874,8 @@
 
         if (event.cyTarget.isEdge()) {
             $('#Detail-table').hide();
-            $('#myTab li:eq(1) a').tab('show');
+            //$('#myTab li:eq(0) a').text('Ed');
+            //$('#myTab li:eq(1) a').tab('show');
             var edge = event.cyTarget;
             var source = edge.source();
             var target = edge.target();
@@ -1594,5 +1604,23 @@
         $('#Pubmed').append("<span class='attribution'><span class='attributionHeader'></span>Pubmed:" + ids[index] + "</span>");
       }
       return true;
+    }
+  </script>
+  <script type="text/javascript">
+    function setUpPathwayTable(superPathway) {
+      console.log(superPathway);
+      //if(superPathway.length > 0) {
+        for(var index in superPathway){
+          $('#pathwayTable').append( 
+            "<tr>" +
+              "<th class='gene-attr-info' >" + superPathway[index]['SuperPathwayName'] + "</th>" +
+              "<td class='gene-abstrct-info'>" + superPathway[index]['GenesCount'] + "</td>" +
+              "<td class='gene-abstrct-info'>" + superPathway[index]['RelevanceScore'] + "</td>" +
+            "</tr>"
+          );
+          console.log(superPathway[index]['SuperPathwayName']);
+        }
+        return true;
+      //}
     }
   </script>
