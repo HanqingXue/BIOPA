@@ -152,6 +152,7 @@ class EntityMapper(object):
 		result_proxy = {}
 		try:
 			result_proxy = pathcards_parser(gene_symbol)
+			print result_proxy
 			
 		except Exception as ex:
 			logging.error('Error occurred %s in querying pathway' % ex)

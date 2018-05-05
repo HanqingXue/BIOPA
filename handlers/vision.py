@@ -63,16 +63,16 @@ class VisionHandler(tornado.web.RequestHandler):
             'CAR': '#FFFFFF'
         }
         #print versionData
-        self.render('vesion.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
+        self.render('version.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
     
     @tornado.web.asynchronous
     def get(self):
         keyword =self.get_argument("keyword", None)
         geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
+        super_pathway = self.entity_mapper.get_seleted_relate_superpathway(keyword)
         summary = self.entity_mapper.get_selected_gene_summary(geneinfo['entrez'])
         ensembl_id = self.entity_mapper.get_selected_gene_ensembl_id(geneinfo['entrez'])
         pubmed_id = self.entity_mapper.get_seleted_relate_pubmedids(geneinfo['entrez'])
-        super_pathway = self.entity_mapper.get_seleted_relate_superpathway(keyword)
-
+       
         data = {'status':0,'message':'successfully','data':[geneinfo, summary, ensembl_id, pubmed_id, super_pathway]}
         self.finish(json.dumps(data))
