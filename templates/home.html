@@ -101,7 +101,7 @@
                     <tbody>
                       <tr></tr>
                       <tr>
-                        <td colspan="2" style="border: none"><h3 id="gene-title">Gene Name</h3></td>
+                        <td colspan="2" style="border: none"><h3 class="gene-title" id="gene-title">Gene Name</h3></td>
                       </tr>
                       <tr>
                         <td colspan="2" id="geneSummary" class="gene-abstrct-info"></td>
@@ -138,13 +138,38 @@
                   </table>
                 </div><!--Deatil-table-->
               </div><!--first home-->
+
               <div class="tab-pane fade" id="ios" style="overflow: hidden; border-top: 0px">
-                <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed table-hover">
-                  <table >
+                <div id="edge-type" class="table  table-striped table-responsive table-condensed table-hover">
+                  <table style="border: 0">
                     <tbody>
+                      <tr></tr>
                       <tr>
-                        <th colspan="3" class="span12"><h3 id="edge-titie">Edge Types</h3></th>
+                        <th colspan="2" style="border: none">
+                          <h3 class="gene-title">Statistics</h3>
+                        </th>
                       </tr>
+                      <tr>
+                        <th class="gene-attr-info span6">Total Nodes</th>
+                        <td class="gene-abstrct-info span6" id="totalNodes" >-</td>
+                      </tr>
+                      <tr>
+                        <th class="gene-attr-info">Total Edges</th>
+                        <td class="gene-abstrct-info" id="totalEdges">-</td>
+                      </tr>
+                      <tr>
+                        <th class="gene-attr-info">Degree</th>
+                        <td class="gene-abstrct-info" id="totalDegree">-</td>
+                      </tr>
+                      <tr>
+                        <th class="gene-attr-info">Degree in</th>
+                        <td class="gene-abstrct-info" id="totalDegreeIn">-</td>
+                      </tr>
+                      <tr>
+                        <th class="gene-attr-info ">Degree out</th>
+                        <td class="gene-abstrct-info" id="totalDegreeOut">-</td>
+                      </tr>
+                      <!--
                       {% for edge_name in edge_types %}
                           <tr>
                             <td class="span2" id="{{ edge_name }}-num"></td>
@@ -156,10 +181,15 @@
                               <a class="icon-plus" value="{{ edge_name }}"></a>
                             </td>
                           </tr>
-                      {% end %}                 
+                      {% end %}
+                      -->
+
+
+
                     </tbody>
                   </table>
-                </div><!---edge Type-->
+                </div>
+                <!---edge Type-->
               </div>
               <div class="tab-pane fade" id="edge-detail">
                 <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed table-hover">
@@ -759,6 +789,7 @@
       cy.panzoom({});
 
       setUpRightMenu(cy);
+      setUpSummaryInit();
       cy.on('tap', function(event){
         var evtTarget = event.cyTarget;
         $('#Detail').addClass('active in');
@@ -967,6 +998,7 @@
         selector.show();
       });
     </script>
+
     <script>
       $('#nodeColorPicker').spectrum({
             color: "#000000#",
@@ -1020,6 +1052,7 @@
             ]
         });
     </script>
+
     <script>
       $('#edgeColorPicker').spectrum({
             color: "#000000",
@@ -1381,5 +1414,45 @@
         }
       }
       return pathdist;
+    }
+  </script>
+  <script type="text/javascript">
+    function setUpSummaryInit() {
+      var nodes = cy.filter("node");
+      var edges = cy.filter("edge");
+
+      var nodeTotal = nodes.length;
+      var edgeTotal = edges.length;
+
+      var totalDegree = nodes.totalDegree();
+      var inoutDegree = getTotalInOutDegree(nodes);
+      setUpSummary(nodes.length, edges.length, totalDegree, inoutDegree['totalInDegree'], inoutDegree['totalOutDegree']);
+      
+      return true;
+    }
+  </script>
+  <script type="text/javascript">
+    function setUpSummary(totalNodes, totalEdges, totalDegree, totalDegreeIn, totalDegreeOut) {
+      $('#totalNodes').text(totalNodes);
+      $('#totalEdges').text(totalEdges);
+      $('#totalDegree').text(totalDegree);
+      $('#totalDegreeIn').text(totalDegreeIn);
+      $('#totalDegreeOut').text(totalDegreeOut);
+      return true;
+    }
+  </script>
+  <script type="text/javascript">
+    function getTotalInOutDegree(nodes) {
+      var indegree = 0;
+      var outdegree = 0;
+      for(var i=0; i < nodes.length; i++){
+        indegree += nodes[i].indegree();
+        outdegree += nodes[i].outdegree();
+      }
+
+      var result = {}
+      result['totalInDegree'] = indegree;
+      result['totalOutDegree'] = outdegree;
+      return result;
     }
   </script>

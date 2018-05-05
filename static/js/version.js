@@ -160,3 +160,9 @@ function setUpRightMenu (cy) {
     contextMenuClasses: ['custom-context-menu']
   });//end-menu
 }
+
+    
+function setUpNetworkStatistics(cy) {
+
+} 
+     
