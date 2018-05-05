@@ -63,7 +63,7 @@ class VisionHandler(tornado.web.RequestHandler):
             'CAR': '#FFFFFF'
         }
         #print versionData
-        self.render('version.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
+        self.render('home.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
     
     @tornado.web.asynchronous
     def get(self):
