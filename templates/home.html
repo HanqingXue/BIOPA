@@ -308,17 +308,17 @@
                                 <span class="icon-cog"></span>
                               </button>
                               <ul class="dropdown-menu " role="menu" id="Shape" style="z-index: 100">
-                                <li><a href="#"  value="ellipse">Ellipse</a></li>
-                                <li><a href="#"  value="rectangle">Rectangle</a></li>
-                                <li><a href="#"  value="triangle">Triangle</a></li>
-                                <li><a href="#"  value="pentagon">Pentagon</a></li>
-                                <li><a href="#"  value="hexgon">Hexgon</a></li>
-                                <li><a href="#"  value="heptagon">Heptagon</a></li>
-                                <li><a href="#"  value="octagon">Octagon</a></li>
-                                <li><a href="#"  value="star">Star</a></li></li>
-                                <li><a href="#"  value= "diamond">Diamond</a></li>
-                                <li><a href="#"  value="vee">Vee</a></li>
-                                <li><a href="#"  value="rhomboid">Rhomboid</a></li>
+                                <li><a  href="javascript:void(0)" value="ellipse">Ellipse</a></li>
+                                <li><a  href="javascript:void(0)" value="rectangle">Rectangle</a></li>
+                                <li><a  href="javascript:void(0)" value="triangle">Triangle</a></li>
+                                <li><a  href="javascript:void(0)" value="pentagon">Pentagon</a></li>
+                                <li><a  href="javascript:void(0)" value="hexgon">Hexgon</a></li>
+                                <li><a  href="javascript:void(0)" value="heptagon">Heptagon</a></li>
+                                <li><a  href="javascript:void(0)" value="octagon">Octagon</a></li>
+                                <li><a  href="javascript:void(0)" value="star">Star</a></li></li>
+                                <li><a  href="javascript:void(0)" value= "diamond">Diamond</a></li>
+                                <li><a  href="javascript:void(0)" value="vee">Vee</a></li>
+                                <li><a  href="javascript:void(0)" value="rhomboid">Rhomboid</a></li>
                               </ul>
                             </div>
                         </td>
@@ -333,7 +333,7 @@
                         </td>
                         <td>
                           <div class="btn-group" ">
-                            <a href="" class="btn .btn-default icon-pencil" id="nodeColorPicker"><span class="icon-pencil"></span></a>
+                            <a  href="javascript:void(0)" class="btn .btn-default icon-pencil" id="nodeColorPicker"><span class="icon-pencil"></span></a>
                           </div>
                         </td>
                       </tr>
@@ -358,9 +358,9 @@
                                 <span class="icon-cog"></span>
                               </button>
                               <ul class="dropdown-menu " role="menu" id="lineStyle">
-                                <li><a href="#"  value="solid">Solid</a></li>
-                                <li><a href="#"  value="dotted">Dotted</a></li>
-                                <li><a href="#"  value="dashed">Dashed</a></li>
+                                <li><a href="javascript:void(0)"  value="solid">Solid</a></li>
+                                <li><a href="javascript:void(0)"  value="dotted">Dotted</a></li>
+                                <li><a href="javascript:void(0)" value="dashed">Dashed</a></li>
                               </ul>
                             </div>
                         </td>
@@ -861,7 +861,7 @@
       cy.on('tap', function(event){
         var evtTarget = event.cyTarget;
         $('#Detail').addClass('active in');
-        if( evtTarget === cy ){
+        if( evtTarget == cy ){
             cy.trigger('boxstart');
         } else {
   
@@ -894,7 +894,7 @@
         }//end-else
       });//end-cy.on
 
-      cy.on('mouseover', 'node', function(event) {
+      /**cy.on('mouseover', 'node', function(event) {
         var node = event.cyTarget;
         nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
 
@@ -917,7 +917,7 @@
               height: 8
             }
           }
-      }, event); });
+      }, event); });**/
     })
     </script>
     <script type="text/javascript">
