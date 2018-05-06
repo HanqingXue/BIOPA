@@ -20,7 +20,6 @@ def simulation():
 			index = random.randint(0,  len(edge_type))
 			index = index - 1
 			interaction = edge_type[index]
-			print interaction
 			pathway['Entity1'] = source_entity
 			pathway['Entity2'] = target_entity
 			pathway['Interaction'] = interaction

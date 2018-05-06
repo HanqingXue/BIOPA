@@ -165,4 +165,18 @@ function setUpRightMenu (cy) {
 function setUpNetworkStatistics(cy) {
 
 } 
+
+function getTotalInOutDegree(nodes) {
+  var indegree = 0;
+  var outdegree = 0;
+  for(var i=0; i < nodes.length; i++){
+    indegree += nodes[i].indegree();
+    outdegree += nodes[i].outdegree();
+  }
+  var result = {}
+  result['totalInDegree'] = indegree;
+  result['totalOutDegree'] = outdegree;
+  return result;
+}
+
      

@@ -247,7 +247,7 @@
                       <tr>
                         <td style="border: none"><i class="icon-minus"></i></td>
                         <th style="border: none">
-                          <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="20" data-slider-max="100" data-slider-step="1" data-slider-value="30"/>
+                          <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="3" data-slider-step="1" data-slider-value="3"/>
                         </th>
                         <td style="border: none"><i class="icon-plus"></i></td>
                       </tr>
@@ -743,6 +743,7 @@
       var nodeColor = '#000000';
       var tableDetail = new Object();
       var opt = new Object();
+      var curOption = 0;
     </script>
     <script>
     $(function() {
@@ -853,7 +854,7 @@
       cy.panzoom({});
 
       setUpRightMenu(cy);
-      setUpSummaryInit();
+      setUpSummaryInit(cy);
       cy.on('tap', function(event){
         var evtTarget = event.cyTarget;
         $('#Detail').addClass('active in');
@@ -954,7 +955,6 @@
           var edge_color = "{{ edge_types[edge_name] }}";
           var edge = cy.filter("edge[type = \'" + edge_name + "\']");
           $('#row-' + edge_name).show();
-          console.log(edge_name);
           $('#' + edge_name + '-count').text(edge.length);
           $('#' + edge_name + '-btn').css('background-color', edge_color);
         {% end %}
@@ -1213,6 +1213,15 @@
       $('#ex2').slider()
       .on('slide', function(ev){
         cy.$('edge:selected').style('width', ev.value);
+      });
+    </script>
+    <script>
+      $('#ex3').slider()
+      .on('slide', function(ev){
+        var nodeId = cy.$('node:selected').id();
+        if(typeof(nodeId) != 'undefined') {
+          hidePathNode(cy, nodeId, ev.value);
+        }
       });
     </script>
     <script type="text/javascript">
@@ -1489,7 +1498,7 @@
     }
   </script>
   <script type="text/javascript">
-    function setUpSummaryInit() {
+    function setUpSummaryInit(cy) {
       var nodes = cy.filter("node");
       var edges = cy.filter("edge");
 
@@ -1514,17 +1523,45 @@
     }
   </script>
   <script type="text/javascript">
-    function getTotalInOutDegree(nodes) {
-      var indegree = 0;
-      var outdegree = 0;
-      for(var i=0; i < nodes.length; i++){
-        indegree += nodes[i].indegree();
-        outdegree += nodes[i].outdegree();
+    function getPathInfo(CytoscapeObject, nodeId) {
+      var pathdist = new Object();
+      var algorithm = CytoscapeObject.elements().floydWarshall();
+      var nodes = CytoscapeObject.filter('node');
+      var distance2id = {}  
+      //console.log(CytoscapeObject.$('#A2M'));
+      for(var i = 0; i < nodes.length; i++) {
+
+        var source = '#' + nodeId;
+        var target = '#' + nodes[i].id();
+        if(source == target) 
+          continue;
+
+        var distance = algorithm.distance(source, target);
+        if (distance in distance2id) {
+          distance2id[distance].push(target);
+        } else {
+           distance2id[distance] =  new Array();
+        }
+      }
+      return distance2id;
+    }
+  </script>
+  <script type="text/javascript">
+    function hidePathNode(CytoscapeObject, nodeId, pathLength) {
+      var distance2id = getPathInfo(CytoscapeObject, nodeId);
+      var maxPathLength = 0;
+      
+      for(var pathDis in distance2id){
+        console.log(typeof(pathDis));
+        if(pathDis > maxPathLength)
+           maxPathLength = pathDis;
       }
 
-      var result = {}
-      result['totalInDegree'] = indegree;
-      result['totalOutDegree'] = outdegree;
-      return result;
-    }
+      for(var k=pathLength+1; k <= parseInt(maxPathLength); k++ ) {
+        var hidedNode = distance2id[k];
+        for(var i=0; i < hidedNode.length; i++) {
+          CytoscapeObject.$(hidedNode[i]).hide();
+        }
+      }
+    } 
   </script>
