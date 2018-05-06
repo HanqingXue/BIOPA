@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ static_url('css/flat-ui.css')}}">
     <link rel="stylesheet" href="{{ static_url('css/slider.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/jquery.qtip.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ static_url('css/jquery.fancybox.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/cytoscape.js-panzoom.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/font-awesome.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/loading.css') }}"> 
@@ -47,6 +48,7 @@
     <script src="{{ static_url('js/arbor.js') }}"></script>
     <script src="{{ static_url('js/cytoscape-arbor.js') }}"></script>
     <script src="{{ static_url('js/version.js') }}"></script>
+    <script src="{{ static_url('js/jquery.fancybox.min.js') }}"></script>
   </head>
   <body style="padding-top:0px">
     <div class="navbar navbar-inverse navbar-fixed-top" style="position: static" >
@@ -66,6 +68,17 @@
               <li class="active"><a href="/">Home</a></li>
               <li><a href="about">About</a></li>
               <li><a href="contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Legends <b class="caret"></b></a>
+                <ul class="dropdown-menu" >
+                  <li>
+                    <a data-fancybox data-src="#hidden-content" href="javascript:;">
+                      Node legends
+                    </a>
+                  </li>
+                  <li><a data-fancybox data-src="#hidden-content2" href="javascript:;">Edge legends</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -381,14 +394,40 @@
                         </td>
                       </tr>
                       <tr>
-                        <th class="gene-attr-info">Begin shape</th>
-                        <td>-</td>
-                        <th class="gene-attr-info">End<br> shape</th>
-                        <td>-</td> 
+                        <th class="gene-attr-info" colspan="2">Source shape</th>
+                        <td colspan="2">
+                          <select class="selectpicker dropup" id="source-shape" data-live-search="true">
+                              <option value="none">None</option>
+                              <option value="triangle-tee">Triangle-tee</option>
+                              <option value="triangle-backcurve">Triangle-backcurve</option>
+                              <option value="vee">Vee<span class="icon-cog"></span></option>
+                              <option value="tee">Tee</option>
+                              <option value="square">Square</option>
+                              <option value="circle">Circle</option>
+                              <option value="diamond">Diamond</option>
+                              <option value="triangle">Triangle</option>
+                          </select>
+                        </td>
                       </tr>
                       <tr>
-                        <th style="line-height: 50px" class="gene-attr-info">Size</th>
-                        <td colspan="3">
+                        <th class="gene-attr-info" colspan="2">Target shape</th>
+                        <td colspan="2">
+                          <select class="selectpicker dropup" id="target-shape">
+                              <option value="none">None</option>
+                              <option value="triangle-tee">Triangle-tee</option>
+                              <option value="triangle-backcurve">Triangle-backcurve</option>
+                              <option value="vee"><a class="icon-cog">Vee</a><span ></span></option>
+                              <option value="tee">Tee</option>
+                              <option value="square">Square</option>
+                              <option value="circle">Circle</option>
+                              <option value="diamond">Diamond</option>
+                              <option value="triangle">Triangle</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th style="line-height: 50px" class="gene-attr-info" colspan="2">Size</th>
+                        <td colspan="2">
                             <input id="ex2" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
                         </td>
                       </tr>
@@ -432,7 +471,6 @@
           </div><!--.span8-->
       <!--<div class="span8">100</div>-->
     </div>
-
 
     <div class="container-fluid" style="padding: 0px 50px 0px 50px">
       <div class="bs-example bs-example-tabs row-fluid" data-example-id="togglable-tabs" style="margin-right: auto;margin-left: auto;">
@@ -638,6 +676,16 @@
         </div>
       </div> 
 
+      <div style="display: none;" id="hidden-content" class="sbgn-frame">
+        <h3 class="gene-title">Node Legends</h3>
+        <img src="{{ static_url('img/legend-node.png') }}">
+      </div>
+
+     <div style="display: none;" id="hidden-content2" class="sbgn-frame">
+        <h3 class="gene-title">Node Legends</h3>
+        <img src="{{ static_url('img/legend-edge.png') }}">
+      </div>
+
       <hr> 
       <footer>
         <p>© Harbin Institute of Technology 2017</p>
@@ -795,7 +843,7 @@
               selector: "edge",
               style : {
                 'curve-style': 'bezier',
-                'target-arrow-shape': 'triangle',
+                'target-arrow-shape': 'triangle-tee',
                 //'haystack-radius': 0.5,
                 'opacity': 1,
                 'line-color': "#ADADAD",
@@ -864,7 +912,6 @@
       });//cy  
         // cy panzoom plugin 
       cy.panzoom({});
-
       setUpRightMenu(cy);
       setUpSummaryInit(cy);
       cy.on('tap', function(event){
@@ -1216,6 +1263,18 @@
         $('#lineText').text(lineStyle);
         cy.$('edge:selected').style('line-style', lineStyle);
      });
+    </script>
+    <script type="text/javascript">
+      $('#source-shape').change(function(){
+        var shape = $('#source-shape').val();
+        cy.$('edge:selected').style('source-arrow-shape', shape);
+      });
+    </script>
+    <script type="text/javascript">
+      $('#target-shape').change(function(){
+        var shape = $('#target-shape').val();
+        cy.$('edge:selected').style('target-arrow-shape', shape);
+      });
     </script>
     <script>
     $('#ex1').slider()
