@@ -163,7 +163,7 @@ function setUpRightMenu (cy) {
 
     
 function setUpNetworkStatistics(cy) {
-
+  
 } 
 
 function getTotalInOutDegree(nodes) {
@@ -179,4 +179,16 @@ function getTotalInOutDegree(nodes) {
   return result;
 }
 
-     
+function getDegreeDistribute(CytoscapeObject) {
+  var degreeDis = new Object();
+  var nodes = CytoscapeObject.filter('node');
+  for(var i = 0; i < nodes.length ; i++){
+    var degree = nodes[i].degree();
+    if(degree in degreeDis) {
+      degreeDis[degree] += 1;
+    } else {
+      degreeDis[degree] = 1
+    }
+  }
+  return degreeDis;
+}
