@@ -53,15 +53,10 @@ class VisionHandler(tornado.web.RequestHandler):
 
         edge2list = list(set(edge_types))
         edge_info = {
-            'CAI': '#8840A7',
-            'BRR': '#1139AA',
-            'MI': '#1DC600',
-            'MI': '#ADADAD',
-            'TBRR': '#20C3C9',
-            'ER': '#C8AA64',
-            'OTHER': '#4B2E32',
-            'CAR': '#FFFFFF'
-        }
+            'interacts-with': '#8840A7',
+            'controls-phosphorylation-of': '#17ccd3',
+            'controls-state-change-of': '#1450b9'}
+
         #print versionData
         self.render('home.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
     

@@ -1,16 +1,26 @@
 #coding=utf-8
 import csv
+import random 
 
 def simulation():
 	with open('network_bak.csv') as net:
 		reader = csv.DictReader(net)
 		version_data = []
+
+		edge_type = \
+			["interacts-with",
+			"controls-phosphorylation-of",
+			"controls-state-change-of"]
+
 		
 		for row in reader:
 			pathway = {}
 			source_entity = row['ID1']
 			target_entity = row['ID2']
-			interaction = 'MI'
+			index = random.randint(0,  len(edge_type))
+			index = index - 1
+			interaction = edge_type[index]
+			print interaction
 			pathway['Entity1'] = source_entity
 			pathway['Entity2'] = target_entity
 			pathway['Interaction'] = interaction

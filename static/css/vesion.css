@@ -94,3 +94,6 @@ span > a {
 .ui-slider {
     margin-bottom: 10px;
 }
+.edge-type-off {
+  display: none;
+}
