@@ -140,7 +140,7 @@
               </div><!--first home-->
 
               <div class="tab-pane fade" id="ios" style="overflow: hidden; border-top: 0px">
-                <div id="edge-type" class="table  table-striped table-responsive table-condensed table-hover">
+                <div id="statistics" class="table  table-striped table-responsive table-condensed table-hover">
                   <table style="border: 0">
                     <tbody>
                       <tr></tr>
@@ -169,28 +169,91 @@
                         <th class="gene-attr-info ">Degree out</th>
                         <td class="gene-abstrct-info" id="totalDegreeOut">-</td>
                       </tr>
-                      <!--
-                      {% for edge_name in edge_types %}
-                          <tr>
-                            <td class="span2" id="{{ edge_name }}-num"></td>
-                            <th class="span9">
-                              <button class="edge_btn" id="{{ edge_name }}-btn">{{ edge_name }}</button>
-                            </th>
-                            <td class="span1">
-                              <a class="icon-remove" value="{{ edge_name }}"></a>
-                              <a class="icon-plus" value="{{ edge_name }}"></a>
-                            </td>
-                          </tr>
-                      {% end %}
-                      -->
-
-
-
                     </tbody>
                   </table>
                 </div>
-                <!---edge Type-->
-              </div>
+                <!--statistics-->
+                <div id="less-more" class="table  table-striped table-responsive table-condensed table-hover">
+                  <table style="border: 0">
+                    <tbody>
+                      <tr></tr>
+                      <tr>
+                        <th colspan="2" style="border: none">
+                          <h3 class="gene-title">Interaction types</h3>
+                        </th>
+                      </tr>
+                      <tr id="row-controls-state-change-of">
+                        <td class="span1 gene-abstrct-info"  id="controls-state-change-of-count">
+                            439
+                        </td>
+                        <td class="span11">
+                            <span class="itx-type-on-off label controls-state-change-of" data-itx-type="controls-state-change-of">controls state change <span class="fui-cross-16"></span></span>
+                        </td>
+                      </tr>
+                      <tr id="row-controls-expression-of">
+                          <td id="controls-expression-of-count" class="span1 gene-abstrct-info">
+                              395
+                          </td>
+                          <td>
+                              <span class="itx-type-on-off label controls-expression-of" data-itx-type="controls-expression-of" st>controls expression <span class="fui-cross-16"></span></span>
+                          </td>
+                      </tr>
+                      <tr id="row-catalysis-precedes">
+                          <td  class="gene-abstrct-info" id="catalysis-precedes-count" class="span1 gene-abstrct-info">
+                              11
+                          </td>
+                          <td>
+                              <span class="itx-type-on-off label catalysis-precedes" data-itx-type="catalysis-precedes">consecutive catalysis <span class="fui-cross-16"></span></span>
+                          </td>
+                      </tr>
+                      <tr id="row-controls-phosphorylation-of">
+                          <td id="controls-phosphorylation-of-count" class="span1 gene-abstrct-info">
+                              37
+                          </td>
+                          <td>
+                              <span class="itx-type-on-off label controls-phosphorylation-of" data-itx-type="controls-phosphorylation-of">controls phosphorylation <span class="fui-cross-16"></span></span>
+                          </td>
+                      </tr>
+                      <tr id="row-controls-transport-of">
+                          <td id="controls-transport-of-count" class="span1 gene-abstrct-info">
+                              2
+                          </td>
+                          <td>
+                              <span class="itx-type-on-off label controls-transport-of" data-itx-type="controls-transport-of">controls transport <span class="fui-cross-16"></span></span>
+                          </td>
+                      </tr>
+                      <tr id="row-in-complex-with">
+                          <td id="in-complex-with-count" class="span1 gene-abstrct-info">
+                              245
+                          </td>
+                          <td>
+                              <span class="itx-type-on-off label in-complex-with" data-itx-type="in-complex-with">in complex  with<span class="fui-cross-16"></span></span>
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!---edge-type-->
+                <div id="less-more-selector" class="table  table-striped table-responsive table-condensed table-hover table-bordered">
+                  <table>
+                    <tbody>
+                      <tr></tr>
+                      <tr>
+                        <th colspan="4" style="border: none" >
+                          <h3 class="gene-title">Show less/more nodes</h3>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td><i class="icon-minus"></i></td>
+                        <th>
+                          <input id="ex3" data-slider-id='ex1Slider' type="text" data-slider-min="20" data-slider-max="100" data-slider-step="1" data-slider-value="30"/>
+                        </th>
+                        <td><i class="icon-plus"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!--more or less-->
+              </div><!--ios-->
               <div class="tab-pane fade" id="edge-detail">
                 <div id="edge-type" class="table table-bordered table-striped table-responsive table-condensed table-hover">
                   <table style="border: 0" id="interactTable">
@@ -901,6 +964,11 @@
              return 'Current value: ' + value;
            }
         });  
+        $('#ex3').slider({
+           formatter: function(value) {
+             return 'Current value: ' + value;
+           }
+        }); 
       });
     </script>
     <script>

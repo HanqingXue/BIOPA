@@ -37,3 +37,60 @@ span > a {
   display: table-cell;
   vertical-align: middle;
 }
+
+.label {
+    text-shadow: none;
+}
+
+.itx-type-on-off {
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.controls-state-change-of {
+    background-color: #1450b9 !important;
+}
+
+.in-complex-with {
+    background-color: #5e3e41 !important;
+}
+
+.chemical-affects {
+    background-color: #ffd81b !important;
+}
+
+.controls-expression-of {
+    background-color: #0ccc0d !important;
+}
+
+.controls-phosphorylation-of {
+    background-color: #17ccd3 !important;
+}
+
+.catalysis-precedes {
+    background-color: #9B59B6 !important;
+}
+
+.controls-transport-of {
+    background-color: #d3b777 !important;
+}
+
+.itx-removed {
+    background-color: #BDC3C7 !important;
+}
+
+.edge-types .fui-cross-16 {
+    font-size: 8px;
+}
+
+.minus-sign-container {
+    padding-right: 5px;
+}
+
+.ui-slider {
+    margin-bottom: 10px;
+}
