@@ -1528,13 +1528,9 @@
       var algorithm = CytoscapeObject.elements().floydWarshall();
       var nodes = CytoscapeObject.filter('node');
       var distance2id = {}  
-      //console.log(CytoscapeObject.$('#A2M'));
       for(var i = 0; i < nodes.length; i++) {
-
         var source = '#' + nodeId;
         var target = '#' + nodes[i].id();
-        if(source == target) 
-          continue;
 
         var distance = algorithm.distance(source, target);
         if (distance in distance2id) {
@@ -1550,17 +1546,21 @@
     function hidePathNode(CytoscapeObject, nodeId, pathLength) {
       var distance2id = getPathInfo(CytoscapeObject, nodeId);
       var maxPathLength = 0;
+
+      CytoscapeObject.nodes().hide();
       
-      for(var pathDis in distance2id){
-        console.log(typeof(pathDis));
-        if(pathDis > maxPathLength)
-           maxPathLength = pathDis;
+
+      var fw = CytoscapeObject.elements().floydWarshall();
+
+      if(pathLength == 0){
+        CytoscapeObject.$('#'+nodeId).show();
       }
 
-      for(var k=pathLength+1; k <= parseInt(maxPathLength); k++ ) {
+      for(var k= 1; k <= parseInt(pathLength); k++ ) {
         var hidedNode = distance2id[k];
         for(var i=0; i < hidedNode.length; i++) {
-          CytoscapeObject.$(hidedNode[i]).hide();
+          var paths = fw.path('#'+nodeId, hidedNode[i]);
+          paths.show();
         }
       }
     } 
