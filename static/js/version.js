@@ -9,8 +9,9 @@ function setUpPebMedids(pubmedIds) {
   return true;
 }
 
-function setUpPathwayTable(superPathway) {
+function setUpPathwayTable(superPathway, nodeId) {
   //if(superPathway.length > 0) {
+    var count = 0
     $("#pathwayTable  tr:not(:first)").html(""); 
     for(var index in superPathway){
       $('#pathwayTable').append( 
@@ -20,7 +21,10 @@ function setUpPathwayTable(superPathway) {
           "<td class='gene-abstrct-info'>" + superPathway[index]['RelevanceScore'] + "</td>" +
         "</tr>"
       );
+      count += 1;
     }
+    $('#help-text-detail-pathway').text(count +  " search results for " + nodeId);
+    $("#pathwayTable").show();
     return true;
   //}
 }
@@ -46,12 +50,19 @@ function setUpDiseaseTable(diseases, nodeId) {
 }
 
 function setUpDrugTable(drugs, nodeId) {
+  
+  var count = 0;
   for(var i in drugs) {
     $('#drugList').append("<li><a>" + i +"</a><span class='attribution'><span class='attributionHeader'></span>Source：" + drugs[i] + "</span></li>");
+    count += 1;
   }
+   $('#help-text-detail-drug').text(count +  " search results for " + nodeId);
+   $('#help-text-detail-drug').show();
+   return true;
 }
 
 function setUpNodeTable(nodeId) {
+  $('#help-text-detail-drug').hide();
   DoAjax(nodeId);
   loadDrug(nodeId);
   $('#gene-title').text(nodeId);

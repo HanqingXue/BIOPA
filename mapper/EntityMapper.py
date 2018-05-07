@@ -3,7 +3,7 @@
 
 import logging
 from Entity import *
-#from methods.WebParseHelper import *
+from methods.WebParseHelper import *
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
@@ -152,7 +152,6 @@ class EntityMapper(object):
 		result_proxy = {}
 		try:
 			result_proxy = pathcards_parser(gene_symbol)
-			print result_proxy
 			
 		except Exception as ex:
 			logging.error('Error occurred %s in querying pathway' % ex)
