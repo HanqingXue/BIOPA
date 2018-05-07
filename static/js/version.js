@@ -192,3 +192,10 @@ function getDegreeDistribute(CytoscapeObject) {
   }
   return degreeDis;
 }
+
+function setUpFrameUrl(nodeId)
+{
+  var expImgUrl = "http://genecardsdata.blob.core.windows.net/rna-expression-v470/gene_expression_" + nodeId + ".png"
+  $('#expImg').attr("src", expImgUrl);
+  $('#curgene').text(nodeId);
+}
