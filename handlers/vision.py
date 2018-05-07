@@ -53,7 +53,7 @@ class VisionHandler(tornado.web.RequestHandler):
 
         edge2list = list(set(edge_types))
         edge_info = {
-            'interacts-with': '#8840A7',
+            'interacts-with': '#5e3e41',
             'controls-phosphorylation-of': '#17ccd3',
             'controls-state-change-of': '#1450b9'}
 

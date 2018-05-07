@@ -27,6 +27,45 @@
     <link rel="stylesheet" type="text/css" href="{{ static_url('css/loading.css') }}"> 
     <link href="{{ static_url('css/iziModal.min.css')}}" rel="stylesheet" >
     <link href="{{ static_url('css/spinner.css')}}" rel="stylesheet">
+    <style type="text/css">
+          #custom-search-form {
+        margin:0;
+        margin-top: 5px;
+        padding: 0;
+    }
+ 
+    #custom-search-form .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-form button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+    </style>
     <script src="{{ static_url('js/plotly-latest.min.js')}}"></script>
     <script src="{{ static_url('js/jquery.js')}}"></script>
     <script src="{{ static_url('js/bootstrap.min.js')}}"></script>
@@ -88,7 +127,19 @@
     <h2 id="net" style="display: none"> {{ hello }}</h2>
     <div class="container-fluid" style="padding: 0px 50px 0px 50px">
       <div class="span3 hero-unit bs-example bs-example-tabs" style="margin-left: 0px " id="geneboard">
-            <ul id="myTab" class="nav nav-tabs">
+        <div class="container">
+          <div class="row">
+                <div class="span12">
+                    <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                        <div class="input-append span12">
+                            <input type="text" class="search-query" placeholder="Search">
+                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+          </div>
+        </div>
+          <ul id="myTab" class="nav nav-tabs">
               <li class="active">
                 <a href="#home" data-toggle="tab" id="Nodetab">
                    Node
@@ -467,7 +518,7 @@
               </div><!--btn-group-->
             </div>                    
             </div><!--.btn-toolbar-->
-            <div id="cy" style="height: 450px; overflow: auto;overflow-x:auto"><p></p></div> 
+            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
           </div><!--.span8-->
       <!--<div class="span8">100</div>-->
     </div>
@@ -681,7 +732,7 @@
         <h3 class="gene-title">Edge Legends</h3>
         <img src="{{ static_url('img/legend-edge.png') }}">
       </div>
-
+          
       <hr> 
       <footer>
         <p>© Harbin Institute of Technology 2017</p>
@@ -760,8 +811,6 @@
                 type:"GET",//get方法
                 data:{keyword: nodeId},//要往服务器传递的数据
                 beforeSend: function () {
-                    $('#help-text-detail-pathway').hide();
-                    $('#help-text-detail-disease').hide();
                     $('#drugList').children().filter('li').remove();
                     $("#diseaseTable  tr:not(:first)").html(""); 
                     $("#diseaseTable").hide();
@@ -769,6 +818,9 @@
                     $("#spinnerDetail").show();
                     $('#spinnerPathway').show();
                     $('#spinnerDisease').show();
+                    $('#help-text-detail-disease').hide();
+                    $('#help-text-detail-pathway').hide();
+                    
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
@@ -854,7 +906,7 @@
             {
               selector:  "edge[type = 'interacts-with']",
               style: {
-                'line-color': '#8840A7'
+                'line-color': '#5e3e41'
               }
             },
            

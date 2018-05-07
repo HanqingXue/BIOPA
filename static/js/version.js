@@ -32,7 +32,6 @@ function setUpPathwayTable(superPathway, nodeId) {
 function setUpDiseaseTable(diseases, nodeId) {
   var diseasesCount = 0;
   for(var i in diseases) {
-    console.log(i);
     if(i == 'null')
       continue;
 
@@ -58,6 +57,7 @@ function setUpDrugTable(drugs, nodeId) {
   }
    $('#help-text-detail-drug').text(count +  " search results for " + nodeId);
    $('#help-text-detail-drug').show();
+   
    return true;
 }
 
