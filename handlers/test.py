@@ -27,7 +27,6 @@ class TestHandler(tornado.web.RequestHandler):
 		keyword =self.get_argument("keyword", None)
 		geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
 		drugs = self.entity_mapper.get_selected_relate_drug(geneinfo['entrez'])
-		drug_ids = self.entity_mapper.get_selected_relate_drug_id(geneinfo['entrez'])
-		diseases = self.entity_mapper.get_seleted_relate_all_diseases(drug_ids.keys())
+		diseases = self.entity_mapper.get_seleted_relate_omim_hgmd(keyword)
 		data = {'status':0,'message':'successfully','data':[drugs, diseases]}
 		self.finish(json.dumps(data))

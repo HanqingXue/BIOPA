@@ -28,18 +28,19 @@ function setUpPathwayTable(superPathway) {
 function setUpDiseaseTable(diseases, nodeId) {
   var diseasesCount = 0;
   for(var i in diseases) {
+    console.log(i);
+    if(i == 'null')
+      continue;
+
     $('#diseaseTable').append(
       "<tr>" + 
-        "<td class='gene-abstrct-info'>" + diseases[i]['name'] + "</td>" +
-        "<td class='gene-abstrct-info'>" + diseases[i]['drug'] + "</td>" +
-        "<th><span class='attribution'><span class='attributionHeader'></span>" + diseases[i]['source'] + "</span></th>" +
+        "<th><span class='attribution'><span class='attributionHeader'></span>" + diseases[i] + "</span></th>" +
+        "<td class='gene-abstrct-info'>" + i + "</td>" +
       "</tr>"
     );
-    diseasesCount = parseInt(i);
-  }
-  if(diseasesCount > 0) {
     diseasesCount += 1;
   }
+
   $('#help-text-detail-disease').text(diseasesCount +  " search results for " + nodeId);
   return diseasesCount;
 }

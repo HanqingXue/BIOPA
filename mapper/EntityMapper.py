@@ -3,7 +3,7 @@
 
 import logging
 from Entity import *
-from methods.WebParseHelper import *
+#from methods.WebParseHelper import *
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
@@ -157,4 +157,30 @@ class EntityMapper(object):
 		except Exception as ex:
 			logging.error('Error occurred %s in querying pathway' % ex)
 		
+		return result_proxy
+
+	def get_seleted_relate_omim_hgmd(self, gene_symbol):
+		result_hgmd = self.db_session.execute( 'SELECT dbSNP_ID, disease_name FROM variation_hgmd where gene_symbol = :gene_symbol;', {'gene_symbol': gene_symbol}).fetchall()
+		result_omim = self.db_session.execute( 'SELECT omim_id, Phenotype_Combind FROM variation_omim WHERE gene_symbol = :gene_symbol;', {'gene_symbol': gene_symbol}).fetchall()
+		key = 0
+		result_proxy = {}
+
+		for row in result_hgmd:
+			if row[1] in result_proxy.keys():
+				result_proxy[row[1]] = 'dbSNP'
+			else:
+				result_proxy[row[1]] = {}
+				result_proxy[row[1]] = 'dbSNP' 
+
+
+		for row in result_omim:
+			if row[1] == 'null':
+				continue
+
+			if row[1] in result_proxy.keys():
+				result_proxy[row[1]] = 'OMIM'
+			else:
+				result_proxy[row[1]] = {}
+				result_proxy[row[1]] = 'OMIM'
+
 		return result_proxy
