@@ -17,16 +17,9 @@ from mapper.EntityMapper import EntityMapper
 class VisionHandler(tornado.web.RequestHandler):
     def initialize(self, db_session):
         self.entity_mapper = EntityMapper(db_session)
-
-    def post(self):
-        noun1 = self.get_argument('noun1')
-        '''
-        db = DataBase()
-        print db.get_database('BioPA').name
-
-        result = search_db(db, 'BioPA', 'Entity1', noun1)
-        '''
-
+    
+    @tornado.web.asynchronous
+    def get(self):
         result = simulation()
         print result 
         versionData = []
@@ -55,13 +48,15 @@ class VisionHandler(tornado.web.RequestHandler):
         edge_info = {
             'interacts-with': '#5e3e41',
             'controls-phosphorylation-of': '#17ccd3',
-            'controls-state-change-of': '#1450b9'}
+            'controls-state-change-of': '#1450b9', 
+            'in-complex-with': '#ffffff', 
+            'controls-expression-of': '#fffff'}
 
         #print versionData
         self.render('home.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
     
-    @tornado.web.asynchronous
-    def get(self):
+    
+    def post(self):
         keyword =self.get_argument("keyword", None)
         geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
         super_pathway = self.entity_mapper.get_seleted_relate_superpathway(keyword)

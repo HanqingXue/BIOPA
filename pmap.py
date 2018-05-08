@@ -12,7 +12,8 @@ from handlers.vision import VisionHandler
 from handlers.data import DataHandler
 from handlers.search import SearchHandler
 from handlers.contact import ContactHandler
-from handlers.test import TestHandler
+from handlers.test import DrugHandler
+from handlers.test import GenePathwayHandler
 from handlers.pathway import PathwayHandler
 from handlers.plot import PlotHandler
 import tornado.ioloop
@@ -39,13 +40,13 @@ class Application(tornado.web.Application):
 			db_session: The connection of MySQL
 		"""
 		handlers = [
-			(r'/', IndexHandler),
 			(r'/about', AboutHandler),
-			(r'/vesion', VisionHandler, dict(db_session=db_session)),
+			(r'/', VisionHandler, dict(db_session=db_session)),
 			(r'/data', DataHandler),
 			(r'/contact', ContactHandler),
 			(r'/search', SearchHandler),
-			(r'/test', TestHandler, dict(db_session=db_session)),
+			(r'/test', DrugHandler, dict(db_session=db_session)),
+			(r'/gene', GenePathwayHandler, dict(db_session=db_session)),
 			(r'/pathway', PathwayHandler),
 			(r'/pathwayplot', PlotHandler),
 		] 
