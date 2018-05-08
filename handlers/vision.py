@@ -21,7 +21,6 @@ class VisionHandler(tornado.web.RequestHandler):
     @tornado.web.asynchronous
     def get(self):
         result = simulation()
-        print result 
         versionData = []
 
         nodes = []

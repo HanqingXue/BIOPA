@@ -14,6 +14,7 @@ from handlers.search import SearchHandler
 from handlers.contact import ContactHandler
 from handlers.test import DrugHandler
 from handlers.test import GenePathwayHandler
+from handlers.test import SearchNetHandler
 from handlers.pathway import PathwayHandler
 from handlers.plot import PlotHandler
 import tornado.ioloop
@@ -47,6 +48,7 @@ class Application(tornado.web.Application):
 			(r'/search', SearchHandler),
 			(r'/test', DrugHandler, dict(db_session=db_session)),
 			(r'/gene', GenePathwayHandler, dict(db_session=db_session)),
+			(r'/searchnet', SearchNetHandler, dict(db_session=db_session)),
 			(r'/pathway', PathwayHandler),
 			(r'/pathwayplot', PlotHandler),
 		] 

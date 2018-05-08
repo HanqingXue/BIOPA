@@ -129,12 +129,12 @@
       <div class="span3 hero-unit bs-example bs-example-tabs" style="margin-left: 0px " id="geneboard">
           <div class="row" style="margin: 0 0 10px 0;">
                 <div>
-                    <form id="custom-search-form" class="form-search form-horizontal" style="width: 100%">
+                    <div id="custom-search-form" class="form-search form-horizontal" style="width: 100%">
                         <div class="input-append" style=" width: 100%">
-                            <input type="text" class="search-query" placeholder="Search" style="width: 98%;">
-                            <button type="submit" class="btn" ><i class="icon-search"></i></button>
+                            <input type="text" class="search-query" placeholder="Search" style="width: 98%;" id="searchInput">
+                            <button class="btn" id="queryBtn"><i class="icon-search"></i></button>
                         </div>
-                    </form>
+                    </div>
                 </div>
           </div>
 
@@ -767,7 +767,7 @@
                       $('#Aliases').show();
                       $('#synonyms').text(obj.data[0]['synonyms']);
                     }
-
+                    $('#gene-title').text(nodeId);
                     $('#help-text-detail').text("Gene Detail Information of " + nodeId);
                     $('#UniProtIDetail').text(nodeId);
                     $('#hgnc').text(obj.data[0]['HGNC']);
@@ -826,7 +826,6 @@
                     var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
                     var drugs = obj.data[0];
                     var diseases = obj.data[1];
-                    console.log(diseases);
                     setUpDiseaseTable(diseases, nodeId);
                     setUpDrugTable(drugs, nodeId);
                 },
@@ -838,6 +837,35 @@
                   $("#diseaseTable").show();
                   $('#help-text-detail-disease').show();
                   $('#help-text-detail-pathway').show();
+                },
+
+                error:function(){//获取失败
+                    console.log("failed");
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function loadNet(nodeId){
+            $.ajax({
+                url:"/searchnet",//调用的是这个url对应的那个Handler
+                type:"GET",//get方法
+                data:{keyword: nodeId},//要往服务器传递的数据
+                beforeSend: function () {
+                    alert('before');
+                  },
+                success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
+                    alert('Success');
+                    //var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
+                   /* var drugs = obj.data[0];
+                    var diseases = obj.data[1];
+                    console.log(diseases);
+                    setUpDiseaseTable(diseases, nodeId);
+                    setUpDrugTable(drugs, nodeId);*/
+                    console.log(arg);
+                },
+
+                complete: function () {
                 },
 
                 error:function(){//获取失败
@@ -1714,4 +1742,13 @@
         var layout = cy.makeLayout({name : 'cose'});
         layout.run();
     }
+  </script>
+  <script type="text/javascript">
+    $('#queryBtn').click(function() {
+      $('#help-text').hide();
+      $('#arrow').hide();
+      var query = $('#searchInput').val();
+      setUpNodeTable(query);
+      loadNet(query);
+    });
   </script>
