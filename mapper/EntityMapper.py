@@ -3,7 +3,7 @@
 
 import logging
 from Entity import *
-from methods.WebParseHelper import *
+#from methods.WebParseHelper import *
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
@@ -183,3 +183,44 @@ class EntityMapper(object):
 				result_proxy[row[1]] = 'OMIM'
 
 		return result_proxy
+
+	def get_net(self, gene_symbol):
+		result_proxy = self.db_session.execute("SELECT * from pathwaycommons9allhgnc WHERE (A2M = :gene_symbol or A1BG= :gene_symbol) and `controls-expression-of` != :edge", {'gene_symbol': gene_symbol, 'edge' : "chemical-affects"}).fetchall()
+		version_data = []
+
+		if len(result_proxy) == 0:
+			return version_data
+
+		for row in result_proxy:
+			pathway = {}
+			pathway['Entity1'] = row[1]
+			pathway['Entity2'] = row[3]
+			pathway['Interaction'] = row[2]
+			pathway['PathID'] = 'ipa'
+			pathway['PathName'] = 'ipa'
+			pathway['ManuscriptID'] = '21900206;|imex:IM-16799'
+			version_data.append(pathway)
+
+		return version_data
+def test_handle():
+	user_name = "lijie"
+	passwd = "lijie_kb5"
+	host = "111.198.139.95"
+	port = "3306"
+	database = "medicine_database"
+	engine = create_engine('mysql+mysqlconnector://{0}:{1}@{2}:{3}/{4}'.format(
+		user_name, passwd, host, port, database))
+
+	db_session  = scoped_session(sessionmaker(bind=engine,
+                        autocommit=True, autoflush=True, expire_on_commit=False))
+
+	gene_info = {}
+
+	try:
+		gene = EntityMapper(db_session)
+		gene.get_net('A2M')
+	except Exception as ex:
+		logging.error('Error occurred: %s' % ex)
+
+if __name__ == '__main__':
+	test_handle()

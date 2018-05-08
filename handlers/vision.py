@@ -28,7 +28,7 @@ class VisionHandler(tornado.web.RequestHandler):
         '''
 
         result = simulation()
-
+        print result 
         versionData = []
 
         nodes = []

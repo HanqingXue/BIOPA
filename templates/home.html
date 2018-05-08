@@ -127,18 +127,17 @@
     <h2 id="net" style="display: none"> {{ hello }}</h2>
     <div class="container-fluid" style="padding: 0px 50px 0px 50px">
       <div class="span3 hero-unit bs-example bs-example-tabs" style="margin-left: 0px " id="geneboard">
-        <div class="container">
-          <div class="row">
-                <div class="span12">
-                    <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                        <div class="input-append span12">
-                            <input type="text" class="search-query" placeholder="Search">
-                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+          <div class="row" style="margin: 0 0 10px 0;">
+                <div>
+                    <form id="custom-search-form" class="form-search form-horizontal" style="width: 100%">
+                        <div class="input-append" style=" width: 100%">
+                            <input type="text" class="search-query" placeholder="Search" style="width: 98%;">
+                            <button type="submit" class="btn" ><i class="icon-search"></i></button>
                         </div>
                     </form>
                 </div>
           </div>
-        </div>
+
           <ul id="myTab" class="nav nav-tabs">
               <li class="active">
                 <a href="#home" data-toggle="tab" id="Nodetab">
@@ -514,6 +513,7 @@
                   <li><a id="Cose"         value="cose">Cose</a></li>
                   <li><a id="Preset"       value="spread">Preset</a></li>
                   <li><a id="Dagre"        value="dagre">Dagre</a>
+                   <li><a id="Arbor"        value="arbor">Arbor</a>
                 </ul>
               </div><!--btn-group-->
             </div>                    
@@ -1706,5 +1706,45 @@
       var totalDegree = nodes.totalDegree();
       var inoutDegree = getTotalInOutDegree(nodes);
       setUpSummary(nodes.length, edges.length, totalDegree, inoutDegree['totalInDegree'], inoutDegree['totalOutDegree']);
+    }
+  </script>
+  <script type="text/javascript">
+    function updateCy() {
+       /**
+
+      ajax data from back edn
+       **/
+
+
+        var newEleJsons = {
+          nodes: [
+            { data: { id: 'a' }, position: {'x': 0, 'y': 0} },
+            { data: { id: 'b' }, position: {'x': 0, 'y': 100}},
+            { data: { id: 'c' },  position: {'x': 0, 'y': 200}},
+            { data: { id: 'd' }, position: {'x': 0, 'y': 300}},
+            { data: { id: 'e' }, position: {'x': 0, 'y': 400} },
+            { data: { id: 'f' },  position: {'x': 0, 'y': 500}},
+            { data: { id: 'g' }, position: {'x': 0, 'y': 600}},
+            { data: { id: 'h' },  position: {'x': 0, 'y': 700}},
+            { data: { id: 'i' },  position: {'x': 0, 'y': 800}},
+            { data: { id: 'j' },  position: {'x': 0, 'y': 900}}
+          ],
+
+          edges: [
+            { data: { id: 'ae', weight: 1, source: 'a', target: 'e' } },
+            { data: { id: 'ab', weight: 3, source: 'a', target: 'b' } },
+            { data: { id: 'ac', weight: 4, source: 'a', target: 'd' } },
+            { data: { id: 'ad', weight: 5, source: 'a', target: 'c' } },
+            { data: { id: 'ae', weight: 1, source: 'a', target: 'e' } },
+            { data: { id: 'af', weight: 3, source: 'a', target: 'f' } },
+            { data: { id: 'ag', weight: 4, source: 'a', target: 'g' } },
+            { data: { id: 'ah', weight: 5, source: 'a', target: 'h' } },
+            { data: { id: 'ai', weight: 4, source: 'a', target: 'i' } },
+            { data: { id: 'aj', weight: 5, source: 'a', target: 'j' } }
+          ]
+        } 
+        cy.json({ elements: newEleJsons });
+        var layout = cy.makeLayout({name : 'cose'});
+        layout.run();
     }
   </script>
