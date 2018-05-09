@@ -16,8 +16,8 @@ def set_node(node_id):
     node['removed'] = False
     node['grabbed'] = False
     node['position'] = {}
-    node['position']['x'] = random.randint(0, 800)
-    node['position']['y'] = random.randint(0, 800)
+    node['position']['x'] = random.randint(0, 400)
+    node['position']['y'] = random.randint(0, 400)
 
     return node
 
@@ -37,8 +37,8 @@ def set_comp_node(node_id, parent):
     node['removed'] = False
     node['grabbed'] = False
     node['position'] = {}
-    node['position']['x'] = random.randint(-1000, 1000)
-    node['position']['y'] = random.randint(-1000, 1000)
+    node['position']['x'] = random.randint(0, 400)
+    node['position']['y'] = random.randint(0, 400)
     node['parent'] = parent
 
     return node

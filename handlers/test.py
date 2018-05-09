@@ -56,16 +56,8 @@ class SearchNetHandler(tornado.web.RequestHandler):
 		Gete network here
 
 		'''
-
 		keyword =self.get_argument("keyword", None)
-		geneinfo = self.entity_mapper.get_selected_gene_ids(keyword)
-		super_pathway = self.entity_mapper.get_seleted_relate_superpathway(keyword)
-		summary = self.entity_mapper.get_selected_gene_summary(geneinfo['entrez'])
-		ensembl_id = self.entity_mapper.get_selected_gene_ensembl_id(geneinfo['entrez'])
-		pubmed_id = self.entity_mapper.get_seleted_relate_pubmedids(geneinfo['entrez'])
-
-
-		result = simulation()
+		result = self.entity_mapper.get_net(keyword)
 		versionData = []
 		nodes = []
 		edge_types = []
@@ -94,5 +86,30 @@ class SearchNetHandler(tornado.web.RequestHandler):
 			'in-complex-with': '#ffffff', 
 			'controls-expression-of': '#fffff'}
 
-		data = {'status':0,'message':'successfully','data':[versionData, edge_info]}
+
+		testData = {}
+		testData["nodes"] = []
+		testData["edges"] = []
+
+		for item in result: 
+			source = {}
+			source["data"] = {}
+			source["data"]["id"] = item['Entity1']
+
+			target = {}
+			target["data"] = {}
+			target["data"]["id"] = item['Entity2']
+
+			testData["nodes"].append(source)
+			testData["nodes"].append(target)
+
+			edge = {}
+			edge["data"] = {}
+			edge["data"]["id"] = item['Entity1'] + "2" + item['Entity2']
+			edge["data"]["source"] =  item['Entity1']
+			edge["data"]["target"] = item['Entity2']
+			edge["data"]["type"] = item['Interaction']
+			testData["edges"].append(edge)
+
+		data = {'status':0,'message':'successfully','data':[json.dumps(testData)]}
 		self.finish(json.dumps(data))

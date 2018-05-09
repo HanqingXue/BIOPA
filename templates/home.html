@@ -852,7 +852,6 @@
                 type:"GET",//get方法
                 data:{keyword: nodeId},//要往服务器传递的数据
                 beforeSend: function () {
-                    alert('before');
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                     alert('Success');
@@ -862,7 +861,14 @@
                     console.log(diseases);
                     setUpDiseaseTable(diseases, nodeId);
                     setUpDrugTable(drugs, nodeId);*/
-                    console.log(arg);
+                    var obj = jQuery.parseJSON(arg);
+                    var newNet = JSON.stringify(obj.data[0])
+
+                    console.log(typeof(obj.data[0]));
+                    console.log(obj.data[0]);
+
+
+                    updateCy(JSON.parse(obj.data[0]));
                 },
 
                 complete: function () {
@@ -1737,10 +1743,31 @@
     }
   </script>
   <script type="text/javascript">
-    function updateCy() {
+    function updateCy(newEleJsons) {
+      var testNet = {
+        nodes: [
+          { data: { id: 'j', name: 'Jerry' } },
+          { data: { id: 'e', name: 'Elaine' } },
+          { data: { id: 'k', name: 'Kramer' } },
+          { data: { id: 'g', name: 'George' } }
+        ],
+        edges: [
+          { data: { source: 'j', target: 'e' } },
+          { data: { source: 'j', target: 'k' } },
+          { data: { source: 'j', target: 'g' } },
+          { data: { source: 'e', target: 'j' } },
+          { data: { source: 'e', target: 'k' } },
+          { data: { source: 'k', target: 'j' } },
+          { data: { source: 'k', target: 'e' } },
+          { data: { source: 'k', target: 'g' } },
+          { data: { source: 'g', target: 'j' } }
+        ]
+      }     
+      console.log(typeof(testNet));
+      console.log(testNet);
+      console.log(newEleJsons);
         cy.json({ elements: newEleJsons });
-        var layout = cy.makeLayout({name : 'cose'});
-        layout.run();
+        cy.forceRender();
     }
   </script>
   <script type="text/javascript">
@@ -1748,7 +1775,13 @@
       $('#help-text').hide();
       $('#arrow').hide();
       var query = $('#searchInput').val();
-      setUpNodeTable(query);
       loadNet(query);
+      setUpNodeTable(query);
     });
+  </script>
+  <script type="text/javascript">
+    function coseLayout() {
+      var layout = cy.makeLayout({name : 'arbor'});
+      layout.run();
+    }
   </script>
