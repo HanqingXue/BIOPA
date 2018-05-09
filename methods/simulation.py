@@ -2,8 +2,8 @@
 import csv
 import random 
 
-def simulation():
-	with open('network_bak.csv') as net:
+def simulation(name='network_bak.csv'):
+	with open(name) as net:
 		reader = csv.DictReader(net)
 		version_data = []
 
@@ -28,4 +28,4 @@ def simulation():
 			pathway['ManuscriptID'] = '21900206;21900206|imex:IM-16799'
 			version_data.append(pathway)
 
-	return version_data	
+	return version_data

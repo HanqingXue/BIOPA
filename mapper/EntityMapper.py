@@ -185,7 +185,7 @@ class EntityMapper(object):
 		return result_proxy
 
 	def get_net(self, gene_symbol):
-		result_proxy = self.db_session.execute("SELECT * from pathwaycommons9allhgnc WHERE (A2M = :gene_symbol or A1BG= :gene_symbol) and `controls-expression-of` != :edge", {'gene_symbol': gene_symbol, 'edge' : "chemical-affects"}).fetchall()
+		result_proxy = self.db_session.execute("SELECT * from pathwaycommons9allhgnc WHERE (PARTICIPANT_A = :gene_symbol or PARTICIPANT_B= :gene_symbol) and `INTERACTION_TYPE` != :edge", {'gene_symbol': gene_symbol, 'edge' : "chemical-affects"}).fetchall()
 		version_data = []
 
 		if len(result_proxy) == 0:
@@ -193,12 +193,12 @@ class EntityMapper(object):
 
 		for row in result_proxy:
 			pathway = {}
-			pathway['Entity1'] = row[1]
-			pathway['Entity2'] = row[3]
-			pathway['Interaction'] = row[2]
+			pathway['Entity1'] = row[0]
+			pathway['Entity2'] = row[2]
+			pathway['Interaction'] = row[1]
 			pathway['PathID'] = 'ipa'
-			pathway['PathName'] = 'ipa'
-			pathway['ManuscriptID'] = '21900206;|imex:IM-16799'
+			pathway['PathName'] = row[5]
+			pathway['ManuscriptID'] = row[4]
 			version_data.append(pathway)
 
 		return version_data

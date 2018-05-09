@@ -735,9 +735,21 @@
       </div>
 
       <div style="display: none;" id="hidden-content3" class="sbgn-frame">
-        <h3 class="gene-title">Query Error</h3>
+        <h3 class="gene-title">Query Network Error</h3>
         <p>Please input valid keyword.</p>
       </div>
+
+    <div id="trueModal" class="p-5 fancybox-content" style="display: none; max-width: 600px;">
+        <h2>
+            Error
+        </h2>
+        <p>
+            Please input valid keyword!.
+        </p>
+        <p>
+            <button data-fancybox-close="" class="btn btn-primary">Close me</button>
+        </p>
+    </div>
       <hr> 
       <footer>
         <p>© Harbin Institute of Technology 2017</p>
@@ -805,7 +817,6 @@
 
                 error:function(){//获取失败
                     console.log("failed");
-                    $("#ErrorMsg").trigger('click');
                 }
             });
         }
@@ -847,7 +858,6 @@
 
                 error:function(){//获取失败
                     console.log("failed");
-                    $("#ErrorMsg").trigger('click');
                 }
             });
         }
@@ -861,21 +871,10 @@
                 beforeSend: function () {
                   },
                 success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
-                    alert('Success');
-                    //var obj = jQuery.parseJSON(arg);//获取的数据一般为json格式，用这个方法来解析数据
-                   /* var drugs = obj.data[0];
-                    var diseases = obj.data[1];
-                    console.log(diseases);
-                    setUpDiseaseTable(diseases, nodeId);
-                    setUpDrugTable(drugs, nodeId);*/
                     var obj = jQuery.parseJSON(arg);
                     var newNet = JSON.stringify(obj.data[0])
-
-                    console.log(typeof(obj.data[0]));
-                    console.log(obj.data[0]);
-
-
                     updateCy(JSON.parse(obj.data[0]));
+                    setUpSummaryInit(cy);
                 },
 
                 complete: function () {
@@ -1045,7 +1044,7 @@
         }//end-else
       });//end-cy.on
 
-      cy.on('mouseover', 'node', function(event) {
+     /* cy.on('mouseover', 'node', function(event) {
         var node = event.cyTarget;
         nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
 
@@ -1068,9 +1067,10 @@
               height: 8
             }
           }
-      }, event); });
+      }, event); });*/
 
       cy.on('boxselect', function(event) {
+        setUpNetworkStatistics(cy);
       });
     })
     </script>
@@ -1752,30 +1752,10 @@
   </script>
   <script type="text/javascript">
     function updateCy(newEleJsons) {
-      var testNet = {
-        nodes: [
-          { data: { id: 'j', name: 'Jerry' } },
-          { data: { id: 'e', name: 'Elaine' } },
-          { data: { id: 'k', name: 'Kramer' } },
-          { data: { id: 'g', name: 'George' } }
-        ],
-        edges: [
-          { data: { source: 'j', target: 'e' } },
-          { data: { source: 'j', target: 'k' } },
-          { data: { source: 'j', target: 'g' } },
-          { data: { source: 'e', target: 'j' } },
-          { data: { source: 'e', target: 'k' } },
-          { data: { source: 'k', target: 'j' } },
-          { data: { source: 'k', target: 'e' } },
-          { data: { source: 'k', target: 'g' } },
-          { data: { source: 'g', target: 'j' } }
-        ]
-      }     
-      console.log(typeof(testNet));
-      console.log(testNet);
-      console.log(newEleJsons);
         cy.json({ elements: newEleJsons });
         cy.forceRender();
+        coseLayout('arbor');
+        //coseLayout('cose');
     }
   </script>
   <script type="text/javascript">
@@ -1783,13 +1763,13 @@
       $('#help-text').hide();
       $('#arrow').hide();
       var query = $('#searchInput').val();
-      loadNet(query);
       setUpNodeTable(query);
+      loadNet(query);
     });
   </script>
   <script type="text/javascript">
-    function coseLayout() {
-      var layout = cy.makeLayout({name : 'arbor'});
+    function coseLayout(layoutName) {
+      var layout = cy.makeLayout({name : layoutName});
       layout.run();
     }
   </script>

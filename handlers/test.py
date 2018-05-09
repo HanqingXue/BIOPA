@@ -7,6 +7,7 @@ sys.path.append('../')
 import tornado.web
 import tornado.log
 import json
+import random
 '''
 Change the workspace to root path.
 '''
@@ -58,35 +59,7 @@ class SearchNetHandler(tornado.web.RequestHandler):
 		'''
 		keyword =self.get_argument("keyword", None)
 		result = self.entity_mapper.get_net(keyword)
-		versionData = []
-		nodes = []
-		edge_types = []
-		for item in result:
-			nodes.append(check_node_Id(item['Entity1']))
-			nodes.append(check_node_Id(item['Entity2']))
-			edge_types.append(item['Interaction'])
-			versionData.append(
-				set_edge_test(check_node_Id(item['Entity1']), 
-				check_node_Id(item['Entity2']), 
-				item['Interaction'], 
-				item['PathID'], 
-				item['PathName'], 
-				item['ManuscriptID']))
-
-		nodes = set(nodes)
-		nodes = list(nodes)
-		for node in nodes:
-			versionData.append(set_node(node))
-
-		edge2list = list(set(edge_types))
-		edge_info = {
-			'interacts-with': '#5e3e41',
-			'controls-phosphorylation-of': '#17ccd3',
-			'controls-state-change-of': '#1450b9', 
-			'in-complex-with': '#ffffff', 
-			'controls-expression-of': '#fffff'}
-
-
+		#result = simulation('toy.csv')
 		testData = {}
 		testData["nodes"] = []
 		testData["edges"] = []
@@ -95,7 +68,9 @@ class SearchNetHandler(tornado.web.RequestHandler):
 			source = {}
 			source["data"] = {}
 			source["data"]["id"] = item['Entity1']
-
+			source["data"]["position"] = {}
+			source["data"]["position"]['x'] = random.randint(0, 800)
+			source["data"]["position"]['y'] = random.randint(0, 800)
 			target = {}
 			target["data"] = {}
 			target["data"]["id"] = item['Entity2']
