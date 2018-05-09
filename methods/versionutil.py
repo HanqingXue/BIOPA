@@ -85,6 +85,7 @@ def set_edge_test(source, target, edge_type, path_id, path_name, manscripts):
     edge['data']['PathID'] = path_id
     edge['data']['PathName'] = path_name
     edge['data']['Manuscripts'] = manscripts
+    edge['data']['id'] = source + 'to' + target
 
     return edge
 

@@ -195,10 +195,16 @@ class EntityMapper(object):
 			pathway = {}
 			pathway['Entity1'] = row[0]
 			pathway['Entity2'] = row[2]
-			pathway['Interaction'] = row[1]
+			
+			if 'Reference' in row[1] or row[1] == ' ':
+				pathway['Interaction'] = 'other'
+			else:
+				pathway['Interaction'] = row[1]
+
 			pathway['PathID'] = 'ipa'
 			pathway['PathName'] = row[5]
-			pathway['ManuscriptID'] = row[4]
+			pathway['Manuscripts'] = row[4]
+			pathway['resource'] = row[3]
 			version_data.append(pathway)
 
 		return version_data

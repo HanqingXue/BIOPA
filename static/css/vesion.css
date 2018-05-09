@@ -48,14 +48,13 @@ span > a {
     border-radius: 0;
     -moz-border-radius: 0;
     font-weight: normal;
-    margin-left: 10px;
 }
 
 .controls-state-change-of {
     background-color: #1450b9 !important;
 }
 
-.in-complex-with {
+.interacts-with {
     background-color: #5e3e41 !important;
 }
 
@@ -71,12 +70,39 @@ span > a {
     background-color: #17ccd3 !important;
 }
 
-.catalysis-precedes {
+.controls-transport-of-chemical {
     background-color: #9B59B6 !important;
 }
 
 .controls-transport-of {
     background-color: #d3b777 !important;
+}
+.in-complex-with {
+    background-color: #4E8CA8 !important;
+}
+.consumption-controlled-by {
+  background-color: #663366 !important;
+}
+.used-to-produce {
+  background-color: #FF0066 !important;
+}
+.reacts-with {
+  background-color: #333366 !important;
+}
+.controls-production-of {
+  background:   #006400 !important
+}
+
+.controls-transport-of {
+  background:   #FF8C00 !important
+}
+
+.catalysis-precedes {
+  background-color: #C8AA64 !important;
+}
+
+.other {
+  background-color: #666666  !important;
 }
 
 .itx-removed {

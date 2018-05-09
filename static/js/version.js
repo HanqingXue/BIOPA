@@ -1,10 +1,10 @@
-function setUpPebMedids(pubmedIds) {
+function setUpPebMedids(pubmedIds, container) {
   var ids = pubmedIds.split(';')
   if(ids[0] == "")
     return true;
   
   for( var index in ids) {
-    $('#Pubmed').append("<span class='attribution'><span class='attributionHeader'></span>Pubmed:" + ids[index] + "</span>");
+    $('#' + container).append("<span class='attribution'><span class='attributionHeader'></span>Pubmed:" + ids[index] + "</span>");
   }
   return true;
 }
