@@ -116,6 +116,7 @@
                     </a>
                   </li>
                   <li><a data-fancybox href="javascript:void(0)" data-src="#hidden-content2" href="javascript:;">Edge legends</a></li>
+                  <li><a data-fancybox href="javascript:void(0)" data-src="#hidden-content3" href="javascript:;" id="ErrorMsg" style="display: none">error</a></li>
                 </ul>
               </li>
             </ul>
@@ -732,7 +733,11 @@
         <h3 class="gene-title">Edge Legends</h3>
         <img src="{{ static_url('img/legend-edge.png') }}">
       </div>
-          
+
+      <div style="display: none;" id="hidden-content3" class="sbgn-frame">
+        <h3 class="gene-title">Query Error</h3>
+        <p>Please input valid keyword.</p>
+      </div>
       <hr> 
       <footer>
         <p>© Harbin Institute of Technology 2017</p>
@@ -800,6 +805,7 @@
 
                 error:function(){//获取失败
                     console.log("failed");
+                    $("#ErrorMsg").trigger('click');
                 }
             });
         }
@@ -841,6 +847,7 @@
 
                 error:function(){//获取失败
                     console.log("failed");
+                    $("#ErrorMsg").trigger('click');
                 }
             });
         }
@@ -876,6 +883,7 @@
 
                 error:function(){//获取失败
                     console.log("failed");
+                    $("#ErrorMsg").trigger('click');
                 }
             });
         }
@@ -1037,7 +1045,7 @@
         }//end-else
       });//end-cy.on
 
-      /**cy.on('mouseover', 'node', function(event) {
+      cy.on('mouseover', 'node', function(event) {
         var node = event.cyTarget;
         nodeIndex = '<p>%s</p>HGNC:7<br>OMIM:103950<br>EntrezID:2'.format(node.id());
 
@@ -1060,7 +1068,7 @@
               height: 8
             }
           }
-      }, event); });**/
+      }, event); });
 
       cy.on('boxselect', function(event) {
       });
