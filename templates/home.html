@@ -93,7 +93,7 @@
                 <div>
                     <div id="custom-search-form" class="form-search form-horizontal" style="width: 100%">
                         <div class="input-append" style=" width: 100%">
-                            <input type="text" class="search-query" placeholder="Search" style="width: 98%;" id="searchInput">
+                            <input type="text" class="search-query" placeholder="Gene symbols(e.g. 'A1BG', 'A2M')" style="width: 98%;" id="searchInput">
                             <button class="btn" id="queryBtn"><i class="icon-search"></i></button>
                         </div>
                     </div>
@@ -168,6 +168,13 @@
               </div><!--first home-->
 
               <div class="tab-pane fade" id="ios" style="overflow: hidden; border-top: 0px">
+                <div class="spinner" style="display: none" id="spinnerStatistics">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+                </div>
                 <div id="statistics" class="table  table-striped table-responsive table-condensed table-hover">
                   <table style="border: 0">
                     <tbody>
@@ -333,7 +340,14 @@
                 </div><!--more or less-->
               </div><!--ios-->
               <div class="tab-pane fade" id="edge-detail">
-                <div id="edge-type" class="table table-striped table-responsive table-condensed table-hover">
+                <div class="spinner" style="display: none" id="spinnerEdgeTable">
+                  <div class="rect1"></div>
+                  <div class="rect2"></div>
+                  <div class="rect3"></div>
+                  <div class="rect4"></div>
+                  <div class="rect5"></div>
+                </div>
+                <div id="edge-type" class="table table-striped table-responsive table-condensed table-hover" style="display: none">
                   <table style="border: 0" id="interactTable">
                     <tbody>
                       <tr>
@@ -344,6 +358,10 @@
                         <td id="PathwayName" class="gene-abstrct-info"></td>
                       </tr>
                       <tr>
+                        <th class="gene-attr-info">Source</th>
+                        <td id="PathwaySource" class="gene-abstrct-info">BioGrid</td>
+                      </tr>
+                      <tr>
                         <th class="span4 gene-attr-info">Interactions</th>
                         <td id="interactions" class="span8 gene-abstrct-info">
                           <span class="itx-type-on-off label" id="edgeTypeLabel">-</span>
@@ -351,7 +369,7 @@
                       </tr>
                       <tr>
                         <th class="gene-attr-info">Manuscripts</th>
-                        <td id="Manuscripts" class="gene-attr-info"></td>
+                        <td id="Manuscripts" class="gene-attr-info">"<span class='attribution'><span class='attributionHeader'></span>Pubmed:21900206</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -451,7 +469,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <th class="gene-attr-info" colspan="2">Source shape</th>
+                        <th class="gene-attr-info" colspan="1">Source shape</th>
                         <td colspan="2">
                           <select class="selectpicker dropup" id="source-shape" data-live-search="true">
                               <option value="none">None</option>
@@ -464,10 +482,15 @@
                               <option value="diamond">Diamond</option>
                               <option value="triangle">Triangle</option>
                           </select>
+                          <td>
+                          <div class="btn-group" ">
+                            <a class="btn .btn-default icon-wrench" id="sourceshapehelper" data-fancybox href="javascript:void(0)" data-src="#hidden-content2"  ><span class="icon-wrench"></span></a>
+                          </div>
+                          </td>
                         </td>
                       </tr>
                       <tr>
-                        <th class="gene-attr-info" colspan="2">Target shape</th>
+                        <th class="gene-attr-info" colspan="1">Target shape</th>
                         <td colspan="2">
                           <select class="selectpicker dropup" id="target-shape">
                               <option value="none">None</option>
@@ -480,6 +503,11 @@
                               <option value="diamond">Diamond</option>
                               <option value="triangle">Triangle</option>
                           </select>
+                        </td>
+                        <td>
+                          <div class="btn-group" ">
+                            <a class="btn .btn-default icon-wrench" id="targetshapehelper" data-fancybox href="javascript:void(0)" data-src="#hidden-content2"  ><span class="icon-wrench"></span></a>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -495,7 +523,19 @@
             </div><!--tab content-->
       </div><!--span4-->
       
+      <div class="hero-unit span9" style="margin-left: 0px;margin-top: 0px;   float: right; display: none; height: 500px" id="spinnerNet">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+          </div>
+      </div>
+      
       <div class="hero-unit span9" style="margin-left: 0px;   float: right;" id="vboard">
+
+            <div id="cover"></div>
             <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
               <button class="btn btn-default" id ="btn-zoom-in" ><a title="Zoom in" class="icon-zoom-in icon-large"></a></button>
@@ -525,14 +565,10 @@
               </div><!--btn-group-->
             </div>                    
             </div><!--.btn-toolbar-->
-            <div class="spinner" id="spinnerNet" style="display: none">
-              <div class="rect1"></div>
-              <div class="rect2"></div>
-              <div class="rect3"></div>
-              <div class="rect4"></div>
-              <div class="rect5"></div>
-            </div>
-            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
+
+            <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto">
+
+            </div> 
           </div><!--.span8-->
       <!--<div class="span8">100</div>-->
     </div>
@@ -885,11 +921,21 @@
                   type:"GET",//get方法
                   data:{keyword: nodeId},//要往服务器传递的数据
                   beforeSend: function () {
+                    $('#spinnerEdgeTable').show();
+                    $('#interactTable').hide();
+                    $('#spinnerStatistics').show();
+                    $('#statistics').hide();
+                    $('#interaction').hide();
+                    $('#less-more-selector').hide();
+                    $('#vboard').hide();
+                    $('#spinnerNet').show();
                   },
 
                     success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
                       var obj = jQuery.parseJSON(arg);
-                      var newNet = JSON.stringify(obj.data[0])
+                      var newNet = JSON.stringify(obj.data[0]);
+                      $('#cy').show();
+                      
                       updateCy(JSON.parse(obj.data[0]));
                       setUpSummaryInit(cy);
                       setUpEdgeTypeStatist(cy);
@@ -897,11 +943,20 @@
 
                     complete: function () {
                       //$('#cy').show();
+                      $('#spinnerEdgeTable').hide();
+                      $('#interactTable').show();
+                      $('#spinnerStatistics').hide();
+                      $('#statistics').show();
+                      $('#interaction').show();
+                      $('#less-more-selector').show();
+                      $('#spinnerNet').hide();
+
                   },
 
                     error:function(){//获取失败
                       console.log("failed");
                       $("#ErrorMsg").trigger('click');
+
                   }
               });
             })
@@ -1108,20 +1163,9 @@
           }//end of event.cyTarget.isNode()
 
         if (event.cyTarget.isEdge()) {
-            $('#Detail-table').hide();
-            //$('#myTab li:eq(0) a').text('Ed');
-            //$('#myTab li:eq(1) a').tab('show');
-          
-            /*var edge = event.cyTarget;
-            console.log(edge.id());
-            var source = edge.source();
-            var target = edge.target();
-            $('#edge-title').text(source.id() + '-' + target.id());
-            var edgeInfo = getEdge(source.id(), target.id());
-            $('#interactTable').show();
-            */
             var edge = event.cyTarget;
             setUpEdgeTable(edge);
+            $('#edge-type').show();
 
           }
         }//end-else
@@ -1171,10 +1215,12 @@
         if( $(window).width() > 1440) {
            $('#geneboard').css('width', "25%");
            $('#vboard').css('width', "65%");
+           $('#spinnerNet').css('width', "65%");
 
         } else {
            $('#geneboard').css('width', "30%");
            $('#vboard').css('width', "60%");
+           $('#spinnerNet').css('width', "60%");
         }
         var halfscreen = $(window).width() * 0.45;
         $('#degreeDis').css('width', halfscreen + "px");
@@ -1782,6 +1828,7 @@
   </script>
   <script type="text/javascript">
     function updateCy(newEleJsons) {
+        $('#vboard').show();
         cy.json({ elements: newEleJsons });
         //cy.forceRender();
         coseLayout('grid');
@@ -1793,6 +1840,7 @@
     $('#queryBtn').click(function() {
       $('#help-text').hide();
       $('#arrow').hide();
+      updateCy({});
       var query = $('#searchInput').val();
       setUpNodeTable(query);
       loadNet(query);
@@ -1816,9 +1864,10 @@
       $('#edge-title').text(source.id() + '-' + target.id());
       $('#interactTable').show();
       $('#PathwayName').text(edge.data()['PathName']);
+      $('#PathwaySource').text(edge.data()['resource']);
       setUpedgeTypeLabel(edgeType);
       $('#Manuscripts').empty();
-      //setUpPebMedids(manuscripts, 'Manuscripts');
+      setUpPebMedids(manuscripts, 'Manuscripts');
       //setUpEdgeTable(edgeInfo);
     }
   </script>
@@ -1837,6 +1886,8 @@
   </script>
       <script type="text/javascript">
       function formatManuscripts(refs) {
+        if(refs == ' ') 
+          return '';
         var manuscripts = refs.toString();
         var format = manuscripts.replace('|', ';');
         var word = format.split(';');
@@ -1879,5 +1930,11 @@
           $('#' + types[i] + '-count').text(typeNum);
         }
         return true;
+      }
+    </script>
+    <script type="text/javascript">
+      function test() {
+        $('#cover').css('z-index', 99999);
+        $('#cy').css('z-index', 0);
       }
     </script>

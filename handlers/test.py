@@ -98,6 +98,7 @@ class SearchNetHandler(tornado.web.RequestHandler):
 
 			edge["data"]['Manuscripts'] = item['Manuscripts']
 			edge["data"]['resource'] = item['resource']
+			edge["data"]['PathName'] = item['PathName']
 			testData["edges"].append(edge)
 
 		data = {'status':0,'message':'successfully','data':[json.dumps(testData)]}

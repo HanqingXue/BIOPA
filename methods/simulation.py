@@ -23,7 +23,7 @@ def simulation(name='network_bak.csv'):
 			pathway['Entity1'] = source_entity
 			pathway['Entity2'] = target_entity
 			pathway['Interaction'] = interaction
-			pathway['PathID'] = 'BioGRID'
+			pathway['Source'] = 'BioGRID'
 			pathway['PathName'] = 'Transcriptional regulation of pluripotent stem cells'
 			pathway['ManuscriptID'] = '21900206;23667531'
 			version_data.append(pathway)

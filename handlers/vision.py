@@ -33,7 +33,7 @@ class VisionHandler(tornado.web.RequestHandler):
                 set_edge_test(check_node_Id(item['Entity1']), 
                 check_node_Id(item['Entity2']), 
                 item['Interaction'], 
-                item['PathID'], 
+                item['Source'], 
                 item['PathName'], 
                 item['ManuscriptID']))
 
