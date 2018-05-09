@@ -519,6 +519,13 @@
               </div><!--btn-group-->
             </div>                    
             </div><!--.btn-toolbar-->
+            <div class="spinner" id="spinnerNet" style="display: none">
+              <div class="rect1"></div>
+              <div class="rect2"></div>
+              <div class="rect3"></div>
+              <div class="rect4"></div>
+              <div class="rect5"></div>
+            </div>
             <div id="cy" style="height: 500px; overflow: auto;overflow-x:auto"><p></p></div> 
           </div><!--.span8-->
       <!--<div class="span8">100</div>-->
@@ -864,27 +871,33 @@
     </script>
     <script type="text/javascript">
         function loadNet(nodeId){
-            $.ajax({
-                url:"/searchnet",//调用的是这个url对应的那个Handler
-                type:"GET",//get方法
-                data:{keyword: nodeId},//要往服务器传递的数据
-                beforeSend: function () {
+          cy.ready( function(event) {
+            console.log('Onloading');
+          
+              $.ajax({
+                  url:"/searchnet",//调用的是这个url对应的那个Handler
+                  type:"GET",//get方法
+                  data:{keyword: nodeId},//要往服务器传递的数据
+                  beforeSend: function () {
                   },
-                success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
-                    var obj = jQuery.parseJSON(arg);
-                    var newNet = JSON.stringify(obj.data[0])
-                    updateCy(JSON.parse(obj.data[0]));
-                    setUpSummaryInit(cy);
-                },
 
-                complete: function () {
-                },
+                    success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
+                      var obj = jQuery.parseJSON(arg);
+                      var newNet = JSON.stringify(obj.data[0])
+                      updateCy(JSON.parse(obj.data[0]));
+                      setUpSummaryInit(cy);
+                  },
 
-                error:function(){//获取失败
-                    console.log("failed");
-                    $("#ErrorMsg").trigger('click');
-                }
-            });
+                    complete: function () {
+                      //$('#cy').show();
+                  },
+
+                    error:function(){//获取失败
+                      console.log("failed");
+                      $("#ErrorMsg").trigger('click');
+                  }
+              });
+            })
         }
     </script>
     <script type="text/javascript">
@@ -907,7 +920,7 @@
         //autounselectify: true,
         layout: {
             name: 'arbor',
-            refresh: .6,
+            refresh: .2,
 
           },
           
@@ -1753,9 +1766,10 @@
   <script type="text/javascript">
     function updateCy(newEleJsons) {
         cy.json({ elements: newEleJsons });
-        cy.forceRender();
-        coseLayout('arbor');
-        //coseLayout('cose');
+        //cy.forceRender();
+        coseLayout('grid');
+        $("#Cose").trigger('click');
+        $("#Cose").trigger('click');
     }
   </script>
   <script type="text/javascript">
@@ -1769,7 +1783,9 @@
   </script>
   <script type="text/javascript">
     function coseLayout(layoutName) {
+      console.log(layoutName);
       var layout = cy.makeLayout({name : layoutName});
       layout.run();
+      cy.forceRender();
     }
   </script>
