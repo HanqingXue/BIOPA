@@ -43,16 +43,7 @@ class VisionHandler(tornado.web.RequestHandler):
         for node in nodes:
             versionData.append(set_node(node))
 
-        edge2list = list(set(edge_types))
-        edge_info = {
-            'interacts-with': '#5e3e41',
-            'controls-phosphorylation-of': '#17ccd3',
-            'controls-state-change-of': '#1450b9', 
-            'in-complex-with': '#ffffff', 
-            'controls-expression-of': '#fffff'}
-
-        #print versionData
-        self.render('home.html', hello= json.dumps(versionData), edge_types = dict([(key, edge_info[key]) for key in edge2list]))
+        self.render('home.html', hello= json.dumps(versionData))
     
     
     def post(self):

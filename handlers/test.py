@@ -67,10 +67,17 @@ class SearchNetHandler(tornado.web.RequestHandler):
 		for item in result: 
 			source = {}
 			source["data"] = {}
+			if ';' in item['Entity1']:
+				continue
+
+			if ';' in item['Entity2']:
+				continue
+
 			source["data"]["id"] = item['Entity1']
 			source["data"]["position"] = {}
 			source["data"]["position"]['x'] = random.randint(0, 800)
 			source["data"]["position"]['y'] = random.randint(0, 800)
+			
 			target = {}
 			target["data"] = {}
 			target["data"]["id"] = item['Entity2']
@@ -83,7 +90,12 @@ class SearchNetHandler(tornado.web.RequestHandler):
 			edge["data"]["id"] = item['Entity1'] + "2" + item['Entity2']
 			edge["data"]["source"] =  item['Entity1']
 			edge["data"]["target"] = item['Entity2']
+
+			#if ';' in item['Interaction']:
+				#item['Interaction'] = 'other'
+
 			edge["data"]["type"] = item['Interaction']
+
 			edge["data"]['Manuscripts'] = item['Manuscripts']
 			edge["data"]['resource'] = item['resource']
 			testData["edges"].append(edge)
