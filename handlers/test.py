@@ -14,7 +14,6 @@ Change the workspace to root path.
 import sys
 sys.path.append('../')
 
-from methods.dbutil import *
 from methods.versionutil import *
 from methods.simulation import *
 from mapper.EntityMapper import EntityMapper
@@ -90,12 +89,7 @@ class SearchNetHandler(tornado.web.RequestHandler):
 			edge["data"]["id"] = item['Entity1'] + "2" + item['Entity2']
 			edge["data"]["source"] =  item['Entity1']
 			edge["data"]["target"] = item['Entity2']
-
-			#if ';' in item['Interaction']:
-				#item['Interaction'] = 'other'
-
 			edge["data"]["type"] = item['Interaction']
-
 			edge["data"]['Manuscripts'] = item['Manuscripts']
 			edge["data"]['resource'] = item['resource']
 			edge["data"]['PathName'] = item['PathName']

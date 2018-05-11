@@ -9,7 +9,6 @@ Change the workspace to root path.
 import sys
 sys.path.append('../')
 
-from methods.dbutil import *
 from methods.versionutil import *
 from methods.simulation import *
 from mapper.EntityMapper import EntityMapper

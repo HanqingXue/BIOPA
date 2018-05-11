@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import logging
 from Entity import *
 from methods.WebParseHelper import *
 from sqlalchemy import Column, String, Integer, create_engine
@@ -28,7 +27,7 @@ class EntityMapper(object):
 				'description': gene.description
 			}	
 		except Exception as ex:
-			logging.error('Error occurred: %s in querying gene ids' % ex)
+			raise ex
 		return gene_info
 
 
@@ -45,8 +44,8 @@ class EntityMapper(object):
 			else:
 				summary_info = result_proxy[0][1]
 		except Exception as ex:
-			logging.error('Error occurred %s in querying gene summary'  % ex)
 			summary_info = '' 
+			raise ex
 
 		return summary_info
 
@@ -57,7 +56,7 @@ class EntityMapper(object):
 			ensembl_info = self.db_session.query(Ensemblinfo).filter(Ensemblinfo.entrez_id == entrez_id).first()
 			ensembl_id = ensembl_info.gene_id
 		except Exception as ex:
-			logging.error('Error occurred %s in querying ensembl_id' % ex)
+			raise ex
 
 		return ensembl_id
 
@@ -68,7 +67,7 @@ class EntityMapper(object):
 			uniprot = self.db_session.query(Uniprotinfo).filter(Uniprotinfo.gene_id == ensembl_id).one()
 			uniprot_id = uniport.Uniprot_id
 		except Exception as ex:
-			logging.error('Error occurred %s in qrurying uniport ' % ex)
+			raise ex
 
 		return uniprot_id
 
@@ -86,7 +85,7 @@ class EntityMapper(object):
 					continue
 
 		except Exception as ex:
-			logging.error('Error occurred %s in qrurying drug' % ex)
+			raise ex
 
 		return result_proxy
 	
@@ -103,7 +102,7 @@ class EntityMapper(object):
 				else:
 					continue
 		except Exception as ex:
-			logging.error('Error occurred %s in qrurying drug' % ex)
+			raise ex
 
 		return result_proxy
 
@@ -154,7 +153,7 @@ class EntityMapper(object):
 			result_proxy = pathcards_parser(gene_symbol)
 			
 		except Exception as ex:
-			logging.error('Error occurred %s in querying pathway' % ex)
+			raise ex
 		
 		return result_proxy
 

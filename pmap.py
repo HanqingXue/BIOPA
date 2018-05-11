@@ -6,17 +6,13 @@ sys.setdefaultencoding('utf-8')
 
 import tornado.web
 import os
-from handlers.index import IndexHandler
 from handlers.about import AboutHandler
 from handlers.vision import VisionHandler
-from handlers.data import DataHandler
 from handlers.search import SearchHandler
 from handlers.contact import ContactHandler
 from handlers.test import DrugHandler
 from handlers.test import GenePathwayHandler
 from handlers.test import SearchNetHandler
-from handlers.pathway import PathwayHandler
-from handlers.plot import PlotHandler
 import tornado.ioloop
 import tornado.options
 import tornado.httpserver
@@ -42,14 +38,11 @@ class Application(tornado.web.Application):
 		handlers = [
 			(r'/about', AboutHandler),
 			(r'/', VisionHandler, dict(db_session=db_session)),
-			(r'/data', DataHandler),
 			(r'/contact', ContactHandler),
 			(r'/search', SearchHandler),
 			(r'/test', DrugHandler, dict(db_session=db_session)),
 			(r'/gene', GenePathwayHandler, dict(db_session=db_session)),
-			(r'/searchnet', SearchNetHandler, dict(db_session=db_session)),
-			(r'/pathway', PathwayHandler),
-			(r'/pathwayplot', PlotHandler),
+			(r'/searchnet', SearchNetHandler, dict(db_session=db_session))
 		] 
 
 		settings = dict(

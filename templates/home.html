@@ -850,7 +850,6 @@
                     $('#summaryDetail').text(obj.data[1]);
                     $('#Ensembl').text(obj.data[2]);
                     $('#ensemblDetail').text(obj.data[2]);
-                    console.log(obj.data[3]);
                     setUpPebMedids(obj.data[3], 'Pubmed');
                     setUpPathwayTable(obj.data[4], nodeId);
                 },
@@ -914,8 +913,6 @@
     <script type="text/javascript">
         function loadNet(nodeId){
           cy.ready( function(event) {
-            console.log('Onloading');
-          
               $.ajax({
                   url:"/searchnet",//调用的是这个url对应的那个Handler
                   type:"GET",//get方法
@@ -1848,7 +1845,6 @@
   </script>
   <script type="text/javascript">
     function coseLayout(layoutName) {
-      console.log(layoutName);
       var layout = cy.makeLayout({name : layoutName});
       layout.run();
       cy.forceRender();
@@ -1860,7 +1856,6 @@
       var target = edge.target();
       var edgeType = edge.data()['type'];
       var manuscripts = edge.data()['Manuscripts'];
-      console.log(manuscripts);
       $('#edge-title').text(source.id() + '-' + target.id());
       $('#interactTable').show();
       $('#PathwayName').text(edge.data()['PathName']);
@@ -1920,7 +1915,6 @@
           'other']
 
         for (var i=0; i < types.length; i++) {
-          console.log(types[i]);
           var typeNum = cy.edges().filter("[type ='" + types[i] +"']").length;
           $('#row-' + types[i]).show();
           
