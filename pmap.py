@@ -24,7 +24,6 @@ from tornado.httpserver import HTTPServer
 from tornado.options import define, options
 from tornado.ioloop import IOLoop
 import config
-import logging
 
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -78,6 +77,5 @@ if __name__ == '__main__':
 	Start HTTP Server
 	'''
 	http_server = HTTPServer(Application(config.base_url, db_session), max_buffer_size=10485760000)
-	logging.info('Pmap web application is running on port: %d.' % options.http_port)
 	http_server.listen(options.http_port)
 	IOLoop.current().start()

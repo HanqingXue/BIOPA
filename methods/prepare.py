@@ -106,7 +106,6 @@ def extract_net(fname):
 		if count == 0:
 			continue
 		item = item.split('\t')
-		print item
 		count += 1
 		out_net.write('{0}\t{1}\n'.format(item[0], item[2]))
 		'''
@@ -114,9 +113,3 @@ def extract_net(fname):
 		out_net.write('{0}\t{1}\n'.format(item[0], item[2]))
 
 	out_net.close()
-'''
-if __name__ == '__main__':
-	#detect_gene_family()
-	extract_net('p53.relationships_PathPPI')
-	pass
-'''

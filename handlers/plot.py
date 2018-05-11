@@ -23,7 +23,6 @@ class PlotHandler(tornado.web.RequestHandler):
             versionData.append(set_base_edge(item[1], item[0]))
 
         for item in nodes:
-            print item
             versionData.append(set_node(item))
 
             if ';' in item:
@@ -32,7 +31,6 @@ class PlotHandler(tornado.web.RequestHandler):
 
                 versionData.append(set_node(comp_name))
                 for sub_name in sub_names:
-                    print set_comp_node(sub_name, comp_name)
                     versionData.append(set_comp_node(sub_name, comp_name))
 
         self.render('plotter.html', hello= json.dumps(versionData), pathname=pathname[:-4])
