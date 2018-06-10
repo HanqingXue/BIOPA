@@ -30,6 +30,10 @@ function setUpPathwayTable(superPathway, nodeId) {
   //}
 }
 
+function setUpKeggTable(pathway, nd) {
+
+}
+
 function setUpDiseaseTable(diseases, nodeId) {
   var diseasesCount = 0;
   for(var i in diseases) {
@@ -66,6 +70,7 @@ function setUpNodeTable(nodeId) {
   $('#help-text-detail-drug').hide();
   DoAjax(nodeId);
   loadDrug(nodeId);
+  loadKegg(nodeId); 
   $('#gene-title').text(nodeId);
   $("tr#"+nodeId).show();
   $('#UniProtID a').text(nodeId);

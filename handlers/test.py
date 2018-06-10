@@ -97,3 +97,31 @@ class SearchNetHandler(tornado.web.RequestHandler):
 
 		data = {'status':0,'message':'successfully','data':[json.dumps(testData)]}
 		self.finish(json.dumps(data))
+
+
+class KEGGSearchHandler(tornado.web.RequestHandler):
+	"""docstring for 	KEGGSearch"""
+	def initialize(self):
+		pass
+
+	@tornado.web.asynchronous
+	def get(self):
+		keggdata = {}
+		keyword =self.get_argument("keyword", None)
+		print keyword
+		f = open('keggdata.txt', 'r')
+		for item in f.readlines():
+			item = item.split('\t')
+			if keyword in item[-1]:
+				keggdata[item[0]] = {}
+				keggdata[item[0]]['name'] = item[1]
+				keggdata[item[0]]['gene'] = item[-1]
+
+		data = {'status':0,'message':'successfully','data':[json.dumps(keggdata)]}
+		self.finish(json.dumps(data))
+
+
+class PathvizHandler(tornado.web.RequestHandler):
+    def get(self):
+    	keyword =self.get_argument("keyword", None)
+        self.render('keggpathway.html', hello=keyword)
