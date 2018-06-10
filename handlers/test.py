@@ -125,3 +125,9 @@ class PathvizHandler(tornado.web.RequestHandler):
     def get(self):
     	keyword =self.get_argument("keyword", None)
         self.render('keggpathway.html', hello=keyword)
+
+
+class PathSearchHandler(tornado.web.RequestHandler):
+	def get(self):
+		self.render('pathsearch.html')
+		

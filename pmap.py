@@ -15,6 +15,7 @@ from handlers.test import GenePathwayHandler
 from handlers.test import SearchNetHandler
 from handlers.test import KEGGSearchHandler
 from handlers.test import PathvizHandler
+from handlers.test import PathSearchHandler
 import tornado.ioloop
 import tornado.options
 import tornado.httpserver
@@ -46,7 +47,9 @@ class Application(tornado.web.Application):
 			(r'/gene', GenePathwayHandler, dict(db_session=db_session)),
 			(r'/searchnet', SearchNetHandler, dict(db_session=db_session)),
 			(r'/kegg', KEGGSearchHandler),
-			('/pathviz', PathvizHandler)
+			(r'/pathviz', PathvizHandler),
+			(r'/pathsearch', PathSearchHandler)
+
 		] 
 
 		settings = dict(
