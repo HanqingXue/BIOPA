@@ -11,9 +11,18 @@
 
   <script async="" src="{{ static_url('js/analytics.js') }}"></script>
   <script defer="" src="{{ static_url('js/deps.js') }}"></script> 
-  <script defer="" src="{{ static_url('js/bundle.js') }}"></script> 
-  <title>Pathway Commons</title> 
+  <script defer="" src="{{ static_url('js/bundle.js') }}"></script>
+  <script          src="{{ static_url('js/jquery.js') }}"></script> 
+  <title>Pathway Search</title> 
   <style type="text/css"></style>
+  <style type="text/css">
+    .search-list-container {
+      padding-left: 125px;
+    }
+    .search-hit-counter{
+      padding-left: 20px;
+    }
+  </style>
  </head> 
  <body> 
   <div id="root">
@@ -31,9 +40,9 @@
        </div>
        <div class="search-searchbar-container">
         <div class="search-searchbar">
-         <input type="text" placeholder="Enter pathway name or gene names" value="Sssdfsdaffsdafa" />
+         <input type="text" placeholder="Enter a gene name" value="BAAT" id="inputKeyword" />
          <div class="search-search-button">
-          <button><i class="material-icons">search</i></button>
+          <button id="search"><i class="material-icons">search</i></button>
          </div>
         </div>
         <div class="search-tabs">
@@ -48,9 +57,13 @@
      </div>
      <div class="loadedContent">
       <div class="search-list-container">
-       <div class="search-result-info">
+        <div class="search-result-info">
+        <div class="search-hit-counter">
+         
+        </div>
        </div>
-       <div class="search-list"></div>
+       <div class="search-list">
+       </div>
       </div>
      </div>
     </div>
@@ -58,3 +71,61 @@
   </div>
  </body>
 </html>
+<script type="text/javascript">
+  $('#search').click(function() {
+    var keyword = $('#inputKeyword').val();
+    loadKegg(keyword);
+  });
+</script>
+<script type="text/javascript">
+  function loadKegg(nodeId){
+    $.ajax({
+        url:"/kegg",//调用的是这个url对应的那个Handler
+        type:"GET",//get方法
+        data:{keyword: nodeId},//要往服务器传递的数据
+        beforeSend: function () {
+          },
+        success:function(arg){//成功从服务端获取到值，参数arg表示从服务端的Handler获取的数据
+          var obj = jQuery.parseJSON(arg);
+          console.log(JSON.parse(obj.data[0]));
+          setUpKeggTable(JSON.parse(obj.data[0]), nodeId);
+        },
+
+      complete: function () {
+        },
+
+      error:function(){//获取失败
+            console.log("failed");
+        }
+    });
+  }
+</script>
+<script type="text/javascript">
+  function setUpKeggTable(pathway, nodeId) {
+      var count = 0;
+      $('.search-list').empty();
+      for(var index in pathway) {
+        console.log(index);
+        var gene = pathway[index]['gene'];
+        gene = gene.split(';')
+        console.log(gene.length); 
+        count += 1;
+        $('.search-hit-counter').text( count +  '  results');
+        $('.search-list').append( 
+            "<div class='search-item'>" + 
+               "<div class='search-item-content'>" + 
+                  "<a target='_blank' href='pathviz?keyword=" + index + " '>" +
+                    "<h3 class='search-item-content-title'>" + pathway[index]['name'] +"</h3>" + 
+                    "</a>" + 
+                    "<p class='search-item-content-datasource'> KEGG</p>" + 
+                    "<p class='search-item-content-participants'>ID:" + index+"</p>" +
+                "</div>" +
+              "</div>"
+        );
+      }
+
+      if(count == 0) {
+        $('.search-hit-counter').text( count +  '  results');
+      }
+  }
+</script>

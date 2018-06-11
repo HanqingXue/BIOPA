@@ -116,7 +116,7 @@ class KEGGSearchHandler(tornado.web.RequestHandler):
 				keggdata[item[0]] = {}
 				keggdata[item[0]]['name'] = item[1]
 				keggdata[item[0]]['gene'] = item[-1]
-
+		f.close()
 		data = {'status':0,'message':'successfully','data':[json.dumps(keggdata)]}
 		self.finish(json.dumps(data))
 
